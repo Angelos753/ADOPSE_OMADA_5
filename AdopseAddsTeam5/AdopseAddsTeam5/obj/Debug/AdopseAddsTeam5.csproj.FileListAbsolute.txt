@@ -1,0 +1,9 @@
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\bin\Debug\AdopseAddsTeam5.exe.config
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\bin\Debug\AdopseAddsTeam5.exe
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\bin\Debug\AdopseAddsTeam5.pdb
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.csprojAssemblyReference.cache
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.Properties.Resources.resources
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.csproj.GenerateResource.cache
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.csproj.CoreCompileInputs.cache
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.exe
+C:\Users\styli\Desktop\adopse\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.pdb
