@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,7 @@ namespace AdopseAddsTeam5
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
-            TestConnection();
+            //TestConnection();
         }
         private static void TestConnection()  //test
         {
@@ -26,7 +27,7 @@ namespace AdopseAddsTeam5
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    Console.WriteLine("Connected");
+                    Debug.WriteLine("Connected");
                 }
             }
         }

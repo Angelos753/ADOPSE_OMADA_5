@@ -63,6 +63,16 @@ namespace AdopseAddsTeam5.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agoraBuilding {
+            get {
+                object obj = ResourceManager.GetObject("agoraBuilding", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_large {
             get {
                 object obj = ResourceManager.GetObject("background-large", resourceCulture);
@@ -76,6 +86,96 @@ namespace AdopseAddsTeam5.Properties {
         internal static System.Drawing.Bitmap background_wide {
             get {
                 object obj = ResourceManager.GetObject("background-wide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap enoikiasiBuilding {
+            get {
+                object obj = ResourceManager.GetObject("enoikiasiBuilding", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap footerBuildingsFull {
+            get {
+                object obj = ResourceManager.GetObject("footerBuildingsFull", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap footerBuildingsLeft {
+            get {
+                object obj = ResourceManager.GetObject("footerBuildingsLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap footerBuildingsRight {
+            get {
+                object obj = ResourceManager.GetObject("footerBuildingsRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoandname_Color {
+            get {
+                object obj = ResourceManager.GetObject("logoandname_Color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoandname_White {
+            get {
+                object obj = ResourceManager.GetObject("logoandname_White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap name_color {
+            get {
+                object obj = ResourceManager.GetObject("name_color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap name_white {
+            get {
+                object obj = ResourceManager.GetObject("name_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap neaaggeliaBuilding {
+            get {
+                object obj = ResourceManager.GetObject("neaaggeliaBuilding", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +356,16 @@ namespace AdopseAddsTeam5.Properties {
         internal static System.Drawing.Bitmap outline_star_black_24dp {
             get {
                 object obj = ResourceManager.GetObject("outline_star_black_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap program_ico {
+            get {
+                object obj = ResourceManager.GetObject("program ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
