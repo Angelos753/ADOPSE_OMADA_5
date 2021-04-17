@@ -10,6 +10,7 @@
  - ΤΣΑΛΙΚΗΣ ΕΥΣΤΡΑΤΙΟΣ  164760
 
 
+![IMG_2471](https://github.com/Angelos753/ADOPSE_OMADA_5/blob/main/Logo%20and%20images/footerBuildingsFull.png)
 
 
 
