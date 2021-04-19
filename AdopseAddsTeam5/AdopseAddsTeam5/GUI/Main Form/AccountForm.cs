@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AdopseAddsTeam5.GUI.Main_Form
 {
-    public partial class Login : Form
+    public partial class Account : Form
     {
-        public Login()
+        public Account()
         {
             InitializeComponent();
         }

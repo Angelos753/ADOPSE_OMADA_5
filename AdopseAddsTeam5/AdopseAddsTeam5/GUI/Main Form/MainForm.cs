@@ -27,7 +27,7 @@ namespace AdopseAddsTeam5
 
         private void logLabel_Click(object sender, EventArgs e)
         {
-            Login l1 = new Login();
+            Account l1 = new Account();
             l1.ShowDialog();
         }
 
