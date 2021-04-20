@@ -547,6 +547,7 @@ namespace AdopseAddsTeam5
             this.searchLabel.TabIndex = 2;
             this.searchLabel.Text = "Αναζήτηση";
             this.searchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
             // 
             // watermarkPicBox
             // 
