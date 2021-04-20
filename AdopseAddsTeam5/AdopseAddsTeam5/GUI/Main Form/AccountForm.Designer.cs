@@ -1,7 +1,7 @@
 ﻿
 namespace AdopseAddsTeam5.GUI.Main_Form
 {
-    partial class Account
+    partial class AccountForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountForm));
             this.headerLabel = new System.Windows.Forms.Label();
             this.mainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.logRegTabControl = new System.Windows.Forms.TabControl();
@@ -339,15 +340,17 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.logoPicBox.TabIndex = 2;
             this.logoPicBox.TabStop = false;
             // 
-            // Account
+            // AccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 418);
             this.Controls.Add(this.mainTableLayout);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(400, 465);
             this.MinimumSize = new System.Drawing.Size(400, 465);
-            this.Name = "Account";
+            this.Name = "AccountForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Λογαριασμός";
             this.mainTableLayout.ResumeLayout(false);
             this.logRegTabControl.ResumeLayout(false);
