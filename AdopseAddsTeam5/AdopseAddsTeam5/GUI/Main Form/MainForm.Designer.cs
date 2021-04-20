@@ -32,7 +32,13 @@ namespace AdopseAddsTeam5
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.sideMenuPanel = new System.Windows.Forms.Panel();
             this.sideMenuTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.userPicBox = new System.Windows.Forms.PictureBox();
             this.sideOptionsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.homepagePicBox = new System.Windows.Forms.PictureBox();
+            this.profilePicBox = new System.Windows.Forms.PictureBox();
+            this.favPicBox = new System.Windows.Forms.PictureBox();
+            this.filterPicBox = new System.Windows.Forms.PictureBox();
+            this.notifPicBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,62 +47,56 @@ namespace AdopseAddsTeam5
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.choiceTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.agoraLabel2 = new System.Windows.Forms.Label();
             this.enoikLabel2 = new System.Windows.Forms.Label();
             this.aggeliaLabel2 = new System.Windows.Forms.Label();
             this.aggeliaLabel = new System.Windows.Forms.Label();
             this.enoikLabel = new System.Windows.Forms.Label();
+            this.aggeliaPicBox = new System.Windows.Forms.PictureBox();
+            this.enoikPicBox = new System.Windows.Forms.PictureBox();
+            this.agoraPicBox = new System.Windows.Forms.PictureBox();
             this.agoraLabel = new System.Windows.Forms.Label();
             this.bgImagePanel = new System.Windows.Forms.Panel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.searchPanelTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.searchPicBox = new System.Windows.Forms.PictureBox();
             this.searchTextbox = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
-            this.logPanel = new System.Windows.Forms.Panel();
-            this.sideMPanel = new System.Windows.Forms.Panel();
-            this.mainTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.userPicBox = new System.Windows.Forms.PictureBox();
-            this.homepagePicBox = new System.Windows.Forms.PictureBox();
-            this.profilePicBox = new System.Windows.Forms.PictureBox();
-            this.favPicBox = new System.Windows.Forms.PictureBox();
-            this.filterPicBox = new System.Windows.Forms.PictureBox();
-            this.notifPicBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.searchPicBox = new System.Windows.Forms.PictureBox();
             this.watermarkPicBox = new System.Windows.Forms.PictureBox();
             this.mainPictureBox = new System.Windows.Forms.PictureBox();
-            this.sideMenuLabel = new System.Windows.Forms.Label();
+            this.logPanel = new System.Windows.Forms.Panel();
             this.logLabel = new System.Windows.Forms.Label();
+            this.sideMPanel = new System.Windows.Forms.Panel();
+            this.sideMenuLabel = new System.Windows.Forms.Label();
+            this.mainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.appNamePanel = new System.Windows.Forms.Panel();
-            this.aggeliaPicBox = new System.Windows.Forms.PictureBox();
-            this.enoikPicBox = new System.Windows.Forms.PictureBox();
-            this.agoraPicBox = new System.Windows.Forms.PictureBox();
             this.footerPicBox = new System.Windows.Forms.PictureBox();
             this.sideMenuPanel.SuspendLayout();
             this.sideMenuTableLayout.SuspendLayout();
-            this.sideOptionsTableLayout.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.choiceTableLayout.SuspendLayout();
-            this.bgImagePanel.SuspendLayout();
-            this.searchPanel.SuspendLayout();
-            this.searchPanelTableLayout.SuspendLayout();
-            this.logPanel.SuspendLayout();
-            this.sideMPanel.SuspendLayout();
-            this.mainTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicBox)).BeginInit();
+            this.sideOptionsTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homepagePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.favPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filterPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notifPicBox)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
+            this.choiceTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliaPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enoikPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agoraPicBox)).BeginInit();
+            this.bgImagePanel.SuspendLayout();
+            this.searchPanel.SuspendLayout();
+            this.searchPanelTableLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).BeginInit();
+            this.logPanel.SuspendLayout();
+            this.sideMPanel.SuspendLayout();
+            this.mainTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.footerPicBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,6 +134,18 @@ namespace AdopseAddsTeam5
             this.sideMenuTableLayout.Size = new System.Drawing.Size(200, 608);
             this.sideMenuTableLayout.TabIndex = 0;
             // 
+            // userPicBox
+            // 
+            this.userPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_Color;
+            this.userPicBox.Location = new System.Drawing.Point(0, 0);
+            this.userPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.userPicBox.Name = "userPicBox";
+            this.userPicBox.Size = new System.Drawing.Size(200, 150);
+            this.userPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPicBox.TabIndex = 0;
+            this.userPicBox.TabStop = false;
+            // 
             // sideOptionsTableLayout
             // 
             this.sideOptionsTableLayout.ColumnCount = 2;
@@ -163,6 +175,66 @@ namespace AdopseAddsTeam5
             this.sideOptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.sideOptionsTableLayout.Size = new System.Drawing.Size(200, 250);
             this.sideOptionsTableLayout.TabIndex = 1;
+            // 
+            // homepagePicBox
+            // 
+            this.homepagePicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homepagePicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_home_white_24dp;
+            this.homepagePicBox.Location = new System.Drawing.Point(0, 0);
+            this.homepagePicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.homepagePicBox.Name = "homepagePicBox";
+            this.homepagePicBox.Size = new System.Drawing.Size(40, 50);
+            this.homepagePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.homepagePicBox.TabIndex = 0;
+            this.homepagePicBox.TabStop = false;
+            // 
+            // profilePicBox
+            // 
+            this.profilePicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profilePicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_person_outline_white_24dp;
+            this.profilePicBox.Location = new System.Drawing.Point(0, 50);
+            this.profilePicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.profilePicBox.Name = "profilePicBox";
+            this.profilePicBox.Size = new System.Drawing.Size(40, 50);
+            this.profilePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.profilePicBox.TabIndex = 1;
+            this.profilePicBox.TabStop = false;
+            // 
+            // favPicBox
+            // 
+            this.favPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.favPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_favorite_white_24dp;
+            this.favPicBox.Location = new System.Drawing.Point(0, 100);
+            this.favPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.favPicBox.Name = "favPicBox";
+            this.favPicBox.Size = new System.Drawing.Size(40, 50);
+            this.favPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.favPicBox.TabIndex = 2;
+            this.favPicBox.TabStop = false;
+            // 
+            // filterPicBox
+            // 
+            this.filterPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.filterPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_bookmark_border_white_24dp;
+            this.filterPicBox.Location = new System.Drawing.Point(0, 150);
+            this.filterPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.filterPicBox.Name = "filterPicBox";
+            this.filterPicBox.Size = new System.Drawing.Size(40, 50);
+            this.filterPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.filterPicBox.TabIndex = 3;
+            this.filterPicBox.TabStop = false;
+            // 
+            // notifPicBox
+            // 
+            this.notifPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.notifPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_notifications_white_24dp;
+            this.notifPicBox.Location = new System.Drawing.Point(0, 200);
+            this.notifPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.notifPicBox.Name = "notifPicBox";
+            this.notifPicBox.Size = new System.Drawing.Size(40, 50);
+            this.notifPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.notifPicBox.TabIndex = 4;
+            this.notifPicBox.TabStop = false;
             // 
             // label1
             // 
@@ -262,6 +334,18 @@ namespace AdopseAddsTeam5
             this.label7.TabIndex = 12;
             this.label7.Text = "ΑΠΟΣΥΝΔΕΣΗ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // choiceTableLayout
             // 
@@ -366,6 +450,45 @@ namespace AdopseAddsTeam5
             this.enoikLabel.Text = "ΕΝΟΙΚΙΑΣΗ";
             this.enoikLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // aggeliaPicBox
+            // 
+            this.aggeliaPicBox.BackColor = System.Drawing.Color.White;
+            this.aggeliaPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aggeliaPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.neaaggeliaBuilding;
+            this.aggeliaPicBox.Location = new System.Drawing.Point(287, 10);
+            this.aggeliaPicBox.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.aggeliaPicBox.Name = "aggeliaPicBox";
+            this.aggeliaPicBox.Size = new System.Drawing.Size(120, 110);
+            this.aggeliaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.aggeliaPicBox.TabIndex = 3;
+            this.aggeliaPicBox.TabStop = false;
+            // 
+            // enoikPicBox
+            // 
+            this.enoikPicBox.BackColor = System.Drawing.Color.White;
+            this.enoikPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.enoikPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.enoikiasiBuilding;
+            this.enoikPicBox.Location = new System.Drawing.Point(148, 10);
+            this.enoikPicBox.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.enoikPicBox.Name = "enoikPicBox";
+            this.enoikPicBox.Size = new System.Drawing.Size(119, 110);
+            this.enoikPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.enoikPicBox.TabIndex = 2;
+            this.enoikPicBox.TabStop = false;
+            // 
+            // agoraPicBox
+            // 
+            this.agoraPicBox.BackColor = System.Drawing.Color.White;
+            this.agoraPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.agoraPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.agoraBuilding;
+            this.agoraPicBox.Location = new System.Drawing.Point(10, 10);
+            this.agoraPicBox.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.agoraPicBox.Name = "agoraPicBox";
+            this.agoraPicBox.Size = new System.Drawing.Size(118, 110);
+            this.agoraPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.agoraPicBox.TabIndex = 0;
+            this.agoraPicBox.TabStop = false;
+            // 
             // agoraLabel
             // 
             this.agoraLabel.AutoSize = true;
@@ -421,6 +544,19 @@ namespace AdopseAddsTeam5
             this.searchPanelTableLayout.Size = new System.Drawing.Size(475, 25);
             this.searchPanelTableLayout.TabIndex = 0;
             // 
+            // searchPicBox
+            // 
+            this.searchPicBox.BackColor = System.Drawing.Color.White;
+            this.searchPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_search_black_24dp;
+            this.searchPicBox.Location = new System.Drawing.Point(0, 0);
+            this.searchPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.searchPicBox.Name = "searchPicBox";
+            this.searchPicBox.Size = new System.Drawing.Size(30, 25);
+            this.searchPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.searchPicBox.TabIndex = 0;
+            this.searchPicBox.TabStop = false;
+            // 
             // searchTextbox
             // 
             this.searchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -450,6 +586,33 @@ namespace AdopseAddsTeam5
             this.searchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
             // 
+            // watermarkPicBox
+            // 
+            this.watermarkPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.watermarkPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.watermarkPicBox.BackgroundImage = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
+            this.watermarkPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
+            this.watermarkPicBox.Location = new System.Drawing.Point(763, 165);
+            this.watermarkPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.watermarkPicBox.Name = "watermarkPicBox";
+            this.watermarkPicBox.Size = new System.Drawing.Size(119, 105);
+            this.watermarkPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.watermarkPicBox.TabIndex = 1;
+            this.watermarkPicBox.TabStop = false;
+            // 
+            // mainPictureBox
+            // 
+            this.mainPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mainPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPictureBox.Image = global::AdopseAddsTeam5.Properties.Resources.background_wide;
+            this.mainPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.mainPictureBox.Margin = new System.Windows.Forms.Padding(0);
+            this.mainPictureBox.Name = "mainPictureBox";
+            this.mainPictureBox.Size = new System.Drawing.Size(882, 270);
+            this.mainPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mainPictureBox.TabIndex = 0;
+            this.mainPictureBox.TabStop = false;
+            // 
             // logPanel
             // 
             this.logPanel.Controls.Add(this.logLabel);
@@ -460,6 +623,17 @@ namespace AdopseAddsTeam5
             this.logPanel.Size = new System.Drawing.Size(52, 45);
             this.logPanel.TabIndex = 4;
             // 
+            // logLabel
+            // 
+            this.logLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.logLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logLabel.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
+            this.logLabel.Location = new System.Drawing.Point(0, 0);
+            this.logLabel.Name = "logLabel";
+            this.logLabel.Size = new System.Drawing.Size(52, 45);
+            this.logLabel.TabIndex = 1;
+            this.logLabel.Click += new System.EventHandler(this.logLabel_Click);
+            // 
             // sideMPanel
             // 
             this.sideMPanel.Controls.Add(this.sideMenuLabel);
@@ -469,6 +643,17 @@ namespace AdopseAddsTeam5
             this.sideMPanel.Name = "sideMPanel";
             this.sideMPanel.Size = new System.Drawing.Size(45, 45);
             this.sideMPanel.TabIndex = 0;
+            // 
+            // sideMenuLabel
+            // 
+            this.sideMenuLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.sideMenuLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideMenuLabel.Image = global::AdopseAddsTeam5.Properties.Resources.outline_menu_white_24dp;
+            this.sideMenuLabel.Location = new System.Drawing.Point(0, 0);
+            this.sideMenuLabel.Name = "sideMenuLabel";
+            this.sideMenuLabel.Size = new System.Drawing.Size(45, 45);
+            this.sideMenuLabel.TabIndex = 0;
+            this.sideMenuLabel.Click += new System.EventHandler(this.sideMenuLabel_Click);
             // 
             // mainTableLayout
             // 
@@ -498,152 +683,6 @@ namespace AdopseAddsTeam5
             this.mainTableLayout.Size = new System.Drawing.Size(882, 653);
             this.mainTableLayout.TabIndex = 0;
             // 
-            // userPicBox
-            // 
-            this.userPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_Color;
-            this.userPicBox.Location = new System.Drawing.Point(0, 0);
-            this.userPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.userPicBox.Name = "userPicBox";
-            this.userPicBox.Size = new System.Drawing.Size(200, 150);
-            this.userPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userPicBox.TabIndex = 0;
-            this.userPicBox.TabStop = false;
-            // 
-            // homepagePicBox
-            // 
-            this.homepagePicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homepagePicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_home_white_24dp;
-            this.homepagePicBox.Location = new System.Drawing.Point(0, 0);
-            this.homepagePicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.homepagePicBox.Name = "homepagePicBox";
-            this.homepagePicBox.Size = new System.Drawing.Size(40, 50);
-            this.homepagePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.homepagePicBox.TabIndex = 0;
-            this.homepagePicBox.TabStop = false;
-            // 
-            // profilePicBox
-            // 
-            this.profilePicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profilePicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_person_outline_white_24dp;
-            this.profilePicBox.Location = new System.Drawing.Point(0, 50);
-            this.profilePicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.profilePicBox.Name = "profilePicBox";
-            this.profilePicBox.Size = new System.Drawing.Size(40, 50);
-            this.profilePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.profilePicBox.TabIndex = 1;
-            this.profilePicBox.TabStop = false;
-            // 
-            // favPicBox
-            // 
-            this.favPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.favPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_favorite_white_24dp;
-            this.favPicBox.Location = new System.Drawing.Point(0, 100);
-            this.favPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.favPicBox.Name = "favPicBox";
-            this.favPicBox.Size = new System.Drawing.Size(40, 50);
-            this.favPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.favPicBox.TabIndex = 2;
-            this.favPicBox.TabStop = false;
-            // 
-            // filterPicBox
-            // 
-            this.filterPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.filterPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_bookmark_border_white_24dp;
-            this.filterPicBox.Location = new System.Drawing.Point(0, 150);
-            this.filterPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.filterPicBox.Name = "filterPicBox";
-            this.filterPicBox.Size = new System.Drawing.Size(40, 50);
-            this.filterPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.filterPicBox.TabIndex = 3;
-            this.filterPicBox.TabStop = false;
-            // 
-            // notifPicBox
-            // 
-            this.notifPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.notifPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_notifications_white_24dp;
-            this.notifPicBox.Location = new System.Drawing.Point(0, 200);
-            this.notifPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.notifPicBox.Name = "notifPicBox";
-            this.notifPicBox.Size = new System.Drawing.Size(40, 50);
-            this.notifPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.notifPicBox.TabIndex = 4;
-            this.notifPicBox.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // searchPicBox
-            // 
-            this.searchPicBox.BackColor = System.Drawing.Color.White;
-            this.searchPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_search_black_24dp;
-            this.searchPicBox.Location = new System.Drawing.Point(0, 0);
-            this.searchPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.searchPicBox.Name = "searchPicBox";
-            this.searchPicBox.Size = new System.Drawing.Size(30, 25);
-            this.searchPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.searchPicBox.TabIndex = 0;
-            this.searchPicBox.TabStop = false;
-            // 
-            // watermarkPicBox
-            // 
-            this.watermarkPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.watermarkPicBox.BackColor = System.Drawing.Color.Transparent;
-            this.watermarkPicBox.BackgroundImage = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
-            this.watermarkPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
-            this.watermarkPicBox.Location = new System.Drawing.Point(763, 165);
-            this.watermarkPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.watermarkPicBox.Name = "watermarkPicBox";
-            this.watermarkPicBox.Size = new System.Drawing.Size(119, 105);
-            this.watermarkPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.watermarkPicBox.TabIndex = 1;
-            this.watermarkPicBox.TabStop = false;
-            // 
-            // mainPictureBox
-            // 
-            this.mainPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.mainPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPictureBox.Image = global::AdopseAddsTeam5.Properties.Resources.background_wide;
-            this.mainPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.mainPictureBox.Margin = new System.Windows.Forms.Padding(0);
-            this.mainPictureBox.Name = "mainPictureBox";
-            this.mainPictureBox.Size = new System.Drawing.Size(882, 270);
-            this.mainPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.mainPictureBox.TabIndex = 0;
-            this.mainPictureBox.TabStop = false;
-            // 
-            // sideMenuLabel
-            // 
-            this.sideMenuLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.sideMenuLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideMenuLabel.Image = global::AdopseAddsTeam5.Properties.Resources.outline_menu_white_24dp;
-            this.sideMenuLabel.Location = new System.Drawing.Point(0, 0);
-            this.sideMenuLabel.Name = "sideMenuLabel";
-            this.sideMenuLabel.Size = new System.Drawing.Size(45, 45);
-            this.sideMenuLabel.TabIndex = 0;
-            this.sideMenuLabel.Click += new System.EventHandler(this.sideMenuLabel_Click);
-            // 
-            // logLabel
-            // 
-            this.logLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.logLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logLabel.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
-            this.logLabel.Location = new System.Drawing.Point(0, 0);
-            this.logLabel.Name = "logLabel";
-            this.logLabel.Size = new System.Drawing.Size(52, 45);
-            this.logLabel.TabIndex = 1;
-            this.logLabel.Click += new System.EventHandler(this.logLabel_Click);
-            // 
             // appNamePanel
             // 
             this.appNamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
@@ -656,45 +695,6 @@ namespace AdopseAddsTeam5
             this.appNamePanel.Name = "appNamePanel";
             this.appNamePanel.Size = new System.Drawing.Size(785, 45);
             this.appNamePanel.TabIndex = 2;
-            // 
-            // aggeliaPicBox
-            // 
-            this.aggeliaPicBox.BackColor = System.Drawing.Color.White;
-            this.aggeliaPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aggeliaPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.neaaggeliaBuilding;
-            this.aggeliaPicBox.Location = new System.Drawing.Point(287, 10);
-            this.aggeliaPicBox.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.aggeliaPicBox.Name = "aggeliaPicBox";
-            this.aggeliaPicBox.Size = new System.Drawing.Size(120, 110);
-            this.aggeliaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.aggeliaPicBox.TabIndex = 3;
-            this.aggeliaPicBox.TabStop = false;
-            // 
-            // enoikPicBox
-            // 
-            this.enoikPicBox.BackColor = System.Drawing.Color.White;
-            this.enoikPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.enoikPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.enoikiasiBuilding;
-            this.enoikPicBox.Location = new System.Drawing.Point(148, 10);
-            this.enoikPicBox.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.enoikPicBox.Name = "enoikPicBox";
-            this.enoikPicBox.Size = new System.Drawing.Size(119, 110);
-            this.enoikPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.enoikPicBox.TabIndex = 2;
-            this.enoikPicBox.TabStop = false;
-            // 
-            // agoraPicBox
-            // 
-            this.agoraPicBox.BackColor = System.Drawing.Color.White;
-            this.agoraPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.agoraPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.agoraBuilding;
-            this.agoraPicBox.Location = new System.Drawing.Point(10, 10);
-            this.agoraPicBox.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.agoraPicBox.Name = "agoraPicBox";
-            this.agoraPicBox.Size = new System.Drawing.Size(118, 110);
-            this.agoraPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.agoraPicBox.TabIndex = 0;
-            this.agoraPicBox.TabStop = false;
             // 
             // footerPicBox
             // 
@@ -725,30 +725,30 @@ namespace AdopseAddsTeam5
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.sideMenuPanel.ResumeLayout(false);
             this.sideMenuTableLayout.ResumeLayout(false);
-            this.sideOptionsTableLayout.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.choiceTableLayout.ResumeLayout(false);
-            this.choiceTableLayout.PerformLayout();
-            this.bgImagePanel.ResumeLayout(false);
-            this.searchPanel.ResumeLayout(false);
-            this.searchPanelTableLayout.ResumeLayout(false);
-            this.searchPanelTableLayout.PerformLayout();
-            this.logPanel.ResumeLayout(false);
-            this.sideMPanel.ResumeLayout(false);
-            this.mainTableLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userPicBox)).EndInit();
+            this.sideOptionsTableLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.homepagePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.favPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filterPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.notifPicBox)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).EndInit();
+            this.choiceTableLayout.ResumeLayout(false);
+            this.choiceTableLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aggeliaPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enoikPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agoraPicBox)).EndInit();
+            this.bgImagePanel.ResumeLayout(false);
+            this.searchPanel.ResumeLayout(false);
+            this.searchPanelTableLayout.ResumeLayout(false);
+            this.searchPanelTableLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainPictureBox)).EndInit();
+            this.logPanel.ResumeLayout(false);
+            this.sideMPanel.ResumeLayout(false);
+            this.mainTableLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.footerPicBox)).EndInit();
             this.ResumeLayout(false);
 

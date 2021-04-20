@@ -188,6 +188,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginEmailTextbox.Size = new System.Drawing.Size(356, 31);
             this.loginEmailTextbox.TabIndex = 3;
             this.loginEmailTextbox.Text = "Συμπλήρωσε email";
+            this.loginEmailTextbox.Enter += new System.EventHandler(this.loginEmailTextbox_Enter);
+            this.loginEmailTextbox.Leave += new System.EventHandler(this.loginEmailTextbox_Leave);
             // 
             // loginPassTextbox
             // 
@@ -200,6 +202,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginPassTextbox.Size = new System.Drawing.Size(356, 31);
             this.loginPassTextbox.TabIndex = 4;
             this.loginPassTextbox.Text = "Συμπλήρωσε κωδικό";
+            this.loginPassTextbox.Enter += new System.EventHandler(this.loginPassTextbox_Enter);
+            this.loginPassTextbox.Leave += new System.EventHandler(this.loginPassTextbox_Leave);
             // 
             // loginForgotLabel
             // 
@@ -212,6 +216,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginForgotLabel.TabIndex = 5;
             this.loginForgotLabel.Text = "Ξέχασα τον κωδικό μου";
             this.loginForgotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.loginForgotLabel.MouseEnter += new System.EventHandler(this.loginForgotLabel_MouseEnter);
+            this.loginForgotLabel.MouseLeave += new System.EventHandler(this.loginForgotLabel_MouseLeave);
             // 
             // registerTab
             // 
@@ -285,6 +291,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.registerLabel.TabIndex = 2;
             this.registerLabel.Text = "Εγγραφή";
             this.registerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.registerLabel.Click += new System.EventHandler(this.registerLabel_Click);
             // 
             // rEmailTextbox
             // 
@@ -296,6 +303,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rEmailTextbox.Size = new System.Drawing.Size(356, 31);
             this.rEmailTextbox.TabIndex = 3;
             this.rEmailTextbox.Text = "Συμπλήρωσε email";
+            this.rEmailTextbox.Enter += new System.EventHandler(this.rEmailTextbox_Enter);
+            this.rEmailTextbox.Leave += new System.EventHandler(this.rEmailTextbox_Leave);
             // 
             // rPassTextbox1
             // 
@@ -307,6 +316,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassTextbox1.Size = new System.Drawing.Size(356, 31);
             this.rPassTextbox1.TabIndex = 4;
             this.rPassTextbox1.Text = "Συμπλήρωσε κωδικό";
+            this.rPassTextbox1.Enter += new System.EventHandler(this.rPassTextbox1_Enter);
+            this.rPassTextbox1.Leave += new System.EventHandler(this.rPassTextbox1_Leave);
             // 
             // rPassTextbox2
             // 
@@ -318,6 +329,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassTextbox2.Size = new System.Drawing.Size(356, 31);
             this.rPassTextbox2.TabIndex = 5;
             this.rPassTextbox2.Text = "Επιβεβαίωση κωδικού";
+            this.rPassTextbox2.Enter += new System.EventHandler(this.rPassTextbox2_Enter);
+            this.rPassTextbox2.Leave += new System.EventHandler(this.rPassTextbox2_Leave);
             // 
             // rPasswordMessage
             // 
