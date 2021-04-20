@@ -1,4 +1,5 @@
 ﻿using AdopseAddsTeam5.GUI.Main_Form;
+using AdopseAddsTeam5.GUI.Templates;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,6 +52,12 @@ namespace AdopseAddsTeam5
                 //this.middle_panel.Size = new Size((int)(formWidth * panel2WidthRatio), (int)(formHeight * panel2HeightRatio));
                 //this.middle_panel.Location = new System.Drawing.Point(this.Size.Width / 4 - 9, this.Size.Height / 4 - 24); // Constants used to correctly calculate center.
             }
+        }
+
+        private void searchLabel_Click(object sender, EventArgs e)
+        {
+            Template t = new Template();
+            t.Show();
         }
 
         private void sideMenuLabel_Click(object sender, EventArgs e)
