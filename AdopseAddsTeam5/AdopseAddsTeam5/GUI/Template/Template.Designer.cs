@@ -63,7 +63,6 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.leftFooterPicBox = new System.Windows.Forms.PictureBox();
             this.rightFooterPicBox = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -92,7 +91,7 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.mainTableLayout.Controls.Add(this.sideMenuLabel, 0, 0);
             this.mainTableLayout.Controls.Add(this.label2, 1, 0);
             this.mainTableLayout.Controls.Add(this.dayLabel, 7, 0);
@@ -149,7 +148,7 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.dayLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
             this.dayLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dayLabel.ForeColor = System.Drawing.Color.White;
-            this.dayLabel.Location = new System.Drawing.Point(1041, 0);
+            this.dayLabel.Location = new System.Drawing.Point(1040, 0);
             this.dayLabel.Margin = new System.Windows.Forms.Padding(0);
             this.dayLabel.Name = "dayLabel";
             this.dayLabel.Size = new System.Drawing.Size(50, 45);
@@ -163,10 +162,10 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.logLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logLabel.ForeColor = System.Drawing.Color.White;
             this.logLabel.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
-            this.logLabel.Location = new System.Drawing.Point(1091, 0);
+            this.logLabel.Location = new System.Drawing.Point(1090, 0);
             this.logLabel.Margin = new System.Windows.Forms.Padding(0);
             this.logLabel.Name = "logLabel";
-            this.logLabel.Size = new System.Drawing.Size(34, 45);
+            this.logLabel.Size = new System.Drawing.Size(35, 45);
             this.logLabel.TabIndex = 4;
             this.logLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -179,7 +178,7 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.appNamePicBox.Location = new System.Drawing.Point(80, 0);
             this.appNamePicBox.Margin = new System.Windows.Forms.Padding(0);
             this.appNamePicBox.Name = "appNamePicBox";
-            this.appNamePicBox.Size = new System.Drawing.Size(961, 45);
+            this.appNamePicBox.Size = new System.Drawing.Size(960, 45);
             this.appNamePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.appNamePicBox.TabIndex = 5;
             this.appNamePicBox.TabStop = false;
@@ -200,7 +199,7 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.searchTableLayout.Name = "searchTableLayout";
             this.searchTableLayout.RowCount = 1;
             this.searchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.searchTableLayout.Size = new System.Drawing.Size(601, 35);
+            this.searchTableLayout.Size = new System.Drawing.Size(600, 35);
             this.searchTableLayout.TabIndex = 6;
             // 
             // searchTextbox
@@ -209,7 +208,7 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.searchTextbox.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.searchTextbox.Location = new System.Drawing.Point(3, 3);
             this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Size = new System.Drawing.Size(265, 29);
+            this.searchTextbox.Size = new System.Drawing.Size(264, 29);
             this.searchTextbox.TabIndex = 0;
             this.searchTextbox.Text = "Λέξεις κλειδιά";
             // 
@@ -219,7 +218,7 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.searchLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchLabel.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.searchLabel.ForeColor = System.Drawing.Color.White;
-            this.searchLabel.Location = new System.Drawing.Point(274, 0);
+            this.searchLabel.Location = new System.Drawing.Point(273, 0);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(109, 35);
             this.searchLabel.TabIndex = 1;
@@ -235,7 +234,7 @@ namespace AdopseAddsTeam5.GUI.Templates
             "Αυτόματη Ταξινόμηση",
             "Αύξουσα Τιμή",
             "Φθίνουσα Τιμή"});
-            this.searchCombobox.Location = new System.Drawing.Point(419, 5);
+            this.searchCombobox.Location = new System.Drawing.Point(418, 5);
             this.searchCombobox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.searchCombobox.Name = "searchCombobox";
             this.searchCombobox.Size = new System.Drawing.Size(179, 24);
@@ -248,9 +247,9 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.arithmosLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.arithmosLabel.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.arithmosLabel.ForeColor = System.Drawing.Color.White;
-            this.arithmosLabel.Location = new System.Drawing.Point(894, 65);
+            this.arithmosLabel.Location = new System.Drawing.Point(893, 65);
             this.arithmosLabel.Name = "arithmosLabel";
-            this.arithmosLabel.Size = new System.Drawing.Size(228, 35);
+            this.arithmosLabel.Size = new System.Drawing.Size(229, 35);
             this.arithmosLabel.TabIndex = 7;
             this.arithmosLabel.Text = "Βρέθηκαν Χ αγγελίες";
             this.arithmosLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -540,15 +539,6 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.textBox6.TabIndex = 21;
             this.textBox6.Text = "Μέγιστο";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(749, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
             // leftFooterPicBox
             // 
             this.mainTableLayout.SetColumnSpan(this.leftFooterPicBox, 4);
@@ -566,9 +556,9 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.mainTableLayout.SetColumnSpan(this.rightFooterPicBox, 4);
             this.rightFooterPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rightFooterPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsRight;
-            this.rightFooterPicBox.Location = new System.Drawing.Point(864, 683);
+            this.rightFooterPicBox.Location = new System.Drawing.Point(863, 683);
             this.rightFooterPicBox.Name = "rightFooterPicBox";
-            this.rightFooterPicBox.Size = new System.Drawing.Size(258, 98);
+            this.rightFooterPicBox.Size = new System.Drawing.Size(259, 98);
             this.rightFooterPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rightFooterPicBox.TabIndex = 10;
             this.rightFooterPicBox.TabStop = false;
@@ -590,7 +580,7 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(595, 474);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(594, 474);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
             // pictureBox1
@@ -620,7 +610,6 @@ namespace AdopseAddsTeam5.GUI.Templates
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 784);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.mainTableLayout);
             this.Name = "Template";
             this.Text = "Form1";
@@ -637,7 +626,6 @@ namespace AdopseAddsTeam5.GUI.Templates
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -667,7 +655,6 @@ namespace AdopseAddsTeam5.GUI.Templates
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox minTimiTextbox;
         private System.Windows.Forms.TextBox maxTimiTextbox;
         private System.Windows.Forms.TextBox textBox1;
