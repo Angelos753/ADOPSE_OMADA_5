@@ -17,7 +17,8 @@ namespace AdopseAddsTeam5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            MainForm mainForm = new MainForm();
+            Application.Run(mainForm);
             //TestConnection();
         }
         private static void TestConnection()  //test
