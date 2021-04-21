@@ -92,11 +92,17 @@
     <Compile Include="GUI\Main Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Template\Template.cs">
+    <Compile Include="GUI\Template\FilterSave.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Template\Template.Designer.cs">
-      <DependentUpon>Template.cs</DependentUpon>
+    <Compile Include="GUI\Template\FilterSave.Designer.cs">
+      <DependentUpon>FilterSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Template\SearchResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Template\SearchResults.Designer.cs">
+      <DependentUpon>SearchResults.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,8 +112,11 @@
     <EmbeddedResource Include="GUI\Main Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Template\Template.resx">
-      <DependentUpon>Template.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Template\FilterSave.resx">
+      <DependentUpon>FilterSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Template\SearchResults.resx">
+      <DependentUpon>SearchResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,7 +1,7 @@
 ﻿
 namespace AdopseAddsTeam5.GUI.Main_Form
 {
-    partial class Account
+    partial class AccountForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountForm));
             this.headerLabel = new System.Windows.Forms.Label();
             this.mainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.logRegTabControl = new System.Windows.Forms.TabControl();
@@ -187,6 +188,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginEmailTextbox.Size = new System.Drawing.Size(356, 31);
             this.loginEmailTextbox.TabIndex = 3;
             this.loginEmailTextbox.Text = "Συμπλήρωσε email";
+            this.loginEmailTextbox.Enter += new System.EventHandler(this.loginEmailTextbox_Enter);
+            this.loginEmailTextbox.Leave += new System.EventHandler(this.loginEmailTextbox_Leave);
             // 
             // loginPassTextbox
             // 
@@ -198,7 +201,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginPassTextbox.Name = "loginPassTextbox";
             this.loginPassTextbox.Size = new System.Drawing.Size(356, 31);
             this.loginPassTextbox.TabIndex = 4;
-            this.loginPassTextbox.Text = "Συμπλήρωσε κωδικό";
+            this.loginPassTextbox.Text = "Πληκτρολογήστε κωδικό";
+            this.loginPassTextbox.Enter += new System.EventHandler(this.loginPassTextbox_Enter);
+            this.loginPassTextbox.Leave += new System.EventHandler(this.loginPassTextbox_Leave);
             // 
             // loginForgotLabel
             // 
@@ -211,6 +216,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginForgotLabel.TabIndex = 5;
             this.loginForgotLabel.Text = "Ξέχασα τον κωδικό μου";
             this.loginForgotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.loginForgotLabel.MouseEnter += new System.EventHandler(this.loginForgotLabel_MouseEnter);
+            this.loginForgotLabel.MouseLeave += new System.EventHandler(this.loginForgotLabel_MouseLeave);
             // 
             // registerTab
             // 
@@ -284,6 +291,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.registerLabel.TabIndex = 2;
             this.registerLabel.Text = "Εγγραφή";
             this.registerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.registerLabel.Click += new System.EventHandler(this.registerLabel_Click);
             // 
             // rEmailTextbox
             // 
@@ -294,7 +302,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rEmailTextbox.Name = "rEmailTextbox";
             this.rEmailTextbox.Size = new System.Drawing.Size(356, 31);
             this.rEmailTextbox.TabIndex = 3;
-            this.rEmailTextbox.Text = "Συμπλήρωσε email";
+            this.rEmailTextbox.Text = "Συμπληρώστε email";
+            this.rEmailTextbox.Enter += new System.EventHandler(this.rEmailTextbox_Enter);
+            this.rEmailTextbox.Leave += new System.EventHandler(this.rEmailTextbox_Leave);
             // 
             // rPassTextbox1
             // 
@@ -305,7 +315,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassTextbox1.Name = "rPassTextbox1";
             this.rPassTextbox1.Size = new System.Drawing.Size(356, 31);
             this.rPassTextbox1.TabIndex = 4;
-            this.rPassTextbox1.Text = "Συμπλήρωσε κωδικό";
+            this.rPassTextbox1.Text = "Πληκτρολογήστε κωδικό";
+            this.rPassTextbox1.TextChanged += new System.EventHandler(this.rPassTextbox1_TextChanged);
+            this.rPassTextbox1.Enter += new System.EventHandler(this.rPassTextbox1_Enter);
+            this.rPassTextbox1.Leave += new System.EventHandler(this.rPassTextbox1_Leave);
             // 
             // rPassTextbox2
             // 
@@ -316,12 +329,16 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassTextbox2.Name = "rPassTextbox2";
             this.rPassTextbox2.Size = new System.Drawing.Size(356, 31);
             this.rPassTextbox2.TabIndex = 5;
-            this.rPassTextbox2.Text = "Επιβεβαίωση κωδικού";
+            this.rPassTextbox2.Text = "Επαναλάβετε τον κωδικό";
+            this.rPassTextbox2.TextChanged += new System.EventHandler(this.rPassTextbox2_TextChanged);
+            this.rPassTextbox2.Enter += new System.EventHandler(this.rPassTextbox2_Enter);
+            this.rPassTextbox2.Leave += new System.EventHandler(this.rPassTextbox2_Leave);
             // 
             // rPasswordMessage
             // 
             this.rPasswordMessage.AutoSize = true;
             this.rPasswordMessage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rPasswordMessage.ForeColor = System.Drawing.Color.Red;
             this.rPasswordMessage.Location = new System.Drawing.Point(3, 165);
             this.rPasswordMessage.Name = "rPasswordMessage";
             this.rPasswordMessage.Size = new System.Drawing.Size(356, 54);
@@ -339,15 +356,17 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.logoPicBox.TabIndex = 2;
             this.logoPicBox.TabStop = false;
             // 
-            // Account
+            // AccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 418);
             this.Controls.Add(this.mainTableLayout);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(400, 465);
             this.MinimumSize = new System.Drawing.Size(400, 465);
-            this.Name = "Account";
+            this.Name = "AccountForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Λογαριασμός";
             this.mainTableLayout.ResumeLayout(false);
             this.logRegTabControl.ResumeLayout(false);

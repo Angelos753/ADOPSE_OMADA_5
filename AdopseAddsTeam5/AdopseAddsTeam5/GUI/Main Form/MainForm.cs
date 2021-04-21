@@ -26,12 +26,6 @@ namespace AdopseAddsTeam5
             watermarkPicBox.Parent = mainPictureBox;
         }
 
-        private void logLabel_Click(object sender, EventArgs e)
-        {
-            Account l1 = new Account();
-            l1.ShowDialog();
-        }
-
         private void MainForm_ResizeBegin(object sender, EventArgs e)
         {
             double p1w = this.sideMenuPanel.Size.Width;    // Grab the panels' dimensions as soon as the user begins to resize
@@ -56,8 +50,14 @@ namespace AdopseAddsTeam5
 
         private void searchLabel_Click(object sender, EventArgs e)
         {
-            Template t = new Template();
+            SearchResults t = new SearchResults();
             t.Show();
+        }
+
+        private void logLabel_Click(object sender, EventArgs e)
+        {
+            AccountForm l1 = new AccountForm();
+            l1.ShowDialog();
         }
 
         private void sideMenuLabel_Click(object sender, EventArgs e)
