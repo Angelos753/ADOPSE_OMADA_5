@@ -201,7 +201,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginPassTextbox.Name = "loginPassTextbox";
             this.loginPassTextbox.Size = new System.Drawing.Size(356, 31);
             this.loginPassTextbox.TabIndex = 4;
-            this.loginPassTextbox.Text = "Συμπλήρωσε κωδικό";
+            this.loginPassTextbox.Text = "Πληκτρολογήστε κωδικό";
             this.loginPassTextbox.Enter += new System.EventHandler(this.loginPassTextbox_Enter);
             this.loginPassTextbox.Leave += new System.EventHandler(this.loginPassTextbox_Leave);
             // 
@@ -302,7 +302,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rEmailTextbox.Name = "rEmailTextbox";
             this.rEmailTextbox.Size = new System.Drawing.Size(356, 31);
             this.rEmailTextbox.TabIndex = 3;
-            this.rEmailTextbox.Text = "Συμπλήρωσε email";
+            this.rEmailTextbox.Text = "Συμπληρώστε email";
             this.rEmailTextbox.Enter += new System.EventHandler(this.rEmailTextbox_Enter);
             this.rEmailTextbox.Leave += new System.EventHandler(this.rEmailTextbox_Leave);
             // 
@@ -315,7 +315,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassTextbox1.Name = "rPassTextbox1";
             this.rPassTextbox1.Size = new System.Drawing.Size(356, 31);
             this.rPassTextbox1.TabIndex = 4;
-            this.rPassTextbox1.Text = "Συμπλήρωσε κωδικό";
+            this.rPassTextbox1.Text = "Πληκτρολογήστε κωδικό";
+            this.rPassTextbox1.TextChanged += new System.EventHandler(this.rPassTextbox1_TextChanged);
             this.rPassTextbox1.Enter += new System.EventHandler(this.rPassTextbox1_Enter);
             this.rPassTextbox1.Leave += new System.EventHandler(this.rPassTextbox1_Leave);
             // 
@@ -328,7 +329,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassTextbox2.Name = "rPassTextbox2";
             this.rPassTextbox2.Size = new System.Drawing.Size(356, 31);
             this.rPassTextbox2.TabIndex = 5;
-            this.rPassTextbox2.Text = "Επιβεβαίωση κωδικού";
+            this.rPassTextbox2.Text = "Επαναλάβετε τον κωδικό";
+            this.rPassTextbox2.TextChanged += new System.EventHandler(this.rPassTextbox2_TextChanged);
             this.rPassTextbox2.Enter += new System.EventHandler(this.rPassTextbox2_Enter);
             this.rPassTextbox2.Leave += new System.EventHandler(this.rPassTextbox2_Leave);
             // 
@@ -336,6 +338,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             // 
             this.rPasswordMessage.AutoSize = true;
             this.rPasswordMessage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rPasswordMessage.ForeColor = System.Drawing.Color.Red;
             this.rPasswordMessage.Location = new System.Drawing.Point(3, 165);
             this.rPasswordMessage.Name = "rPasswordMessage";
             this.rPasswordMessage.Size = new System.Drawing.Size(356, 54);

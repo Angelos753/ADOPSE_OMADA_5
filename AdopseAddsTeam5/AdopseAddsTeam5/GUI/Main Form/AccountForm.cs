@@ -37,18 +37,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         private void loginPassTextbox_Enter(object sender, EventArgs e)
         {
-            if (loginPassTextbox.Text == "Συμπλήρωσε κωδικό")
+            if (loginPassTextbox.Text == "Πληκτρολογήστε κωδικό")
             {
                 loginPassTextbox.Text = "";
+                loginPassTextbox.UseSystemPasswordChar = true;
                 loginPassTextbox.ForeColor = System.Drawing.Color.Black;
-            }
-        }
-        private void loginPassTextbox_Leave(object sender, EventArgs e)
-        {
-            if (loginPassTextbox.Text == "")
-            {
-                loginPassTextbox.Text = "Συμπλήρωσε κωδικό";
-                loginPassTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
@@ -64,7 +57,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         private void rEmailTextbox_Enter(object sender, EventArgs e)
         {
-            if (rEmailTextbox.Text == "Συμπλήρωσε email")
+            if (rEmailTextbox.Text == "Συμπληρώστε email")
             {
                 rEmailTextbox.Text = "";
                 rEmailTextbox.ForeColor = System.Drawing.Color.Black;
@@ -75,35 +68,62 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         {
             if (rEmailTextbox.Text == "")
             {
-                rEmailTextbox.Text = "Συμπλήρωσε email";
+                rEmailTextbox.Text = "Συμπληρώστε email";
                 rEmailTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
         private void rPassTextbox1_Enter(object sender, EventArgs e)
         {
-            if (rPassTextbox1.Text == "Συμπλήρωσε κωδικό")
+            if(rPassTextbox1.Text == "Πληκτρολογήστε κωδικό")
             {
                 rPassTextbox1.Text = "";
+                rPassTextbox1.UseSystemPasswordChar = true;
                 rPassTextbox1.ForeColor = System.Drawing.Color.Black;
             }
+        }
+
+        private void rPassTextbox2_Enter(object sender, EventArgs e)
+        {
+            if (rPassTextbox2.Text == "Επαναλάβετε τον κωδικό")
+            {
+                rPassTextbox2.Text = "";
+                rPassTextbox2.UseSystemPasswordChar = true;
+                rPassTextbox2.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void registerLabel_Click(object sender, EventArgs e)
+        {
+            if(rPassTextbox1.Text == "Πληκτρολογήστε κωδικό" || rPassTextbox2.Text == "Επαναλάβετε τον κωδικό"
+                || rPassTextbox1.Text == "" || rPassTextbox2.Text == "" || rEmailTextbox.Text == "" 
+                || rEmailTextbox.Text == "Συμπληρώστε email")
+            {
+                rPasswordMessage.Text = "*Συμπληρώστε όλα τα πεδία";
+            }
+            else if (rPassTextbox1.Text != rPassTextbox2.Text)
+            {
+                rPasswordMessage.Text = "*Οι κωδικοί δεν ταιριάζουν.";
+            }
+        }
+
+        private void rPassTextbox1_TextChanged(object sender, EventArgs e)
+        {
+            rPasswordMessage.Text = "";
+        }
+
+        private void rPassTextbox2_TextChanged(object sender, EventArgs e)
+        {
+            rPasswordMessage.Text = "";
         }
 
         private void rPassTextbox1_Leave(object sender, EventArgs e)
         {
             if (rPassTextbox1.Text == "")
             {
-                rPassTextbox1.Text = "Συμπλήρωσε κωδικό";
+                rPassTextbox1.Text = "Πληκτρολογήστε κωδικό";
+                rPassTextbox1.UseSystemPasswordChar = false;
                 rPassTextbox1.ForeColor = System.Drawing.Color.DarkGray;
-            }
-        }
-
-        private void rPassTextbox2_Enter(object sender, EventArgs e)
-        {
-            if (rPassTextbox2.Text == "Επιβεβαίωση κωδικού")
-            {
-                rPassTextbox2.Text = "";
-                rPassTextbox2.ForeColor = System.Drawing.Color.Black;
             }
         }
 
@@ -111,16 +131,19 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         {
             if (rPassTextbox2.Text == "")
             {
-                rPassTextbox2.Text = "Επιβεβαίωση κωδικού";
+                rPassTextbox2.Text = "Επαναλάβετε τον κωδικό";
+                rPassTextbox2.UseSystemPasswordChar = false;
                 rPassTextbox2.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
-        private void registerLabel_Click(object sender, EventArgs e)
+        private void loginPassTextbox_Leave(object sender, EventArgs e)
         {
-            if(rPassTextbox1.Text!=rPassTextbox2.Text)
+            if (loginPassTextbox.Text == "")
             {
-                rPasswordMessage.Text = "*Οι κωδικοί δεν ταιριάζουν.";
+                loginPassTextbox.Text = "Πληκτρολογήστε κωδικό";
+                loginPassTextbox.UseSystemPasswordChar = false;
+                loginPassTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
     }
