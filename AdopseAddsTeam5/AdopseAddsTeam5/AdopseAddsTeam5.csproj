@@ -80,6 +80,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Create Listing\CreateListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Create Listing\CreateListing.Designer.cs">
+      <DependentUpon>CreateListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Main Form\AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Create Listing\CreateListing.resx">
+      <DependentUpon>CreateListing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main Form\AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
     </EmbeddedResource>

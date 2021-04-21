@@ -86,3 +86,4 @@ C:\Users\alexa\Source\Repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAdds
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Template.FilterSave.resources
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Main_Form.AccountForm.resources
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Templates.SearchResults.resources
+C:\Users\alexa\Source\Repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Create_Listing.CreateListing.resources

@@ -1,4 +1,5 @@
-﻿using AdopseAddsTeam5.GUI.Main_Form;
+﻿using AdopseAddsTeam5.GUI.Create_Listing;
+using AdopseAddsTeam5.GUI.Main_Form;
 using AdopseAddsTeam5.GUI.Templates;
 using System;
 using System.Collections.Generic;
@@ -58,6 +59,12 @@ namespace AdopseAddsTeam5
         {
             AccountForm l1 = new AccountForm();
             l1.ShowDialog();
+        }
+
+        private void aggeliaPicBox_Click(object sender, EventArgs e)
+        {
+            CreateListing c = new CreateListing();
+            c.Show();
         }
 
         private void sideMenuLabel_Click(object sender, EventArgs e)

@@ -462,6 +462,7 @@ namespace AdopseAddsTeam5
             this.aggeliaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.aggeliaPicBox.TabIndex = 3;
             this.aggeliaPicBox.TabStop = false;
+            this.aggeliaPicBox.Click += new System.EventHandler(this.aggeliaPicBox_Click);
             // 
             // enoikPicBox
             // 
