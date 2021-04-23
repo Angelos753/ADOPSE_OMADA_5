@@ -1,6 +1,4 @@
-﻿using AdopseAddsTeam5.GUI.Create_Listing;
-using AdopseAddsTeam5.GUI.Main_Form;
-using AdopseAddsTeam5.GUI.Templates;
+﻿using AdopseAddsTeam5.GUI.Main_Form;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,65 +13,84 @@ namespace AdopseAddsTeam5
 {
     public partial class MainForm : Form
     {
+
+        private bool logged = true;
+
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private double panel1WidthRatio, panel1HeightRatio; // Global variables for maintaining ratio.
-
         private void MainForm_Load(object sender, EventArgs e)
         {
-            watermarkPicBox.Parent = mainPictureBox;
+            watermarkPicbox.Parent = bgImagePicbox;
         }
 
-        private void MainForm_ResizeBegin(object sender, EventArgs e)
+        private void sideMenuPicbox_Click(object sender, EventArgs e)
         {
-            double p1w = this.sideMenuPanel.Size.Width;    // Grab the panels' dimensions as soon as the user begins to resize
-            double p1h = this.sideMenuPanel.Size.Height;   // in order to store the Panel to Form dimension ratios.
-            double fw = this.mainTableLayout.Size.Width;
-            double fh = this.Size.Height;
-            panel1WidthRatio = p1w / fw;
-            panel1HeightRatio = p1h / fh;
-        }
-
-        private void MainForm_SizeChanged(object sender, EventArgs e)
-        {
-            if (panel1WidthRatio != 0)
+            if(logged)
             {
-                double formWidth = this.mainTableLayout.Size.Width; // As soon as a new size is set
-                double formHeight = this.Size.Height;               // resize the panel using the earlier ratio.
-                this.sideMenuPanel.Size = new Size((int)(formWidth * panel1WidthRatio), this.mainTableLayout.Size.Height-35);
-                //this.middle_panel.Size = new Size((int)(formWidth * panel2WidthRatio), (int)(formHeight * panel2HeightRatio));
-                //this.middle_panel.Location = new System.Drawing.Point(this.Size.Width / 4 - 9, this.Size.Height / 4 - 24); // Constants used to correctly calculate center.
+                sideMenuPanel.Visible = !sideMenuPanel.Visible;
+            }
+            else
+            {
+
             }
         }
 
-        private void searchLabel_Click(object sender, EventArgs e)
+        private void controlLogout_Click(object sender, EventArgs e)
         {
-            SearchResults t = new SearchResults();
-            t.Show();
+
         }
 
-        private void logLabel_Click(object sender, EventArgs e)
+        private void controlHomepage_Click(object sender, EventArgs e)
         {
-            AccountForm l1 = new AccountForm();
-            l1.ShowDialog();
+
         }
 
-        private void aggeliaPicBox_Click(object sender, EventArgs e)
+        private void controlProfile_Click(object sender, EventArgs e)
         {
-            CreateListing c = new CreateListing();
-            c.Show();
+
         }
 
-        private void sideMenuLabel_Click(object sender, EventArgs e)
+        private void controlFavorites_Click(object sender, EventArgs e)
         {
-            sideMenuPanel.Visible = !sideMenuPanel.Visible;
+
         }
-        //System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(00)))), ((int)(((byte)(205)))));
-        //System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
 
+        private void controlFilters_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void controlNotifications_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void controlBuy1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void controlRent1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void controlAdd1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logPicbox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
