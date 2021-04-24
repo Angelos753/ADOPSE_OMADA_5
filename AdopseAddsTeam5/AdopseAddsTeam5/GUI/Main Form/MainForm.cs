@@ -26,6 +26,17 @@ namespace AdopseAddsTeam5
             watermarkPicbox.Parent = bgImagePicbox;
         }
 
+        private void hideControls()
+        {
+            searchTableLayout.Hide();
+            choicePanel.Hide();
+            watermarkPicbox.Hide();
+            footerMiddle.Hide();
+            leftFooter.Hide();
+            rightFooter.Hide();
+            sideMenuPanel.Hide();
+        }
+
         private void sideMenuPicbox_Click(object sender, EventArgs e)
         {
             if(logged)
@@ -50,7 +61,11 @@ namespace AdopseAddsTeam5
 
         private void controlProfile_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            profilePanel.Show();
+            profilePanel.BringToFront();
+            leftFooter.Show();
+            rightFooter.Show();
         }
 
         private void controlFavorites_Click(object sender, EventArgs e)
@@ -92,5 +107,31 @@ namespace AdopseAddsTeam5
         {
 
         }
+
+        private void profileNameEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profilePicEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profileEmailEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profileAddListing_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void controlProfile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

@@ -31,15 +31,15 @@ namespace AdopseAddsTeam5
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.irrelevant1 = new System.Windows.Forms.PictureBox();
             this.searchBtn = new System.Windows.Forms.Label();
             this.searchTextbox = new System.Windows.Forms.TextBox();
             this.choicePanel = new System.Windows.Forms.Panel();
-            this.controlRent1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlRent();
-            this.controlBuy1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlBuy();
-            this.controlAdd1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlAdd();
+            this.controlAdd = new AdopseAddsTeam5.GUI.Custom_Controls.ControlAdd();
+            this.controlRent = new AdopseAddsTeam5.GUI.Custom_Controls.ControlRent();
+            this.controlBuy = new AdopseAddsTeam5.GUI.Custom_Controls.ControlBuy();
+            this.notificationPicBox = new System.Windows.Forms.PictureBox();
             this.rightFooter = new System.Windows.Forms.PictureBox();
             this.footerMiddle = new System.Windows.Forms.PictureBox();
             this.leftFooter = new System.Windows.Forms.PictureBox();
@@ -47,6 +47,7 @@ namespace AdopseAddsTeam5
             this.logPicbox = new System.Windows.Forms.PictureBox();
             this.appNamePicbox = new System.Windows.Forms.PictureBox();
             this.sideMenuPicbox = new System.Windows.Forms.PictureBox();
+            this.watermarkPicbox = new System.Windows.Forms.PictureBox();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
             this.controlLogout = new AdopseAddsTeam5.GUI.Custom_Controls.ControlLogout();
             this.controlNotifications = new AdopseAddsTeam5.GUI.Custom_Controls.ControlNotifications();
@@ -56,16 +57,25 @@ namespace AdopseAddsTeam5
             this.controlHomepage = new AdopseAddsTeam5.GUI.Custom_Controls.ControlHomepage();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.userPicbox = new System.Windows.Forms.PictureBox();
-            this.watermarkPicbox = new System.Windows.Forms.PictureBox();
             this.profilePanel = new System.Windows.Forms.Panel();
             this.profileTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.profilePicbox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.irrelevant2 = new System.Windows.Forms.Label();
+            this.profileNameText = new System.Windows.Forms.Label();
+            this.profileNameEdit = new System.Windows.Forms.Label();
+            this.irrelevant3 = new System.Windows.Forms.Label();
+            this.profilePicEdit = new System.Windows.Forms.Label();
+            this.irrelevant4 = new System.Windows.Forms.Label();
+            this.profileEmailText = new System.Windows.Forms.Label();
+            this.profileEmailEdit = new System.Windows.Forms.Label();
+            this.irrelevant5 = new System.Windows.Forms.Label();
+            this.profileAddListing = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.searchTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.irrelevant1)).BeginInit();
             this.choicePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.notificationPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightFooter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.footerMiddle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftFooter)).BeginInit();
@@ -73,9 +83,9 @@ namespace AdopseAddsTeam5
             ((System.ComponentModel.ISupportInitialize)(this.logPicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appNamePicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sideMenuPicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
             this.sideMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
             this.profilePanel.SuspendLayout();
             this.profileTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicbox)).BeginInit();
@@ -84,8 +94,9 @@ namespace AdopseAddsTeam5
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mainPanel.Controls.Add(this.pictureBox1);
+            this.mainPanel.Controls.Add(this.searchTableLayout);
             this.mainPanel.Controls.Add(this.choicePanel);
+            this.mainPanel.Controls.Add(this.notificationPicBox);
             this.mainPanel.Controls.Add(this.rightFooter);
             this.mainPanel.Controls.Add(this.footerMiddle);
             this.mainPanel.Controls.Add(this.leftFooter);
@@ -93,7 +104,6 @@ namespace AdopseAddsTeam5
             this.mainPanel.Controls.Add(this.logPicbox);
             this.mainPanel.Controls.Add(this.appNamePicbox);
             this.mainPanel.Controls.Add(this.sideMenuPicbox);
-            this.mainPanel.Controls.Add(this.searchTableLayout);
             this.mainPanel.Controls.Add(this.watermarkPicbox);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
@@ -101,18 +111,6 @@ namespace AdopseAddsTeam5
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1062, 673);
             this.mainPanel.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.pictureBox1.Location = new System.Drawing.Point(962, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // searchTableLayout
             // 
@@ -177,45 +175,56 @@ namespace AdopseAddsTeam5
             // 
             this.choicePanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.choicePanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.choicePanel.Controls.Add(this.controlRent1);
-            this.choicePanel.Controls.Add(this.controlBuy1);
-            this.choicePanel.Controls.Add(this.controlAdd1);
+            this.choicePanel.Controls.Add(this.controlAdd);
+            this.choicePanel.Controls.Add(this.controlRent);
+            this.choicePanel.Controls.Add(this.controlBuy);
             this.choicePanel.Location = new System.Drawing.Point(276, 338);
             this.choicePanel.Margin = new System.Windows.Forms.Padding(0);
             this.choicePanel.Name = "choicePanel";
             this.choicePanel.Size = new System.Drawing.Size(510, 237);
             this.choicePanel.TabIndex = 7;
-            this.choicePanel.Visible = false;
             // 
-            // controlRent1
+            // controlAdd
             // 
-            this.controlRent1.BackColor = System.Drawing.Color.White;
-            this.controlRent1.Location = new System.Drawing.Point(170, 0);
-            this.controlRent1.Margin = new System.Windows.Forms.Padding(0);
-            this.controlRent1.Name = "controlRent1";
-            this.controlRent1.Size = new System.Drawing.Size(170, 237);
-            this.controlRent1.TabIndex = 2;
-            this.controlRent1.Click += new System.EventHandler(this.controlRent1_Click);
+            this.controlAdd.BackColor = System.Drawing.Color.White;
+            this.controlAdd.Location = new System.Drawing.Point(340, 0);
+            this.controlAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.controlAdd.Name = "controlAdd";
+            this.controlAdd.Size = new System.Drawing.Size(170, 237);
+            this.controlAdd.TabIndex = 0;
+            this.controlAdd.Click += new System.EventHandler(this.controlAdd1_Click);
             // 
-            // controlBuy1
+            // controlRent
             // 
-            this.controlBuy1.BackColor = System.Drawing.Color.White;
-            this.controlBuy1.Location = new System.Drawing.Point(0, 0);
-            this.controlBuy1.Margin = new System.Windows.Forms.Padding(0);
-            this.controlBuy1.Name = "controlBuy1";
-            this.controlBuy1.Size = new System.Drawing.Size(170, 237);
-            this.controlBuy1.TabIndex = 1;
-            this.controlBuy1.Click += new System.EventHandler(this.controlBuy1_Click);
+            this.controlRent.BackColor = System.Drawing.Color.White;
+            this.controlRent.Location = new System.Drawing.Point(170, 0);
+            this.controlRent.Margin = new System.Windows.Forms.Padding(0);
+            this.controlRent.Name = "controlRent";
+            this.controlRent.Size = new System.Drawing.Size(170, 237);
+            this.controlRent.TabIndex = 2;
+            this.controlRent.Click += new System.EventHandler(this.controlRent1_Click);
             // 
-            // controlAdd1
+            // controlBuy
             // 
-            this.controlAdd1.BackColor = System.Drawing.Color.White;
-            this.controlAdd1.Location = new System.Drawing.Point(340, 0);
-            this.controlAdd1.Margin = new System.Windows.Forms.Padding(0);
-            this.controlAdd1.Name = "controlAdd1";
-            this.controlAdd1.Size = new System.Drawing.Size(170, 237);
-            this.controlAdd1.TabIndex = 0;
-            this.controlAdd1.Click += new System.EventHandler(this.controlAdd1_Click);
+            this.controlBuy.BackColor = System.Drawing.Color.White;
+            this.controlBuy.Location = new System.Drawing.Point(0, 0);
+            this.controlBuy.Margin = new System.Windows.Forms.Padding(0);
+            this.controlBuy.Name = "controlBuy";
+            this.controlBuy.Size = new System.Drawing.Size(170, 237);
+            this.controlBuy.TabIndex = 1;
+            this.controlBuy.Click += new System.EventHandler(this.controlBuy1_Click);
+            // 
+            // notificationPicBox
+            // 
+            this.notificationPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.notificationPicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.notificationPicBox.Location = new System.Drawing.Point(962, 0);
+            this.notificationPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.notificationPicBox.Name = "notificationPicBox";
+            this.notificationPicBox.Size = new System.Drawing.Size(50, 50);
+            this.notificationPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.notificationPicBox.TabIndex = 3;
+            this.notificationPicBox.TabStop = false;
             // 
             // rightFooter
             // 
@@ -228,6 +237,7 @@ namespace AdopseAddsTeam5
             this.rightFooter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rightFooter.TabIndex = 6;
             this.rightFooter.TabStop = false;
+            this.rightFooter.Visible = false;
             // 
             // footerMiddle
             // 
@@ -252,6 +262,7 @@ namespace AdopseAddsTeam5
             this.leftFooter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.leftFooter.TabIndex = 4;
             this.leftFooter.TabStop = false;
+            this.leftFooter.Visible = false;
             // 
             // bgImagePicbox
             // 
@@ -308,6 +319,19 @@ namespace AdopseAddsTeam5
             this.sideMenuPicbox.TabStop = false;
             this.sideMenuPicbox.Click += new System.EventHandler(this.sideMenuPicbox_Click);
             // 
+            // watermarkPicbox
+            // 
+            this.watermarkPicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.watermarkPicbox.BackColor = System.Drawing.Color.Transparent;
+            this.watermarkPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
+            this.watermarkPicbox.Location = new System.Drawing.Point(897, 142);
+            this.watermarkPicbox.Margin = new System.Windows.Forms.Padding(0);
+            this.watermarkPicbox.Name = "watermarkPicbox";
+            this.watermarkPicbox.Size = new System.Drawing.Size(218, 120);
+            this.watermarkPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.watermarkPicbox.TabIndex = 9;
+            this.watermarkPicbox.TabStop = false;
+            // 
             // sideMenuPanel
             // 
             this.sideMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -328,6 +352,7 @@ namespace AdopseAddsTeam5
             this.sideMenuPanel.Name = "sideMenuPanel";
             this.sideMenuPanel.Size = new System.Drawing.Size(270, 623);
             this.sideMenuPanel.TabIndex = 1;
+            this.sideMenuPanel.Visible = false;
             // 
             // controlLogout
             // 
@@ -374,6 +399,7 @@ namespace AdopseAddsTeam5
             this.controlProfile.Size = new System.Drawing.Size(270, 40);
             this.controlProfile.TabIndex = 3;
             this.controlProfile.Click += new System.EventHandler(this.controlProfile_Click);
+            this.controlProfile.Load += new System.EventHandler(this.controlProfile_Load);
             // 
             // controlHomepage
             // 
@@ -408,71 +434,226 @@ namespace AdopseAddsTeam5
             this.userPicbox.TabIndex = 0;
             this.userPicbox.TabStop = false;
             // 
-            // watermarkPicbox
-            // 
-            this.watermarkPicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.watermarkPicbox.BackColor = System.Drawing.Color.Transparent;
-            this.watermarkPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
-            this.watermarkPicbox.Location = new System.Drawing.Point(897, 142);
-            this.watermarkPicbox.Margin = new System.Windows.Forms.Padding(0);
-            this.watermarkPicbox.Name = "watermarkPicbox";
-            this.watermarkPicbox.Size = new System.Drawing.Size(218, 120);
-            this.watermarkPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.watermarkPicbox.TabIndex = 9;
-            this.watermarkPicbox.TabStop = false;
-            // 
             // profilePanel
             // 
+            this.profilePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.profilePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profilePanel.Controls.Add(this.profileTableLayout);
             this.profilePanel.Location = new System.Drawing.Point(281, 72);
             this.profilePanel.Margin = new System.Windows.Forms.Padding(5);
             this.profilePanel.Name = "profilePanel";
             this.profilePanel.Size = new System.Drawing.Size(500, 587);
             this.profilePanel.TabIndex = 2;
+            this.profilePanel.Visible = false;
             // 
             // profileTableLayout
             // 
-            this.profileTableLayout.ColumnCount = 1;
+            this.profileTableLayout.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
+            this.profileTableLayout.ColumnCount = 3;
+            this.profileTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.profileTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.profileTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.profileTableLayout.Controls.Add(this.profilePicbox, 0, 0);
-            this.profileTableLayout.Controls.Add(this.label1, 0, 6);
+            this.profileTableLayout.Controls.Add(this.irrelevant2, 0, 1);
+            this.profileTableLayout.Controls.Add(this.profileNameText, 0, 2);
+            this.profileTableLayout.Controls.Add(this.profileNameEdit, 2, 2);
+            this.profileTableLayout.Controls.Add(this.irrelevant3, 0, 3);
+            this.profileTableLayout.Controls.Add(this.profilePicEdit, 2, 3);
+            this.profileTableLayout.Controls.Add(this.irrelevant4, 0, 4);
+            this.profileTableLayout.Controls.Add(this.profileEmailText, 0, 5);
+            this.profileTableLayout.Controls.Add(this.profileEmailEdit, 2, 5);
+            this.profileTableLayout.Controls.Add(this.irrelevant5, 0, 6);
+            this.profileTableLayout.Controls.Add(this.profileAddListing, 0, 8);
+            this.profileTableLayout.Controls.Add(this.flowLayoutPanel1, 0, 7);
             this.profileTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileTableLayout.Location = new System.Drawing.Point(0, 0);
             this.profileTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.profileTableLayout.Name = "profileTableLayout";
             this.profileTableLayout.Padding = new System.Windows.Forms.Padding(15);
             this.profileTableLayout.RowCount = 9;
-            this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.profileTableLayout.Size = new System.Drawing.Size(500, 587);
+            this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.profileTableLayout.Size = new System.Drawing.Size(498, 585);
             this.profileTableLayout.TabIndex = 0;
             // 
             // profilePicbox
             // 
+            this.profileTableLayout.SetColumnSpan(this.profilePicbox, 3);
             this.profilePicbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profilePicbox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_Color;
-            this.profilePicbox.Location = new System.Drawing.Point(0, 0);
+            this.profilePicbox.Location = new System.Drawing.Point(17, 17);
             this.profilePicbox.Margin = new System.Windows.Forms.Padding(0);
             this.profilePicbox.Name = "profilePicbox";
-            this.profilePicbox.Size = new System.Drawing.Size(500, 150);
+            this.profilePicbox.Size = new System.Drawing.Size(464, 200);
             this.profilePicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.profilePicbox.TabIndex = 1;
             this.profilePicbox.TabStop = false;
             // 
-            // label1
+            // irrelevant2
             // 
-            this.label1.Location = new System.Drawing.Point(201, 226);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.profileTableLayout.SetColumnSpan(this.irrelevant2, 3);
+            this.irrelevant2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.irrelevant2.Location = new System.Drawing.Point(17, 219);
+            this.irrelevant2.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant2.Name = "irrelevant2";
+            this.irrelevant2.Size = new System.Drawing.Size(464, 30);
+            this.irrelevant2.TabIndex = 2;
+            this.irrelevant2.Text = "Ονοματεπώνυμο";
+            this.irrelevant2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // profileNameText
+            // 
+            this.profileTableLayout.SetColumnSpan(this.profileNameText, 2);
+            this.profileNameText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileNameText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.profileNameText.ForeColor = System.Drawing.Color.DarkGray;
+            this.profileNameText.Location = new System.Drawing.Point(17, 251);
+            this.profileNameText.Margin = new System.Windows.Forms.Padding(0);
+            this.profileNameText.Name = "profileNameText";
+            this.profileNameText.Size = new System.Drawing.Size(354, 30);
+            this.profileNameText.TabIndex = 3;
+            this.profileNameText.Text = "Γιώτας Αλέξανδρος";
+            this.profileNameText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // profileNameEdit
+            // 
+            this.profileNameEdit.AutoSize = true;
+            this.profileNameEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileNameEdit.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.profileNameEdit.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.profileNameEdit.Location = new System.Drawing.Point(373, 251);
+            this.profileNameEdit.Margin = new System.Windows.Forms.Padding(0);
+            this.profileNameEdit.Name = "profileNameEdit";
+            this.profileNameEdit.Size = new System.Drawing.Size(108, 30);
+            this.profileNameEdit.TabIndex = 4;
+            this.profileNameEdit.Text = "Επεξεργασία";
+            this.profileNameEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.profileNameEdit.Click += new System.EventHandler(this.profileNameEdit_Click);
+            // 
+            // irrelevant3
+            // 
+            this.profileTableLayout.SetColumnSpan(this.irrelevant3, 2);
+            this.irrelevant3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.irrelevant3.Location = new System.Drawing.Point(17, 283);
+            this.irrelevant3.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant3.Name = "irrelevant3";
+            this.irrelevant3.Size = new System.Drawing.Size(354, 30);
+            this.irrelevant3.TabIndex = 5;
+            this.irrelevant3.Text = "Φωτογραφία Προφίλ";
+            this.irrelevant3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // profilePicEdit
+            // 
+            this.profilePicEdit.AutoSize = true;
+            this.profilePicEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profilePicEdit.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.profilePicEdit.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.profilePicEdit.Location = new System.Drawing.Point(373, 283);
+            this.profilePicEdit.Margin = new System.Windows.Forms.Padding(0);
+            this.profilePicEdit.Name = "profilePicEdit";
+            this.profilePicEdit.Size = new System.Drawing.Size(108, 30);
+            this.profilePicEdit.TabIndex = 6;
+            this.profilePicEdit.Text = "Επεξεργασία";
+            this.profilePicEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.profilePicEdit.Click += new System.EventHandler(this.profilePicEdit_Click);
+            // 
+            // irrelevant4
+            // 
+            this.profileTableLayout.SetColumnSpan(this.irrelevant4, 2);
+            this.irrelevant4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.irrelevant4.Location = new System.Drawing.Point(17, 315);
+            this.irrelevant4.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant4.Name = "irrelevant4";
+            this.irrelevant4.Size = new System.Drawing.Size(354, 30);
+            this.irrelevant4.TabIndex = 7;
+            this.irrelevant4.Text = "Email";
+            this.irrelevant4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // profileEmailText
+            // 
+            this.profileTableLayout.SetColumnSpan(this.profileEmailText, 2);
+            this.profileEmailText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileEmailText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.profileEmailText.ForeColor = System.Drawing.Color.DarkGray;
+            this.profileEmailText.Location = new System.Drawing.Point(17, 347);
+            this.profileEmailText.Margin = new System.Windows.Forms.Padding(0);
+            this.profileEmailText.Name = "profileEmailText";
+            this.profileEmailText.Size = new System.Drawing.Size(354, 30);
+            this.profileEmailText.TabIndex = 8;
+            this.profileEmailText.Text = "alexandergiotas@gmail.com";
+            this.profileEmailText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // profileEmailEdit
+            // 
+            this.profileEmailEdit.AutoSize = true;
+            this.profileEmailEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileEmailEdit.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.profileEmailEdit.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.profileEmailEdit.Location = new System.Drawing.Point(373, 347);
+            this.profileEmailEdit.Margin = new System.Windows.Forms.Padding(0);
+            this.profileEmailEdit.Name = "profileEmailEdit";
+            this.profileEmailEdit.Size = new System.Drawing.Size(108, 30);
+            this.profileEmailEdit.TabIndex = 9;
+            this.profileEmailEdit.Text = "Επεξεργασία";
+            this.profileEmailEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.profileEmailEdit.Click += new System.EventHandler(this.profileEmailEdit_Click);
+            // 
+            // irrelevant5
+            // 
+            this.profileTableLayout.SetColumnSpan(this.irrelevant5, 2);
+            this.irrelevant5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.irrelevant5.Location = new System.Drawing.Point(17, 379);
+            this.irrelevant5.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant5.Name = "irrelevant5";
+            this.irrelevant5.Size = new System.Drawing.Size(354, 30);
+            this.irrelevant5.TabIndex = 10;
+            this.irrelevant5.Text = "Οι αγγελίες μου:";
+            this.irrelevant5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // profileAddListing
+            // 
+            this.profileAddListing.AutoSize = true;
+            this.profileAddListing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.profileTableLayout.SetColumnSpan(this.profileAddListing, 3);
+            this.profileAddListing.Dock = System.Windows.Forms.DockStyle.Left;
+            this.profileAddListing.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.profileAddListing.ForeColor = System.Drawing.Color.White;
+            this.profileAddListing.Location = new System.Drawing.Point(17, 543);
+            this.profileAddListing.Margin = new System.Windows.Forms.Padding(0);
+            this.profileAddListing.Name = "profileAddListing";
+            this.profileAddListing.Size = new System.Drawing.Size(99, 25);
+            this.profileAddListing.TabIndex = 11;
+            this.profileAddListing.Text = "Νέα Αγγελία";
+            this.profileAddListing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.profileAddListing.Click += new System.EventHandler(this.profileAddListing_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.profileTableLayout.SetColumnSpan(this.flowLayoutPanel1, 3);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 411);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(464, 130);
+            this.flowLayoutPanel1.TabIndex = 12;
             // 
             // MainForm
             // 
@@ -481,8 +662,8 @@ namespace AdopseAddsTeam5
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1062, 673);
             this.Controls.Add(this.profilePanel);
-            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sideMenuPanel);
+            this.Controls.Add(this.mainPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1080, 720);
@@ -491,11 +672,11 @@ namespace AdopseAddsTeam5
             this.Text = "Application Name";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.mainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.searchTableLayout.ResumeLayout(false);
             this.searchTableLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.irrelevant1)).EndInit();
             this.choicePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.notificationPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightFooter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.footerMiddle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftFooter)).EndInit();
@@ -503,11 +684,12 @@ namespace AdopseAddsTeam5
             ((System.ComponentModel.ISupportInitialize)(this.logPicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appNamePicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sideMenuPicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).EndInit();
             this.sideMenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userPicbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).EndInit();
             this.profilePanel.ResumeLayout(false);
             this.profileTableLayout.ResumeLayout(false);
+            this.profileTableLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicbox)).EndInit();
             this.ResumeLayout(false);
 
@@ -529,10 +711,10 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.TextBox searchTextbox;
         private System.Windows.Forms.PictureBox irrelevant1;
         private System.Windows.Forms.Label searchBtn;
-        private GUI.Custom_Controls.ControlRent controlRent1;
-        private GUI.Custom_Controls.ControlBuy controlBuy1;
-        private GUI.Custom_Controls.ControlAdd controlAdd1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private GUI.Custom_Controls.ControlRent controlRent;
+        private GUI.Custom_Controls.ControlBuy controlBuy;
+        private GUI.Custom_Controls.ControlAdd controlAdd;
+        private System.Windows.Forms.PictureBox notificationPicBox;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.PictureBox userPicbox;
         private GUI.Custom_Controls.ControlLogout controlLogout;
@@ -545,7 +727,17 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Panel profilePanel;
         private System.Windows.Forms.TableLayoutPanel profileTableLayout;
         private System.Windows.Forms.PictureBox profilePicbox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label irrelevant2;
+        private System.Windows.Forms.Label profileNameText;
+        private System.Windows.Forms.Label profileNameEdit;
+        private System.Windows.Forms.Label irrelevant3;
+        private System.Windows.Forms.Label profilePicEdit;
+        private System.Windows.Forms.Label irrelevant4;
+        private System.Windows.Forms.Label profileEmailText;
+        private System.Windows.Forms.Label profileEmailEdit;
+        private System.Windows.Forms.Label irrelevant5;
+        private System.Windows.Forms.Label profileAddListing;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
