@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,8 +29,24 @@ namespace AdopseAddsTeam5
             watermarkPicbox.Parent = bgImagePicbox;
         }
 
+        private void MainForm_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.Size.Width < 1218)
+            {
+                leftFooter.Hide();
+                rightFooter.Hide();
+                if (!h) sideMenuPanel.Hide();
+            }
+            else
+            {
+                leftFooter.Show();
+                rightFooter.Show();
+            }
+        }
+
         private void hideControls()
         {
+            sideMenuPanel.Hide();
             searchTableLayout.Hide();
             choicePanel.Hide();
             profilePanel.Hide();
@@ -36,8 +54,9 @@ namespace AdopseAddsTeam5
             footerMiddle.Hide();
             leftFooter.Hide();
             rightFooter.Hide();
-            sideMenuPanel.Hide();
             addPanel1.Hide();
+            addPanel2.Hide();
+            addPanel3.Hide();
             h = false;
         }
 
@@ -90,7 +109,7 @@ namespace AdopseAddsTeam5
 
         private void controlNotifications_Click(object sender, EventArgs e)
         {
-            searchBtn.Text = "Width is " + this.Size.Width + " pixels";
+            //searchBtn.Text = "Width is " + this.Size.Width + " pixels";
         }
 
         private void controlBuy1_Click(object sender, EventArgs e)
@@ -105,6 +124,9 @@ namespace AdopseAddsTeam5
 
         private void controlAdd1_Click(object sender, EventArgs e)
         {
+            hideControls();
+            addPanel1.Show();
+            addPanel1.BringToFront();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -134,22 +156,72 @@ namespace AdopseAddsTeam5
 
         private void profileAddListing_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            addPanel1.Show();
+            addPanel1.BringToFront();
         }
 
-        private void MainForm_SizeChanged(object sender, EventArgs e)
+        private void add1Next_Click(object sender, EventArgs e)
         {
-            if(this.Size.Width < 1218)
+            addPanel1.SendToBack();
+            addPanel1.Hide();
+            addPanel2.BringToFront();
+            addPanel2.Show();
+        }
+
+        private void add2Next_Click(object sender, EventArgs e)
+        {
+            addPanel2.SendToBack();
+            addPanel2.Hide();
+            addPanel3.BringToFront();
+            addPanel3.Show();
+        }
+
+        private PictureBox[] pics = new PictureBox[10];
+        private int x = 0;
+
+        private void add3PicAdd_Click(object sender, EventArgs e)
+        {
+            pics[0] = add3Picbox1;
+            add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            add3Dialog.Multiselect = false;
+            if (add3Dialog.ShowDialog() == DialogResult.OK)
             {
-                leftFooter.Hide();
-                rightFooter.Hide();
-                if(!h) sideMenuPanel.Hide();
+                Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 90, 90);
+                pics[x].Image = b;
             }
-            else
+        }
+
+        public static Bitmap ResizeImage(Image image, int width, int height)
+        {
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
             {
-                leftFooter.Show();
-                rightFooter.Show();
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
             }
+
+            return destImage;
+        }
+
+        private void add3Post_Click(object sender, EventArgs e)
+        {
+            addPanel3.SendToBack();
+            addPanel3.Hide();
+            controlHomepage_Click(this, e);
         }
     }
 
