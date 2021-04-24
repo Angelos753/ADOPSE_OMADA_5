@@ -57,11 +57,13 @@ namespace AdopseAddsTeam5
             addPanel1.Hide();
             addPanel2.Hide();
             addPanel3.Hide();
+            notificationsPanel.Hide();
             h = false;
         }
 
         private void sideMenuPicbox_Click(object sender, EventArgs e)
         {
+            sideMenuPanel.BringToFront();
             if(logged && (this.Size.Width > 1218 || h))
             {
                 sideMenuPanel.Visible = !sideMenuPanel.Visible;
@@ -99,7 +101,11 @@ namespace AdopseAddsTeam5
 
         private void controlFavorites_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            notificationsPanel.Show();
+            notificationsPanel.BringToFront();
+            leftFooter.Show();
+            rightFooter.Show();
         }
 
         private void controlFilters_Click(object sender, EventArgs e)
@@ -222,6 +228,18 @@ namespace AdopseAddsTeam5
             addPanel3.SendToBack();
             addPanel3.Hide();
             controlHomepage_Click(this, e);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            messagePanel.Show();
+            messagePanel.BringToFront();
+        }
+
+        private void messageExit_Click(object sender, EventArgs e)
+        {
+            messagePanel.Hide();
+            messagePanel.SendToBack();
         }
     }
 

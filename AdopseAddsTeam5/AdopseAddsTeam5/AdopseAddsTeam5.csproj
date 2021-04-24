@@ -116,6 +116,12 @@
     <Compile Include="GUI\Custom Controls\ControlLogout.Designer.cs">
       <DependentUpon>ControlLogout.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Custom Controls\ControlSave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlSave.Designer.cs">
+      <DependentUpon>ControlSave.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Custom Controls\ControlProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     </Compile>
     <Compile Include="GUI\Custom Controls\ControlNotifications.Designer.cs">
       <DependentUpon>ControlNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlPrint.Designer.cs">
+      <DependentUpon>ControlPrint.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Main Form\AccountForm.cs">
       <SubType>Form</SubType>
@@ -169,11 +181,17 @@
     <EmbeddedResource Include="GUI\Custom Controls\ControlNotifications.resx">
       <DependentUpon>ControlNotifications.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlSave.resx">
+      <DependentUpon>ControlSave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\ControlProfile.resx">
       <DependentUpon>ControlProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\ControlRent.resx">
       <DependentUpon>ControlRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlPrint.resx">
+      <DependentUpon>ControlPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main Form\AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
