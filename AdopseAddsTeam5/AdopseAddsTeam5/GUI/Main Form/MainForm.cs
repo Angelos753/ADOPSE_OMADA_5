@@ -15,6 +15,7 @@ namespace AdopseAddsTeam5
     {
 
         private bool logged = true;
+        private bool h = true;
 
         public MainForm()
         {
@@ -30,16 +31,19 @@ namespace AdopseAddsTeam5
         {
             searchTableLayout.Hide();
             choicePanel.Hide();
+            profilePanel.Hide();
             watermarkPicbox.Hide();
             footerMiddle.Hide();
             leftFooter.Hide();
             rightFooter.Hide();
             sideMenuPanel.Hide();
+            addPanel1.Hide();
+            h = false;
         }
 
         private void sideMenuPicbox_Click(object sender, EventArgs e)
         {
-            if(logged)
+            if(logged && (this.Size.Width > 1218 || h))
             {
                 sideMenuPanel.Visible = !sideMenuPanel.Visible;
             }
@@ -56,7 +60,13 @@ namespace AdopseAddsTeam5
 
         private void controlHomepage_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            searchTableLayout.Show();
+            searchTableLayout.BringToFront();
+            choicePanel.Show();
+            footerMiddle.Show();
+            watermarkPicbox.Show();
+            h = true;
         }
 
         private void controlProfile_Click(object sender, EventArgs e)
@@ -80,7 +90,7 @@ namespace AdopseAddsTeam5
 
         private void controlNotifications_Click(object sender, EventArgs e)
         {
-
+            searchBtn.Text = "Width is " + this.Size.Width + " pixels";
         }
 
         private void controlBuy1_Click(object sender, EventArgs e)
@@ -95,7 +105,6 @@ namespace AdopseAddsTeam5
 
         private void controlAdd1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -128,9 +137,19 @@ namespace AdopseAddsTeam5
 
         }
 
-        private void controlProfile_Load(object sender, EventArgs e)
+        private void MainForm_SizeChanged(object sender, EventArgs e)
         {
-
+            if(this.Size.Width < 1218)
+            {
+                leftFooter.Hide();
+                rightFooter.Hide();
+                if(!h) sideMenuPanel.Hide();
+            }
+            else
+            {
+                leftFooter.Show();
+                rightFooter.Show();
+            }
         }
     }
 
