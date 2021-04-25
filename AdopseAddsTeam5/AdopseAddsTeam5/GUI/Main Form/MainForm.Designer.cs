@@ -31,19 +31,19 @@ namespace AdopseAddsTeam5
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.notificationPicBox = new System.Windows.Forms.PictureBox();
-            this.rightFooter = new System.Windows.Forms.PictureBox();
-            this.footerMiddle = new System.Windows.Forms.PictureBox();
-            this.leftFooter = new System.Windows.Forms.PictureBox();
-            this.bgImagePicbox = new System.Windows.Forms.PictureBox();
-            this.logPicbox = new System.Windows.Forms.PictureBox();
-            this.appNamePicbox = new System.Windows.Forms.PictureBox();
-            this.sideMenuPicbox = new System.Windows.Forms.PictureBox();
             this.watermarkPicbox = new System.Windows.Forms.PictureBox();
             this.searchTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.irrelevant1 = new System.Windows.Forms.PictureBox();
             this.searchBtn = new System.Windows.Forms.Label();
             this.searchTextbox = new System.Windows.Forms.TextBox();
+            this.notificationPicBox = new System.Windows.Forms.PictureBox();
+            this.footerRight = new System.Windows.Forms.PictureBox();
+            this.footerMiddle = new System.Windows.Forms.PictureBox();
+            this.footerLeft = new System.Windows.Forms.PictureBox();
+            this.bgImagePicbox = new System.Windows.Forms.PictureBox();
+            this.logPicbox = new System.Windows.Forms.PictureBox();
+            this.appNamePicbox = new System.Windows.Forms.PictureBox();
+            this.sideMenuPicbox = new System.Windows.Forms.PictureBox();
             this.choicePanel = new System.Windows.Forms.Panel();
             this.controlAdd = new AdopseAddsTeam5.GUI.Custom_Controls.ControlAdd();
             this.controlRent = new AdopseAddsTeam5.GUI.Custom_Controls.ControlRent();
@@ -141,18 +141,59 @@ namespace AdopseAddsTeam5
             this.messagePhone = new System.Windows.Forms.Label();
             this.messageEmail = new System.Windows.Forms.Label();
             this.messageTitle = new System.Windows.Forms.TextBox();
+            this.filtersPanel = new System.Windows.Forms.Panel();
+            this.filtersTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.irrelevant23 = new System.Windows.Forms.Label();
+            this.filtersCounter = new System.Windows.Forms.Label();
+            this.filtersCombo = new System.Windows.Forms.ComboBox();
+            this.filtersFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.favoritesPanel = new System.Windows.Forms.Panel();
+            this.favoritesTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.irrelevant24 = new System.Windows.Forms.Label();
+            this.favoritesCounter = new System.Windows.Forms.Label();
+            this.favoritesCombo = new System.Windows.Forms.ComboBox();
+            this.favoritesFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.resultsPanel = new System.Windows.Forms.Panel();
+            this.resultsFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.resultsCombo = new System.Windows.Forms.ComboBox();
+            this.resultsSearchbox = new System.Windows.Forms.TextBox();
+            this.resultsSearchBtn = new System.Windows.Forms.Label();
+            this.resultsFilterPanel = new System.Windows.Forms.Panel();
+            this.searchFilterLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.searchFilterRefresh = new System.Windows.Forms.Label();
+            this.searchFilterSave = new System.Windows.Forms.Label();
+            this.searchFilterMore = new System.Windows.Forms.Label();
+            this.irrelevant25 = new System.Windows.Forms.Label();
+            this.irrelevant26 = new System.Windows.Forms.Label();
+            this.irrelevant27 = new System.Windows.Forms.Label();
+            this.irrelevant28 = new System.Windows.Forms.Label();
+            this.irrelevant29 = new System.Windows.Forms.Label();
+            this.irrelevant30 = new System.Windows.Forms.Label();
+            this.irrelevant32 = new System.Windows.Forms.Label();
+            this.irrelevant31 = new System.Windows.Forms.Label();
+            this.irrelevant33 = new System.Windows.Forms.Label();
+            this.searchFilterCombo = new System.Windows.Forms.ComboBox();
+            this.filterMinBaths = new System.Windows.Forms.TextBox();
+            this.filterMaxBaths = new System.Windows.Forms.TextBox();
+            this.filterMaxRooms = new System.Windows.Forms.TextBox();
+            this.filterMinRooms = new System.Windows.Forms.TextBox();
+            this.filterMinEmvado = new System.Windows.Forms.TextBox();
+            this.filterMaxEmvado = new System.Windows.Forms.TextBox();
+            this.filterMaxTimi = new System.Windows.Forms.TextBox();
+            this.filterMinTimi = new System.Windows.Forms.TextBox();
+            this.resultsSearchTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
+            this.searchTableLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.irrelevant1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.notificationPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rightFooter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.footerMiddle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftFooter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgImagePicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logPicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appNamePicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sideMenuPicbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
-            this.searchTableLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.irrelevant1)).BeginInit();
             this.choicePanel.SuspendLayout();
             this.sideMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userPicbox)).BeginInit();
@@ -175,140 +216,44 @@ namespace AdopseAddsTeam5
             this.notificationsFlowLayout.SuspendLayout();
             this.messagePanel.SuspendLayout();
             this.messageTableLayout.SuspendLayout();
+            this.filtersPanel.SuspendLayout();
+            this.filtersTableLayout.SuspendLayout();
+            this.favoritesPanel.SuspendLayout();
+            this.favoritesTableLayout.SuspendLayout();
+            this.resultsPanel.SuspendLayout();
+            this.resultsFilterPanel.SuspendLayout();
+            this.searchFilterLayoutPanel.SuspendLayout();
+            this.resultsSearchTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.Controls.Add(this.resultsCombo);
+            this.mainPanel.Controls.Add(this.watermarkPicbox);
+            this.mainPanel.Controls.Add(this.searchTableLayout);
             this.mainPanel.Controls.Add(this.notificationPicBox);
-            this.mainPanel.Controls.Add(this.rightFooter);
+            this.mainPanel.Controls.Add(this.footerRight);
             this.mainPanel.Controls.Add(this.footerMiddle);
-            this.mainPanel.Controls.Add(this.leftFooter);
+            this.mainPanel.Controls.Add(this.footerLeft);
             this.mainPanel.Controls.Add(this.bgImagePicbox);
             this.mainPanel.Controls.Add(this.logPicbox);
             this.mainPanel.Controls.Add(this.appNamePicbox);
             this.mainPanel.Controls.Add(this.sideMenuPicbox);
-            this.mainPanel.Controls.Add(this.watermarkPicbox);
-            this.mainPanel.Controls.Add(this.searchTableLayout);
             this.mainPanel.Controls.Add(this.choicePanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1062, 673);
+            this.mainPanel.Size = new System.Drawing.Size(1902, 673);
             this.mainPanel.TabIndex = 0;
-            // 
-            // notificationPicBox
-            // 
-            this.notificationPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.notificationPicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.notificationPicBox.Location = new System.Drawing.Point(962, 0);
-            this.notificationPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.notificationPicBox.Name = "notificationPicBox";
-            this.notificationPicBox.Size = new System.Drawing.Size(50, 50);
-            this.notificationPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.notificationPicBox.TabIndex = 3;
-            this.notificationPicBox.TabStop = false;
-            // 
-            // rightFooter
-            // 
-            this.rightFooter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rightFooter.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsRight;
-            this.rightFooter.Location = new System.Drawing.Point(792, 593);
-            this.rightFooter.Margin = new System.Windows.Forms.Padding(0);
-            this.rightFooter.Name = "rightFooter";
-            this.rightFooter.Size = new System.Drawing.Size(270, 80);
-            this.rightFooter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.rightFooter.TabIndex = 6;
-            this.rightFooter.TabStop = false;
-            this.rightFooter.Visible = false;
-            // 
-            // footerMiddle
-            // 
-            this.footerMiddle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.footerMiddle.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsFull;
-            this.footerMiddle.Location = new System.Drawing.Point(270, 593);
-            this.footerMiddle.Margin = new System.Windows.Forms.Padding(0);
-            this.footerMiddle.Name = "footerMiddle";
-            this.footerMiddle.Size = new System.Drawing.Size(522, 80);
-            this.footerMiddle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.footerMiddle.TabIndex = 5;
-            this.footerMiddle.TabStop = false;
-            // 
-            // leftFooter
-            // 
-            this.leftFooter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.leftFooter.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsLeft;
-            this.leftFooter.Location = new System.Drawing.Point(0, 593);
-            this.leftFooter.Margin = new System.Windows.Forms.Padding(0);
-            this.leftFooter.Name = "leftFooter";
-            this.leftFooter.Size = new System.Drawing.Size(270, 80);
-            this.leftFooter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.leftFooter.TabIndex = 4;
-            this.leftFooter.TabStop = false;
-            this.leftFooter.Visible = false;
-            // 
-            // bgImagePicbox
-            // 
-            this.bgImagePicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bgImagePicbox.Image = ((System.Drawing.Image)(resources.GetObject("bgImagePicbox.Image")));
-            this.bgImagePicbox.Location = new System.Drawing.Point(0, 50);
-            this.bgImagePicbox.Margin = new System.Windows.Forms.Padding(0);
-            this.bgImagePicbox.Name = "bgImagePicbox";
-            this.bgImagePicbox.Size = new System.Drawing.Size(1062, 263);
-            this.bgImagePicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bgImagePicbox.TabIndex = 3;
-            this.bgImagePicbox.TabStop = false;
-            // 
-            // logPicbox
-            // 
-            this.logPicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logPicbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
-            this.logPicbox.Location = new System.Drawing.Point(1012, 0);
-            this.logPicbox.Margin = new System.Windows.Forms.Padding(0);
-            this.logPicbox.Name = "logPicbox";
-            this.logPicbox.Size = new System.Drawing.Size(50, 50);
-            this.logPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.logPicbox.TabIndex = 2;
-            this.logPicbox.TabStop = false;
-            this.logPicbox.Click += new System.EventHandler(this.logPicbox_Click);
-            // 
-            // appNamePicbox
-            // 
-            this.appNamePicbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.appNamePicbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.appNamePicbox.Image = global::AdopseAddsTeam5.Properties.Resources.name_white;
-            this.appNamePicbox.Location = new System.Drawing.Point(50, 0);
-            this.appNamePicbox.Margin = new System.Windows.Forms.Padding(0);
-            this.appNamePicbox.Name = "appNamePicbox";
-            this.appNamePicbox.Size = new System.Drawing.Size(962, 50);
-            this.appNamePicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.appNamePicbox.TabIndex = 1;
-            this.appNamePicbox.TabStop = false;
-            // 
-            // sideMenuPicbox
-            // 
-            this.sideMenuPicbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.sideMenuPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_menu_white_24dp;
-            this.sideMenuPicbox.Location = new System.Drawing.Point(0, 0);
-            this.sideMenuPicbox.Margin = new System.Windows.Forms.Padding(0);
-            this.sideMenuPicbox.Name = "sideMenuPicbox";
-            this.sideMenuPicbox.Size = new System.Drawing.Size(50, 50);
-            this.sideMenuPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.sideMenuPicbox.TabIndex = 0;
-            this.sideMenuPicbox.TabStop = false;
-            this.sideMenuPicbox.Click += new System.EventHandler(this.sideMenuPicbox_Click);
             // 
             // watermarkPicbox
             // 
             this.watermarkPicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.watermarkPicbox.BackColor = System.Drawing.Color.Transparent;
             this.watermarkPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
-            this.watermarkPicbox.Location = new System.Drawing.Point(897, 142);
+            this.watermarkPicbox.Location = new System.Drawing.Point(1737, 142);
             this.watermarkPicbox.Margin = new System.Windows.Forms.Padding(0);
             this.watermarkPicbox.Name = "watermarkPicbox";
             this.watermarkPicbox.Size = new System.Drawing.Size(218, 120);
@@ -327,7 +272,7 @@ namespace AdopseAddsTeam5
             this.searchTableLayout.Controls.Add(this.irrelevant1, 0, 0);
             this.searchTableLayout.Controls.Add(this.searchBtn, 2, 0);
             this.searchTableLayout.Controls.Add(this.searchTextbox, 1, 0);
-            this.searchTableLayout.Location = new System.Drawing.Point(276, 157);
+            this.searchTableLayout.Location = new System.Drawing.Point(696, 157);
             this.searchTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.searchTableLayout.Name = "searchTableLayout";
             this.searchTableLayout.RowCount = 1;
@@ -375,46 +320,151 @@ namespace AdopseAddsTeam5
             this.searchTextbox.TabIndex = 2;
             this.searchTextbox.Text = "Τεστ Τεστ ";
             // 
+            // notificationPicBox
+            // 
+            this.notificationPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.notificationPicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.notificationPicBox.Location = new System.Drawing.Point(1802, 0);
+            this.notificationPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.notificationPicBox.Name = "notificationPicBox";
+            this.notificationPicBox.Size = new System.Drawing.Size(50, 50);
+            this.notificationPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.notificationPicBox.TabIndex = 3;
+            this.notificationPicBox.TabStop = false;
+            // 
+            // footerRight
+            // 
+            this.footerRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.footerRight.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsRight;
+            this.footerRight.Location = new System.Drawing.Point(1632, 593);
+            this.footerRight.Margin = new System.Windows.Forms.Padding(0);
+            this.footerRight.Name = "footerRight";
+            this.footerRight.Size = new System.Drawing.Size(270, 80);
+            this.footerRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.footerRight.TabIndex = 6;
+            this.footerRight.TabStop = false;
+            this.footerRight.Visible = false;
+            // 
+            // footerMiddle
+            // 
+            this.footerMiddle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.footerMiddle.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsFull;
+            this.footerMiddle.Location = new System.Drawing.Point(690, 593);
+            this.footerMiddle.Margin = new System.Windows.Forms.Padding(0);
+            this.footerMiddle.Name = "footerMiddle";
+            this.footerMiddle.Size = new System.Drawing.Size(522, 80);
+            this.footerMiddle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.footerMiddle.TabIndex = 5;
+            this.footerMiddle.TabStop = false;
+            // 
+            // footerLeft
+            // 
+            this.footerLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.footerLeft.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsLeft;
+            this.footerLeft.Location = new System.Drawing.Point(0, 593);
+            this.footerLeft.Margin = new System.Windows.Forms.Padding(0);
+            this.footerLeft.Name = "footerLeft";
+            this.footerLeft.Size = new System.Drawing.Size(270, 80);
+            this.footerLeft.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.footerLeft.TabIndex = 4;
+            this.footerLeft.TabStop = false;
+            this.footerLeft.Visible = false;
+            // 
+            // bgImagePicbox
+            // 
+            this.bgImagePicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bgImagePicbox.Image = ((System.Drawing.Image)(resources.GetObject("bgImagePicbox.Image")));
+            this.bgImagePicbox.Location = new System.Drawing.Point(0, 50);
+            this.bgImagePicbox.Margin = new System.Windows.Forms.Padding(0);
+            this.bgImagePicbox.Name = "bgImagePicbox";
+            this.bgImagePicbox.Size = new System.Drawing.Size(1902, 263);
+            this.bgImagePicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bgImagePicbox.TabIndex = 3;
+            this.bgImagePicbox.TabStop = false;
+            // 
+            // logPicbox
+            // 
+            this.logPicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logPicbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
+            this.logPicbox.Location = new System.Drawing.Point(1852, 0);
+            this.logPicbox.Margin = new System.Windows.Forms.Padding(0);
+            this.logPicbox.Name = "logPicbox";
+            this.logPicbox.Size = new System.Drawing.Size(50, 50);
+            this.logPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.logPicbox.TabIndex = 2;
+            this.logPicbox.TabStop = false;
+            this.logPicbox.Click += new System.EventHandler(this.logPicbox_Click);
+            // 
+            // appNamePicbox
+            // 
+            this.appNamePicbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.appNamePicbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.appNamePicbox.Image = global::AdopseAddsTeam5.Properties.Resources.name_white;
+            this.appNamePicbox.Location = new System.Drawing.Point(50, 0);
+            this.appNamePicbox.Margin = new System.Windows.Forms.Padding(0);
+            this.appNamePicbox.Name = "appNamePicbox";
+            this.appNamePicbox.Size = new System.Drawing.Size(1802, 50);
+            this.appNamePicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.appNamePicbox.TabIndex = 1;
+            this.appNamePicbox.TabStop = false;
+            // 
+            // sideMenuPicbox
+            // 
+            this.sideMenuPicbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.sideMenuPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_menu_white_24dp;
+            this.sideMenuPicbox.Location = new System.Drawing.Point(0, 0);
+            this.sideMenuPicbox.Margin = new System.Windows.Forms.Padding(0);
+            this.sideMenuPicbox.Name = "sideMenuPicbox";
+            this.sideMenuPicbox.Size = new System.Drawing.Size(50, 50);
+            this.sideMenuPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.sideMenuPicbox.TabIndex = 0;
+            this.sideMenuPicbox.TabStop = false;
+            this.sideMenuPicbox.Click += new System.EventHandler(this.sideMenuPicbox_Click);
+            // 
             // choicePanel
             // 
             this.choicePanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.choicePanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.choicePanel.BackColor = System.Drawing.Color.LightGray;
             this.choicePanel.Controls.Add(this.controlAdd);
             this.choicePanel.Controls.Add(this.controlRent);
             this.choicePanel.Controls.Add(this.controlBuy);
-            this.choicePanel.Location = new System.Drawing.Point(276, 338);
+            this.choicePanel.Location = new System.Drawing.Point(699, 338);
             this.choicePanel.Margin = new System.Windows.Forms.Padding(0);
             this.choicePanel.Name = "choicePanel";
-            this.choicePanel.Size = new System.Drawing.Size(510, 237);
+            this.choicePanel.Size = new System.Drawing.Size(505, 237);
             this.choicePanel.TabIndex = 7;
             // 
             // controlAdd
             // 
             this.controlAdd.BackColor = System.Drawing.Color.White;
-            this.controlAdd.Location = new System.Drawing.Point(340, 0);
-            this.controlAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.controlAdd.Location = new System.Drawing.Point(340, 10);
+            this.controlAdd.Margin = new System.Windows.Forms.Padding(0, 10, 10, 10);
             this.controlAdd.Name = "controlAdd";
-            this.controlAdd.Size = new System.Drawing.Size(170, 237);
+            this.controlAdd.Size = new System.Drawing.Size(155, 217);
             this.controlAdd.TabIndex = 0;
             this.controlAdd.Click += new System.EventHandler(this.controlAdd1_Click);
             // 
             // controlRent
             // 
             this.controlRent.BackColor = System.Drawing.Color.White;
-            this.controlRent.Location = new System.Drawing.Point(170, 0);
-            this.controlRent.Margin = new System.Windows.Forms.Padding(0);
+            this.controlRent.Location = new System.Drawing.Point(175, 10);
+            this.controlRent.Margin = new System.Windows.Forms.Padding(10);
             this.controlRent.Name = "controlRent";
-            this.controlRent.Size = new System.Drawing.Size(170, 237);
+            this.controlRent.Size = new System.Drawing.Size(155, 217);
             this.controlRent.TabIndex = 2;
             this.controlRent.Click += new System.EventHandler(this.controlRent1_Click);
             // 
             // controlBuy
             // 
             this.controlBuy.BackColor = System.Drawing.Color.White;
-            this.controlBuy.Location = new System.Drawing.Point(0, 0);
-            this.controlBuy.Margin = new System.Windows.Forms.Padding(0);
+            this.controlBuy.Location = new System.Drawing.Point(10, 10);
+            this.controlBuy.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
             this.controlBuy.Name = "controlBuy";
-            this.controlBuy.Size = new System.Drawing.Size(170, 237);
+            this.controlBuy.Size = new System.Drawing.Size(155, 217);
             this.controlBuy.TabIndex = 1;
             this.controlBuy.Click += new System.EventHandler(this.controlBuy1_Click);
             // 
@@ -524,7 +574,7 @@ namespace AdopseAddsTeam5
             this.profilePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.profilePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profilePanel.Controls.Add(this.profileTableLayout);
-            this.profilePanel.Location = new System.Drawing.Point(0, 72);
+            this.profilePanel.Location = new System.Drawing.Point(419, 72);
             this.profilePanel.Margin = new System.Windows.Forms.Padding(5);
             this.profilePanel.MinimumSize = new System.Drawing.Size(1064, 2);
             this.profilePanel.Name = "profilePanel";
@@ -743,7 +793,7 @@ namespace AdopseAddsTeam5
             // 
             this.addPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.addPanel1.Controls.Add(this.add1TableLayout);
-            this.addPanel1.Location = new System.Drawing.Point(0, 72);
+            this.addPanel1.Location = new System.Drawing.Point(419, 72);
             this.addPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.addPanel1.MinimumSize = new System.Drawing.Size(1064, 0);
             this.addPanel1.Name = "addPanel1";
@@ -1145,7 +1195,7 @@ namespace AdopseAddsTeam5
             // 
             this.addPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.addPanel2.Controls.Add(this.add2TableLayout);
-            this.addPanel2.Location = new System.Drawing.Point(0, 72);
+            this.addPanel2.Location = new System.Drawing.Point(419, 72);
             this.addPanel2.Margin = new System.Windows.Forms.Padding(5);
             this.addPanel2.MinimumSize = new System.Drawing.Size(1064, 0);
             this.addPanel2.Name = "addPanel2";
@@ -1265,7 +1315,7 @@ namespace AdopseAddsTeam5
             // 
             this.addPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.addPanel3.Controls.Add(this.add3TableLayout);
-            this.addPanel3.Location = new System.Drawing.Point(0, 72);
+            this.addPanel3.Location = new System.Drawing.Point(419, 72);
             this.addPanel3.Margin = new System.Windows.Forms.Padding(5);
             this.addPanel3.MinimumSize = new System.Drawing.Size(1064, 0);
             this.addPanel3.Name = "addPanel3";
@@ -1384,7 +1434,7 @@ namespace AdopseAddsTeam5
             // 
             this.notificationsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.notificationsPanel.Controls.Add(this.notificationsTableLayout);
-            this.notificationsPanel.Location = new System.Drawing.Point(0, 72);
+            this.notificationsPanel.Location = new System.Drawing.Point(419, 72);
             this.notificationsPanel.Margin = new System.Windows.Forms.Padding(5);
             this.notificationsPanel.MinimumSize = new System.Drawing.Size(1064, 0);
             this.notificationsPanel.Name = "notificationsPanel";
@@ -1488,7 +1538,7 @@ namespace AdopseAddsTeam5
             this.messagePanel.BackColor = System.Drawing.Color.White;
             this.messagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.messagePanel.Controls.Add(this.messageTableLayout);
-            this.messagePanel.Location = new System.Drawing.Point(286, 161);
+            this.messagePanel.Location = new System.Drawing.Point(706, 161);
             this.messagePanel.Margin = new System.Windows.Forms.Padding(0);
             this.messagePanel.Name = "messagePanel";
             this.messagePanel.Size = new System.Drawing.Size(491, 350);
@@ -1499,8 +1549,8 @@ namespace AdopseAddsTeam5
             this.messageTableLayout.BackColor = System.Drawing.Color.WhiteSmoke;
             this.messageTableLayout.ColumnCount = 4;
             this.messageTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.messageTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.messageTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.messageTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
+            this.messageTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
             this.messageTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.messageTableLayout.Controls.Add(this.messageExit, 3, 0);
             this.messageTableLayout.Controls.Add(this.lineSeparator4, 0, 9);
@@ -1602,7 +1652,7 @@ namespace AdopseAddsTeam5
             // messagePrint
             // 
             this.messagePrint.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.messagePrint.Location = new System.Drawing.Point(307, 2);
+            this.messagePrint.Location = new System.Drawing.Point(293, 2);
             this.messagePrint.Margin = new System.Windows.Forms.Padding(0);
             this.messagePrint.Name = "messagePrint";
             this.messagePrint.Size = new System.Drawing.Size(134, 35);
@@ -1611,10 +1661,10 @@ namespace AdopseAddsTeam5
             // messageSave
             // 
             this.messageSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.messageSave.Location = new System.Drawing.Point(149, 2);
+            this.messageSave.Location = new System.Drawing.Point(106, 2);
             this.messageSave.Margin = new System.Windows.Forms.Padding(0);
             this.messageSave.Name = "messageSave";
-            this.messageSave.Size = new System.Drawing.Size(150, 35);
+            this.messageSave.Size = new System.Drawing.Size(158, 35);
             this.messageSave.TabIndex = 6;
             // 
             // messageText
@@ -1639,7 +1689,7 @@ namespace AdopseAddsTeam5
             this.irrelevant22.Location = new System.Drawing.Point(0, 163);
             this.irrelevant22.Margin = new System.Windows.Forms.Padding(0);
             this.irrelevant22.Name = "irrelevant22";
-            this.irrelevant22.Size = new System.Drawing.Size(149, 30);
+            this.irrelevant22.Size = new System.Drawing.Size(99, 30);
             this.irrelevant22.TabIndex = 8;
             this.irrelevant22.Text = "Email";
             this.irrelevant22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1652,7 +1702,7 @@ namespace AdopseAddsTeam5
             this.irrelevant21.Location = new System.Drawing.Point(0, 132);
             this.irrelevant21.Margin = new System.Windows.Forms.Padding(0);
             this.irrelevant21.Name = "irrelevant21";
-            this.irrelevant21.Size = new System.Drawing.Size(149, 30);
+            this.irrelevant21.Size = new System.Drawing.Size(99, 30);
             this.irrelevant21.TabIndex = 9;
             this.irrelevant21.Text = "Τηλέφωνο";
             this.irrelevant21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1665,7 +1715,7 @@ namespace AdopseAddsTeam5
             this.irrelevant20.Location = new System.Drawing.Point(0, 101);
             this.irrelevant20.Margin = new System.Windows.Forms.Padding(0);
             this.irrelevant20.Name = "irrelevant20";
-            this.irrelevant20.Size = new System.Drawing.Size(149, 30);
+            this.irrelevant20.Size = new System.Drawing.Size(99, 30);
             this.irrelevant20.TabIndex = 10;
             this.irrelevant20.Text = "Επώνυμο";
             this.irrelevant20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1678,7 +1728,7 @@ namespace AdopseAddsTeam5
             this.irrelevant19.Location = new System.Drawing.Point(0, 70);
             this.irrelevant19.Margin = new System.Windows.Forms.Padding(0);
             this.irrelevant19.Name = "irrelevant19";
-            this.irrelevant19.Size = new System.Drawing.Size(149, 30);
+            this.irrelevant19.Size = new System.Drawing.Size(99, 30);
             this.irrelevant19.TabIndex = 11;
             this.irrelevant19.Text = "Όνομα";
             this.irrelevant19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1688,10 +1738,10 @@ namespace AdopseAddsTeam5
             this.messageTableLayout.SetColumnSpan(this.messageFName, 3);
             this.messageFName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.messageFName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.messageFName.Location = new System.Drawing.Point(149, 70);
+            this.messageFName.Location = new System.Drawing.Point(99, 70);
             this.messageFName.Margin = new System.Windows.Forms.Padding(0);
             this.messageFName.Name = "messageFName";
-            this.messageFName.Size = new System.Drawing.Size(340, 30);
+            this.messageFName.Size = new System.Drawing.Size(390, 30);
             this.messageFName.TabIndex = 12;
             this.messageFName.Text = "ΓΙΩΤΑΣ";
             this.messageFName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1701,10 +1751,10 @@ namespace AdopseAddsTeam5
             this.messageTableLayout.SetColumnSpan(this.messageLName, 3);
             this.messageLName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.messageLName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.messageLName.Location = new System.Drawing.Point(149, 101);
+            this.messageLName.Location = new System.Drawing.Point(99, 101);
             this.messageLName.Margin = new System.Windows.Forms.Padding(0);
             this.messageLName.Name = "messageLName";
-            this.messageLName.Size = new System.Drawing.Size(340, 30);
+            this.messageLName.Size = new System.Drawing.Size(390, 30);
             this.messageLName.TabIndex = 13;
             this.messageLName.Text = "ΑΛΕΞΑΝΔΡΟΣ";
             this.messageLName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1714,10 +1764,10 @@ namespace AdopseAddsTeam5
             this.messageTableLayout.SetColumnSpan(this.messagePhone, 3);
             this.messagePhone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.messagePhone.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.messagePhone.Location = new System.Drawing.Point(149, 132);
+            this.messagePhone.Location = new System.Drawing.Point(99, 132);
             this.messagePhone.Margin = new System.Windows.Forms.Padding(0);
             this.messagePhone.Name = "messagePhone";
-            this.messagePhone.Size = new System.Drawing.Size(340, 30);
+            this.messagePhone.Size = new System.Drawing.Size(390, 30);
             this.messagePhone.TabIndex = 14;
             this.messagePhone.Text = "69ΧΧΧΧΧΧΧΧ";
             this.messagePhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1727,10 +1777,10 @@ namespace AdopseAddsTeam5
             this.messageTableLayout.SetColumnSpan(this.messageEmail, 3);
             this.messageEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.messageEmail.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.messageEmail.Location = new System.Drawing.Point(149, 163);
+            this.messageEmail.Location = new System.Drawing.Point(99, 163);
             this.messageEmail.Margin = new System.Windows.Forms.Padding(0);
             this.messageEmail.Name = "messageEmail";
-            this.messageEmail.Size = new System.Drawing.Size(340, 30);
+            this.messageEmail.Size = new System.Drawing.Size(390, 30);
             this.messageEmail.TabIndex = 15;
             this.messageEmail.Text = "alexandergiotas@gmail.com";
             this.messageEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1746,20 +1796,600 @@ namespace AdopseAddsTeam5
             this.messageTitle.Size = new System.Drawing.Size(489, 27);
             this.messageTitle.TabIndex = 16;
             // 
+            // filtersPanel
+            // 
+            this.filtersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.filtersPanel.Controls.Add(this.filtersTableLayout);
+            this.filtersPanel.Location = new System.Drawing.Point(419, 72);
+            this.filtersPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.filtersPanel.MinimumSize = new System.Drawing.Size(1064, 0);
+            this.filtersPanel.Name = "filtersPanel";
+            this.filtersPanel.Size = new System.Drawing.Size(1064, 565);
+            this.filtersPanel.TabIndex = 8;
+            this.filtersPanel.Visible = false;
+            // 
+            // filtersTableLayout
+            // 
+            this.filtersTableLayout.ColumnCount = 2;
+            this.filtersTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.filtersTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.filtersTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.filtersTableLayout.Controls.Add(this.irrelevant23, 0, 0);
+            this.filtersTableLayout.Controls.Add(this.filtersCounter, 0, 1);
+            this.filtersTableLayout.Controls.Add(this.filtersCombo, 1, 1);
+            this.filtersTableLayout.Controls.Add(this.filtersFlowLayout, 0, 2);
+            this.filtersTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.filtersTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.filtersTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.filtersTableLayout.Name = "filtersTableLayout";
+            this.filtersTableLayout.Padding = new System.Windows.Forms.Padding(15);
+            this.filtersTableLayout.RowCount = 3;
+            this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.filtersTableLayout.Size = new System.Drawing.Size(1064, 565);
+            this.filtersTableLayout.TabIndex = 0;
+            // 
+            // irrelevant23
+            // 
+            this.irrelevant23.AutoSize = true;
+            this.filtersTableLayout.SetColumnSpan(this.irrelevant23, 2);
+            this.irrelevant23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant23.Location = new System.Drawing.Point(15, 15);
+            this.irrelevant23.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant23.Name = "irrelevant23";
+            this.irrelevant23.Size = new System.Drawing.Size(1034, 40);
+            this.irrelevant23.TabIndex = 0;
+            this.irrelevant23.Text = "Τα φίλτρα μου";
+            this.irrelevant23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // filtersCounter
+            // 
+            this.filtersCounter.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.filtersCounter.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filtersCounter.Location = new System.Drawing.Point(18, 63);
+            this.filtersCounter.Name = "filtersCounter";
+            this.filtersCounter.Size = new System.Drawing.Size(298, 23);
+            this.filtersCounter.TabIndex = 1;
+            this.filtersCounter.Text = "X αποθηκευμένα φίλτρα";
+            this.filtersCounter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // filtersCombo
+            // 
+            this.filtersCombo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.filtersCombo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filtersCombo.FormattingEnabled = true;
+            this.filtersCombo.Items.AddRange(new object[] {
+            "Ημερομηνία αποθήκευσης",
+            "Αλφαβητικά (Α-Ζ)"});
+            this.filtersCombo.Location = new System.Drawing.Point(763, 61);
+            this.filtersCombo.Name = "filtersCombo";
+            this.filtersCombo.Size = new System.Drawing.Size(283, 27);
+            this.filtersCombo.TabIndex = 2;
+            this.filtersCombo.Text = "Ημερομηνία αποθήκευσης";
+            // 
+            // filtersFlowLayout
+            // 
+            this.filtersTableLayout.SetColumnSpan(this.filtersFlowLayout, 2);
+            this.filtersFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.filtersFlowLayout.Location = new System.Drawing.Point(15, 95);
+            this.filtersFlowLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.filtersFlowLayout.Name = "filtersFlowLayout";
+            this.filtersFlowLayout.Size = new System.Drawing.Size(1034, 455);
+            this.filtersFlowLayout.TabIndex = 3;
+            // 
+            // favoritesPanel
+            // 
+            this.favoritesPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.favoritesPanel.Controls.Add(this.favoritesTableLayout);
+            this.favoritesPanel.Location = new System.Drawing.Point(419, 72);
+            this.favoritesPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.favoritesPanel.MinimumSize = new System.Drawing.Size(1064, 0);
+            this.favoritesPanel.Name = "favoritesPanel";
+            this.favoritesPanel.Size = new System.Drawing.Size(1064, 565);
+            this.favoritesPanel.TabIndex = 9;
+            this.favoritesPanel.Visible = false;
+            // 
+            // favoritesTableLayout
+            // 
+            this.favoritesTableLayout.ColumnCount = 2;
+            this.favoritesTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.favoritesTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.favoritesTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.favoritesTableLayout.Controls.Add(this.irrelevant24, 0, 0);
+            this.favoritesTableLayout.Controls.Add(this.favoritesCounter, 0, 1);
+            this.favoritesTableLayout.Controls.Add(this.favoritesCombo, 1, 1);
+            this.favoritesTableLayout.Controls.Add(this.favoritesFlowLayout, 0, 2);
+            this.favoritesTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.favoritesTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.favoritesTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.favoritesTableLayout.Name = "favoritesTableLayout";
+            this.favoritesTableLayout.Padding = new System.Windows.Forms.Padding(15);
+            this.favoritesTableLayout.RowCount = 3;
+            this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.favoritesTableLayout.Size = new System.Drawing.Size(1064, 565);
+            this.favoritesTableLayout.TabIndex = 0;
+            // 
+            // irrelevant24
+            // 
+            this.irrelevant24.AutoSize = true;
+            this.favoritesTableLayout.SetColumnSpan(this.irrelevant24, 2);
+            this.irrelevant24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant24.Location = new System.Drawing.Point(15, 15);
+            this.irrelevant24.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant24.Name = "irrelevant24";
+            this.irrelevant24.Size = new System.Drawing.Size(1034, 40);
+            this.irrelevant24.TabIndex = 0;
+            this.irrelevant24.Text = "Αγαπημένα";
+            this.irrelevant24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // favoritesCounter
+            // 
+            this.favoritesCounter.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.favoritesCounter.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.favoritesCounter.Location = new System.Drawing.Point(18, 63);
+            this.favoritesCounter.Name = "favoritesCounter";
+            this.favoritesCounter.Size = new System.Drawing.Size(298, 23);
+            this.favoritesCounter.TabIndex = 1;
+            this.favoritesCounter.Text = "X στην λίστα";
+            this.favoritesCounter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // favoritesCombo
+            // 
+            this.favoritesCombo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.favoritesCombo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.favoritesCombo.FormattingEnabled = true;
+            this.favoritesCombo.Items.AddRange(new object[] {
+            "Ημερομηνία ένταξης στα Αγαπημένα",
+            "Αύξουσα Τιμή",
+            "Φθίνουσα Τιμή"});
+            this.favoritesCombo.Location = new System.Drawing.Point(710, 61);
+            this.favoritesCombo.Name = "favoritesCombo";
+            this.favoritesCombo.Size = new System.Drawing.Size(336, 27);
+            this.favoritesCombo.TabIndex = 2;
+            this.favoritesCombo.Text = "Ημερομηνία ένταξης στα Αγαπημένα";
+            // 
+            // favoritesFlowLayout
+            // 
+            this.favoritesTableLayout.SetColumnSpan(this.favoritesFlowLayout, 2);
+            this.favoritesFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.favoritesFlowLayout.Location = new System.Drawing.Point(15, 95);
+            this.favoritesFlowLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.favoritesFlowLayout.Name = "favoritesFlowLayout";
+            this.favoritesFlowLayout.Size = new System.Drawing.Size(1034, 455);
+            this.favoritesFlowLayout.TabIndex = 3;
+            // 
+            // resultsPanel
+            // 
+            this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.resultsPanel.Controls.Add(this.resultsFlowLayout);
+            this.resultsPanel.Location = new System.Drawing.Point(419, 135);
+            this.resultsPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.resultsPanel.MinimumSize = new System.Drawing.Size(1064, 0);
+            this.resultsPanel.Name = "resultsPanel";
+            this.resultsPanel.Size = new System.Drawing.Size(1064, 502);
+            this.resultsPanel.TabIndex = 10;
+            // 
+            // resultsFlowLayout
+            // 
+            this.resultsFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.resultsFlowLayout.Location = new System.Drawing.Point(0, 0);
+            this.resultsFlowLayout.Margin = new System.Windows.Forms.Padding(10);
+            this.resultsFlowLayout.Name = "resultsFlowLayout";
+            this.resultsFlowLayout.Size = new System.Drawing.Size(1064, 502);
+            this.resultsFlowLayout.TabIndex = 0;
+            // 
+            // resultsCombo
+            // 
+            this.resultsCombo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.resultsCombo.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.resultsCombo.FormattingEnabled = true;
+            this.resultsCombo.Items.AddRange(new object[] {
+            "Αυτόματη Ταξινόμηση",
+            "Αύξουσα Τιμή",
+            "Φθίνουσα Τιμή"});
+            this.resultsCombo.Location = new System.Drawing.Point(1218, 76);
+            this.resultsCombo.Margin = new System.Windows.Forms.Padding(0);
+            this.resultsCombo.Name = "resultsCombo";
+            this.resultsCombo.Size = new System.Drawing.Size(236, 29);
+            this.resultsCombo.TabIndex = 10;
+            this.resultsCombo.Text = "Αυτόματη Ταξινόμηση";
+            // 
+            // resultsSearchbox
+            // 
+            this.resultsSearchbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.resultsSearchbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.resultsSearchbox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.resultsSearchbox.Location = new System.Drawing.Point(0, 0);
+            this.resultsSearchbox.Margin = new System.Windows.Forms.Padding(0);
+            this.resultsSearchbox.Name = "resultsSearchbox";
+            this.resultsSearchbox.Size = new System.Drawing.Size(303, 30);
+            this.resultsSearchbox.TabIndex = 11;
+            // 
+            // resultsSearchBtn
+            // 
+            this.resultsSearchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.resultsSearchBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.resultsSearchBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.resultsSearchBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.resultsSearchBtn.ForeColor = System.Drawing.Color.White;
+            this.resultsSearchBtn.Location = new System.Drawing.Point(303, 0);
+            this.resultsSearchBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.resultsSearchBtn.Name = "resultsSearchBtn";
+            this.resultsSearchBtn.Size = new System.Drawing.Size(109, 31);
+            this.resultsSearchBtn.TabIndex = 12;
+            this.resultsSearchBtn.Text = "Αναζήτηση";
+            this.resultsSearchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // resultsFilterPanel
+            // 
+            this.resultsFilterPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.resultsFilterPanel.Controls.Add(this.searchFilterLayoutPanel);
+            this.resultsFilterPanel.Location = new System.Drawing.Point(110, 135);
+            this.resultsFilterPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.resultsFilterPanel.Name = "resultsFilterPanel";
+            this.resultsFilterPanel.Size = new System.Drawing.Size(300, 450);
+            this.resultsFilterPanel.TabIndex = 11;
+            // 
+            // searchFilterLayoutPanel
+            // 
+            this.searchFilterLayoutPanel.ColumnCount = 3;
+            this.searchFilterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchFilterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.searchFilterLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.searchFilterLayoutPanel.Controls.Add(this.searchFilterRefresh, 0, 13);
+            this.searchFilterLayoutPanel.Controls.Add(this.searchFilterSave, 0, 12);
+            this.searchFilterLayoutPanel.Controls.Add(this.searchFilterMore, 0, 11);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant25, 1, 10);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant26, 0, 9);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant27, 1, 8);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant28, 0, 7);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant29, 1, 6);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant30, 0, 5);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant32, 1, 4);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant31, 0, 3);
+            this.searchFilterLayoutPanel.Controls.Add(this.irrelevant33, 0, 1);
+            this.searchFilterLayoutPanel.Controls.Add(this.searchFilterCombo, 0, 2);
+            this.searchFilterLayoutPanel.Controls.Add(this.filterMinBaths, 0, 10);
+            this.searchFilterLayoutPanel.Controls.Add(this.filterMaxBaths, 2, 10);
+            this.searchFilterLayoutPanel.Controls.Add(this.filterMaxRooms, 2, 8);
+            this.searchFilterLayoutPanel.Controls.Add(this.filterMinRooms, 0, 8);
+            this.searchFilterLayoutPanel.Controls.Add(this.filterMinEmvado, 0, 6);
+            this.searchFilterLayoutPanel.Controls.Add(this.filterMaxEmvado, 2, 6);
+            this.searchFilterLayoutPanel.Controls.Add(this.filterMaxTimi, 2, 4);
+            this.searchFilterLayoutPanel.Controls.Add(this.filterMinTimi, 0, 4);
+            this.searchFilterLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.searchFilterLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.searchFilterLayoutPanel.Name = "searchFilterLayoutPanel";
+            this.searchFilterLayoutPanel.RowCount = 14;
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.searchFilterLayoutPanel.Size = new System.Drawing.Size(300, 450);
+            this.searchFilterLayoutPanel.TabIndex = 0;
+            // 
+            // searchFilterRefresh
+            // 
+            this.searchFilterRefresh.AutoSize = true;
+            this.searchFilterRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.searchFilterLayoutPanel.SetColumnSpan(this.searchFilterRefresh, 3);
+            this.searchFilterRefresh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchFilterRefresh.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.searchFilterRefresh.ForeColor = System.Drawing.Color.White;
+            this.searchFilterRefresh.Location = new System.Drawing.Point(0, 416);
+            this.searchFilterRefresh.Margin = new System.Windows.Forms.Padding(0);
+            this.searchFilterRefresh.Name = "searchFilterRefresh";
+            this.searchFilterRefresh.Size = new System.Drawing.Size(300, 34);
+            this.searchFilterRefresh.TabIndex = 0;
+            this.searchFilterRefresh.Text = "Ανανέωση";
+            this.searchFilterRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // searchFilterSave
+            // 
+            this.searchFilterSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
+            this.searchFilterLayoutPanel.SetColumnSpan(this.searchFilterSave, 3);
+            this.searchFilterSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchFilterSave.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.searchFilterSave.ForeColor = System.Drawing.Color.White;
+            this.searchFilterSave.Location = new System.Drawing.Point(0, 384);
+            this.searchFilterSave.Margin = new System.Windows.Forms.Padding(0);
+            this.searchFilterSave.Name = "searchFilterSave";
+            this.searchFilterSave.Size = new System.Drawing.Size(300, 32);
+            this.searchFilterSave.TabIndex = 1;
+            this.searchFilterSave.Text = "Αποθήκευση Φίλτρων";
+            this.searchFilterSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // searchFilterMore
+            // 
+            this.searchFilterMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
+            this.searchFilterLayoutPanel.SetColumnSpan(this.searchFilterMore, 3);
+            this.searchFilterMore.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchFilterMore.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.searchFilterMore.ForeColor = System.Drawing.Color.White;
+            this.searchFilterMore.Location = new System.Drawing.Point(0, 352);
+            this.searchFilterMore.Margin = new System.Windows.Forms.Padding(0);
+            this.searchFilterMore.Name = "searchFilterMore";
+            this.searchFilterMore.Size = new System.Drawing.Size(300, 32);
+            this.searchFilterMore.TabIndex = 2;
+            this.searchFilterMore.Text = "Περισσότερα";
+            this.searchFilterMore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // irrelevant25
+            // 
+            this.irrelevant25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant25.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant25.Location = new System.Drawing.Point(120, 320);
+            this.irrelevant25.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant25.Name = "irrelevant25";
+            this.irrelevant25.Size = new System.Drawing.Size(60, 32);
+            this.irrelevant25.TabIndex = 3;
+            this.irrelevant25.Text = "έως";
+            this.irrelevant25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // irrelevant26
+            // 
+            this.searchFilterLayoutPanel.SetColumnSpan(this.irrelevant26, 3);
+            this.irrelevant26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant26.Font = new System.Drawing.Font("Arial", 8F);
+            this.irrelevant26.Location = new System.Drawing.Point(0, 288);
+            this.irrelevant26.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant26.Name = "irrelevant26";
+            this.irrelevant26.Size = new System.Drawing.Size(300, 32);
+            this.irrelevant26.TabIndex = 4;
+            this.irrelevant26.Text = "Μπάνια:";
+            this.irrelevant26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // irrelevant27
+            // 
+            this.irrelevant27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant27.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant27.Location = new System.Drawing.Point(120, 256);
+            this.irrelevant27.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant27.Name = "irrelevant27";
+            this.irrelevant27.Size = new System.Drawing.Size(60, 32);
+            this.irrelevant27.TabIndex = 5;
+            this.irrelevant27.Text = "έως";
+            this.irrelevant27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // irrelevant28
+            // 
+            this.searchFilterLayoutPanel.SetColumnSpan(this.irrelevant28, 3);
+            this.irrelevant28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant28.Font = new System.Drawing.Font("Arial", 8F);
+            this.irrelevant28.Location = new System.Drawing.Point(0, 224);
+            this.irrelevant28.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant28.Name = "irrelevant28";
+            this.irrelevant28.Size = new System.Drawing.Size(300, 32);
+            this.irrelevant28.TabIndex = 6;
+            this.irrelevant28.Text = "Υπνοδωμάτια:";
+            this.irrelevant28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // irrelevant29
+            // 
+            this.irrelevant29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant29.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant29.Location = new System.Drawing.Point(120, 192);
+            this.irrelevant29.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant29.Name = "irrelevant29";
+            this.irrelevant29.Size = new System.Drawing.Size(60, 32);
+            this.irrelevant29.TabIndex = 7;
+            this.irrelevant29.Text = "έως";
+            this.irrelevant29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // irrelevant30
+            // 
+            this.searchFilterLayoutPanel.SetColumnSpan(this.irrelevant30, 3);
+            this.irrelevant30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant30.Font = new System.Drawing.Font("Arial", 8F);
+            this.irrelevant30.Location = new System.Drawing.Point(0, 160);
+            this.irrelevant30.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant30.Name = "irrelevant30";
+            this.irrelevant30.Size = new System.Drawing.Size(300, 32);
+            this.irrelevant30.TabIndex = 8;
+            this.irrelevant30.Text = "Εμβαδόν (τ.μ.):";
+            this.irrelevant30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // irrelevant32
+            // 
+            this.irrelevant32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant32.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant32.Location = new System.Drawing.Point(120, 128);
+            this.irrelevant32.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant32.Name = "irrelevant32";
+            this.irrelevant32.Size = new System.Drawing.Size(60, 32);
+            this.irrelevant32.TabIndex = 9;
+            this.irrelevant32.Text = "έως";
+            this.irrelevant32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // irrelevant31
+            // 
+            this.searchFilterLayoutPanel.SetColumnSpan(this.irrelevant31, 3);
+            this.irrelevant31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant31.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant31.Location = new System.Drawing.Point(0, 96);
+            this.irrelevant31.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant31.Name = "irrelevant31";
+            this.irrelevant31.Size = new System.Drawing.Size(300, 32);
+            this.irrelevant31.TabIndex = 10;
+            this.irrelevant31.Text = "Τιμή (€):";
+            this.irrelevant31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // irrelevant33
+            // 
+            this.searchFilterLayoutPanel.SetColumnSpan(this.irrelevant33, 3);
+            this.irrelevant33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.irrelevant33.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.irrelevant33.Location = new System.Drawing.Point(0, 32);
+            this.irrelevant33.Margin = new System.Windows.Forms.Padding(0);
+            this.irrelevant33.Name = "irrelevant33";
+            this.irrelevant33.Size = new System.Drawing.Size(300, 32);
+            this.irrelevant33.TabIndex = 11;
+            this.irrelevant33.Text = "Κατηγορία";
+            this.irrelevant33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // searchFilterCombo
+            // 
+            this.searchFilterCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchFilterLayoutPanel.SetColumnSpan(this.searchFilterCombo, 3);
+            this.searchFilterCombo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.searchFilterCombo.FormattingEnabled = true;
+            this.searchFilterCombo.Items.AddRange(new object[] {
+            "Όλες οι κατηγορίες",
+            "Διαμέρισμα",
+            "Μονοκατοικία"});
+            this.searchFilterCombo.Location = new System.Drawing.Point(0, 66);
+            this.searchFilterCombo.Margin = new System.Windows.Forms.Padding(0);
+            this.searchFilterCombo.Name = "searchFilterCombo";
+            this.searchFilterCombo.Size = new System.Drawing.Size(300, 27);
+            this.searchFilterCombo.TabIndex = 12;
+            this.searchFilterCombo.Text = "Όλες οι κατηγορίες";
+            // 
+            // filterMinBaths
+            // 
+            this.filterMinBaths.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterMinBaths.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filterMinBaths.ForeColor = System.Drawing.Color.DarkGray;
+            this.filterMinBaths.Location = new System.Drawing.Point(3, 323);
+            this.filterMinBaths.Name = "filterMinBaths";
+            this.filterMinBaths.Size = new System.Drawing.Size(114, 27);
+            this.filterMinBaths.TabIndex = 13;
+            this.filterMinBaths.Text = "Ελάχιστο";
+            // 
+            // filterMaxBaths
+            // 
+            this.filterMaxBaths.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterMaxBaths.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filterMaxBaths.ForeColor = System.Drawing.Color.DarkGray;
+            this.filterMaxBaths.Location = new System.Drawing.Point(183, 323);
+            this.filterMaxBaths.Name = "filterMaxBaths";
+            this.filterMaxBaths.Size = new System.Drawing.Size(114, 27);
+            this.filterMaxBaths.TabIndex = 14;
+            this.filterMaxBaths.Text = "Μέγιστο";
+            // 
+            // filterMaxRooms
+            // 
+            this.filterMaxRooms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterMaxRooms.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filterMaxRooms.ForeColor = System.Drawing.Color.DarkGray;
+            this.filterMaxRooms.Location = new System.Drawing.Point(183, 259);
+            this.filterMaxRooms.Name = "filterMaxRooms";
+            this.filterMaxRooms.Size = new System.Drawing.Size(114, 27);
+            this.filterMaxRooms.TabIndex = 15;
+            this.filterMaxRooms.Text = "Μέγιστο";
+            // 
+            // filterMinRooms
+            // 
+            this.filterMinRooms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterMinRooms.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filterMinRooms.ForeColor = System.Drawing.Color.DarkGray;
+            this.filterMinRooms.Location = new System.Drawing.Point(3, 259);
+            this.filterMinRooms.Name = "filterMinRooms";
+            this.filterMinRooms.Size = new System.Drawing.Size(114, 27);
+            this.filterMinRooms.TabIndex = 16;
+            this.filterMinRooms.Text = "Ελάχιστο";
+            // 
+            // filterMinEmvado
+            // 
+            this.filterMinEmvado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterMinEmvado.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filterMinEmvado.ForeColor = System.Drawing.Color.DarkGray;
+            this.filterMinEmvado.Location = new System.Drawing.Point(3, 195);
+            this.filterMinEmvado.Name = "filterMinEmvado";
+            this.filterMinEmvado.Size = new System.Drawing.Size(114, 27);
+            this.filterMinEmvado.TabIndex = 17;
+            this.filterMinEmvado.Text = "Ελάχιστο";
+            // 
+            // filterMaxEmvado
+            // 
+            this.filterMaxEmvado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterMaxEmvado.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filterMaxEmvado.ForeColor = System.Drawing.Color.DarkGray;
+            this.filterMaxEmvado.Location = new System.Drawing.Point(183, 195);
+            this.filterMaxEmvado.Name = "filterMaxEmvado";
+            this.filterMaxEmvado.Size = new System.Drawing.Size(114, 27);
+            this.filterMaxEmvado.TabIndex = 18;
+            this.filterMaxEmvado.Text = "Μέγιστο";
+            // 
+            // filterMaxTimi
+            // 
+            this.filterMaxTimi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterMaxTimi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filterMaxTimi.ForeColor = System.Drawing.Color.DarkGray;
+            this.filterMaxTimi.Location = new System.Drawing.Point(183, 131);
+            this.filterMaxTimi.Name = "filterMaxTimi";
+            this.filterMaxTimi.Size = new System.Drawing.Size(114, 27);
+            this.filterMaxTimi.TabIndex = 19;
+            this.filterMaxTimi.Text = "Μέγιστη";
+            // 
+            // filterMinTimi
+            // 
+            this.filterMinTimi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterMinTimi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.filterMinTimi.ForeColor = System.Drawing.Color.DarkGray;
+            this.filterMinTimi.Location = new System.Drawing.Point(3, 131);
+            this.filterMinTimi.Name = "filterMinTimi";
+            this.filterMinTimi.Size = new System.Drawing.Size(114, 27);
+            this.filterMinTimi.TabIndex = 20;
+            this.filterMinTimi.Text = "Ελάχιστη";
+            // 
+            // resultsSearchTableLayout
+            // 
+            this.resultsSearchTableLayout.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.resultsSearchTableLayout.ColumnCount = 2;
+            this.resultsSearchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.resultsSearchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.resultsSearchTableLayout.Controls.Add(this.resultsSearchbox, 0, 0);
+            this.resultsSearchTableLayout.Controls.Add(this.resultsSearchBtn, 1, 0);
+            this.resultsSearchTableLayout.Location = new System.Drawing.Point(450, 75);
+            this.resultsSearchTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.resultsSearchTableLayout.Name = "resultsSearchTableLayout";
+            this.resultsSearchTableLayout.RowCount = 1;
+            this.resultsSearchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.resultsSearchTableLayout.Size = new System.Drawing.Size(412, 31);
+            this.resultsSearchTableLayout.TabIndex = 12;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1062, 673);
-            this.Controls.Add(this.messagePanel);
-            this.Controls.Add(this.notificationsPanel);
+            this.ClientSize = new System.Drawing.Size(1902, 673);
+            this.Controls.Add(this.resultsSearchTableLayout);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.profilePanel);
             this.Controls.Add(this.addPanel3);
             this.Controls.Add(this.addPanel2);
             this.Controls.Add(this.addPanel1);
+            this.Controls.Add(this.notificationsPanel);
+            this.Controls.Add(this.messagePanel);
+            this.Controls.Add(this.filtersPanel);
+            this.Controls.Add(this.favoritesPanel);
             this.Controls.Add(this.sideMenuPanel);
+            this.Controls.Add(this.resultsFilterPanel);
+            this.Controls.Add(this.resultsPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1080, 720);
@@ -1769,18 +2399,18 @@ namespace AdopseAddsTeam5
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.mainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.notificationPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rightFooter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.footerMiddle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftFooter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bgImagePicbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logPicbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appNamePicbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sideMenuPicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).EndInit();
             this.searchTableLayout.ResumeLayout(false);
             this.searchTableLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.irrelevant1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notificationPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerMiddle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footerLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bgImagePicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logPicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appNamePicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sideMenuPicbox)).EndInit();
             this.choicePanel.ResumeLayout(false);
             this.sideMenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userPicbox)).EndInit();
@@ -1810,6 +2440,18 @@ namespace AdopseAddsTeam5
             this.messagePanel.ResumeLayout(false);
             this.messageTableLayout.ResumeLayout(false);
             this.messageTableLayout.PerformLayout();
+            this.filtersPanel.ResumeLayout(false);
+            this.filtersTableLayout.ResumeLayout(false);
+            this.filtersTableLayout.PerformLayout();
+            this.favoritesPanel.ResumeLayout(false);
+            this.favoritesTableLayout.ResumeLayout(false);
+            this.favoritesTableLayout.PerformLayout();
+            this.resultsPanel.ResumeLayout(false);
+            this.resultsFilterPanel.ResumeLayout(false);
+            this.searchFilterLayoutPanel.ResumeLayout(false);
+            this.searchFilterLayoutPanel.PerformLayout();
+            this.resultsSearchTableLayout.ResumeLayout(false);
+            this.resultsSearchTableLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1818,9 +2460,9 @@ namespace AdopseAddsTeam5
 
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel choicePanel;
-        private System.Windows.Forms.PictureBox rightFooter;
+        private System.Windows.Forms.PictureBox footerRight;
         private System.Windows.Forms.PictureBox footerMiddle;
-        private System.Windows.Forms.PictureBox leftFooter;
+        private System.Windows.Forms.PictureBox footerLeft;
         private System.Windows.Forms.PictureBox bgImagePicbox;
         private System.Windows.Forms.PictureBox logPicbox;
         private System.Windows.Forms.PictureBox appNamePicbox;
@@ -1927,6 +2569,47 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label messagePhone;
         private System.Windows.Forms.Label messageEmail;
         private System.Windows.Forms.TextBox messageTitle;
+        private System.Windows.Forms.Panel filtersPanel;
+        private System.Windows.Forms.TableLayoutPanel filtersTableLayout;
+        private System.Windows.Forms.Label irrelevant23;
+        private System.Windows.Forms.Label filtersCounter;
+        private System.Windows.Forms.ComboBox filtersCombo;
+        private System.Windows.Forms.FlowLayoutPanel filtersFlowLayout;
+        private System.Windows.Forms.Panel favoritesPanel;
+        private System.Windows.Forms.TableLayoutPanel favoritesTableLayout;
+        private System.Windows.Forms.Label irrelevant24;
+        private System.Windows.Forms.Label favoritesCounter;
+        private System.Windows.Forms.ComboBox favoritesCombo;
+        private System.Windows.Forms.FlowLayoutPanel favoritesFlowLayout;
+        private System.Windows.Forms.Label resultsSearchBtn;
+        private System.Windows.Forms.TextBox resultsSearchbox;
+        private System.Windows.Forms.ComboBox resultsCombo;
+        private System.Windows.Forms.Panel resultsPanel;
+        private System.Windows.Forms.FlowLayoutPanel resultsFlowLayout;
+        private System.Windows.Forms.Panel resultsFilterPanel;
+        private System.Windows.Forms.TableLayoutPanel searchFilterLayoutPanel;
+        private System.Windows.Forms.Label searchFilterRefresh;
+        private System.Windows.Forms.Label searchFilterSave;
+        private System.Windows.Forms.Label searchFilterMore;
+        private System.Windows.Forms.Label irrelevant25;
+        private System.Windows.Forms.Label irrelevant26;
+        private System.Windows.Forms.Label irrelevant27;
+        private System.Windows.Forms.Label irrelevant28;
+        private System.Windows.Forms.Label irrelevant29;
+        private System.Windows.Forms.Label irrelevant30;
+        private System.Windows.Forms.Label irrelevant32;
+        private System.Windows.Forms.Label irrelevant31;
+        private System.Windows.Forms.Label irrelevant33;
+        private System.Windows.Forms.ComboBox searchFilterCombo;
+        private System.Windows.Forms.TextBox filterMinBaths;
+        private System.Windows.Forms.TextBox filterMaxBaths;
+        private System.Windows.Forms.TextBox filterMaxRooms;
+        private System.Windows.Forms.TextBox filterMinRooms;
+        private System.Windows.Forms.TextBox filterMinEmvado;
+        private System.Windows.Forms.TextBox filterMaxEmvado;
+        private System.Windows.Forms.TextBox filterMaxTimi;
+        private System.Windows.Forms.TextBox filterMinTimi;
+        private System.Windows.Forms.TableLayoutPanel resultsSearchTableLayout;
     }
 }
 

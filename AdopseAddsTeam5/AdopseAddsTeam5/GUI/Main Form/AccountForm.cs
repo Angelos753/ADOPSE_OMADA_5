@@ -146,5 +146,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 loginPassTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
+
+        private void loginConnectLabel_Click(object sender, EventArgs e)
+        {
+            MainForm.login();
+            this.Close();
+        }
     }
 }

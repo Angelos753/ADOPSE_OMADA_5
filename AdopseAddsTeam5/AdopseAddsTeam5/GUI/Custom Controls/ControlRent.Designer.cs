@@ -39,10 +39,10 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::AdopseAddsTeam5.Properties.Resources.enoikiasiBuilding;
-            this.pictureBox1.Location = new System.Drawing.Point(-20, -19);
+            this.pictureBox1.Location = new System.Drawing.Point(-15, -16);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 210);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 190);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -50,11 +50,11 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.Location = new System.Drawing.Point(0, 161);
+            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(1, 152);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 27);
+            this.label1.Size = new System.Drawing.Size(159, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "ΕΝΟΙΚΙΑΣΗ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,12 +62,12 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(0, 194);
+            this.label2.Location = new System.Drawing.Point(1, 184);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 32);
+            this.label2.Size = new System.Drawing.Size(159, 25);
             this.label2.TabIndex = 8;
             this.label2.Text = "ΒΡΕΣ ΤΩΡΑ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,7 +81,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ControlRent";
-            this.Size = new System.Drawing.Size(170, 237);
+            this.Size = new System.Drawing.Size(160, 217);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

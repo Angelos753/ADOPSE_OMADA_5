@@ -16,8 +16,9 @@ namespace AdopseAddsTeam5
     public partial class MainForm : Form
     {
 
-        private bool logged = true;
+        private static bool logged = false;
         private bool h = true;
+        private bool s = false;
 
         public MainForm()
         {
@@ -31,16 +32,30 @@ namespace AdopseAddsTeam5
 
         private void MainForm_SizeChanged(object sender, EventArgs e)
         {
-            if (this.Size.Width < 1218)
+            if(s)
             {
-                leftFooter.Hide();
-                rightFooter.Hide();
-                if (!h) sideMenuPanel.Hide();
+                if (this.Size.Width < 1280)
+                {
+                    resultsFilterPanel.Hide();
+                }
+                else
+                {
+                    resultsFilterPanel.Show();
+                }
             }
-            else
+            
+            if (choicePanel.Visible != true) 
             {
-                leftFooter.Show();
-                rightFooter.Show();
+                if (this.Size.Width < 1218)
+                {
+                    footerLeft.Hide();
+                    footerRight.Hide();
+                }
+                else
+                {
+                    footerLeft.Show();
+                    footerRight.Show();
+                }
             }
         }
 
@@ -49,34 +64,41 @@ namespace AdopseAddsTeam5
             sideMenuPanel.Hide();
             searchTableLayout.Hide();
             choicePanel.Hide();
-            profilePanel.Hide();
             watermarkPicbox.Hide();
-            footerMiddle.Hide();
-            leftFooter.Hide();
-            rightFooter.Hide();
+            profilePanel.Hide();
+            favoritesPanel.Hide();
+            filtersPanel.Hide();
+            notificationsPanel.Hide();
+            resultsPanel.Hide();
+            resultsSearchTableLayout.Hide();
+            resultsCombo.Hide();
             addPanel1.Hide();
             addPanel2.Hide();
             addPanel3.Hide();
-            notificationsPanel.Hide();
+            footerLeft.Hide();
+            footerRight.Hide();
+            footerMiddle.Hide();
+            s = false;
             h = false;
         }
 
         private void sideMenuPicbox_Click(object sender, EventArgs e)
         {
             sideMenuPanel.BringToFront();
-            if(logged && (this.Size.Width > 1218 || h))
+            if(logged && (this.Size.Width > 1218 || choicePanel.Visible != false))
             {
                 sideMenuPanel.Visible = !sideMenuPanel.Visible;
             }
             else
             {
-
+                new AccountForm().Show();
             }
         }
 
         private void controlLogout_Click(object sender, EventArgs e)
         {
-
+            logged = false;
+            sideMenuPanel.Hide();
         }
 
         private void controlHomepage_Click(object sender, EventArgs e)
@@ -95,37 +117,65 @@ namespace AdopseAddsTeam5
             hideControls();
             profilePanel.Show();
             profilePanel.BringToFront();
-            leftFooter.Show();
-            rightFooter.Show();
+            footerLeft.Show();
+            footerRight.Show();
         }
 
         private void controlFavorites_Click(object sender, EventArgs e)
         {
             hideControls();
-            notificationsPanel.Show();
-            notificationsPanel.BringToFront();
-            leftFooter.Show();
-            rightFooter.Show();
+            favoritesPanel.Show();
+            favoritesPanel.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
         }
 
         private void controlFilters_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            filtersPanel.Show();
+            filtersPanel.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
         }
 
         private void controlNotifications_Click(object sender, EventArgs e)
         {
-            //searchBtn.Text = "Width is " + this.Size.Width + " pixels";
+            hideControls();
+            notificationsPanel.Show();
+            notificationsPanel.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
         }
 
         private void controlBuy1_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            resultsPanel.Show();
+            resultsPanel.BringToFront();
+            resultsCombo.Show();
+            resultsCombo.BringToFront();
+            resultsSearchTableLayout.Show();
+            resultsSearchTableLayout.BringToFront();
+            resultsFilterPanel.Show();
+            resultsFilterPanel.BringToFront();
+            s = true;
         }
 
         private void controlRent1_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            resultsPanel.Show();
+            resultsPanel.BringToFront();
+            resultsCombo.Show();
+            resultsCombo.BringToFront();
+            resultsSearchbox.Show();
+            resultsSearchbox.BringToFront();
+            resultsSearchBtn.Show();
+            resultsSearchBtn.BringToFront();
+            resultsFilterPanel.Show();
+            resultsFilterPanel.BringToFront();
+            s = true;
         }
 
         private void controlAdd1_Click(object sender, EventArgs e)
@@ -133,16 +183,29 @@ namespace AdopseAddsTeam5
             hideControls();
             addPanel1.Show();
             addPanel1.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            resultsPanel.Show();
+            resultsPanel.BringToFront();
+            resultsCombo.Show();
+            resultsCombo.BringToFront();
+            resultsSearchbox.Show();
+            resultsSearchbox.BringToFront();
+            resultsSearchBtn.Show();
+            resultsSearchBtn.BringToFront();
+            resultsFilterPanel.Show();
+            resultsFilterPanel.BringToFront();
+            s = true;
         }
 
         private void logPicbox_Click(object sender, EventArgs e)
         {
-
+            new AccountForm().Show();
         }
 
         private void profileNameEdit_Click(object sender, EventArgs e)
@@ -165,6 +228,8 @@ namespace AdopseAddsTeam5
             hideControls();
             addPanel1.Show();
             addPanel1.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
         }
 
         private void add1Next_Click(object sender, EventArgs e)
@@ -240,6 +305,11 @@ namespace AdopseAddsTeam5
         {
             messagePanel.Hide();
             messagePanel.SendToBack();
+        }
+
+        public static void login()
+        {
+            logged = true;
         }
     }
 
