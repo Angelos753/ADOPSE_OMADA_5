@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AdopseAddsTeam5",
+    "\\AdopseAddsTeam5\\AdopseAddsTeam5",
+    "\\AdopseAddsTeam5\\AdopseAddsTeam5\\GUI",
+    "\\AdopseAddsTeam5\\AdopseAddsTeam5\\GUI\\Main Form"
   ],
+  "SelectedNode": "\\AdopseAddsTeam5\\AdopseAddsTeam5\\GUI\\Main Form\\MainForm.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,11 +1,11 @@
-﻿using AdopseAddsTeam5.GUI.Create_Listing;
-using AdopseAddsTeam5.GUI.Main_Form;
-using AdopseAddsTeam5.GUI.Templates;
+﻿using AdopseAddsTeam5.GUI.Main_Form;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,65 +15,740 @@ namespace AdopseAddsTeam5
 {
     public partial class MainForm : Form
     {
+
+        private static bool logged = false;
+        private bool h;
+        private bool s = false;
+
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private double panel1WidthRatio, panel1HeightRatio; // Global variables for maintaining ratio.
-
         private void MainForm_Load(object sender, EventArgs e)
         {
-            watermarkPicBox.Parent = mainPictureBox;
-        }
-
-        private void MainForm_ResizeBegin(object sender, EventArgs e)
-        {
-            double p1w = this.sideMenuPanel.Size.Width;    // Grab the panels' dimensions as soon as the user begins to resize
-            double p1h = this.sideMenuPanel.Size.Height;   // in order to store the Panel to Form dimension ratios.
-            double fw = this.mainTableLayout.Size.Width;
-            double fh = this.Size.Height;
-            panel1WidthRatio = p1w / fw;
-            panel1HeightRatio = p1h / fh;
+            watermarkPicbox.Parent = bgImagePicbox;
         }
 
         private void MainForm_SizeChanged(object sender, EventArgs e)
         {
-            if (panel1WidthRatio != 0)
+            if(s)
             {
-                double formWidth = this.mainTableLayout.Size.Width; // As soon as a new size is set
-                double formHeight = this.Size.Height;               // resize the panel using the earlier ratio.
-                this.sideMenuPanel.Size = new Size((int)(formWidth * panel1WidthRatio), this.mainTableLayout.Size.Height-35);
-                //this.middle_panel.Size = new Size((int)(formWidth * panel2WidthRatio), (int)(formHeight * panel2HeightRatio));
-                //this.middle_panel.Location = new System.Drawing.Point(this.Size.Width / 4 - 9, this.Size.Height / 4 - 24); // Constants used to correctly calculate center.
+                if (this.Size.Width < 1290)
+                {
+                    resultsFilterPanel.Hide();
+                }
+                else
+                {
+                    resultsFilterPanel.Show();
+                    resultsFilterPanel.BringToFront();
+                }
+            }
+            
+            /*if (choicePanel.Visible != true) 
+            {
+                if (this.Size.Width < 1218)
+                {
+                    footerLeft.Hide();
+                    footerRight.Hide();
+                }
+                else
+                {
+                    footerLeft.Show();
+                    footerRight.Show();
+                }
+            }*/
+        }
+
+        private void hideControls()
+        {
+            sideMenuPanel.Hide();
+            searchTableLayout.Hide();
+            choicePanel.Hide();
+            watermarkPicbox.Hide();
+            profilePanel.Hide();
+            favoritesPanel.Hide();
+            filtersPanel.Hide();
+            notificationsPanel.Hide();
+            resultsPanel.Hide();
+            resultsSearchTableLayout.Hide();
+            resultsCombo.Hide();
+            resultsFilterPanel.Hide();
+            addPanel1.Hide();
+            addPanel2.Hide();
+            addPanel3.Hide();
+            viewListingPanel.Hide();
+            footerLeft.Hide();
+            footerRight.Hide();
+            footerMiddle.Hide();
+            footerMiddleB.Hide();
+            s = false;
+            h = false;
+        }
+
+        private void sideMenuPicbox_Click(object sender, EventArgs e)
+        {
+            sideMenuPanel.BringToFront();
+            if(logged /*&& (this.Size.Width > 1218 || choicePanel.Visible != false)*/)
+            {
+                sideMenuPanel.Visible = !sideMenuPanel.Visible;
+            }
+            else
+            {
+                new AccountForm().ShowDialog();
             }
         }
 
-        private void searchLabel_Click(object sender, EventArgs e)
+        private void controlLogout_Click(object sender, EventArgs e)
         {
-            SearchResults t = new SearchResults();
-            t.Show();
+            logged = false;
+            logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
+            sideMenuPanel.Hide();
         }
 
-        private void logLabel_Click(object sender, EventArgs e)
+        private void controlHomepage_Click(object sender, EventArgs e)
         {
-            AccountForm l1 = new AccountForm();
-            l1.ShowDialog();
+            hideControls();
+            searchTableLayout.Show();
+            searchTableLayout.BringToFront();
+            choicePanel.Show();
+            footerMiddle.Show();
+            watermarkPicbox.Show();
+            h = true;
         }
 
-        private void aggeliaPicBox_Click(object sender, EventArgs e)
+        private void controlProfile_Click(object sender, EventArgs e)
         {
-            CreateListing c = new CreateListing();
-            c.Show();
+            hideControls();
+            profilePanel.Show();
+            profilePanel.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
         }
 
-        private void sideMenuLabel_Click(object sender, EventArgs e)
+        private void controlFavorites_Click(object sender, EventArgs e)
         {
-            sideMenuPanel.Visible = !sideMenuPanel.Visible;
+            hideControls();
+            favoritesPanel.Show();
+            favoritesPanel.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
         }
-        //System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(00)))), ((int)(((byte)(205)))));
-        //System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
 
+        private void controlFilters_Click(object sender, EventArgs e)
+        {
+            hideControls();
+            filtersPanel.Show();
+            filtersPanel.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
+        }
 
+        private void controlNotifications_Click(object sender, EventArgs e)
+        {
+            hideControls();
+            notificationsPanel.Show();
+            notificationsPanel.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
+        }
+
+        private void controlBuy1_Click(object sender, EventArgs e)
+        {
+            hideControls();
+            this.showResults();
+            footerLeft.Show();
+            footerRight.Show();
+            footerMiddleB.Show();
+            footerMiddleB.BringToFront();
+            s = true;
+        }
+
+        private void controlRent1_Click(object sender, EventArgs e)
+        {
+            hideControls();
+            this.showResults();
+            footerLeft.Show();
+            footerRight.Show();
+            s = true;
+        }
+
+        private void controlAdd1_Click(object sender, EventArgs e)
+        {
+            hideControls();
+            addPanel1.Show();
+            addPanel1.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            hideControls();
+            showResults();
+            footerLeft.Show();
+            footerRight.Show();
+            s = true;
+        }
+
+        private void logPicbox_Click(object sender, EventArgs e)
+        {
+            if(!logged)
+            {
+                new AccountForm().ShowDialog();
+            }
+            else
+            {
+                logged = false;
+                logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
+            }
+        }
+
+        private void profileNameEdit_Click(object sender, EventArgs e)
+        {
+            hideControls();
+            viewListingPanel.Show();
+            viewListingPanel.BringToFront();
+        }
+
+        private void profilePicEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profileEmailEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profileAddListing_Click(object sender, EventArgs e)
+        {
+            hideControls();
+            addPanel1.Show();
+            addPanel1.BringToFront();
+            footerLeft.Show();
+            footerRight.Show();
+        }
+
+        private void add1Next_Click(object sender, EventArgs e)
+        {
+            addPanel1.Hide();
+            addPanel2.BringToFront();
+            addPanel2.Show();
+        }
+
+        private void add2Next_Click(object sender, EventArgs e)
+        {
+            addPanel2.Hide();
+            addPanel3.BringToFront();
+            addPanel3.Show();
+        }
+
+        private PictureBox[] pics = new PictureBox[10];
+        private int x = 0;
+
+        private void add3PicAdd_Click(object sender, EventArgs e)
+        {
+            pics[0] = add3Picbox1;
+            add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            add3Dialog.Multiselect = false;
+            if (add3Dialog.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 90, 90);
+                pics[x].Image = b;
+            }
+        }
+
+        public static Bitmap ResizeImage(Image image, int width, int height)
+        {
+            var destRect = new Rectangle(0, 0, width, height);
+            var destImage = new Bitmap(width, height);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            return destImage;
+        }
+
+        private void add3Post_Click(object sender, EventArgs e)
+        {
+            addPanel3.Hide();
+            controlHomepage_Click(this, e);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            messagePanel.Show();
+            messagePanel.BringToFront();
+        }
+
+        private void messageExit_Click(object sender, EventArgs e)
+        {
+            messagePanel.Hide();
+        }
+
+        public static void login()
+        {
+            logged = true;
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            if(logged)
+            {
+                logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
+            }
+        }
+
+        private void searchFilterSave_Click(object sender, EventArgs e)
+        {
+            if(logged)
+            {
+                new FilterSave().ShowDialog();
+            }
+            else
+            {
+                new AccountForm().ShowDialog();
+            }
+        }
+
+        private void vlMsgSend_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vlShowPhone_Click(object sender, EventArgs e)
+        {
+            if(!logged)
+            {
+                new AccountForm().ShowDialog();
+            }
+            else
+            {
+                vlShowPhone.BackColor = System.Drawing.Color.White;
+                vlShowPhone.ForeColor = System.Drawing.Color.Black;
+                vlShowPhone.Text = "6937123456";
+            }
+        }
+
+        private void viewListingPic1_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingPic2_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingPic3_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingPic4_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingPic5_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewListingPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewListingExit_Click(object sender, EventArgs e)
+        {
+            viewListingPanel.Hide();
+        }
+
+        private void tableLayoutPanel2_Click(object sender, EventArgs e)
+        {
+            viewListingPanel.Show();
+            viewListingPanel.BringToFront();
+        }
+
+        private void showResults()
+        {
+            resultsPanel.Show();
+            resultsPanel.BringToFront();
+            resultsCombo.Show();
+            resultsCombo.BringToFront();
+            resultsSearchTableLayout.Show();
+            resultsSearchTableLayout.BringToFront();
+            if (this.Size.Width >= 1290)
+            {
+                resultsFilterPanel.Show();
+                resultsFilterPanel.BringToFront();
+            }
+                
+        }
+
+        private void add2AddressTextbox_Enter(object sender, EventArgs e)
+        {
+            if(add2AddressTextbox.Text == "Διεύθυνση")
+            {
+                add2AddressTextbox.Text = "";
+                add2AddressTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void add2AddressTextbox_Leave(object sender, EventArgs e)
+        {
+            if (add2AddressTextbox.Text == "")
+            {
+                add2AddressTextbox.Text = "Διεύθυνση";
+                add2AddressTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void perioxiTextbox_Enter(object sender, EventArgs e)
+        {
+            if (perioxiTextbox.Text == "π.χ. Θεσσαλονίκη - Τούμπα")
+            {
+                perioxiTextbox.Text = "";
+                perioxiTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void perioxiTextbox_Leave(object sender, EventArgs e)
+        {
+            if (perioxiTextbox.Text == "")
+            {
+                perioxiTextbox.Text = "π.χ. Θεσσαλονίκη - Τούμπα";
+                perioxiTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+           
+        }
+
+        private void timiTextbox_Enter(object sender, EventArgs e)
+        {
+            if (timiTextbox.Text == "π.χ. €150000 ή 150.000")
+            {
+                timiTextbox.Text = "";
+                timiTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void timiTextbox_Leave(object sender, EventArgs e)
+        {
+            if (timiTextbox.Text == "")
+            {
+                timiTextbox.Text = "π.χ. €150000 ή 150.000";
+                timiTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void emvadoTextbox_Enter(object sender, EventArgs e)
+        {
+            if (emvadoTextbox.Text == "π.χ. 89")
+            {
+                emvadoTextbox.Text = "";
+                emvadoTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void emvadoTextbox_Leave(object sender, EventArgs e)
+        {
+            if (emvadoTextbox.Text == "")
+            {
+                emvadoTextbox.Text = "π.χ. 89";
+                emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void tiposTextbox_Enter(object sender, EventArgs e)
+        {
+            if (tiposTextbox.Text == "π.χ. Διαμέρισμα ή Μονοκατοικία")
+            {
+                tiposTextbox.Text = "";
+                tiposTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void tiposTextbox_Leave(object sender, EventArgs e)
+        {
+            if (tiposTextbox.Text == "")
+            {
+                tiposTextbox.Text = "π.χ. Διαμέρισμα ή Μονοκατοικία";
+                tiposTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void phoneTextbox_Enter(object sender, EventArgs e)
+        {
+            if (phoneTextbox.Text == "π.χ. 2101234567 ή 6912345678")
+            {
+                phoneTextbox.Text = "";
+                phoneTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void phoneTextbox_Leave(object sender, EventArgs e)
+        {
+            if (phoneTextbox.Text == "")
+            {
+                phoneTextbox.Text = "π.χ. 2101234567 ή 6912345678";
+                phoneTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgFName_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgFName.Text == "Όνομα")
+            {
+                vlMsgFName.Text = "";
+                vlMsgFName.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgFName_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgFName.Text == "")
+            {
+                vlMsgFName.Text = "Όνομα";
+                vlMsgFName.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgLName_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgLName.Text == "Επώνυμο")
+            {
+                vlMsgLName.Text = "";
+                vlMsgLName.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgLName_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgLName.Text == "")
+            {
+                vlMsgLName.Text = "Επώνυμο";
+                vlMsgLName.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgPhone_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgPhone.Text == "Τηλέφωνο")
+            {
+                vlMsgPhone.Text = "";
+                vlMsgPhone.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgPhone_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgPhone.Text == "")
+            {
+                vlMsgPhone.Text = "Τηλέφωνο";
+                vlMsgPhone.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgEmail_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgEmail.Text == "Email")
+            {
+                vlMsgEmail.Text = "";
+                vlMsgEmail.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgEmail_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgEmail.Text == "")
+            {
+                vlMsgEmail.Text = "Email";
+                vlMsgEmail.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgText_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgText.Text == "Το μήνυμα σας...")
+            {
+                vlMsgText.Text = "";
+                vlMsgText.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgText_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgText.Text == "")
+            {
+                vlMsgText.Text = "Το μήνυμα σας...";
+                vlMsgText.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMinTimi_Enter(object sender, EventArgs e)
+        {
+            if (filterMinTimi.Text == "Ελάχιστη")
+            {
+                filterMinTimi.Text = "";
+                filterMinTimi.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMinTimi_Leave(object sender, EventArgs e)
+        {
+            if (filterMinTimi.Text == "")
+            {
+                filterMinTimi.Text = "Ελάχιστη";
+                filterMinTimi.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMinEmvado_Enter(object sender, EventArgs e)
+        {
+            if (filterMinEmvado.Text == "Ελάχιστο")
+            {
+                filterMinEmvado.Text = "";
+                filterMinEmvado.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMinEmvado_Leave(object sender, EventArgs e)
+        {
+            if (filterMinEmvado.Text == "")
+            {
+                filterMinEmvado.Text = "Ελάχιστο";
+                filterMinEmvado.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMinRooms_Enter(object sender, EventArgs e)
+        {
+            if (filterMinRooms.Text == "Ελάχιστο")
+            {
+                filterMinRooms.Text = "";
+                filterMinRooms.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMinRooms_Leave(object sender, EventArgs e)
+        {
+            if (filterMinRooms.Text == "")
+            {
+                filterMinRooms.Text = "Ελάχιστο";
+                filterMinRooms.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMinBaths_Enter(object sender, EventArgs e)
+        {
+            if (filterMinBaths.Text == "Ελάχιστο")
+            {
+                filterMinBaths.Text = "";
+                filterMinBaths.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMinBaths_Leave(object sender, EventArgs e)
+        {
+            if (filterMinBaths.Text == "")
+            {
+                filterMinBaths.Text = "Ελάχιστο";
+                filterMinBaths.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMaxTimi_Enter(object sender, EventArgs e)
+        {
+            if (filterMaxTimi.Text == "Μέγιστη")
+            {
+                filterMaxTimi.Text = "";
+                filterMaxTimi.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMaxTimi_Leave(object sender, EventArgs e)
+        {
+            if (filterMaxTimi.Text == "")
+            {
+                filterMaxTimi.Text = "Μέγιστη";
+                filterMaxTimi.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMaxEmvado_Enter(object sender, EventArgs e)
+        {
+            if (filterMaxEmvado.Text == "Μέγιστο")
+            {
+                filterMaxEmvado.Text = "";
+                filterMaxEmvado.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMaxEmvado_Leave(object sender, EventArgs e)
+        {
+            if (filterMaxEmvado.Text == "")
+            {
+                filterMaxEmvado.Text = "Μέγιστο";
+                filterMaxEmvado.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMaxRooms_Enter(object sender, EventArgs e)
+        {
+            if (filterMaxRooms.Text == "Μέγιστο")
+            {
+                filterMaxRooms.Text = "";
+                filterMaxRooms.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMaxRooms_Leave(object sender, EventArgs e)
+        {
+            if (filterMaxRooms.Text == "")
+            {
+                filterMaxRooms.Text = "Μέγιστο";
+                filterMaxRooms.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMaxBaths_Enter(object sender, EventArgs e)
+        {
+            if (filterMaxBaths.Text == "Μέγιστο")
+            {
+                filterMaxBaths.Text = "";
+                filterMaxBaths.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMaxBaths_Leave(object sender, EventArgs e)
+        {
+            if (filterMaxBaths.Text == "")
+            {
+                filterMaxBaths.Text = "Μέγιστο";
+                filterMaxBaths.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
     }
+
 }

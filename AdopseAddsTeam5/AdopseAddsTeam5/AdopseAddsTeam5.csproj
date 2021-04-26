@@ -80,11 +80,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\Create Listing\CreateListing.cs">
-      <SubType>Form</SubType>
+    <Compile Include="GUI\Custom Controls\ControlAdd.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\Create Listing\CreateListing.Designer.cs">
-      <DependentUpon>CreateListing.cs</DependentUpon>
+    <Compile Include="GUI\Custom Controls\ControlAdd.Designer.cs">
+      <DependentUpon>ControlAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlBuy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlBuy.Designer.cs">
+      <DependentUpon>ControlBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlFavorites.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlFavorites.Designer.cs">
+      <DependentUpon>ControlFavorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlFilters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlFilters.Designer.cs">
+      <DependentUpon>ControlFilters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlHomepage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlHomepage.Designer.cs">
+      <DependentUpon>ControlHomepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlLogout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlLogout.Designer.cs">
+      <DependentUpon>ControlLogout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlSave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlSave.Designer.cs">
+      <DependentUpon>ControlSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlProfile.Designer.cs">
+      <DependentUpon>ControlProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlRent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlRent.Designer.cs">
+      <DependentUpon>ControlRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlNotifications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlNotifications.Designer.cs">
+      <DependentUpon>ControlNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlPrint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlPrint.Designer.cs">
+      <DependentUpon>ControlPrint.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Main Form\AccountForm.cs">
       <SubType>Form</SubType>
@@ -92,28 +152,52 @@
     <Compile Include="GUI\Main Form\AccountForm.Designer.cs">
       <DependentUpon>AccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Main Form\FilterSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main Form\FilterSave.Designer.cs">
+      <DependentUpon>FilterSave.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Main Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Main Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Template\FilterSave.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Template\FilterSave.Designer.cs">
-      <DependentUpon>FilterSave.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Template\SearchResults.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Template\SearchResults.Designer.cs">
-      <DependentUpon>SearchResults.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\Create Listing\CreateListing.resx">
-      <DependentUpon>CreateListing.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlAdd.resx">
+      <DependentUpon>ControlAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlBuy.resx">
+      <DependentUpon>ControlBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlFavorites.resx">
+      <DependentUpon>ControlFavorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlFilters.resx">
+      <DependentUpon>ControlFilters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlHomepage.resx">
+      <DependentUpon>ControlHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlLogout.resx">
+      <DependentUpon>ControlLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlNotifications.resx">
+      <DependentUpon>ControlNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlSave.resx">
+      <DependentUpon>ControlSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlProfile.resx">
+      <DependentUpon>ControlProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlRent.resx">
+      <DependentUpon>ControlRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlPrint.resx">
+      <DependentUpon>ControlPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main Form\AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
@@ -121,11 +205,8 @@
     <EmbeddedResource Include="GUI\Main Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Template\FilterSave.resx">
+    <EmbeddedResource Include="GUI\Main Form\FilterSave.resx">
       <DependentUpon>FilterSave.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Template\SearchResults.resx">
-      <DependentUpon>SearchResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
