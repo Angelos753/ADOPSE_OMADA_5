@@ -344,7 +344,7 @@ namespace AdopseAddsTeam5
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1062, 673);
+            this.mainPanel.Size = new System.Drawing.Size(1902, 1033);
             this.mainPanel.TabIndex = 0;
             // 
             // watermarkPicbox
@@ -352,7 +352,7 @@ namespace AdopseAddsTeam5
             this.watermarkPicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.watermarkPicbox.BackColor = System.Drawing.Color.Transparent;
             this.watermarkPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
-            this.watermarkPicbox.Location = new System.Drawing.Point(897, 142);
+            this.watermarkPicbox.Location = new System.Drawing.Point(1737, 502);
             this.watermarkPicbox.Margin = new System.Windows.Forms.Padding(0);
             this.watermarkPicbox.Name = "watermarkPicbox";
             this.watermarkPicbox.Size = new System.Drawing.Size(218, 120);
@@ -371,7 +371,7 @@ namespace AdopseAddsTeam5
             this.searchTableLayout.Controls.Add(this.irrelevant1, 0, 0);
             this.searchTableLayout.Controls.Add(this.searchBtn, 2, 0);
             this.searchTableLayout.Controls.Add(this.searchTextbox, 1, 0);
-            this.searchTableLayout.Location = new System.Drawing.Point(276, 157);
+            this.searchTableLayout.Location = new System.Drawing.Point(696, 337);
             this.searchTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.searchTableLayout.Name = "searchTableLayout";
             this.searchTableLayout.RowCount = 1;
@@ -423,7 +423,7 @@ namespace AdopseAddsTeam5
             // 
             this.notificationPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.notificationPicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.notificationPicBox.Location = new System.Drawing.Point(962, 0);
+            this.notificationPicBox.Location = new System.Drawing.Point(1802, 0);
             this.notificationPicBox.Margin = new System.Windows.Forms.Padding(0);
             this.notificationPicBox.Name = "notificationPicBox";
             this.notificationPicBox.Size = new System.Drawing.Size(50, 50);
@@ -435,7 +435,7 @@ namespace AdopseAddsTeam5
             // 
             this.footerRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.footerRight.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsRight;
-            this.footerRight.Location = new System.Drawing.Point(792, 593);
+            this.footerRight.Location = new System.Drawing.Point(1632, 953);
             this.footerRight.Margin = new System.Windows.Forms.Padding(0);
             this.footerRight.Name = "footerRight";
             this.footerRight.Size = new System.Drawing.Size(270, 80);
@@ -448,7 +448,7 @@ namespace AdopseAddsTeam5
             // 
             this.footerMiddle.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.footerMiddle.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsFull;
-            this.footerMiddle.Location = new System.Drawing.Point(270, 593);
+            this.footerMiddle.Location = new System.Drawing.Point(690, 953);
             this.footerMiddle.Margin = new System.Windows.Forms.Padding(0);
             this.footerMiddle.Name = "footerMiddle";
             this.footerMiddle.Size = new System.Drawing.Size(522, 80);
@@ -460,7 +460,7 @@ namespace AdopseAddsTeam5
             // 
             this.footerLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.footerLeft.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsLeft;
-            this.footerLeft.Location = new System.Drawing.Point(0, 593);
+            this.footerLeft.Location = new System.Drawing.Point(0, 953);
             this.footerLeft.Margin = new System.Windows.Forms.Padding(0);
             this.footerLeft.Name = "footerLeft";
             this.footerLeft.Size = new System.Drawing.Size(270, 80);
@@ -478,7 +478,7 @@ namespace AdopseAddsTeam5
             this.bgImagePicbox.Location = new System.Drawing.Point(0, 50);
             this.bgImagePicbox.Margin = new System.Windows.Forms.Padding(0);
             this.bgImagePicbox.Name = "bgImagePicbox";
-            this.bgImagePicbox.Size = new System.Drawing.Size(1062, 263);
+            this.bgImagePicbox.Size = new System.Drawing.Size(1902, 623);
             this.bgImagePicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.bgImagePicbox.TabIndex = 3;
             this.bgImagePicbox.TabStop = false;
@@ -488,7 +488,7 @@ namespace AdopseAddsTeam5
             this.logPicbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logPicbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
             this.logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
-            this.logPicbox.Location = new System.Drawing.Point(1012, 0);
+            this.logPicbox.Location = new System.Drawing.Point(1852, 0);
             this.logPicbox.Margin = new System.Windows.Forms.Padding(0);
             this.logPicbox.Name = "logPicbox";
             this.logPicbox.Size = new System.Drawing.Size(50, 50);
@@ -506,7 +506,7 @@ namespace AdopseAddsTeam5
             this.appNamePicbox.Location = new System.Drawing.Point(50, 0);
             this.appNamePicbox.Margin = new System.Windows.Forms.Padding(0);
             this.appNamePicbox.Name = "appNamePicbox";
-            this.appNamePicbox.Size = new System.Drawing.Size(962, 50);
+            this.appNamePicbox.Size = new System.Drawing.Size(1802, 50);
             this.appNamePicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.appNamePicbox.TabIndex = 1;
             this.appNamePicbox.TabStop = false;
@@ -531,7 +531,7 @@ namespace AdopseAddsTeam5
             this.choicePanel.Controls.Add(this.controlAdd);
             this.choicePanel.Controls.Add(this.controlRent);
             this.choicePanel.Controls.Add(this.controlBuy);
-            this.choicePanel.Location = new System.Drawing.Point(279, 338);
+            this.choicePanel.Location = new System.Drawing.Point(699, 698);
             this.choicePanel.Margin = new System.Windows.Forms.Padding(0);
             this.choicePanel.Name = "choicePanel";
             this.choicePanel.Size = new System.Drawing.Size(505, 237);
@@ -576,7 +576,7 @@ namespace AdopseAddsTeam5
             "Αυτόματη Ταξινόμηση",
             "Αύξουσα Τιμή",
             "Φθίνουσα Τιμή"});
-            this.resultsCombo.Location = new System.Drawing.Point(798, 76);
+            this.resultsCombo.Location = new System.Drawing.Point(1218, 76);
             this.resultsCombo.Margin = new System.Windows.Forms.Padding(0);
             this.resultsCombo.Name = "resultsCombo";
             this.resultsCombo.Size = new System.Drawing.Size(236, 29);
@@ -689,11 +689,11 @@ namespace AdopseAddsTeam5
             this.profilePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.profilePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profilePanel.Controls.Add(this.profileTableLayout);
-            this.profilePanel.Location = new System.Drawing.Point(-1, 72);
+            this.profilePanel.Location = new System.Drawing.Point(419, 72);
             this.profilePanel.Margin = new System.Windows.Forms.Padding(5);
             this.profilePanel.MinimumSize = new System.Drawing.Size(1064, 2);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(1064, 565);
+            this.profilePanel.Size = new System.Drawing.Size(1064, 925);
             this.profilePanel.TabIndex = 2;
             this.profilePanel.Visible = false;
             // 
@@ -731,7 +731,7 @@ namespace AdopseAddsTeam5
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.profileTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.profileTableLayout.Size = new System.Drawing.Size(1062, 563);
+            this.profileTableLayout.Size = new System.Drawing.Size(1062, 923);
             this.profileTableLayout.TabIndex = 0;
             // 
             // profilePicbox
@@ -884,7 +884,7 @@ namespace AdopseAddsTeam5
             this.profileAddListing.Dock = System.Windows.Forms.DockStyle.Left;
             this.profileAddListing.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.profileAddListing.ForeColor = System.Drawing.Color.White;
-            this.profileAddListing.Location = new System.Drawing.Point(17, 521);
+            this.profileAddListing.Location = new System.Drawing.Point(17, 881);
             this.profileAddListing.Margin = new System.Windows.Forms.Padding(0);
             this.profileAddListing.Name = "profileAddListing";
             this.profileAddListing.Size = new System.Drawing.Size(99, 25);
@@ -901,18 +901,18 @@ namespace AdopseAddsTeam5
             this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 411);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1028, 108);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1028, 468);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // addPanel1
             // 
             this.addPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.addPanel1.Controls.Add(this.add1TableLayout);
-            this.addPanel1.Location = new System.Drawing.Point(-1, 72);
+            this.addPanel1.Location = new System.Drawing.Point(419, 72);
             this.addPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.addPanel1.MinimumSize = new System.Drawing.Size(1064, 0);
             this.addPanel1.Name = "addPanel1";
-            this.addPanel1.Size = new System.Drawing.Size(1064, 565);
+            this.addPanel1.Size = new System.Drawing.Size(1064, 925);
             this.addPanel1.TabIndex = 3;
             // 
             // add1TableLayout
@@ -942,7 +942,7 @@ namespace AdopseAddsTeam5
             this.add1TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.add1TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.add1TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.add1TableLayout.Size = new System.Drawing.Size(1064, 565);
+            this.add1TableLayout.Size = new System.Drawing.Size(1064, 925);
             this.add1TableLayout.TabIndex = 0;
             // 
             // irrelevant6
@@ -1008,7 +1008,7 @@ namespace AdopseAddsTeam5
             this.addPerigrafiText.Location = new System.Drawing.Point(15, 429);
             this.addPerigrafiText.Margin = new System.Windows.Forms.Padding(0);
             this.addPerigrafiText.Name = "addPerigrafiText";
-            this.addPerigrafiText.Size = new System.Drawing.Size(1034, 81);
+            this.addPerigrafiText.Size = new System.Drawing.Size(1034, 441);
             this.addPerigrafiText.TabIndex = 5;
             this.addPerigrafiText.Text = "";
             // 
@@ -1020,7 +1020,7 @@ namespace AdopseAddsTeam5
             this.add1Next.Dock = System.Windows.Forms.DockStyle.Right;
             this.add1Next.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.add1Next.ForeColor = System.Drawing.Color.White;
-            this.add1Next.Location = new System.Drawing.Point(969, 510);
+            this.add1Next.Location = new System.Drawing.Point(969, 870);
             this.add1Next.Margin = new System.Windows.Forms.Padding(0);
             this.add1Next.Name = "add1Next";
             this.add1Next.Size = new System.Drawing.Size(80, 40);
@@ -1070,56 +1070,66 @@ namespace AdopseAddsTeam5
             // 
             this.perioxiTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.perioxiTextbox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.perioxiTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.perioxiTextbox.ForeColor = System.Drawing.Color.DarkGray;
             this.perioxiTextbox.Location = new System.Drawing.Point(331, 4);
             this.perioxiTextbox.Name = "perioxiTextbox";
             this.perioxiTextbox.Size = new System.Drawing.Size(699, 28);
             this.perioxiTextbox.TabIndex = 0;
             this.perioxiTextbox.Text = "π.χ. Θεσσαλονίκη - Τούμπα";
+            this.perioxiTextbox.Enter += new System.EventHandler(this.perioxiTextbox_Enter);
+            this.perioxiTextbox.Leave += new System.EventHandler(this.perioxiTextbox_Leave);
             // 
             // timiTextbox
             // 
             this.timiTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.timiTextbox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.timiTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.timiTextbox.ForeColor = System.Drawing.Color.DarkGray;
             this.timiTextbox.Location = new System.Drawing.Point(331, 40);
             this.timiTextbox.Name = "timiTextbox";
             this.timiTextbox.Size = new System.Drawing.Size(699, 28);
             this.timiTextbox.TabIndex = 1;
             this.timiTextbox.Text = "π.χ. €150000 ή 150.000";
+            this.timiTextbox.Enter += new System.EventHandler(this.timiTextbox_Enter);
+            this.timiTextbox.Leave += new System.EventHandler(this.timiTextbox_Leave);
             // 
             // emvadoTextbox
             // 
             this.emvadoTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.emvadoTextbox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.emvadoTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
             this.emvadoTextbox.Location = new System.Drawing.Point(331, 112);
             this.emvadoTextbox.Name = "emvadoTextbox";
             this.emvadoTextbox.Size = new System.Drawing.Size(699, 28);
             this.emvadoTextbox.TabIndex = 2;
             this.emvadoTextbox.Text = "π.χ. 89";
+            this.emvadoTextbox.Enter += new System.EventHandler(this.emvadoTextbox_Enter);
+            this.emvadoTextbox.Leave += new System.EventHandler(this.emvadoTextbox_Leave);
             // 
             // tiposTextbox
             // 
             this.tiposTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tiposTextbox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.tiposTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.tiposTextbox.ForeColor = System.Drawing.Color.DarkGray;
             this.tiposTextbox.Location = new System.Drawing.Point(331, 148);
             this.tiposTextbox.Name = "tiposTextbox";
             this.tiposTextbox.Size = new System.Drawing.Size(699, 28);
             this.tiposTextbox.TabIndex = 3;
             this.tiposTextbox.Text = "π.χ. Διαμέρισμα ή Μονοκατοικία";
+            this.tiposTextbox.Enter += new System.EventHandler(this.tiposTextbox_Enter);
+            this.tiposTextbox.Leave += new System.EventHandler(this.tiposTextbox_Leave);
             // 
             // phoneTextbox
             // 
             this.phoneTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.phoneTextbox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.phoneTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.phoneTextbox.ForeColor = System.Drawing.Color.DarkGray;
             this.phoneTextbox.Location = new System.Drawing.Point(331, 220);
             this.phoneTextbox.Name = "phoneTextbox";
             this.phoneTextbox.Size = new System.Drawing.Size(699, 28);
             this.phoneTextbox.TabIndex = 5;
             this.phoneTextbox.Text = "π.χ. 2101234567 ή 6912345678";
+            this.phoneTextbox.Enter += new System.EventHandler(this.phoneTextbox_Enter);
+            this.phoneTextbox.Leave += new System.EventHandler(this.phoneTextbox_Leave);
             // 
             // irrelevant9
             // 
@@ -1310,11 +1320,11 @@ namespace AdopseAddsTeam5
             // 
             this.addPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.addPanel2.Controls.Add(this.add2TableLayout);
-            this.addPanel2.Location = new System.Drawing.Point(-1, 72);
+            this.addPanel2.Location = new System.Drawing.Point(419, 72);
             this.addPanel2.Margin = new System.Windows.Forms.Padding(5);
             this.addPanel2.MinimumSize = new System.Drawing.Size(1064, 0);
             this.addPanel2.Name = "addPanel2";
-            this.addPanel2.Size = new System.Drawing.Size(1064, 565);
+            this.addPanel2.Size = new System.Drawing.Size(1064, 925);
             this.addPanel2.TabIndex = 4;
             // 
             // add2TableLayout
@@ -1343,7 +1353,7 @@ namespace AdopseAddsTeam5
             this.add2TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.add2TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.add2TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.add2TableLayout.Size = new System.Drawing.Size(1064, 565);
+            this.add2TableLayout.Size = new System.Drawing.Size(1064, 925);
             this.add2TableLayout.TabIndex = 0;
             // 
             // irrelevant16
@@ -1394,7 +1404,7 @@ namespace AdopseAddsTeam5
             this.add2Next.Dock = System.Windows.Forms.DockStyle.Right;
             this.add2Next.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.add2Next.ForeColor = System.Drawing.Color.White;
-            this.add2Next.Location = new System.Drawing.Point(969, 510);
+            this.add2Next.Location = new System.Drawing.Point(969, 870);
             this.add2Next.Margin = new System.Windows.Forms.Padding(0);
             this.add2Next.Name = "add2Next";
             this.add2Next.Size = new System.Drawing.Size(80, 40);
@@ -1408,13 +1418,15 @@ namespace AdopseAddsTeam5
             this.add2AddressTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.add2TableLayout.SetColumnSpan(this.add2AddressTextbox, 3);
             this.add2AddressTextbox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.add2AddressTextbox.ForeColor = System.Drawing.Color.DimGray;
+            this.add2AddressTextbox.ForeColor = System.Drawing.Color.DarkGray;
             this.add2AddressTextbox.Location = new System.Drawing.Point(215, 142);
             this.add2AddressTextbox.Margin = new System.Windows.Forms.Padding(0);
             this.add2AddressTextbox.Name = "add2AddressTextbox";
             this.add2AddressTextbox.Size = new System.Drawing.Size(634, 27);
             this.add2AddressTextbox.TabIndex = 5;
             this.add2AddressTextbox.Text = "Διεύθυνση";
+            this.add2AddressTextbox.Enter += new System.EventHandler(this.add2AddressTextbox_Enter);
+            this.add2AddressTextbox.Leave += new System.EventHandler(this.add2AddressTextbox_Leave);
             // 
             // add2MapPanel
             // 
@@ -1423,18 +1435,18 @@ namespace AdopseAddsTeam5
             this.add2MapPanel.Location = new System.Drawing.Point(140, 186);
             this.add2MapPanel.Margin = new System.Windows.Forms.Padding(25, 10, 25, 10);
             this.add2MapPanel.Name = "add2MapPanel";
-            this.add2MapPanel.Size = new System.Drawing.Size(784, 314);
+            this.add2MapPanel.Size = new System.Drawing.Size(784, 674);
             this.add2MapPanel.TabIndex = 6;
             // 
             // addPanel3
             // 
             this.addPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.addPanel3.Controls.Add(this.add3TableLayout);
-            this.addPanel3.Location = new System.Drawing.Point(-1, 72);
+            this.addPanel3.Location = new System.Drawing.Point(419, 72);
             this.addPanel3.Margin = new System.Windows.Forms.Padding(5);
             this.addPanel3.MinimumSize = new System.Drawing.Size(1064, 0);
             this.addPanel3.Name = "addPanel3";
-            this.addPanel3.Size = new System.Drawing.Size(1064, 565);
+            this.addPanel3.Size = new System.Drawing.Size(1064, 925);
             this.addPanel3.TabIndex = 5;
             // 
             // add3TableLayout
@@ -1459,7 +1471,7 @@ namespace AdopseAddsTeam5
             this.add3TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.add3TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.add3TableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.add3TableLayout.Size = new System.Drawing.Size(1064, 565);
+            this.add3TableLayout.Size = new System.Drawing.Size(1064, 925);
             this.add3TableLayout.TabIndex = 0;
             // 
             // add3Post
@@ -1470,7 +1482,7 @@ namespace AdopseAddsTeam5
             this.add3Post.Dock = System.Windows.Forms.DockStyle.Right;
             this.add3Post.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.add3Post.ForeColor = System.Drawing.Color.White;
-            this.add3Post.Location = new System.Drawing.Point(969, 510);
+            this.add3Post.Location = new System.Drawing.Point(969, 870);
             this.add3Post.Margin = new System.Windows.Forms.Padding(0);
             this.add3Post.Name = "add3Post";
             this.add3Post.Size = new System.Drawing.Size(80, 40);
@@ -1514,7 +1526,7 @@ namespace AdopseAddsTeam5
             this.flowLayoutPanel2.Location = new System.Drawing.Point(30, 151);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(15);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1004, 344);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1004, 704);
             this.flowLayoutPanel2.TabIndex = 6;
             // 
             // add3PicAdd
@@ -1549,11 +1561,11 @@ namespace AdopseAddsTeam5
             // 
             this.notificationsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.notificationsPanel.Controls.Add(this.notificationsTableLayout);
-            this.notificationsPanel.Location = new System.Drawing.Point(-1, 72);
+            this.notificationsPanel.Location = new System.Drawing.Point(419, 72);
             this.notificationsPanel.Margin = new System.Windows.Forms.Padding(5);
             this.notificationsPanel.MinimumSize = new System.Drawing.Size(1064, 0);
             this.notificationsPanel.Name = "notificationsPanel";
-            this.notificationsPanel.Size = new System.Drawing.Size(1064, 565);
+            this.notificationsPanel.Size = new System.Drawing.Size(1064, 925);
             this.notificationsPanel.TabIndex = 6;
             // 
             // notificationsTableLayout
@@ -1579,7 +1591,7 @@ namespace AdopseAddsTeam5
             this.notificationsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.notificationsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.notificationsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.notificationsTableLayout.Size = new System.Drawing.Size(1064, 565);
+            this.notificationsTableLayout.Size = new System.Drawing.Size(1064, 925);
             this.notificationsTableLayout.TabIndex = 0;
             // 
             // irrelevant18
@@ -1630,7 +1642,7 @@ namespace AdopseAddsTeam5
             this.notificationsFlowLayout.Location = new System.Drawing.Point(15, 95);
             this.notificationsFlowLayout.Margin = new System.Windows.Forms.Padding(0);
             this.notificationsFlowLayout.Name = "notificationsFlowLayout";
-            this.notificationsFlowLayout.Size = new System.Drawing.Size(1034, 455);
+            this.notificationsFlowLayout.Size = new System.Drawing.Size(1034, 815);
             this.notificationsFlowLayout.TabIndex = 3;
             // 
             // label1
@@ -1653,7 +1665,7 @@ namespace AdopseAddsTeam5
             this.messagePanel.BackColor = System.Drawing.Color.White;
             this.messagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.messagePanel.Controls.Add(this.messageTableLayout);
-            this.messagePanel.Location = new System.Drawing.Point(286, 161);
+            this.messagePanel.Location = new System.Drawing.Point(706, 341);
             this.messagePanel.Margin = new System.Windows.Forms.Padding(0);
             this.messagePanel.Name = "messagePanel";
             this.messagePanel.Size = new System.Drawing.Size(491, 350);
@@ -1767,11 +1779,12 @@ namespace AdopseAddsTeam5
             // messagePrint
             // 
             this.messagePrint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.messagePrint.AutoSize = true;
             this.messagePrint.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.messagePrint.Location = new System.Drawing.Point(282, 2);
+            this.messagePrint.Location = new System.Drawing.Point(272, 7);
             this.messagePrint.Margin = new System.Windows.Forms.Padding(0);
             this.messagePrint.Name = "messagePrint";
-            this.messagePrint.Size = new System.Drawing.Size(156, 35);
+            this.messagePrint.Size = new System.Drawing.Size(177, 25);
             this.messagePrint.TabIndex = 5;
             // 
             // messageSave
@@ -1918,11 +1931,11 @@ namespace AdopseAddsTeam5
             // 
             this.filtersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.filtersPanel.Controls.Add(this.filtersTableLayout);
-            this.filtersPanel.Location = new System.Drawing.Point(-1, 72);
+            this.filtersPanel.Location = new System.Drawing.Point(419, 72);
             this.filtersPanel.Margin = new System.Windows.Forms.Padding(5);
             this.filtersPanel.MinimumSize = new System.Drawing.Size(1064, 0);
             this.filtersPanel.Name = "filtersPanel";
-            this.filtersPanel.Size = new System.Drawing.Size(1064, 565);
+            this.filtersPanel.Size = new System.Drawing.Size(1064, 925);
             this.filtersPanel.TabIndex = 8;
             this.filtersPanel.Visible = false;
             // 
@@ -1949,7 +1962,7 @@ namespace AdopseAddsTeam5
             this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.filtersTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.filtersTableLayout.Size = new System.Drawing.Size(1064, 565);
+            this.filtersTableLayout.Size = new System.Drawing.Size(1064, 925);
             this.filtersTableLayout.TabIndex = 0;
             // 
             // irrelevant23
@@ -1998,18 +2011,18 @@ namespace AdopseAddsTeam5
             this.filtersFlowLayout.Location = new System.Drawing.Point(15, 95);
             this.filtersFlowLayout.Margin = new System.Windows.Forms.Padding(0);
             this.filtersFlowLayout.Name = "filtersFlowLayout";
-            this.filtersFlowLayout.Size = new System.Drawing.Size(1034, 455);
+            this.filtersFlowLayout.Size = new System.Drawing.Size(1034, 815);
             this.filtersFlowLayout.TabIndex = 3;
             // 
             // favoritesPanel
             // 
             this.favoritesPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.favoritesPanel.Controls.Add(this.favoritesTableLayout);
-            this.favoritesPanel.Location = new System.Drawing.Point(-1, 72);
+            this.favoritesPanel.Location = new System.Drawing.Point(419, 72);
             this.favoritesPanel.Margin = new System.Windows.Forms.Padding(5);
             this.favoritesPanel.MinimumSize = new System.Drawing.Size(1064, 0);
             this.favoritesPanel.Name = "favoritesPanel";
-            this.favoritesPanel.Size = new System.Drawing.Size(1064, 565);
+            this.favoritesPanel.Size = new System.Drawing.Size(1064, 925);
             this.favoritesPanel.TabIndex = 9;
             this.favoritesPanel.Visible = false;
             // 
@@ -2036,7 +2049,7 @@ namespace AdopseAddsTeam5
             this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.favoritesTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.favoritesTableLayout.Size = new System.Drawing.Size(1064, 565);
+            this.favoritesTableLayout.Size = new System.Drawing.Size(1064, 925);
             this.favoritesTableLayout.TabIndex = 0;
             // 
             // irrelevant24
@@ -2086,18 +2099,18 @@ namespace AdopseAddsTeam5
             this.favoritesFlowLayout.Location = new System.Drawing.Point(15, 95);
             this.favoritesFlowLayout.Margin = new System.Windows.Forms.Padding(0);
             this.favoritesFlowLayout.Name = "favoritesFlowLayout";
-            this.favoritesFlowLayout.Size = new System.Drawing.Size(1034, 455);
+            this.favoritesFlowLayout.Size = new System.Drawing.Size(1034, 815);
             this.favoritesFlowLayout.TabIndex = 3;
             // 
             // resultsPanel
             // 
             this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.resultsPanel.Controls.Add(this.resultsFlowLayout);
-            this.resultsPanel.Location = new System.Drawing.Point(-1, 135);
+            this.resultsPanel.Location = new System.Drawing.Point(419, 135);
             this.resultsPanel.Margin = new System.Windows.Forms.Padding(5);
             this.resultsPanel.MinimumSize = new System.Drawing.Size(1064, 0);
             this.resultsPanel.Name = "resultsPanel";
-            this.resultsPanel.Size = new System.Drawing.Size(1064, 502);
+            this.resultsPanel.Size = new System.Drawing.Size(1064, 862);
             this.resultsPanel.TabIndex = 10;
             // 
             // resultsFlowLayout
@@ -2112,7 +2125,7 @@ namespace AdopseAddsTeam5
             this.resultsFlowLayout.Margin = new System.Windows.Forms.Padding(0);
             this.resultsFlowLayout.Name = "resultsFlowLayout";
             this.resultsFlowLayout.Padding = new System.Windows.Forms.Padding(15);
-            this.resultsFlowLayout.Size = new System.Drawing.Size(1064, 502);
+            this.resultsFlowLayout.Size = new System.Drawing.Size(1064, 862);
             this.resultsFlowLayout.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -2482,7 +2495,7 @@ namespace AdopseAddsTeam5
             // 
             this.resultsFilterPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.resultsFilterPanel.Controls.Add(this.searchFilterLayoutPanel);
-            this.resultsFilterPanel.Location = new System.Drawing.Point(-310, 135);
+            this.resultsFilterPanel.Location = new System.Drawing.Point(110, 135);
             this.resultsFilterPanel.Margin = new System.Windows.Forms.Padding(0);
             this.resultsFilterPanel.Name = "resultsFilterPanel";
             this.resultsFilterPanel.Size = new System.Drawing.Size(300, 450);
@@ -2724,6 +2737,8 @@ namespace AdopseAddsTeam5
             this.filterMinBaths.Size = new System.Drawing.Size(104, 27);
             this.filterMinBaths.TabIndex = 13;
             this.filterMinBaths.Text = "Ελάχιστο";
+            this.filterMinBaths.Enter += new System.EventHandler(this.filterMinBaths_Enter);
+            this.filterMinBaths.Leave += new System.EventHandler(this.filterMinBaths_Leave);
             // 
             // filterMaxBaths
             // 
@@ -2735,6 +2750,8 @@ namespace AdopseAddsTeam5
             this.filterMaxBaths.Size = new System.Drawing.Size(104, 27);
             this.filterMaxBaths.TabIndex = 14;
             this.filterMaxBaths.Text = "Μέγιστο";
+            this.filterMaxBaths.Enter += new System.EventHandler(this.filterMaxBaths_Enter);
+            this.filterMaxBaths.Leave += new System.EventHandler(this.filterMaxBaths_Leave);
             // 
             // filterMaxRooms
             // 
@@ -2746,6 +2763,8 @@ namespace AdopseAddsTeam5
             this.filterMaxRooms.Size = new System.Drawing.Size(104, 27);
             this.filterMaxRooms.TabIndex = 15;
             this.filterMaxRooms.Text = "Μέγιστο";
+            this.filterMaxRooms.Enter += new System.EventHandler(this.filterMaxRooms_Enter);
+            this.filterMaxRooms.Leave += new System.EventHandler(this.filterMaxRooms_Leave);
             // 
             // filterMinRooms
             // 
@@ -2757,6 +2776,8 @@ namespace AdopseAddsTeam5
             this.filterMinRooms.Size = new System.Drawing.Size(104, 27);
             this.filterMinRooms.TabIndex = 16;
             this.filterMinRooms.Text = "Ελάχιστο";
+            this.filterMinRooms.Enter += new System.EventHandler(this.filterMinRooms_Enter);
+            this.filterMinRooms.Leave += new System.EventHandler(this.filterMinRooms_Leave);
             // 
             // filterMinEmvado
             // 
@@ -2768,6 +2789,8 @@ namespace AdopseAddsTeam5
             this.filterMinEmvado.Size = new System.Drawing.Size(104, 27);
             this.filterMinEmvado.TabIndex = 17;
             this.filterMinEmvado.Text = "Ελάχιστο";
+            this.filterMinEmvado.Enter += new System.EventHandler(this.filterMinEmvado_Enter);
+            this.filterMinEmvado.Leave += new System.EventHandler(this.filterMinEmvado_Leave);
             // 
             // filterMaxEmvado
             // 
@@ -2779,6 +2802,8 @@ namespace AdopseAddsTeam5
             this.filterMaxEmvado.Size = new System.Drawing.Size(104, 27);
             this.filterMaxEmvado.TabIndex = 18;
             this.filterMaxEmvado.Text = "Μέγιστο";
+            this.filterMaxEmvado.Enter += new System.EventHandler(this.filterMaxEmvado_Enter);
+            this.filterMaxEmvado.Leave += new System.EventHandler(this.filterMaxEmvado_Leave);
             // 
             // filterMaxTimi
             // 
@@ -2790,6 +2815,8 @@ namespace AdopseAddsTeam5
             this.filterMaxTimi.Size = new System.Drawing.Size(104, 27);
             this.filterMaxTimi.TabIndex = 19;
             this.filterMaxTimi.Text = "Μέγιστη";
+            this.filterMaxTimi.Enter += new System.EventHandler(this.filterMaxTimi_Enter);
+            this.filterMaxTimi.Leave += new System.EventHandler(this.filterMaxTimi_Leave);
             // 
             // filterMinTimi
             // 
@@ -2801,6 +2828,8 @@ namespace AdopseAddsTeam5
             this.filterMinTimi.Size = new System.Drawing.Size(104, 27);
             this.filterMinTimi.TabIndex = 20;
             this.filterMinTimi.Text = "Ελάχιστη";
+            this.filterMinTimi.Enter += new System.EventHandler(this.filterMinTimi_Enter);
+            this.filterMinTimi.Leave += new System.EventHandler(this.filterMinTimi_Leave);
             // 
             // resultsSearchTableLayout
             // 
@@ -2810,7 +2839,7 @@ namespace AdopseAddsTeam5
             this.resultsSearchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.resultsSearchTableLayout.Controls.Add(this.resultsSearchbox, 0, 0);
             this.resultsSearchTableLayout.Controls.Add(this.resultsSearchBtn, 1, 0);
-            this.resultsSearchTableLayout.Location = new System.Drawing.Point(30, 75);
+            this.resultsSearchTableLayout.Location = new System.Drawing.Point(450, 75);
             this.resultsSearchTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.resultsSearchTableLayout.Name = "resultsSearchTableLayout";
             this.resultsSearchTableLayout.RowCount = 1;
@@ -2822,11 +2851,11 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.viewListingPanel.Controls.Add(this.viewListingTableLayout1);
-            this.viewListingPanel.Location = new System.Drawing.Point(-1, 72);
+            this.viewListingPanel.Location = new System.Drawing.Point(419, 72);
             this.viewListingPanel.Margin = new System.Windows.Forms.Padding(5);
             this.viewListingPanel.MinimumSize = new System.Drawing.Size(1064, 0);
             this.viewListingPanel.Name = "viewListingPanel";
-            this.viewListingPanel.Size = new System.Drawing.Size(1064, 565);
+            this.viewListingPanel.Size = new System.Drawing.Size(1064, 925);
             this.viewListingPanel.TabIndex = 13;
             this.viewListingPanel.Visible = false;
             // 
@@ -2843,7 +2872,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout1.Name = "viewListingTableLayout1";
             this.viewListingTableLayout1.RowCount = 1;
             this.viewListingTableLayout1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.viewListingTableLayout1.Size = new System.Drawing.Size(1064, 565);
+            this.viewListingTableLayout1.Size = new System.Drawing.Size(1064, 925);
             this.viewListingTableLayout1.TabIndex = 0;
             // 
             // viewListingTableLayout2
@@ -2861,7 +2890,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.viewListingTableLayout2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1F));
             this.viewListingTableLayout2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.viewListingTableLayout2.Size = new System.Drawing.Size(644, 565);
+            this.viewListingTableLayout2.Size = new System.Drawing.Size(644, 925);
             this.viewListingTableLayout2.TabIndex = 0;
             // 
             // tabControl1
@@ -2872,12 +2901,12 @@ namespace AdopseAddsTeam5
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 339);
+            this.tabControl1.Location = new System.Drawing.Point(0, 555);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(644, 226);
+            this.tabControl1.Size = new System.Drawing.Size(644, 370);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -2886,7 +2915,7 @@ namespace AdopseAddsTeam5
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(636, 194);
+            this.tabPage1.Size = new System.Drawing.Size(636, 338);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Χαρακτηριστικά";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2943,7 +2972,7 @@ namespace AdopseAddsTeam5
             this.lineSeparator13.AutoSize = true;
             this.lineSeparator13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
             this.lineSeparator13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lineSeparator13.Location = new System.Drawing.Point(0, 338);
+            this.lineSeparator13.Location = new System.Drawing.Point(0, 554);
             this.lineSeparator13.Margin = new System.Windows.Forms.Padding(0);
             this.lineSeparator13.Name = "lineSeparator13";
             this.lineSeparator13.Size = new System.Drawing.Size(644, 1);
@@ -2964,7 +2993,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.viewListingTableLayout4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.viewListingTableLayout4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.viewListingTableLayout4.Size = new System.Drawing.Size(644, 338);
+            this.viewListingTableLayout4.Size = new System.Drawing.Size(644, 554);
             this.viewListingTableLayout4.TabIndex = 3;
             // 
             // viewListingTitle
@@ -3047,7 +3076,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout6.Name = "viewListingTableLayout6";
             this.viewListingTableLayout6.RowCount = 1;
             this.viewListingTableLayout6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.viewListingTableLayout6.Size = new System.Drawing.Size(644, 268);
+            this.viewListingTableLayout6.Size = new System.Drawing.Size(644, 484);
             this.viewListingTableLayout6.TabIndex = 4;
             // 
             // viewListingTableLayout7
@@ -3069,7 +3098,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout7.Controls.Add(this.irrelevant38, 0, 8);
             this.viewListingTableLayout7.Controls.Add(this.irrelevant39, 0, 10);
             this.viewListingTableLayout7.Controls.Add(this.vlShowPhone, 0, 11);
-            this.viewListingTableLayout7.Location = new System.Drawing.Point(10, 10);
+            this.viewListingTableLayout7.Location = new System.Drawing.Point(10, 118);
             this.viewListingTableLayout7.Margin = new System.Windows.Forms.Padding(10);
             this.viewListingTableLayout7.MaximumSize = new System.Drawing.Size(302, 248);
             this.viewListingTableLayout7.Name = "viewListingTableLayout7";
@@ -3264,7 +3293,7 @@ namespace AdopseAddsTeam5
             this.viewListingMessageTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.viewListingMessageTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.viewListingMessageTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.viewListingMessageTableLayout.Size = new System.Drawing.Size(302, 248);
+            this.viewListingMessageTableLayout.Size = new System.Drawing.Size(302, 464);
             this.viewListingMessageTableLayout.TabIndex = 1;
             // 
             // irrelevant41
@@ -3283,7 +3312,7 @@ namespace AdopseAddsTeam5
             this.vlMsgFName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.vlMsgFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlMsgFName.Font = new System.Drawing.Font("Arial", 10F);
-            this.vlMsgFName.ForeColor = System.Drawing.Color.Gray;
+            this.vlMsgFName.ForeColor = System.Drawing.Color.DarkGray;
             this.vlMsgFName.Location = new System.Drawing.Point(0, 34);
             this.vlMsgFName.Margin = new System.Windows.Forms.Padding(0);
             this.vlMsgFName.Multiline = true;
@@ -3291,13 +3320,15 @@ namespace AdopseAddsTeam5
             this.vlMsgFName.Size = new System.Drawing.Size(302, 22);
             this.vlMsgFName.TabIndex = 1;
             this.vlMsgFName.Text = "Όνομα";
+            this.vlMsgFName.Enter += new System.EventHandler(this.vlMsgFName_Enter);
+            this.vlMsgFName.Leave += new System.EventHandler(this.vlMsgFName_Leave);
             // 
             // vlMsgLName
             // 
             this.vlMsgLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.vlMsgLName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlMsgLName.Font = new System.Drawing.Font("Arial", 10F);
-            this.vlMsgLName.ForeColor = System.Drawing.Color.Gray;
+            this.vlMsgLName.ForeColor = System.Drawing.Color.DarkGray;
             this.vlMsgLName.Location = new System.Drawing.Point(0, 64);
             this.vlMsgLName.Margin = new System.Windows.Forms.Padding(0);
             this.vlMsgLName.Multiline = true;
@@ -3305,13 +3336,15 @@ namespace AdopseAddsTeam5
             this.vlMsgLName.Size = new System.Drawing.Size(302, 22);
             this.vlMsgLName.TabIndex = 2;
             this.vlMsgLName.Text = "Επώνυμο";
+            this.vlMsgLName.Enter += new System.EventHandler(this.vlMsgLName_Enter);
+            this.vlMsgLName.Leave += new System.EventHandler(this.vlMsgLName_Leave);
             // 
             // vlMsgPhone
             // 
             this.vlMsgPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.vlMsgPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlMsgPhone.Font = new System.Drawing.Font("Arial", 10F);
-            this.vlMsgPhone.ForeColor = System.Drawing.Color.Gray;
+            this.vlMsgPhone.ForeColor = System.Drawing.Color.DarkGray;
             this.vlMsgPhone.Location = new System.Drawing.Point(0, 94);
             this.vlMsgPhone.Margin = new System.Windows.Forms.Padding(0);
             this.vlMsgPhone.Multiline = true;
@@ -3319,13 +3352,15 @@ namespace AdopseAddsTeam5
             this.vlMsgPhone.Size = new System.Drawing.Size(302, 22);
             this.vlMsgPhone.TabIndex = 3;
             this.vlMsgPhone.Text = "Τηλέφωνο";
+            this.vlMsgPhone.Enter += new System.EventHandler(this.vlMsgPhone_Enter);
+            this.vlMsgPhone.Leave += new System.EventHandler(this.vlMsgPhone_Leave);
             // 
             // vlMsgEmail
             // 
             this.vlMsgEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.vlMsgEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlMsgEmail.Font = new System.Drawing.Font("Arial", 10F);
-            this.vlMsgEmail.ForeColor = System.Drawing.Color.Gray;
+            this.vlMsgEmail.ForeColor = System.Drawing.Color.DarkGray;
             this.vlMsgEmail.Location = new System.Drawing.Point(0, 124);
             this.vlMsgEmail.Margin = new System.Windows.Forms.Padding(0);
             this.vlMsgEmail.Multiline = true;
@@ -3333,20 +3368,24 @@ namespace AdopseAddsTeam5
             this.vlMsgEmail.Size = new System.Drawing.Size(302, 22);
             this.vlMsgEmail.TabIndex = 4;
             this.vlMsgEmail.Text = "Email";
+            this.vlMsgEmail.Enter += new System.EventHandler(this.vlMsgEmail_Enter);
+            this.vlMsgEmail.Leave += new System.EventHandler(this.vlMsgEmail_Leave);
             // 
             // vlMsgText
             // 
             this.vlMsgText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlMsgText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlMsgText.Font = new System.Drawing.Font("Arial", 10F);
-            this.vlMsgText.ForeColor = System.Drawing.Color.Gray;
+            this.vlMsgText.ForeColor = System.Drawing.Color.DarkGray;
             this.vlMsgText.Location = new System.Drawing.Point(0, 150);
             this.vlMsgText.Margin = new System.Windows.Forms.Padding(0);
             this.vlMsgText.Multiline = true;
             this.vlMsgText.Name = "vlMsgText";
-            this.vlMsgText.Size = new System.Drawing.Size(302, 63);
+            this.vlMsgText.Size = new System.Drawing.Size(302, 279);
             this.vlMsgText.TabIndex = 5;
             this.vlMsgText.Text = "Το μήνυμα σας...";
+            this.vlMsgText.Enter += new System.EventHandler(this.vlMsgText_Enter);
+            this.vlMsgText.Leave += new System.EventHandler(this.vlMsgText_Leave);
             // 
             // vlMsgSend
             // 
@@ -3355,7 +3394,7 @@ namespace AdopseAddsTeam5
             this.vlMsgSend.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlMsgSend.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.vlMsgSend.ForeColor = System.Drawing.Color.White;
-            this.vlMsgSend.Location = new System.Drawing.Point(50, 217);
+            this.vlMsgSend.Location = new System.Drawing.Point(50, 433);
             this.vlMsgSend.Margin = new System.Windows.Forms.Padding(50, 4, 50, 4);
             this.vlMsgSend.Name = "vlMsgSend";
             this.vlMsgSend.Size = new System.Drawing.Size(202, 27);
@@ -3387,7 +3426,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.viewListingTableLayout3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.viewListingTableLayout3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.viewListingTableLayout3.Size = new System.Drawing.Size(420, 565);
+            this.viewListingTableLayout3.Size = new System.Drawing.Size(420, 925);
             this.viewListingTableLayout3.TabIndex = 1;
             // 
             // viewListingMainPic
@@ -3399,7 +3438,7 @@ namespace AdopseAddsTeam5
             this.viewListingMainPic.Location = new System.Drawing.Point(2, 2);
             this.viewListingMainPic.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingMainPic.Name = "viewListingMainPic";
-            this.viewListingMainPic.Size = new System.Drawing.Size(416, 236);
+            this.viewListingMainPic.Size = new System.Drawing.Size(416, 416);
             this.viewListingMainPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.viewListingMainPic.TabIndex = 0;
             this.viewListingMainPic.TabStop = false;
@@ -3409,7 +3448,7 @@ namespace AdopseAddsTeam5
             this.viewListingPic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingPic1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingPic1.Image = ((System.Drawing.Image)(resources.GetObject("viewListingPic1.Image")));
-            this.viewListingPic1.Location = new System.Drawing.Point(2, 242);
+            this.viewListingPic1.Location = new System.Drawing.Point(2, 422);
             this.viewListingPic1.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingPic1.Name = "viewListingPic1";
             this.viewListingPic1.Size = new System.Drawing.Size(80, 80);
@@ -3423,7 +3462,7 @@ namespace AdopseAddsTeam5
             this.viewListingPic2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingPic2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingPic2.Image = ((System.Drawing.Image)(resources.GetObject("viewListingPic2.Image")));
-            this.viewListingPic2.Location = new System.Drawing.Point(86, 242);
+            this.viewListingPic2.Location = new System.Drawing.Point(86, 422);
             this.viewListingPic2.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingPic2.Name = "viewListingPic2";
             this.viewListingPic2.Size = new System.Drawing.Size(80, 80);
@@ -3436,7 +3475,7 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingPic3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingPic3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPic3.Location = new System.Drawing.Point(170, 242);
+            this.viewListingPic3.Location = new System.Drawing.Point(170, 422);
             this.viewListingPic3.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingPic3.Name = "viewListingPic3";
             this.viewListingPic3.Size = new System.Drawing.Size(80, 80);
@@ -3449,7 +3488,7 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingPic4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingPic4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPic4.Location = new System.Drawing.Point(254, 242);
+            this.viewListingPic4.Location = new System.Drawing.Point(254, 422);
             this.viewListingPic4.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingPic4.Name = "viewListingPic4";
             this.viewListingPic4.Size = new System.Drawing.Size(80, 80);
@@ -3462,7 +3501,7 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingPic5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingPic5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPic5.Location = new System.Drawing.Point(338, 242);
+            this.viewListingPic5.Location = new System.Drawing.Point(338, 422);
             this.viewListingPic5.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingPic5.Name = "viewListingPic5";
             this.viewListingPic5.Size = new System.Drawing.Size(80, 80);
@@ -3476,16 +3515,16 @@ namespace AdopseAddsTeam5
             this.viewListingMapPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingTableLayout3.SetColumnSpan(this.viewListingMapPanel, 5);
             this.viewListingMapPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingMapPanel.Location = new System.Drawing.Point(2, 326);
+            this.viewListingMapPanel.Location = new System.Drawing.Point(2, 506);
             this.viewListingMapPanel.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingMapPanel.Name = "viewListingMapPanel";
-            this.viewListingMapPanel.Size = new System.Drawing.Size(416, 237);
+            this.viewListingMapPanel.Size = new System.Drawing.Size(416, 417);
             this.viewListingMapPanel.TabIndex = 6;
             // 
             // footerMiddleB
             // 
             this.footerMiddleB.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.footerMiddleB.Location = new System.Drawing.Point(-1, 637);
+            this.footerMiddleB.Location = new System.Drawing.Point(419, 997);
             this.footerMiddleB.Margin = new System.Windows.Forms.Padding(0);
             this.footerMiddleB.Name = "footerMiddleB";
             this.footerMiddleB.Size = new System.Drawing.Size(1064, 36);
@@ -3497,9 +3536,14 @@ namespace AdopseAddsTeam5
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1062, 673);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.resultsFilterPanel);
             this.Controls.Add(this.footerMiddleB);
             this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.resultsSearchTableLayout);
+            this.Controls.Add(this.sideMenuPanel);
+            this.Controls.Add(this.profilePanel);
+            this.Controls.Add(this.resultsPanel);
             this.Controls.Add(this.addPanel3);
             this.Controls.Add(this.addPanel2);
             this.Controls.Add(this.addPanel1);
@@ -3507,12 +3551,7 @@ namespace AdopseAddsTeam5
             this.Controls.Add(this.messagePanel);
             this.Controls.Add(this.filtersPanel);
             this.Controls.Add(this.favoritesPanel);
-            this.Controls.Add(this.resultsFilterPanel);
             this.Controls.Add(this.viewListingPanel);
-            this.Controls.Add(this.resultsSearchTableLayout);
-            this.Controls.Add(this.sideMenuPanel);
-            this.Controls.Add(this.profilePanel);
-            this.Controls.Add(this.resultsPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1080, 720);

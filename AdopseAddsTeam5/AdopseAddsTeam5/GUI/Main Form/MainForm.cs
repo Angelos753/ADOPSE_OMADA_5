@@ -81,6 +81,7 @@ namespace AdopseAddsTeam5
             footerLeft.Hide();
             footerRight.Hide();
             footerMiddle.Hide();
+            footerMiddleB.Hide();
             s = false;
             h = false;
         }
@@ -404,6 +405,349 @@ namespace AdopseAddsTeam5
                 resultsFilterPanel.BringToFront();
             }
                 
+        }
+
+        private void add2AddressTextbox_Enter(object sender, EventArgs e)
+        {
+            if(add2AddressTextbox.Text == "Διεύθυνση")
+            {
+                add2AddressTextbox.Text = "";
+                add2AddressTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void add2AddressTextbox_Leave(object sender, EventArgs e)
+        {
+            if (add2AddressTextbox.Text == "")
+            {
+                add2AddressTextbox.Text = "Διεύθυνση";
+                add2AddressTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void perioxiTextbox_Enter(object sender, EventArgs e)
+        {
+            if (perioxiTextbox.Text == "π.χ. Θεσσαλονίκη - Τούμπα")
+            {
+                perioxiTextbox.Text = "";
+                perioxiTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void perioxiTextbox_Leave(object sender, EventArgs e)
+        {
+            if (perioxiTextbox.Text == "")
+            {
+                perioxiTextbox.Text = "π.χ. Θεσσαλονίκη - Τούμπα";
+                perioxiTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+           
+        }
+
+        private void timiTextbox_Enter(object sender, EventArgs e)
+        {
+            if (timiTextbox.Text == "π.χ. €150000 ή 150.000")
+            {
+                timiTextbox.Text = "";
+                timiTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void timiTextbox_Leave(object sender, EventArgs e)
+        {
+            if (timiTextbox.Text == "")
+            {
+                timiTextbox.Text = "π.χ. €150000 ή 150.000";
+                timiTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void emvadoTextbox_Enter(object sender, EventArgs e)
+        {
+            if (emvadoTextbox.Text == "π.χ. 89")
+            {
+                emvadoTextbox.Text = "";
+                emvadoTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void emvadoTextbox_Leave(object sender, EventArgs e)
+        {
+            if (emvadoTextbox.Text == "")
+            {
+                emvadoTextbox.Text = "π.χ. 89";
+                emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void tiposTextbox_Enter(object sender, EventArgs e)
+        {
+            if (tiposTextbox.Text == "π.χ. Διαμέρισμα ή Μονοκατοικία")
+            {
+                tiposTextbox.Text = "";
+                tiposTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void tiposTextbox_Leave(object sender, EventArgs e)
+        {
+            if (tiposTextbox.Text == "")
+            {
+                tiposTextbox.Text = "π.χ. Διαμέρισμα ή Μονοκατοικία";
+                tiposTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void phoneTextbox_Enter(object sender, EventArgs e)
+        {
+            if (phoneTextbox.Text == "π.χ. 2101234567 ή 6912345678")
+            {
+                phoneTextbox.Text = "";
+                phoneTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void phoneTextbox_Leave(object sender, EventArgs e)
+        {
+            if (phoneTextbox.Text == "")
+            {
+                phoneTextbox.Text = "π.χ. 2101234567 ή 6912345678";
+                phoneTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgFName_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgFName.Text == "Όνομα")
+            {
+                vlMsgFName.Text = "";
+                vlMsgFName.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgFName_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgFName.Text == "")
+            {
+                vlMsgFName.Text = "Όνομα";
+                vlMsgFName.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgLName_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgLName.Text == "Επώνυμο")
+            {
+                vlMsgLName.Text = "";
+                vlMsgLName.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgLName_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgLName.Text == "")
+            {
+                vlMsgLName.Text = "Επώνυμο";
+                vlMsgLName.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgPhone_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgPhone.Text == "Τηλέφωνο")
+            {
+                vlMsgPhone.Text = "";
+                vlMsgPhone.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgPhone_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgPhone.Text == "")
+            {
+                vlMsgPhone.Text = "Τηλέφωνο";
+                vlMsgPhone.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgEmail_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgEmail.Text == "Email")
+            {
+                vlMsgEmail.Text = "";
+                vlMsgEmail.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgEmail_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgEmail.Text == "")
+            {
+                vlMsgEmail.Text = "Email";
+                vlMsgEmail.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void vlMsgText_Enter(object sender, EventArgs e)
+        {
+            if (vlMsgText.Text == "Το μήνυμα σας...")
+            {
+                vlMsgText.Text = "";
+                vlMsgText.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void vlMsgText_Leave(object sender, EventArgs e)
+        {
+            if (vlMsgText.Text == "")
+            {
+                vlMsgText.Text = "Το μήνυμα σας...";
+                vlMsgText.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMinTimi_Enter(object sender, EventArgs e)
+        {
+            if (filterMinTimi.Text == "Ελάχιστη")
+            {
+                filterMinTimi.Text = "";
+                filterMinTimi.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMinTimi_Leave(object sender, EventArgs e)
+        {
+            if (filterMinTimi.Text == "")
+            {
+                filterMinTimi.Text = "Ελάχιστη";
+                filterMinTimi.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMinEmvado_Enter(object sender, EventArgs e)
+        {
+            if (filterMinEmvado.Text == "Ελάχιστο")
+            {
+                filterMinEmvado.Text = "";
+                filterMinEmvado.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMinEmvado_Leave(object sender, EventArgs e)
+        {
+            if (filterMinEmvado.Text == "")
+            {
+                filterMinEmvado.Text = "Ελάχιστο";
+                filterMinEmvado.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMinRooms_Enter(object sender, EventArgs e)
+        {
+            if (filterMinRooms.Text == "Ελάχιστο")
+            {
+                filterMinRooms.Text = "";
+                filterMinRooms.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMinRooms_Leave(object sender, EventArgs e)
+        {
+            if (filterMinRooms.Text == "")
+            {
+                filterMinRooms.Text = "Ελάχιστο";
+                filterMinRooms.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMinBaths_Enter(object sender, EventArgs e)
+        {
+            if (filterMinBaths.Text == "Ελάχιστο")
+            {
+                filterMinBaths.Text = "";
+                filterMinBaths.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMinBaths_Leave(object sender, EventArgs e)
+        {
+            if (filterMinBaths.Text == "")
+            {
+                filterMinBaths.Text = "Ελάχιστο";
+                filterMinBaths.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMaxTimi_Enter(object sender, EventArgs e)
+        {
+            if (filterMaxTimi.Text == "Μέγιστη")
+            {
+                filterMaxTimi.Text = "";
+                filterMaxTimi.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMaxTimi_Leave(object sender, EventArgs e)
+        {
+            if (filterMaxTimi.Text == "")
+            {
+                filterMaxTimi.Text = "Μέγιστη";
+                filterMaxTimi.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMaxEmvado_Enter(object sender, EventArgs e)
+        {
+            if (filterMaxEmvado.Text == "Μέγιστο")
+            {
+                filterMaxEmvado.Text = "";
+                filterMaxEmvado.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMaxEmvado_Leave(object sender, EventArgs e)
+        {
+            if (filterMaxEmvado.Text == "")
+            {
+                filterMaxEmvado.Text = "Μέγιστο";
+                filterMaxEmvado.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMaxRooms_Enter(object sender, EventArgs e)
+        {
+            if (filterMaxRooms.Text == "Μέγιστο")
+            {
+                filterMaxRooms.Text = "";
+                filterMaxRooms.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMaxRooms_Leave(object sender, EventArgs e)
+        {
+            if (filterMaxRooms.Text == "")
+            {
+                filterMaxRooms.Text = "Μέγιστο";
+                filterMaxRooms.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void filterMaxBaths_Enter(object sender, EventArgs e)
+        {
+            if (filterMaxBaths.Text == "Μέγιστο")
+            {
+                filterMaxBaths.Text = "";
+                filterMaxBaths.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void filterMaxBaths_Leave(object sender, EventArgs e)
+        {
+            if (filterMaxBaths.Text == "")
+            {
+                filterMaxBaths.Text = "Μέγιστο";
+                filterMaxBaths.ForeColor = System.Drawing.Color.DarkGray;
+            }
         }
     }
 
