@@ -170,6 +170,7 @@ namespace AdopseAddsTeam5
             this.showResults();
             footerLeft.Show();
             footerRight.Show();
+            footerMiddleB.BringToFront();
             s = true;
         }
 
@@ -188,6 +189,7 @@ namespace AdopseAddsTeam5
             showResults();
             footerLeft.Show();
             footerRight.Show();
+            footerMiddleB.BringToFront();
             s = true;
         }
 
@@ -749,6 +751,23 @@ namespace AdopseAddsTeam5
                 filterMaxBaths.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
-    }
 
+        private void searchTextbox_Enter(object sender, EventArgs e)
+        {
+            if (searchTextbox.Text == "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.")
+            {
+                searchTextbox.Text = "";
+                searchTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void searchTextbox_Leave(object sender, EventArgs e)
+        {
+            if (searchTextbox.Text == "")
+            {
+                searchTextbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.";
+                searchTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+    }
 }
