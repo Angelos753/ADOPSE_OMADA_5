@@ -156,6 +156,32 @@ namespace AdopseAddsTeam5
             this.favoritesFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.resultsPanel = new System.Windows.Forms.Panel();
             this.resultsFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.resultsSearchbox = new System.Windows.Forms.TextBox();
             this.resultsSearchBtn = new System.Windows.Forms.Label();
             this.resultsFilterPanel = new System.Windows.Forms.Panel();
@@ -187,8 +213,8 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout2 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.viewListingPerigrafi = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.lineSeparator13 = new System.Windows.Forms.Label();
@@ -228,6 +254,7 @@ namespace AdopseAddsTeam5
             this.viewListingPic4 = new System.Windows.Forms.PictureBox();
             this.viewListingPic5 = new System.Windows.Forms.PictureBox();
             this.viewListingMapPanel = new System.Windows.Forms.Panel();
+            this.footerMiddleB = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
             this.searchTableLayout.SuspendLayout();
@@ -267,6 +294,15 @@ namespace AdopseAddsTeam5
             this.favoritesPanel.SuspendLayout();
             this.favoritesTableLayout.SuspendLayout();
             this.resultsPanel.SuspendLayout();
+            this.resultsFlowLayout.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.resultsFilterPanel.SuspendLayout();
             this.searchFilterLayoutPanel.SuspendLayout();
             this.resultsSearchTableLayout.SuspendLayout();
@@ -274,7 +310,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout1.SuspendLayout();
             this.viewListingTableLayout2.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.viewListingTableLayout4.SuspendLayout();
             this.viewListingTableLayout5.SuspendLayout();
             this.viewListingTableLayout6.SuspendLayout();
@@ -572,7 +608,7 @@ namespace AdopseAddsTeam5
             // controlLogout
             // 
             this.controlLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.controlLogout.Location = new System.Drawing.Point(-1, 583);
+            this.controlLogout.Location = new System.Drawing.Point(-1, 943);
             this.controlLogout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.controlLogout.Name = "controlLogout";
             this.controlLogout.Size = new System.Drawing.Size(270, 40);
@@ -2066,12 +2102,356 @@ namespace AdopseAddsTeam5
             // 
             // resultsFlowLayout
             // 
+            this.resultsFlowLayout.AutoScroll = true;
+            this.resultsFlowLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.resultsFlowLayout.Controls.Add(this.tableLayoutPanel2);
+            this.resultsFlowLayout.Controls.Add(this.panel1);
+            this.resultsFlowLayout.Controls.Add(this.panel2);
             this.resultsFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.resultsFlowLayout.Location = new System.Drawing.Point(0, 0);
-            this.resultsFlowLayout.Margin = new System.Windows.Forms.Padding(10);
+            this.resultsFlowLayout.Margin = new System.Windows.Forms.Padding(0);
             this.resultsFlowLayout.Name = "resultsFlowLayout";
+            this.resultsFlowLayout.Padding = new System.Windows.Forms.Padding(15);
             this.resultsFlowLayout.Size = new System.Drawing.Size(1064, 502);
             this.resultsFlowLayout.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 1, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(30, 30);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(15);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 6;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(400, 200);
+            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Click += new System.EventHandler(this.tableLayoutPanel2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel2.SetRowSpan(this.pictureBox1, 6);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.label3.Location = new System.Drawing.Point(203, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(194, 40);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Διαμέρισμα 85 τ.μ.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label4.Location = new System.Drawing.Point(203, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(194, 30);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Κάτω Τούμπα";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label5.Location = new System.Drawing.Point(203, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(194, 30);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "21/3/21";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label6.Location = new System.Drawing.Point(203, 100);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(194, 30);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "2 Υπνοδωμάτια";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label7.Location = new System.Drawing.Point(203, 130);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(194, 30);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "1 Μπάνιο";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label8.Location = new System.Drawing.Point(203, 160);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(194, 40);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "€150.000";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.tableLayoutPanel7);
+            this.panel1.Location = new System.Drawing.Point(460, 30);
+            this.panel1.Margin = new System.Windows.Forms.Padding(15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 200);
+            this.panel1.TabIndex = 6;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.pictureBox6, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label33, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label34, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label35, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.label36, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.label37, 1, 4);
+            this.tableLayoutPanel7.Controls.Add(this.label38, 1, 5);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 6;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(396, 196);
+            this.tableLayoutPanel7.TabIndex = 6;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.tableLayoutPanel7.SetRowSpan(this.pictureBox6, 6);
+            this.pictureBox6.Size = new System.Drawing.Size(198, 196);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label33
+            // 
+            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label33.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.label33.Location = new System.Drawing.Point(201, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(192, 39);
+            this.label33.TabIndex = 1;
+            this.label33.Text = "Διαμέρισμα 85 τ.μ.";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label34
+            // 
+            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label34.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label34.Location = new System.Drawing.Point(201, 39);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(192, 29);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "Κάτω Τούμπα";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label35
+            // 
+            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label35.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label35.Location = new System.Drawing.Point(201, 68);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(192, 29);
+            this.label35.TabIndex = 3;
+            this.label35.Text = "21/3/21";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label36
+            // 
+            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label36.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label36.Location = new System.Drawing.Point(201, 97);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(192, 29);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "2 Υπνοδωμάτια";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label37
+            // 
+            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label37.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label37.Location = new System.Drawing.Point(201, 126);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(192, 29);
+            this.label37.TabIndex = 5;
+            this.label37.Text = "1 Μπάνιο";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label38
+            // 
+            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label38.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label38.Location = new System.Drawing.Point(201, 155);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(192, 41);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "€150.000";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.tableLayoutPanel3);
+            this.panel2.Location = new System.Drawing.Point(30, 260);
+            this.panel2.Margin = new System.Windows.Forms.Padding(15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(400, 200);
+            this.panel2.TabIndex = 7;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.pictureBox2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label9, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label10, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label11, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label12, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.label13, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.label14, 1, 5);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(398, 198);
+            this.tableLayoutPanel3.TabIndex = 6;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.tableLayoutPanel3.SetRowSpan(this.pictureBox2, 6);
+            this.pictureBox2.Size = new System.Drawing.Size(199, 198);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.label9.Location = new System.Drawing.Point(202, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(193, 39);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Διαμέρισμα 85 τ.μ.";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label10.Location = new System.Drawing.Point(202, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(193, 29);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Κάτω Τούμπα";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label11.Location = new System.Drawing.Point(202, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(193, 29);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "21/3/21";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label12.Location = new System.Drawing.Point(202, 97);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(193, 29);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "2 Υπνοδωμάτια";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label13.Location = new System.Drawing.Point(202, 126);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(193, 29);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "1 Μπάνιο";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label14.Location = new System.Drawing.Point(202, 155);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(193, 43);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "€150.000";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // resultsSearchbox
             // 
@@ -2081,20 +2461,19 @@ namespace AdopseAddsTeam5
             this.resultsSearchbox.Location = new System.Drawing.Point(0, 0);
             this.resultsSearchbox.Margin = new System.Windows.Forms.Padding(0);
             this.resultsSearchbox.Name = "resultsSearchbox";
-            this.resultsSearchbox.Size = new System.Drawing.Size(303, 30);
+            this.resultsSearchbox.Size = new System.Drawing.Size(320, 30);
             this.resultsSearchbox.TabIndex = 11;
             // 
             // resultsSearchBtn
             // 
             this.resultsSearchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
             this.resultsSearchBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.resultsSearchBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.resultsSearchBtn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.resultsSearchBtn.ForeColor = System.Drawing.Color.White;
-            this.resultsSearchBtn.Location = new System.Drawing.Point(303, 0);
+            this.resultsSearchBtn.Location = new System.Drawing.Point(320, 0);
             this.resultsSearchBtn.Margin = new System.Windows.Forms.Padding(0);
             this.resultsSearchBtn.Name = "resultsSearchBtn";
-            this.resultsSearchBtn.Size = new System.Drawing.Size(109, 31);
+            this.resultsSearchBtn.Size = new System.Drawing.Size(115, 31);
             this.resultsSearchBtn.TabIndex = 12;
             this.resultsSearchBtn.Text = "Αναζήτηση";
             this.resultsSearchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2428,7 +2807,7 @@ namespace AdopseAddsTeam5
             this.resultsSearchTableLayout.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.resultsSearchTableLayout.ColumnCount = 2;
             this.resultsSearchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.resultsSearchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.resultsSearchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.resultsSearchTableLayout.Controls.Add(this.resultsSearchbox, 0, 0);
             this.resultsSearchTableLayout.Controls.Add(this.resultsSearchBtn, 1, 0);
             this.resultsSearchTableLayout.Location = new System.Drawing.Point(30, 75);
@@ -2436,7 +2815,7 @@ namespace AdopseAddsTeam5
             this.resultsSearchTableLayout.Name = "resultsSearchTableLayout";
             this.resultsSearchTableLayout.RowCount = 1;
             this.resultsSearchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.resultsSearchTableLayout.Size = new System.Drawing.Size(412, 31);
+            this.resultsSearchTableLayout.Size = new System.Drawing.Size(435, 31);
             this.resultsSearchTableLayout.TabIndex = 12;
             // 
             // viewListingPanel
@@ -2503,7 +2882,6 @@ namespace AdopseAddsTeam5
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
@@ -2513,31 +2891,39 @@ namespace AdopseAddsTeam5
             this.tabPage1.Text = "Χαρακτηριστικά";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(636, 194);
-            this.textBox1.TabIndex = 0;
-            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.viewListingPerigrafi);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(636, 194);
+            this.tabPage2.Size = new System.Drawing.Size(636, 338);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Περιγραφή";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // viewListingPerigrafi
+            // 
+            this.viewListingPerigrafi.BackColor = System.Drawing.Color.White;
+            this.viewListingPerigrafi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewListingPerigrafi.Enabled = false;
+            this.viewListingPerigrafi.Location = new System.Drawing.Point(0, 0);
+            this.viewListingPerigrafi.Margin = new System.Windows.Forms.Padding(0);
+            this.viewListingPerigrafi.Multiline = true;
+            this.viewListingPerigrafi.Name = "viewListingPerigrafi";
+            this.viewListingPerigrafi.ReadOnly = true;
+            this.viewListingPerigrafi.Size = new System.Drawing.Size(636, 338);
+            this.viewListingPerigrafi.TabIndex = 0;
+            this.viewListingPerigrafi.Text = "Lorem ipsum dolor sit amet. Ex nobis dicta nam sapiente possimus eos quia sunt. E" +
+    "st eius commodi eos omnis molestiae vel explicabo illum et quis laboriosam ea ne" +
+    "que rerum.";
             // 
             // tabPage3
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(636, 194);
+            this.tabPage3.Size = new System.Drawing.Size(636, 338);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Γειτονιά";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2547,7 +2933,7 @@ namespace AdopseAddsTeam5
             this.tabPage4.Location = new System.Drawing.Point(4, 28);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(636, 194);
+            this.tabPage4.Size = new System.Drawing.Size(636, 338);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Παραπλήσια σπίτια";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2600,7 +2986,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout5.ColumnCount = 3;
             this.viewListingTableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.8437F));
             this.viewListingTableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.15631F));
-            this.viewListingTableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.viewListingTableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.viewListingTableLayout5.Controls.Add(this.viewListingExit, 2, 0);
             this.viewListingTableLayout5.Controls.Add(this.viewListingSave, 0, 0);
             this.viewListingTableLayout5.Controls.Add(this.viewListingPrint, 1, 0);
@@ -2617,33 +3003,36 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingExit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.viewListingExit.Location = new System.Drawing.Point(605, 0);
+            this.viewListingExit.Location = new System.Drawing.Point(604, 0);
             this.viewListingExit.Name = "viewListingExit";
-            this.viewListingExit.Size = new System.Drawing.Size(36, 35);
+            this.viewListingExit.Size = new System.Drawing.Size(37, 35);
             this.viewListingExit.TabIndex = 0;
             this.viewListingExit.Text = "X";
             this.viewListingExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.viewListingExit.Click += new System.EventHandler(this.viewListingExit_Click);
             // 
             // viewListingSave
             // 
             this.viewListingSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.viewListingSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.viewListingSave.Location = new System.Drawing.Point(297, 5);
+            this.viewListingSave.Location = new System.Drawing.Point(296, 5);
             this.viewListingSave.Margin = new System.Windows.Forms.Padding(0);
             this.viewListingSave.Name = "viewListingSave";
             this.viewListingSave.Size = new System.Drawing.Size(160, 25);
             this.viewListingSave.TabIndex = 2;
+            this.viewListingSave.Click += new System.EventHandler(this.viewListingSave_Click);
             // 
             // viewListingPrint
             // 
             this.viewListingPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.viewListingPrint.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.viewListingPrint.Location = new System.Drawing.Point(457, 5);
+            this.viewListingPrint.Location = new System.Drawing.Point(456, 5);
             this.viewListingPrint.Margin = new System.Windows.Forms.Padding(0);
             this.viewListingPrint.Name = "viewListingPrint";
             this.viewListingPrint.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.viewListingPrint.Size = new System.Drawing.Size(145, 25);
             this.viewListingPrint.TabIndex = 3;
+            this.viewListingPrint.Click += new System.EventHandler(this.viewListingPrint_Click);
             // 
             // viewListingTableLayout6
             // 
@@ -2842,10 +3231,10 @@ namespace AdopseAddsTeam5
             this.vlShowPhone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlShowPhone.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.vlShowPhone.ForeColor = System.Drawing.Color.White;
-            this.vlShowPhone.Location = new System.Drawing.Point(40, 219);
-            this.vlShowPhone.Margin = new System.Windows.Forms.Padding(40, 7, 40, 7);
+            this.vlShowPhone.Location = new System.Drawing.Point(50, 217);
+            this.vlShowPhone.Margin = new System.Windows.Forms.Padding(50, 5, 50, 5);
             this.vlShowPhone.Name = "vlShowPhone";
-            this.vlShowPhone.Size = new System.Drawing.Size(222, 22);
+            this.vlShowPhone.Size = new System.Drawing.Size(202, 26);
             this.vlShowPhone.TabIndex = 11;
             this.vlShowPhone.Text = "Εμφάνιση τηλεφώνου";
             this.vlShowPhone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3027,6 +3416,7 @@ namespace AdopseAddsTeam5
             this.viewListingPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.viewListingPic1.TabIndex = 1;
             this.viewListingPic1.TabStop = false;
+            this.viewListingPic1.Click += new System.EventHandler(this.viewListingPic1_Click);
             // 
             // viewListingPic2
             // 
@@ -3040,6 +3430,7 @@ namespace AdopseAddsTeam5
             this.viewListingPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.viewListingPic2.TabIndex = 2;
             this.viewListingPic2.TabStop = false;
+            this.viewListingPic2.Click += new System.EventHandler(this.viewListingPic2_Click);
             // 
             // viewListingPic3
             // 
@@ -3049,8 +3440,10 @@ namespace AdopseAddsTeam5
             this.viewListingPic3.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingPic3.Name = "viewListingPic3";
             this.viewListingPic3.Size = new System.Drawing.Size(80, 80);
+            this.viewListingPic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.viewListingPic3.TabIndex = 3;
             this.viewListingPic3.TabStop = false;
+            this.viewListingPic3.Click += new System.EventHandler(this.viewListingPic3_Click);
             // 
             // viewListingPic4
             // 
@@ -3060,8 +3453,10 @@ namespace AdopseAddsTeam5
             this.viewListingPic4.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingPic4.Name = "viewListingPic4";
             this.viewListingPic4.Size = new System.Drawing.Size(80, 80);
+            this.viewListingPic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.viewListingPic4.TabIndex = 4;
             this.viewListingPic4.TabStop = false;
+            this.viewListingPic4.Click += new System.EventHandler(this.viewListingPic4_Click);
             // 
             // viewListingPic5
             // 
@@ -3071,8 +3466,10 @@ namespace AdopseAddsTeam5
             this.viewListingPic5.Margin = new System.Windows.Forms.Padding(2);
             this.viewListingPic5.Name = "viewListingPic5";
             this.viewListingPic5.Size = new System.Drawing.Size(80, 80);
+            this.viewListingPic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.viewListingPic5.TabIndex = 5;
             this.viewListingPic5.TabStop = false;
+            this.viewListingPic5.Click += new System.EventHandler(this.viewListingPic5_Click);
             // 
             // viewListingMapPanel
             // 
@@ -3085,16 +3482,24 @@ namespace AdopseAddsTeam5
             this.viewListingMapPanel.Size = new System.Drawing.Size(416, 237);
             this.viewListingMapPanel.TabIndex = 6;
             // 
+            // footerMiddleB
+            // 
+            this.footerMiddleB.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.footerMiddleB.Location = new System.Drawing.Point(-1, 637);
+            this.footerMiddleB.Margin = new System.Windows.Forms.Padding(0);
+            this.footerMiddleB.Name = "footerMiddleB";
+            this.footerMiddleB.Size = new System.Drawing.Size(1064, 36);
+            this.footerMiddleB.TabIndex = 14;
+            this.footerMiddleB.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1062, 673);
-            this.Controls.Add(this.viewListingPanel);
-            this.Controls.Add(this.sideMenuPanel);
+            this.Controls.Add(this.footerMiddleB);
             this.Controls.Add(this.mainPanel);
-            this.Controls.Add(this.profilePanel);
             this.Controls.Add(this.addPanel3);
             this.Controls.Add(this.addPanel2);
             this.Controls.Add(this.addPanel1);
@@ -3102,9 +3507,12 @@ namespace AdopseAddsTeam5
             this.Controls.Add(this.messagePanel);
             this.Controls.Add(this.filtersPanel);
             this.Controls.Add(this.favoritesPanel);
-            this.Controls.Add(this.resultsPanel);
-            this.Controls.Add(this.resultsSearchTableLayout);
             this.Controls.Add(this.resultsFilterPanel);
+            this.Controls.Add(this.viewListingPanel);
+            this.Controls.Add(this.resultsSearchTableLayout);
+            this.Controls.Add(this.sideMenuPanel);
+            this.Controls.Add(this.profilePanel);
+            this.Controls.Add(this.resultsPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.MinimumSize = new System.Drawing.Size(1080, 720);
@@ -3163,6 +3571,15 @@ namespace AdopseAddsTeam5
             this.favoritesTableLayout.ResumeLayout(false);
             this.favoritesTableLayout.PerformLayout();
             this.resultsPanel.ResumeLayout(false);
+            this.resultsFlowLayout.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.resultsFilterPanel.ResumeLayout(false);
             this.searchFilterLayoutPanel.ResumeLayout(false);
             this.searchFilterLayoutPanel.PerformLayout();
@@ -3173,8 +3590,8 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout2.ResumeLayout(false);
             this.viewListingTableLayout2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.viewListingTableLayout4.ResumeLayout(false);
             this.viewListingTableLayout4.PerformLayout();
             this.viewListingTableLayout5.ResumeLayout(false);
@@ -3353,7 +3770,6 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.TableLayoutPanel viewListingTableLayout2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -3394,6 +3810,34 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.TextBox vlMsgText;
         private System.Windows.Forms.Label vlMsgSend;
         private System.Windows.Forms.Panel viewListingMapPanel;
+        private System.Windows.Forms.TextBox viewListingPerigrafi;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel footerMiddleB;
     }
 }
 

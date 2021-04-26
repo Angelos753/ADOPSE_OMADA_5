@@ -41,10 +41,11 @@ namespace AdopseAddsTeam5
                 else
                 {
                     resultsFilterPanel.Show();
+                    resultsFilterPanel.BringToFront();
                 }
             }
             
-            if (choicePanel.Visible != true) 
+            /*if (choicePanel.Visible != true) 
             {
                 if (this.Size.Width < 1218)
                 {
@@ -56,7 +57,7 @@ namespace AdopseAddsTeam5
                     footerLeft.Show();
                     footerRight.Show();
                 }
-            }
+            }*/
         }
 
         private void hideControls()
@@ -76,6 +77,7 @@ namespace AdopseAddsTeam5
             addPanel1.Hide();
             addPanel2.Hide();
             addPanel3.Hide();
+            viewListingPanel.Hide();
             footerLeft.Hide();
             footerRight.Hide();
             footerMiddle.Hide();
@@ -86,7 +88,7 @@ namespace AdopseAddsTeam5
         private void sideMenuPicbox_Click(object sender, EventArgs e)
         {
             sideMenuPanel.BringToFront();
-            if(logged && (this.Size.Width > 1218 || choicePanel.Visible != false))
+            if(logged /*&& (this.Size.Width > 1218 || choicePanel.Visible != false)*/)
             {
                 sideMenuPanel.Visible = !sideMenuPanel.Visible;
             }
@@ -153,30 +155,20 @@ namespace AdopseAddsTeam5
         private void controlBuy1_Click(object sender, EventArgs e)
         {
             hideControls();
-            resultsPanel.Show();
-            resultsPanel.BringToFront();
-            resultsCombo.Show();
-            resultsCombo.BringToFront();
-            resultsSearchTableLayout.Show();
-            resultsSearchTableLayout.BringToFront();
-            resultsFilterPanel.Show();
-            resultsFilterPanel.BringToFront();
+            this.showResults();
+            footerLeft.Show();
+            footerRight.Show();
+            footerMiddleB.Show();
+            footerMiddleB.BringToFront();
             s = true;
         }
 
         private void controlRent1_Click(object sender, EventArgs e)
         {
             hideControls();
-            resultsPanel.Show();
-            resultsPanel.BringToFront();
-            resultsCombo.Show();
-            resultsCombo.BringToFront();
-            resultsSearchbox.Show();
-            resultsSearchbox.BringToFront();
-            resultsSearchBtn.Show();
-            resultsSearchBtn.BringToFront();
-            resultsFilterPanel.Show();
-            resultsFilterPanel.BringToFront();
+            this.showResults();
+            footerLeft.Show();
+            footerRight.Show();
             s = true;
         }
 
@@ -192,14 +184,9 @@ namespace AdopseAddsTeam5
         private void searchBtn_Click(object sender, EventArgs e)
         {
             hideControls();
-            resultsPanel.Show();
-            resultsPanel.BringToFront();
-            resultsCombo.Show();
-            resultsCombo.BringToFront();
-            resultsSearchTableLayout.Show();
-            resultsSearchTableLayout.BringToFront();
-            resultsFilterPanel.Show();
-            resultsFilterPanel.BringToFront();
+            showResults();
+            footerLeft.Show();
+            footerRight.Show();
             s = true;
         }
 
@@ -244,7 +231,6 @@ namespace AdopseAddsTeam5
 
         private void add1Next_Click(object sender, EventArgs e)
         {
-            addPanel1.SendToBack();
             addPanel1.Hide();
             addPanel2.BringToFront();
             addPanel2.Show();
@@ -252,7 +238,6 @@ namespace AdopseAddsTeam5
 
         private void add2Next_Click(object sender, EventArgs e)
         {
-            addPanel2.SendToBack();
             addPanel2.Hide();
             addPanel3.BringToFront();
             addPanel3.Show();
@@ -300,7 +285,6 @@ namespace AdopseAddsTeam5
 
         private void add3Post_Click(object sender, EventArgs e)
         {
-            addPanel3.SendToBack();
             addPanel3.Hide();
             controlHomepage_Click(this, e);
         }
@@ -314,7 +298,6 @@ namespace AdopseAddsTeam5
         private void messageExit_Click(object sender, EventArgs e)
         {
             messagePanel.Hide();
-            messagePanel.SendToBack();
         }
 
         public static void login()
@@ -332,7 +315,14 @@ namespace AdopseAddsTeam5
 
         private void searchFilterSave_Click(object sender, EventArgs e)
         {
-            new FilterSave().ShowDialog();
+            if(logged)
+            {
+                new FilterSave().ShowDialog();
+            }
+            else
+            {
+                new AccountForm().ShowDialog();
+            }
         }
 
         private void vlMsgSend_Click(object sender, EventArgs e)
@@ -342,7 +332,78 @@ namespace AdopseAddsTeam5
 
         private void vlShowPhone_Click(object sender, EventArgs e)
         {
+            if(!logged)
+            {
+                new AccountForm().ShowDialog();
+            }
+            else
+            {
+                vlShowPhone.BackColor = System.Drawing.Color.White;
+                vlShowPhone.ForeColor = System.Drawing.Color.Black;
+                vlShowPhone.Text = "6937123456";
+            }
+        }
 
+        private void viewListingPic1_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingPic2_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingPic3_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingPic4_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingPic5_Click(object sender, EventArgs e)
+        {
+            viewListingMainPic.Image = ((PictureBox)sender).Image;
+        }
+
+        private void viewListingSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewListingPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewListingExit_Click(object sender, EventArgs e)
+        {
+            viewListingPanel.Hide();
+        }
+
+        private void tableLayoutPanel2_Click(object sender, EventArgs e)
+        {
+            viewListingPanel.Show();
+            viewListingPanel.BringToFront();
+        }
+
+        private void showResults()
+        {
+            resultsPanel.Show();
+            resultsPanel.BringToFront();
+            resultsCombo.Show();
+            resultsCombo.BringToFront();
+            resultsSearchTableLayout.Show();
+            resultsSearchTableLayout.BringToFront();
+            if (this.Size.Width >= 1290)
+            {
+                resultsFilterPanel.Show();
+                resultsFilterPanel.BringToFront();
+            }
+                
         }
     }
 

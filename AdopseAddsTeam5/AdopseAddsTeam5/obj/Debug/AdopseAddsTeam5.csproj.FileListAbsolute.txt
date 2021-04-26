@@ -95,4 +95,3 @@ C:\Users\alexa\Source\Repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAdds
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Custom_Controls.ControlSave.resources
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Custom_Controls.ControlPrint.resources
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Main_Form.FilterSave.resources
-C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.csprojAssemblyReference.cache
