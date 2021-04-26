@@ -17,7 +17,7 @@ namespace AdopseAddsTeam5
     {
 
         private static bool logged = false;
-        private bool h = true;
+        private bool h;
         private bool s = false;
 
         public MainForm()
@@ -34,7 +34,7 @@ namespace AdopseAddsTeam5
         {
             if(s)
             {
-                if (this.Size.Width < 1280)
+                if (this.Size.Width < 1290)
                 {
                     resultsFilterPanel.Hide();
                 }
@@ -72,6 +72,7 @@ namespace AdopseAddsTeam5
             resultsPanel.Hide();
             resultsSearchTableLayout.Hide();
             resultsCombo.Hide();
+            resultsFilterPanel.Hide();
             addPanel1.Hide();
             addPanel2.Hide();
             addPanel3.Hide();
@@ -91,13 +92,14 @@ namespace AdopseAddsTeam5
             }
             else
             {
-                new AccountForm().Show();
+                new AccountForm().ShowDialog();
             }
         }
 
         private void controlLogout_Click(object sender, EventArgs e)
         {
             logged = false;
+            logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
             sideMenuPanel.Hide();
         }
 
@@ -194,10 +196,8 @@ namespace AdopseAddsTeam5
             resultsPanel.BringToFront();
             resultsCombo.Show();
             resultsCombo.BringToFront();
-            resultsSearchbox.Show();
-            resultsSearchbox.BringToFront();
-            resultsSearchBtn.Show();
-            resultsSearchBtn.BringToFront();
+            resultsSearchTableLayout.Show();
+            resultsSearchTableLayout.BringToFront();
             resultsFilterPanel.Show();
             resultsFilterPanel.BringToFront();
             s = true;
@@ -205,12 +205,22 @@ namespace AdopseAddsTeam5
 
         private void logPicbox_Click(object sender, EventArgs e)
         {
-            new AccountForm().Show();
+            if(!logged)
+            {
+                new AccountForm().ShowDialog();
+            }
+            else
+            {
+                logged = false;
+                logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
+            }
         }
 
         private void profileNameEdit_Click(object sender, EventArgs e)
         {
-
+            hideControls();
+            viewListingPanel.Show();
+            viewListingPanel.BringToFront();
         }
 
         private void profilePicEdit_Click(object sender, EventArgs e)
@@ -310,6 +320,29 @@ namespace AdopseAddsTeam5
         public static void login()
         {
             logged = true;
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            if(logged)
+            {
+                logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
+            }
+        }
+
+        private void searchFilterSave_Click(object sender, EventArgs e)
+        {
+            new FilterSave().ShowDialog();
+        }
+
+        private void vlMsgSend_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vlShowPhone_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
