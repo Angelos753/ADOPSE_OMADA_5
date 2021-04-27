@@ -38,11 +38,11 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(0, 152);
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(0, 175);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 25);
+            this.label1.Size = new System.Drawing.Size(200, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "ΑΓΟΡΑ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -50,12 +50,12 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(0, 184);
+            this.label2.Location = new System.Drawing.Point(0, 210);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 25);
+            this.label2.Size = new System.Drawing.Size(200, 35);
             this.label2.TabIndex = 2;
             this.label2.Text = "ΒΡΕΣ ΤΩΡΑ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,10 +64,10 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::AdopseAddsTeam5.Properties.Resources.agoraBuilding;
-            this.pictureBox1.Location = new System.Drawing.Point(-16, -16);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 190);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 195);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -80,9 +80,10 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Location = new System.Drawing.Point(0, -5);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ControlBuy";
-            this.Size = new System.Drawing.Size(160, 217);
+            this.Size = new System.Drawing.Size(200, 250);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

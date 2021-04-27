@@ -19,10 +19,18 @@ namespace AdopseAddsTeam5
         private static bool logged = false;
         private bool h;
         private bool s = false;
+        private string email;
+        private bool sizeFlag = true;
 
         public MainForm()
         {
             InitializeComponent();
+            BindControls();
+        }
+
+        protected void BindControls()
+        {
+            resultsSearchbox.DataBindings.Add("Text", searchTextbox, "Text", false);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -32,32 +40,39 @@ namespace AdopseAddsTeam5
 
         private void MainForm_SizeChanged(object sender, EventArgs e)
         {
-            if(s)
-            {
-                if (this.Size.Width < 1290)
-                {
-                    resultsFilterPanel.Hide();
-                }
-                else
-                {
-                    resultsFilterPanel.Show();
-                    resultsFilterPanel.BringToFront();
-                }
-            }
-            
-            /*if (choicePanel.Visible != true) 
-            {
-                if (this.Size.Width < 1218)
-                {
-                    footerLeft.Hide();
-                    footerRight.Hide();
-                }
-                else
-                {
-                    footerLeft.Show();
-                    footerRight.Show();
-                }
-            }*/
+            /* resultsSearchbox.Text = "Width " + this.Size.Width;
+
+                 if (this.Size.Width == 1290)
+                 {
+                     if (sizeFlag)
+                     {
+                         this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                     | System.Windows.Forms.AnchorStyles.Left)
+                     | System.Windows.Forms.AnchorStyles.Right)));
+                         resultsFilterPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+                         sizeFlag = false;
+                     }
+                     else
+                     {
+                         this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+                         resultsFilterPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+                         sizeFlag = true;
+                     }
+                 }
+
+             if (choicePanel.Visible != true) 
+             {
+                 if (this.Size.Width < 1218)
+                 {
+                     footerLeft.Hide();
+                     footerRight.Hide();
+                 }
+                 else
+                 {
+                     footerLeft.Show();
+                     footerRight.Show();
+                 }
+             }*/
         }
 
         private void hideControls()
@@ -220,7 +235,21 @@ namespace AdopseAddsTeam5
 
         private void profileEmailEdit_Click(object sender, EventArgs e)
         {
-
+            email = profileEmailText.Text;
+            if (profileEmailEdit.Text == "Επεξεργασία")
+            {
+                profileEmailText.Enabled = true;
+                profileEmailText.ReadOnly = false;
+                profileEmailText.Focus();
+                profileEmailEdit.Text = "Αποθήκευση";
+            }
+            else
+            {
+                profileEmailText.Enabled = false;
+                profileEmailText.ReadOnly = true;
+                profileEmailEdit.Text = "Επεξεργασία";
+                email = profileEmailText.Text;
+            }
         }
 
         private void profileAddListing_Click(object sender, EventArgs e)
@@ -768,6 +797,28 @@ namespace AdopseAddsTeam5
                 searchTextbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.";
                 searchTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
+        }
+
+        private void profileEmailText_Leave(object sender, EventArgs e)
+        {
+            profileEmailText.Text = email;
+            profileEmailText.Enabled = false;
+            profileEmailText.ReadOnly = true;
+            profileEmailEdit.Text = "Επεξεργασία";            
+        }
+
+        private void resultsRentBtn_Click(object sender, EventArgs e)
+        {
+            resultsRentBtn.BackColor = System.Drawing.Color.White;
+            resultsRentBtn.ForeColor = System.Drawing.Color.Black;
+            resultsBuyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
+        }
+
+        private void resultsBuyBtn_Click(object sender, EventArgs e)
+        {
+            resultsBuyBtn.BackColor = System.Drawing.Color.White;
+            resultsBuyBtn.ForeColor = System.Drawing.Color.Black;
+            resultsRentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
         }
     }
 }
