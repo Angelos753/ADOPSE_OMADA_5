@@ -387,6 +387,7 @@ namespace AdopseAddsTeam5
             // 
             this.searchTableLayout.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.searchTableLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.searchTableLayout.BackColor = System.Drawing.Color.White;
             this.searchTableLayout.ColumnCount = 3;
             this.searchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.searchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 354F));
@@ -593,6 +594,7 @@ namespace AdopseAddsTeam5
             // resultsCombo
             // 
             this.resultsCombo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.resultsCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.resultsCombo.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.resultsCombo.FormattingEnabled = true;
             this.resultsCombo.Items.AddRange(new object[] {
@@ -604,7 +606,6 @@ namespace AdopseAddsTeam5
             this.resultsCombo.Name = "resultsCombo";
             this.resultsCombo.Size = new System.Drawing.Size(236, 29);
             this.resultsCombo.TabIndex = 10;
-            this.resultsCombo.Text = "Αυτόματη Ταξινόμηση";
             // 
             // sideMenuPanel
             // 
@@ -2670,6 +2671,7 @@ namespace AdopseAddsTeam5
             this.resultsSearchbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.resultsSearchbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.resultsSearchbox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.resultsSearchbox.ForeColor = System.Drawing.Color.DarkGray;
             this.resultsSearchbox.Location = new System.Drawing.Point(0, 0);
             this.resultsSearchbox.Margin = new System.Windows.Forms.Padding(0);
             this.resultsSearchbox.Name = "resultsSearchbox";
@@ -3287,7 +3289,7 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout5.ColumnCount = 3;
             this.viewListingTableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.8437F));
             this.viewListingTableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.15631F));
-            this.viewListingTableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.viewListingTableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.viewListingTableLayout5.Controls.Add(this.viewListingExit, 2, 0);
             this.viewListingTableLayout5.Controls.Add(this.viewListingSave, 0, 0);
             this.viewListingTableLayout5.Controls.Add(this.viewListingPrint, 1, 0);
@@ -3304,9 +3306,9 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingExit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.viewListingExit.Location = new System.Drawing.Point(592, 0);
+            this.viewListingExit.Location = new System.Drawing.Point(589, 0);
             this.viewListingExit.Name = "viewListingExit";
-            this.viewListingExit.Size = new System.Drawing.Size(49, 35);
+            this.viewListingExit.Size = new System.Drawing.Size(52, 35);
             this.viewListingExit.TabIndex = 0;
             this.viewListingExit.Text = "X";
             this.viewListingExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3316,7 +3318,7 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.viewListingSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.viewListingSave.Location = new System.Drawing.Point(287, 5);
+            this.viewListingSave.Location = new System.Drawing.Point(285, 5);
             this.viewListingSave.Margin = new System.Windows.Forms.Padding(0);
             this.viewListingSave.Name = "viewListingSave";
             this.viewListingSave.Size = new System.Drawing.Size(160, 25);
@@ -3327,11 +3329,11 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingPrint.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.viewListingPrint.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.viewListingPrint.Location = new System.Drawing.Point(447, 5);
+            this.viewListingPrint.Location = new System.Drawing.Point(445, 5);
             this.viewListingPrint.Margin = new System.Windows.Forms.Padding(0);
             this.viewListingPrint.Name = "viewListingPrint";
             this.viewListingPrint.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.viewListingPrint.Size = new System.Drawing.Size(142, 25);
+            this.viewListingPrint.Size = new System.Drawing.Size(141, 25);
             this.viewListingPrint.TabIndex = 3;
             this.viewListingPrint.Click += new System.EventHandler(this.viewListingPrint_Click);
             // 

@@ -35,7 +35,7 @@ namespace AdopseAddsTeam5
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            watermarkPicbox.Parent = bgImagePicbox;
+            watermarkPicbox.Parent = bgImagePicbox; 
         }
 
         private void MainForm_SizeChanged(object sender, EventArgs e)
