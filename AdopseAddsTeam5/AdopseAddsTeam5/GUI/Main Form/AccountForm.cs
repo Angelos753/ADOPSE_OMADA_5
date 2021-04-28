@@ -47,12 +47,12 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         private void loginForgotLabel_MouseEnter(object sender, EventArgs e)
         {
-            loginForgotLabel.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            loginForgotLabel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
         }
 
         private void loginForgotLabel_MouseLeave(object sender, EventArgs e)
         {
-            loginForgotLabel.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            loginForgotLabel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
         }
 
         private void rEmailTextbox_Enter(object sender, EventArgs e)

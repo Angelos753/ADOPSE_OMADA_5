@@ -1,4 +1,5 @@
 ﻿using AdopseAddsTeam5.GUI.Main_Form;
+using AdopseAddsTeam5.GUI.Custom_Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,6 @@ namespace AdopseAddsTeam5
         private bool h;
         private bool s = false;
         private string email;
-        private bool sizeFlag = true;
 
         public MainForm()
         {
@@ -39,40 +39,21 @@ namespace AdopseAddsTeam5
         }
 
         private void MainForm_SizeChanged(object sender, EventArgs e)
-        {
-            /* resultsSearchbox.Text = "Width " + this.Size.Width;
-
-                 if (this.Size.Width == 1290)
-                 {
-                     if (sizeFlag)
-                     {
-                         this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                     | System.Windows.Forms.AnchorStyles.Left)
-                     | System.Windows.Forms.AnchorStyles.Right)));
-                         resultsFilterPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-                         sizeFlag = false;
-                     }
-                     else
-                     {
-                         this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-                         resultsFilterPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-                         sizeFlag = true;
-                     }
-                 }
-
-             if (choicePanel.Visible != true) 
-             {
-                 if (this.Size.Width < 1218)
-                 {
-                     footerLeft.Hide();
-                     footerRight.Hide();
-                 }
-                 else
-                 {
-                     footerLeft.Show();
-                     footerRight.Show();
-                 }
-             }*/
+        {/*
+            resultsSearchbox.Text = "Text " + resultsFlowLayout.Controls.GetChildIndex(miniAd1);
+            resultsFlowLayout.Controls.SetChildIndex(miniAd2, 0);
+            
+            if (this.Size.Width < 1290)
+            {
+                this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left))));
+                //resultsFilterPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            }
+            else
+            {
+                this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+                //resultsFilterPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            }*/
         }
 
         private void hideControls()
@@ -104,7 +85,7 @@ namespace AdopseAddsTeam5
         private void sideMenuPicbox_Click(object sender, EventArgs e)
         {
             sideMenuPanel.BringToFront();
-            if(logged /*&& (this.Size.Width > 1218 || choicePanel.Visible != false)*/)
+            if(logged)
             {
                 sideMenuPanel.Visible = !sideMenuPanel.Visible;
             }
@@ -221,13 +202,6 @@ namespace AdopseAddsTeam5
             }
         }
 
-        private void profileNameEdit_Click(object sender, EventArgs e)
-        {
-            hideControls();
-            viewListingPanel.Show();
-            viewListingPanel.BringToFront();
-        }
-
         private void profilePicEdit_Click(object sender, EventArgs e)
         {
 
@@ -323,13 +297,7 @@ namespace AdopseAddsTeam5
 
         private void label1_Click(object sender, EventArgs e)
         {
-            messagePanel.Show();
-            messagePanel.BringToFront();
-        }
-
-        private void messageExit_Click(object sender, EventArgs e)
-        {
-            messagePanel.Hide();
+            new MessageForm().ShowDialog();
         }
 
         public static void login()
@@ -399,27 +367,6 @@ namespace AdopseAddsTeam5
         private void viewListingPic5_Click(object sender, EventArgs e)
         {
             viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void viewListingPrint_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void viewListingExit_Click(object sender, EventArgs e)
-        {
-            viewListingPanel.Hide();
-        }
-
-        private void tableLayoutPanel2_Click(object sender, EventArgs e)
-        {
-            viewListingPanel.Show();
-            viewListingPanel.BringToFront();
         }
 
         private void showResults()
@@ -819,6 +766,53 @@ namespace AdopseAddsTeam5
             resultsBuyBtn.BackColor = System.Drawing.Color.White;
             resultsBuyBtn.ForeColor = System.Drawing.Color.Black;
             resultsRentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
+        }
+
+        private void resultsSearchbox_Enter(object sender, EventArgs e)
+        {
+            if (resultsSearchbox.Text == "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.")
+            {
+                resultsSearchbox.Text = "";
+                resultsSearchbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void resultsSearchbox_Leave(object sender, EventArgs e)
+        {
+            if (resultsSearchbox.Text == "")
+            {
+                resultsSearchbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.";
+                resultsSearchbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void miniAd1_Click(object sender, EventArgs e)
+        {
+            int n = 4;
+            miniAd m = new miniAd();
+            UserFilter u = new UserFilter();
+            string t = "listing" + n;
+            m.setPrice(t);
+            m.Click += (sender1, e1) =>
+            {
+                viewListing();
+            };
+            resultsFlowLayout.Controls.Add(m);
+        }
+
+        public void viewListing()
+        {
+            hideControls();
+            viewListingPanel.Show();
+            viewListingPanel.BringToFront();
+        }
+
+        private void vlExit_Click(object sender, EventArgs e)
+        {
+            viewListingPanel.Hide();
+            resultsPanel.Show();
+            resultsFilterPanel.Show();
+            resultsSearchTableLayout.Show();
         }
     }
 }
