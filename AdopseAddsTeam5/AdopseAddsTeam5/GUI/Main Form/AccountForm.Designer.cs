@@ -64,9 +64,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             // 
             this.headerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.headerLabel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.headerLabel.Location = new System.Drawing.Point(3, 0);
+            this.headerLabel.Location = new System.Drawing.Point(2, 0);
+            this.headerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(376, 40);
+            this.headerLabel.Size = new System.Drawing.Size(284, 32);
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Καλωσήρθατε στο";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,12 +82,13 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.mainTableLayout.Controls.Add(this.logoPicBox, 0, 1);
             this.mainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.mainTableLayout.Margin = new System.Windows.Forms.Padding(2);
             this.mainTableLayout.Name = "mainTableLayout";
             this.mainTableLayout.RowCount = 3;
-            this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainTableLayout.Size = new System.Drawing.Size(382, 418);
+            this.mainTableLayout.Size = new System.Drawing.Size(288, 346);
             this.mainTableLayout.TabIndex = 0;
             // 
             // logRegTabControl
@@ -95,22 +97,24 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.logRegTabControl.Controls.Add(this.registerTab);
             this.logRegTabControl.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.logRegTabControl.HotTrack = true;
-            this.logRegTabControl.Location = new System.Drawing.Point(3, 113);
+            this.logRegTabControl.Location = new System.Drawing.Point(2, 91);
+            this.logRegTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.logRegTabControl.Multiline = true;
             this.logRegTabControl.Name = "logRegTabControl";
             this.logRegTabControl.SelectedIndex = 0;
-            this.logRegTabControl.Size = new System.Drawing.Size(376, 298);
+            this.logRegTabControl.Size = new System.Drawing.Size(282, 242);
             this.logRegTabControl.TabIndex = 1;
             // 
             // loginTab
             // 
             this.loginTab.Controls.Add(this.loginTableLayout);
             this.loginTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.loginTab.Location = new System.Drawing.Point(4, 28);
+            this.loginTab.Location = new System.Drawing.Point(4, 25);
+            this.loginTab.Margin = new System.Windows.Forms.Padding(2);
             this.loginTab.Name = "loginTab";
-            this.loginTab.Padding = new System.Windows.Forms.Padding(3);
+            this.loginTab.Padding = new System.Windows.Forms.Padding(2);
             this.loginTab.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.loginTab.Size = new System.Drawing.Size(368, 266);
+            this.loginTab.Size = new System.Drawing.Size(274, 213);
             this.loginTab.TabIndex = 0;
             this.loginTab.Text = "Σύνδεση";
             this.loginTab.UseVisualStyleBackColor = true;
@@ -126,17 +130,18 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginTableLayout.Controls.Add(this.loginPassTextbox, 0, 3);
             this.loginTableLayout.Controls.Add(this.loginForgotLabel, 0, 6);
             this.loginTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginTableLayout.Location = new System.Drawing.Point(3, 3);
+            this.loginTableLayout.Location = new System.Drawing.Point(2, 2);
+            this.loginTableLayout.Margin = new System.Windows.Forms.Padding(2);
             this.loginTableLayout.Name = "loginTableLayout";
             this.loginTableLayout.RowCount = 7;
-            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.loginTableLayout.Size = new System.Drawing.Size(362, 260);
+            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.loginTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.loginTableLayout.Size = new System.Drawing.Size(270, 209);
             this.loginTableLayout.TabIndex = 0;
             // 
             // LoginEmailLabel
@@ -144,9 +149,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.LoginEmailLabel.AutoSize = true;
             this.LoginEmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginEmailLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.LoginEmailLabel.Location = new System.Drawing.Point(3, 0);
+            this.LoginEmailLabel.Location = new System.Drawing.Point(2, 0);
+            this.LoginEmailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoginEmailLabel.Name = "LoginEmailLabel";
-            this.LoginEmailLabel.Size = new System.Drawing.Size(356, 35);
+            this.LoginEmailLabel.Size = new System.Drawing.Size(266, 28);
             this.LoginEmailLabel.TabIndex = 0;
             this.LoginEmailLabel.Text = "Email";
             this.LoginEmailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,9 +162,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.LoginPassLabel.AutoSize = true;
             this.LoginPassLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoginPassLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.LoginPassLabel.Location = new System.Drawing.Point(3, 75);
+            this.LoginPassLabel.Location = new System.Drawing.Point(2, 60);
+            this.LoginPassLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoginPassLabel.Name = "LoginPassLabel";
-            this.LoginPassLabel.Size = new System.Drawing.Size(356, 35);
+            this.LoginPassLabel.Size = new System.Drawing.Size(266, 28);
             this.LoginPassLabel.TabIndex = 1;
             this.LoginPassLabel.Text = "Κωδικός";
             this.LoginPassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,9 +177,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginConnectLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginConnectLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.loginConnectLabel.ForeColor = System.Drawing.Color.White;
-            this.loginConnectLabel.Location = new System.Drawing.Point(3, 190);
+            this.loginConnectLabel.Location = new System.Drawing.Point(2, 153);
+            this.loginConnectLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.loginConnectLabel.Name = "loginConnectLabel";
-            this.loginConnectLabel.Size = new System.Drawing.Size(356, 40);
+            this.loginConnectLabel.Size = new System.Drawing.Size(266, 32);
             this.loginConnectLabel.TabIndex = 2;
             this.loginConnectLabel.Text = "Σύνδεση";
             this.loginConnectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,9 +192,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginEmailTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginEmailTextbox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.loginEmailTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            this.loginEmailTextbox.Location = new System.Drawing.Point(3, 38);
+            this.loginEmailTextbox.Location = new System.Drawing.Point(2, 30);
+            this.loginEmailTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.loginEmailTextbox.Name = "loginEmailTextbox";
-            this.loginEmailTextbox.Size = new System.Drawing.Size(356, 30);
+            this.loginEmailTextbox.Size = new System.Drawing.Size(266, 26);
             this.loginEmailTextbox.TabIndex = 3;
             this.loginEmailTextbox.Text = "Συμπλήρωσε email";
             this.loginEmailTextbox.Enter += new System.EventHandler(this.loginEmailTextbox_Enter);
@@ -198,9 +207,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.loginPassTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginPassTextbox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.loginPassTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            this.loginPassTextbox.Location = new System.Drawing.Point(3, 113);
+            this.loginPassTextbox.Location = new System.Drawing.Point(2, 90);
+            this.loginPassTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.loginPassTextbox.Name = "loginPassTextbox";
-            this.loginPassTextbox.Size = new System.Drawing.Size(356, 30);
+            this.loginPassTextbox.Size = new System.Drawing.Size(266, 26);
             this.loginPassTextbox.TabIndex = 4;
             this.loginPassTextbox.Text = "Πληκτρολογήστε κωδικό";
             this.loginPassTextbox.Enter += new System.EventHandler(this.loginPassTextbox_Enter);
@@ -210,9 +220,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             // 
             this.loginForgotLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.loginForgotLabel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.loginForgotLabel.Location = new System.Drawing.Point(3, 235);
+            this.loginForgotLabel.Location = new System.Drawing.Point(2, 189);
+            this.loginForgotLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.loginForgotLabel.Name = "loginForgotLabel";
-            this.loginForgotLabel.Size = new System.Drawing.Size(188, 20);
+            this.loginForgotLabel.Size = new System.Drawing.Size(141, 16);
             this.loginForgotLabel.TabIndex = 5;
             this.loginForgotLabel.Text = "Ξέχασα τον κωδικό μου";
             this.loginForgotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,10 +233,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             // registerTab
             // 
             this.registerTab.Controls.Add(this.registerTableLayout);
-            this.registerTab.Location = new System.Drawing.Point(4, 28);
+            this.registerTab.Location = new System.Drawing.Point(4, 25);
+            this.registerTab.Margin = new System.Windows.Forms.Padding(2);
             this.registerTab.Name = "registerTab";
-            this.registerTab.Padding = new System.Windows.Forms.Padding(3);
-            this.registerTab.Size = new System.Drawing.Size(368, 266);
+            this.registerTab.Padding = new System.Windows.Forms.Padding(2);
+            this.registerTab.Size = new System.Drawing.Size(274, 213);
             this.registerTab.TabIndex = 1;
             this.registerTab.Text = "Εγγραφή";
             this.registerTab.UseVisualStyleBackColor = true;
@@ -242,17 +254,18 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.registerTableLayout.Controls.Add(this.rPassTextbox2, 0, 4);
             this.registerTableLayout.Controls.Add(this.rPasswordMessage, 0, 5);
             this.registerTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.registerTableLayout.Location = new System.Drawing.Point(3, 3);
+            this.registerTableLayout.Location = new System.Drawing.Point(2, 2);
+            this.registerTableLayout.Margin = new System.Windows.Forms.Padding(2);
             this.registerTableLayout.Name = "registerTableLayout";
             this.registerTableLayout.RowCount = 7;
-            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.registerTableLayout.Size = new System.Drawing.Size(362, 260);
+            this.registerTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.registerTableLayout.Size = new System.Drawing.Size(270, 209);
             this.registerTableLayout.TabIndex = 0;
             // 
             // rEmailLabel
@@ -260,9 +273,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rEmailLabel.AutoSize = true;
             this.rEmailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rEmailLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.rEmailLabel.Location = new System.Drawing.Point(3, 0);
+            this.rEmailLabel.Location = new System.Drawing.Point(2, 0);
+            this.rEmailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rEmailLabel.Name = "rEmailLabel";
-            this.rEmailLabel.Size = new System.Drawing.Size(356, 30);
+            this.rEmailLabel.Size = new System.Drawing.Size(266, 24);
             this.rEmailLabel.TabIndex = 0;
             this.rEmailLabel.Text = "Email";
             this.rEmailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,9 +286,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassLabel.AutoSize = true;
             this.rPassLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rPassLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.rPassLabel.Location = new System.Drawing.Point(3, 65);
+            this.rPassLabel.Location = new System.Drawing.Point(2, 52);
+            this.rPassLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rPassLabel.Name = "rPassLabel";
-            this.rPassLabel.Size = new System.Drawing.Size(356, 30);
+            this.rPassLabel.Size = new System.Drawing.Size(266, 24);
             this.rPassLabel.TabIndex = 1;
             this.rPassLabel.Text = "Κωδικός";
             this.rPassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,9 +300,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.registerLabel.BackColor = System.Drawing.Color.RoyalBlue;
             this.registerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.registerLabel.ForeColor = System.Drawing.Color.White;
-            this.registerLabel.Location = new System.Drawing.Point(3, 220);
+            this.registerLabel.Location = new System.Drawing.Point(2, 177);
+            this.registerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.registerLabel.Name = "registerLabel";
-            this.registerLabel.Size = new System.Drawing.Size(356, 40);
+            this.registerLabel.Size = new System.Drawing.Size(266, 32);
             this.registerLabel.TabIndex = 2;
             this.registerLabel.Text = "Εγγραφή";
             this.registerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,9 +314,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rEmailTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rEmailTextbox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.rEmailTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            this.rEmailTextbox.Location = new System.Drawing.Point(3, 33);
+            this.rEmailTextbox.Location = new System.Drawing.Point(2, 26);
+            this.rEmailTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.rEmailTextbox.Name = "rEmailTextbox";
-            this.rEmailTextbox.Size = new System.Drawing.Size(356, 30);
+            this.rEmailTextbox.Size = new System.Drawing.Size(266, 26);
             this.rEmailTextbox.TabIndex = 3;
             this.rEmailTextbox.Text = "Συμπληρώστε email";
             this.rEmailTextbox.Enter += new System.EventHandler(this.rEmailTextbox_Enter);
@@ -311,9 +328,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassTextbox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rPassTextbox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.rPassTextbox1.ForeColor = System.Drawing.Color.DarkGray;
-            this.rPassTextbox1.Location = new System.Drawing.Point(3, 98);
+            this.rPassTextbox1.Location = new System.Drawing.Point(2, 78);
+            this.rPassTextbox1.Margin = new System.Windows.Forms.Padding(2);
             this.rPassTextbox1.Name = "rPassTextbox1";
-            this.rPassTextbox1.Size = new System.Drawing.Size(356, 30);
+            this.rPassTextbox1.Size = new System.Drawing.Size(266, 26);
             this.rPassTextbox1.TabIndex = 4;
             this.rPassTextbox1.Text = "Πληκτρολογήστε κωδικό";
             this.rPassTextbox1.TextChanged += new System.EventHandler(this.rPassTextbox1_TextChanged);
@@ -325,9 +343,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPassTextbox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rPassTextbox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.rPassTextbox2.ForeColor = System.Drawing.Color.DarkGray;
-            this.rPassTextbox2.Location = new System.Drawing.Point(3, 133);
+            this.rPassTextbox2.Location = new System.Drawing.Point(2, 106);
+            this.rPassTextbox2.Margin = new System.Windows.Forms.Padding(2);
             this.rPassTextbox2.Name = "rPassTextbox2";
-            this.rPassTextbox2.Size = new System.Drawing.Size(356, 30);
+            this.rPassTextbox2.Size = new System.Drawing.Size(266, 26);
             this.rPassTextbox2.TabIndex = 5;
             this.rPassTextbox2.Text = "Επαναλάβετε τον κωδικό";
             this.rPassTextbox2.TextChanged += new System.EventHandler(this.rPassTextbox2_TextChanged);
@@ -339,9 +358,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.rPasswordMessage.AutoSize = true;
             this.rPasswordMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rPasswordMessage.ForeColor = System.Drawing.Color.Red;
-            this.rPasswordMessage.Location = new System.Drawing.Point(3, 165);
+            this.rPasswordMessage.Location = new System.Drawing.Point(2, 132);
+            this.rPasswordMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rPasswordMessage.Name = "rPasswordMessage";
-            this.rPasswordMessage.Size = new System.Drawing.Size(356, 55);
+            this.rPasswordMessage.Size = new System.Drawing.Size(266, 45);
             this.rPasswordMessage.TabIndex = 6;
             this.rPasswordMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -349,22 +369,24 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             // 
             this.logoPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logoPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.name_color;
-            this.logoPicBox.Location = new System.Drawing.Point(3, 43);
+            this.logoPicBox.Location = new System.Drawing.Point(2, 34);
+            this.logoPicBox.Margin = new System.Windows.Forms.Padding(2);
             this.logoPicBox.Name = "logoPicBox";
-            this.logoPicBox.Size = new System.Drawing.Size(376, 64);
+            this.logoPicBox.Size = new System.Drawing.Size(284, 53);
             this.logoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPicBox.TabIndex = 2;
             this.logoPicBox.TabStop = false;
             // 
             // AccountForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 418);
+            this.ClientSize = new System.Drawing.Size(288, 346);
             this.Controls.Add(this.mainTableLayout);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(400, 465);
-            this.MinimumSize = new System.Drawing.Size(400, 465);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(304, 385);
+            this.MinimumSize = new System.Drawing.Size(304, 385);
             this.Name = "AccountForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Λογαριασμός";

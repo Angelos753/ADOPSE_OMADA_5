@@ -15,6 +15,9 @@ namespace AdopseAddsTeam5
 {
     public partial class MainForm : Form
     {
+        public static User user1 = new User();
+
+
 
         private static bool logged = false;
         private bool h;
@@ -23,6 +26,7 @@ namespace AdopseAddsTeam5
         public MainForm()
         {
             InitializeComponent();
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -303,9 +307,10 @@ namespace AdopseAddsTeam5
             messagePanel.Hide();
         }
 
-        public static void login()
+        public static void login(User user)
         {
             logged = true;
+            user1 = user;
         }
 
         private void MainForm_Activated(object sender, EventArgs e)
@@ -768,6 +773,18 @@ namespace AdopseAddsTeam5
                 searchTextbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.";
                 searchTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
+        }
+
+        private void userPicbox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void controlFavorites_Load(object sender, EventArgs e)
+        {
+            
+            DataAccess db = new DataAccess();
+            Adds[] add = db.FavoriteAdds(user1.EmailAddress);
         }
     }
 }

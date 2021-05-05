@@ -12,6 +12,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 {
     public partial class AccountForm : Form
     {
+        
+
         public AccountForm()
         {
             InitializeComponent();
@@ -105,6 +107,14 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             {
                 rPasswordMessage.Text = "*Οι κωδικοί δεν ταιριάζουν.";
             }
+            else
+            {
+                DataAccess db = new DataAccess();
+                db.NewUser(rEmailTextbox.Text, rPassTextbox1.Text);
+                User user = new User { EmailAddress = rEmailTextbox.Text, Password = rPassTextbox1.Text };
+                MainForm.login(user);
+                this.Close();
+            }
         }
 
         private void rPassTextbox1_TextChanged(object sender, EventArgs e)
@@ -149,8 +159,27 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         private void loginConnectLabel_Click(object sender, EventArgs e)
         {
-            MainForm.login();
-            this.Close();
+            if (loginPassTextbox.Text == "Πληκτρολογήστε κωδικό" 
+                || loginPassTextbox.Text == "" || loginEmailTextbox.Text == ""
+                || loginEmailTextbox.Text == "Συμπληρώστε email")
+            {
+                rPasswordMessage.Text = "*Συμπληρώστε όλα τα πεδία";
+            }
+            else
+            {
+                User user = new User();
+                DataAccess db = new DataAccess();
+                user = db.LogIn(loginEmailTextbox.Text, loginPassTextbox.Text);
+                if (user.Password == loginPassTextbox.Text)
+                {
+                    MainForm.login(user);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Λάθος email ή κωδικός");
+                }
+            } 
         }
     }
 }
