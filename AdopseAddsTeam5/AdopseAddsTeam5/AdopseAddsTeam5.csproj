@@ -151,6 +151,18 @@
     <Compile Include="GUI\Custom Controls\ControlPrint.Designer.cs">
       <DependentUpon>ControlPrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Custom Controls\MiniAd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\MiniAd.Designer.cs">
+      <DependentUpon>MiniAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\UserFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\UserFilter.Designer.cs">
+      <DependentUpon>UserFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Main Form\AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +176,12 @@
     </Compile>
     <Compile Include="GUI\Main Form\FilterSave.Designer.cs">
       <DependentUpon>FilterSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Main Form\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Main Form\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Main Form\LuceneSearch.cs" />
     <Compile Include="GUI\Main Form\Message.cs" />
@@ -211,6 +229,12 @@
     <EmbeddedResource Include="GUI\Custom Controls\ControlPrint.resx">
       <DependentUpon>ControlPrint.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\MiniAd.resx">
+      <DependentUpon>MiniAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\UserFilter.resx">
+      <DependentUpon>UserFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main Form\AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main Form\FilterSave.resx">
       <DependentUpon>FilterSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Main Form\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
