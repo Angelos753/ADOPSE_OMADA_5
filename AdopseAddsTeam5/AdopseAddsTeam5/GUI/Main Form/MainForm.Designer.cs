@@ -559,6 +559,7 @@ namespace AdopseAddsTeam5
             this.sideMenuPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.sideMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
+<<<<<<< Updated upstream
             this.sideMenuPanel.Controls.Add(this.controlLogout);
             this.sideMenuPanel.Controls.Add(this.controlNotifications);
             this.sideMenuPanel.Controls.Add(this.controlFilters);
@@ -3186,11 +3187,642 @@ namespace AdopseAddsTeam5
             this.footerMiddleB.Size = new System.Drawing.Size(798, 50);
             this.footerMiddleB.TabIndex = 14;
             this.footerMiddleB.Visible = false;
+=======
+            this.sideMenuPanel.Controls.Add(this.sideMenuTableLayout);
+            this.sideMenuPanel.Location = new System.Drawing.Point(0, 37);
+            this.sideMenuPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sideMenuPanel.MaximumSize = new System.Drawing.Size(150, 8125);
+            this.sideMenuPanel.MinimumSize = new System.Drawing.Size(150, 0);
+            this.sideMenuPanel.Name = "sideMenuPanel";
+            this.sideMenuPanel.Size = new System.Drawing.Size(150, 494);
+            this.sideMenuPanel.TabIndex = 1;
+            this.sideMenuPanel.Visible = false;
+            // 
+            // sideMenuTableLayout
+            // 
+            this.sideMenuTableLayout.ColumnCount = 1;
+            this.sideMenuTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.sideMenuTableLayout.Controls.Add(this.userPicBox, 0, 0);
+            this.sideMenuTableLayout.Controls.Add(this.sideOptionsTableLayout, 0, 3);
+            this.sideMenuTableLayout.Controls.Add(this.label8, 0, 1);
+            this.sideMenuTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideMenuTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.sideMenuTableLayout.Margin = new System.Windows.Forms.Padding(2);
+            this.sideMenuTableLayout.Name = "sideMenuTableLayout";
+            this.sideMenuTableLayout.RowCount = 5;
+            this.sideMenuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66668F));
+            this.sideMenuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.sideMenuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.sideMenuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.66667F));
+            this.sideMenuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
+            this.sideMenuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.sideMenuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.sideMenuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.sideMenuTableLayout.Size = new System.Drawing.Size(150, 494);
+            this.sideMenuTableLayout.TabIndex = 0;
+            // 
+            // userPicBox
+            // 
+            this.userPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_Color;
+            this.userPicBox.Location = new System.Drawing.Point(0, 0);
+            this.userPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.userPicBox.Name = "userPicBox";
+            this.userPicBox.Size = new System.Drawing.Size(150, 185);
+            this.userPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPicBox.TabIndex = 0;
+            this.userPicBox.TabStop = false;
+            // 
+            // sideOptionsTableLayout
+            // 
+            this.sideOptionsTableLayout.ColumnCount = 2;
+            this.sideOptionsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.sideOptionsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.sideOptionsTableLayout.Controls.Add(this.pictureBox1, 0, 6);
+            this.sideOptionsTableLayout.Controls.Add(this.label7, 0, 6);
+            this.sideOptionsTableLayout.Controls.Add(this.homepagePicBox, 0, 0);
+            this.sideOptionsTableLayout.Controls.Add(this.profilePicBox, 0, 1);
+            this.sideOptionsTableLayout.Controls.Add(this.favPicBox, 0, 2);
+            this.sideOptionsTableLayout.Controls.Add(this.filterPicBox, 0, 3);
+            this.sideOptionsTableLayout.Controls.Add(this.notifPicBox, 0, 4);
+            this.sideOptionsTableLayout.Controls.Add(this.label1, 1, 0);
+            this.sideOptionsTableLayout.Controls.Add(this.label3, 1, 1);
+            this.sideOptionsTableLayout.Controls.Add(this.label4, 1, 2);
+            this.sideOptionsTableLayout.Controls.Add(this.label5, 1, 3);
+            this.sideOptionsTableLayout.Controls.Add(this.label6, 1, 4);
+            this.sideOptionsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideOptionsTableLayout.Location = new System.Drawing.Point(0, 233);
+            this.sideOptionsTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.sideOptionsTableLayout.Name = "sideOptionsTableLayout";
+            this.sideOptionsTableLayout.RowCount = 7;
+            this.sideOptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.sideOptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.sideOptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.sideOptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.sideOptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.sideOptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.sideOptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.sideOptionsTableLayout.Size = new System.Drawing.Size(150, 185);
+            this.sideOptionsTableLayout.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 157);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(32, 157);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 28);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "ΑΠΟΣΥΝΔΕΣΗ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // homepagePicBox
+            // 
+            this.homepagePicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homepagePicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_home_white_24dp;
+            this.homepagePicBox.Location = new System.Drawing.Point(0, 0);
+            this.homepagePicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.homepagePicBox.Name = "homepagePicBox";
+            this.homepagePicBox.Size = new System.Drawing.Size(30, 25);
+            this.homepagePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.homepagePicBox.TabIndex = 0;
+            this.homepagePicBox.TabStop = false;
+            // 
+            // profilePicBox
+            // 
+            this.profilePicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profilePicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_person_outline_white_24dp;
+            this.profilePicBox.Location = new System.Drawing.Point(0, 25);
+            this.profilePicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.profilePicBox.Name = "profilePicBox";
+            this.profilePicBox.Size = new System.Drawing.Size(30, 25);
+            this.profilePicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.profilePicBox.TabIndex = 1;
+            this.profilePicBox.TabStop = false;
+            // 
+            // favPicBox
+            // 
+            this.favPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.favPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_favorite_white_24dp;
+            this.favPicBox.Location = new System.Drawing.Point(0, 50);
+            this.favPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.favPicBox.Name = "favPicBox";
+            this.favPicBox.Size = new System.Drawing.Size(30, 25);
+            this.favPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.favPicBox.TabIndex = 2;
+            this.favPicBox.TabStop = false;
+            // 
+            // filterPicBox
+            // 
+            this.filterPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.filterPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_bookmark_border_white_24dp;
+            this.filterPicBox.Location = new System.Drawing.Point(0, 75);
+            this.filterPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.filterPicBox.Name = "filterPicBox";
+            this.filterPicBox.Size = new System.Drawing.Size(30, 25);
+            this.filterPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.filterPicBox.TabIndex = 3;
+            this.filterPicBox.TabStop = false;
+            // 
+            // notifPicBox
+            // 
+            this.notifPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.notifPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_notifications_white_24dp;
+            this.notifPicBox.Location = new System.Drawing.Point(0, 100);
+            this.notifPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.notifPicBox.Name = "notifPicBox";
+            this.notifPicBox.Size = new System.Drawing.Size(30, 25);
+            this.notifPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.notifPicBox.TabIndex = 4;
+            this.notifPicBox.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(32, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "ΑΡΧΙΚΗ ΣΕΛΙΔΑ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(32, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 25);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "ΠΡΟΦΙΛ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(32, 50);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 25);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "ΑΓΑΠΗΜΕΝΑ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(32, 75);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "ΤΑ ΦΙΛΤΡΑ ΜΟΥ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(32, 100);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 25);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "ΕΙΔΟΠΟΙΗΣΕΙΣ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(2, 185);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(146, 24);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Ονοματεπώνυμο";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // choiceTableLayout
+            // 
+            this.choiceTableLayout.BackColor = System.Drawing.Color.White;
+            this.choiceTableLayout.ColumnCount = 3;
+            this.choiceTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.choiceTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.choiceTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.choiceTableLayout.Controls.Add(this.aggeliaLabel, 2, 1);
+            this.choiceTableLayout.Controls.Add(this.enoikLabel, 1, 1);
+            this.choiceTableLayout.Controls.Add(this.aggeliaPicBox, 2, 0);
+            this.choiceTableLayout.Controls.Add(this.enoikPicBox, 1, 0);
+            this.choiceTableLayout.Controls.Add(this.agoraPicBox, 0, 0);
+            this.choiceTableLayout.Controls.Add(this.agoraLabel, 0, 1);
+            this.choiceTableLayout.Controls.Add(this.agoraButton, 0, 2);
+            this.choiceTableLayout.Controls.Add(this.enoikButton, 1, 2);
+            this.choiceTableLayout.Controls.Add(this.aggeliaButton, 2, 2);
+            this.choiceTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.choiceTableLayout.Location = new System.Drawing.Point(172, 259);
+            this.choiceTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.choiceTableLayout.Name = "choiceTableLayout";
+            this.choiceTableLayout.RowCount = 3;
+            this.choiceTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.choiceTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.choiceTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.choiceTableLayout.Size = new System.Drawing.Size(313, 194);
+            this.choiceTableLayout.TabIndex = 6;
+            // 
+            // aggeliaLabel
+            // 
+            this.aggeliaLabel.AutoSize = true;
+            this.aggeliaLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aggeliaLabel.Location = new System.Drawing.Point(210, 112);
+            this.aggeliaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.aggeliaLabel.Name = "aggeliaLabel";
+            this.aggeliaLabel.Size = new System.Drawing.Size(101, 41);
+            this.aggeliaLabel.TabIndex = 5;
+            this.aggeliaLabel.Text = "ΝΕΑ ΑΓΓΕΛΙΑ";
+            this.aggeliaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // enoikLabel
+            // 
+            this.enoikLabel.AutoSize = true;
+            this.enoikLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.enoikLabel.Location = new System.Drawing.Point(106, 112);
+            this.enoikLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.enoikLabel.Name = "enoikLabel";
+            this.enoikLabel.Size = new System.Drawing.Size(100, 41);
+            this.enoikLabel.TabIndex = 4;
+            this.enoikLabel.Text = "ΕΝΟΙΚΙΑΣΗ";
+            this.enoikLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // aggeliaPicBox
+            // 
+            this.aggeliaPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aggeliaPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.neaaggeliaBuilding;
+            this.aggeliaPicBox.Location = new System.Drawing.Point(208, 0);
+            this.aggeliaPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.aggeliaPicBox.Name = "aggeliaPicBox";
+            this.aggeliaPicBox.Size = new System.Drawing.Size(105, 112);
+            this.aggeliaPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.aggeliaPicBox.TabIndex = 3;
+            this.aggeliaPicBox.TabStop = false;
+            // 
+            // enoikPicBox
+            // 
+            this.enoikPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.enoikPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.enoikiasiBuilding;
+            this.enoikPicBox.Location = new System.Drawing.Point(104, 0);
+            this.enoikPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.enoikPicBox.Name = "enoikPicBox";
+            this.enoikPicBox.Size = new System.Drawing.Size(104, 112);
+            this.enoikPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.enoikPicBox.TabIndex = 2;
+            this.enoikPicBox.TabStop = false;
+            // 
+            // agoraPicBox
+            // 
+            this.agoraPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.agoraPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.agoraBuilding;
+            this.agoraPicBox.Location = new System.Drawing.Point(0, 0);
+            this.agoraPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.agoraPicBox.Name = "agoraPicBox";
+            this.agoraPicBox.Size = new System.Drawing.Size(104, 112);
+            this.agoraPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.agoraPicBox.TabIndex = 0;
+            this.agoraPicBox.TabStop = false;
+            // 
+            // agoraLabel
+            // 
+            this.agoraLabel.AutoSize = true;
+            this.agoraLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.agoraLabel.Location = new System.Drawing.Point(2, 112);
+            this.agoraLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.agoraLabel.Name = "agoraLabel";
+            this.agoraLabel.Size = new System.Drawing.Size(100, 41);
+            this.agoraLabel.TabIndex = 1;
+            this.agoraLabel.Text = "ΑΓΟΡΑ";
+            this.agoraLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // agoraButton
+            // 
+            this.agoraButton.BackColor = System.Drawing.Color.White;
+            this.agoraButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.agoraButton.Location = new System.Drawing.Point(2, 155);
+            this.agoraButton.Margin = new System.Windows.Forms.Padding(2);
+            this.agoraButton.Name = "agoraButton";
+            this.agoraButton.Size = new System.Drawing.Size(100, 37);
+            this.agoraButton.TabIndex = 6;
+            this.agoraButton.Text = "ΒΡΕΣ ΤΩΡΑ";
+            this.agoraButton.UseVisualStyleBackColor = false;
+            // 
+            // enoikButton
+            // 
+            this.enoikButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.enoikButton.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.enoikButton.Location = new System.Drawing.Point(106, 155);
+            this.enoikButton.Margin = new System.Windows.Forms.Padding(2);
+            this.enoikButton.Name = "enoikButton";
+            this.enoikButton.Size = new System.Drawing.Size(100, 37);
+            this.enoikButton.TabIndex = 7;
+            this.enoikButton.Text = "ΒΡΕΣ ΤΩΡΑ";
+            this.enoikButton.UseVisualStyleBackColor = true;
+            // 
+            // aggeliaButton
+            // 
+            this.aggeliaButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aggeliaButton.Location = new System.Drawing.Point(210, 155);
+            this.aggeliaButton.Margin = new System.Windows.Forms.Padding(2);
+            this.aggeliaButton.Name = "aggeliaButton";
+            this.aggeliaButton.Size = new System.Drawing.Size(101, 37);
+            this.aggeliaButton.TabIndex = 8;
+            this.aggeliaButton.Text = "ΚΑΤΑΧΩΡΗΣΕ";
+            this.aggeliaButton.UseVisualStyleBackColor = true;
+            // 
+            // bgImagePanel
+            // 
+            this.bgImagePanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.mainTableLayout.SetColumnSpan(this.bgImagePanel, 7);
+            this.bgImagePanel.Controls.Add(this.searchPanel);
+            this.bgImagePanel.Controls.Add(this.watermarkPicBox);
+            this.bgImagePanel.Controls.Add(this.mainPictureBox);
+            this.bgImagePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bgImagePanel.Location = new System.Drawing.Point(0, 37);
+            this.bgImagePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.bgImagePanel.Name = "bgImagePanel";
+            this.bgImagePanel.Size = new System.Drawing.Size(663, 222);
+            this.bgImagePanel.TabIndex = 5;
+            // 
+            // searchPanel
+            // 
+            this.searchPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchPanel.Controls.Add(this.searchPanelTableLayout);
+            this.searchPanel.Location = new System.Drawing.Point(153, 98);
+            this.searchPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.searchPanel.Name = "searchPanel";
+            this.searchPanel.Size = new System.Drawing.Size(357, 21);
+            this.searchPanel.TabIndex = 2;
+            // 
+            // searchPanelTableLayout
+            // 
+            this.searchPanelTableLayout.ColumnCount = 3;
+            this.searchPanelTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.searchPanelTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.searchPanelTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.searchPanelTableLayout.Controls.Add(this.searchPicBox, 0, 0);
+            this.searchPanelTableLayout.Controls.Add(this.searchTextbox, 1, 0);
+            this.searchPanelTableLayout.Controls.Add(this.searchLabel, 2, 0);
+            this.searchPanelTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchPanelTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.searchPanelTableLayout.Margin = new System.Windows.Forms.Padding(2);
+            this.searchPanelTableLayout.MaximumSize = new System.Drawing.Size(450, 21);
+            this.searchPanelTableLayout.Name = "searchPanelTableLayout";
+            this.searchPanelTableLayout.RowCount = 1;
+            this.searchPanelTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.searchPanelTableLayout.Size = new System.Drawing.Size(357, 21);
+            this.searchPanelTableLayout.TabIndex = 0;
+            // 
+            // searchPicBox
+            // 
+            this.searchPicBox.BackColor = System.Drawing.Color.White;
+            this.searchPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_search_black_24dp;
+            this.searchPicBox.Location = new System.Drawing.Point(0, 0);
+            this.searchPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.searchPicBox.Name = "searchPicBox";
+            this.searchPicBox.Size = new System.Drawing.Size(22, 21);
+            this.searchPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.searchPicBox.TabIndex = 0;
+            this.searchPicBox.TabStop = false;
+            // 
+            // searchTextbox
+            // 
+            this.searchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.searchTextbox.Location = new System.Drawing.Point(22, 0);
+            this.searchTextbox.Margin = new System.Windows.Forms.Padding(0);
+            this.searchTextbox.Name = "searchTextbox";
+            this.searchTextbox.Size = new System.Drawing.Size(268, 24);
+            this.searchTextbox.TabIndex = 1;
+            this.searchTextbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.\r\n";
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.AutoSize = true;
+            this.searchLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.searchLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.searchLabel.ForeColor = System.Drawing.Color.White;
+            this.searchLabel.Location = new System.Drawing.Point(290, 0);
+            this.searchLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(67, 21);
+            this.searchLabel.TabIndex = 2;
+            this.searchLabel.Text = "Αναζήτηση";
+            this.searchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
+            // 
+            // watermarkPicBox
+            // 
+            this.watermarkPicBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.watermarkPicBox.BackColor = System.Drawing.Color.Transparent;
+            this.watermarkPicBox.BackgroundImage = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
+            this.watermarkPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_White;
+            this.watermarkPicBox.Location = new System.Drawing.Point(573, 137);
+            this.watermarkPicBox.Margin = new System.Windows.Forms.Padding(0);
+            this.watermarkPicBox.Name = "watermarkPicBox";
+            this.watermarkPicBox.Size = new System.Drawing.Size(89, 85);
+            this.watermarkPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.watermarkPicBox.TabIndex = 1;
+            this.watermarkPicBox.TabStop = false;
+            // 
+            // mainPictureBox
+            // 
+            this.mainPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.mainPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPictureBox.Image = global::AdopseAddsTeam5.Properties.Resources.background_wide;
+            this.mainPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.mainPictureBox.Margin = new System.Windows.Forms.Padding(0);
+            this.mainPictureBox.Name = "mainPictureBox";
+            this.mainPictureBox.Size = new System.Drawing.Size(663, 222);
+            this.mainPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mainPictureBox.TabIndex = 0;
+            this.mainPictureBox.TabStop = false;
+            // 
+            // logPanel
+            // 
+            this.logPanel.Controls.Add(this.logLabel);
+            this.logPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logPanel.Location = new System.Drawing.Point(623, 0);
+            this.logPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.logPanel.Name = "logPanel";
+            this.logPanel.Size = new System.Drawing.Size(40, 37);
+            this.logPanel.TabIndex = 4;
+            // 
+            // logLabel
+            // 
+            this.logLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.logLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logLabel.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
+            this.logLabel.Location = new System.Drawing.Point(0, 0);
+            this.logLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.logLabel.Name = "logLabel";
+            this.logLabel.Size = new System.Drawing.Size(40, 37);
+            this.logLabel.TabIndex = 0;
+            this.logLabel.Click += new System.EventHandler(this.logLabel_Click);
+            // 
+            // dayPanel
+            // 
+            this.dayPanel.Controls.Add(this.dayLabel);
+            this.dayPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dayPanel.Location = new System.Drawing.Point(589, 0);
+            this.dayPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.dayPanel.Name = "dayPanel";
+            this.dayPanel.Size = new System.Drawing.Size(34, 37);
+            this.dayPanel.TabIndex = 3;
+            // 
+            // dayLabel
+            // 
+            this.dayLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.dayLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dayLabel.ForeColor = System.Drawing.Color.White;
+            this.dayLabel.Location = new System.Drawing.Point(0, 0);
+            this.dayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dayLabel.Name = "dayLabel";
+            this.dayLabel.Size = new System.Drawing.Size(34, 37);
+            this.dayLabel.TabIndex = 0;
+            this.dayLabel.Text = "Day/Night";
+            this.dayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sideMPanel
+            // 
+            this.sideMPanel.Controls.Add(this.sideMenuLabel);
+            this.sideMPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideMPanel.Location = new System.Drawing.Point(0, 0);
+            this.sideMPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.sideMPanel.Name = "sideMPanel";
+            this.sideMPanel.Size = new System.Drawing.Size(34, 37);
+            this.sideMPanel.TabIndex = 0;
+            // 
+            // sideMenuLabel
+            // 
+            this.sideMenuLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.sideMenuLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideMenuLabel.Image = global::AdopseAddsTeam5.Properties.Resources.outline_menu_white_24dp;
+            this.sideMenuLabel.Location = new System.Drawing.Point(0, 0);
+            this.sideMenuLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sideMenuLabel.Name = "sideMenuLabel";
+            this.sideMenuLabel.Size = new System.Drawing.Size(34, 37);
+            this.sideMenuLabel.TabIndex = 0;
+            this.sideMenuLabel.Click += new System.EventHandler(this.sideMenuLabel_Click);
+            // 
+            // mainTableLayout
+            // 
+            this.mainTableLayout.ColumnCount = 7;
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.mainTableLayout.Controls.Add(this.sideMPanel, 0, 0);
+            this.mainTableLayout.Controls.Add(this.dayPanel, 5, 0);
+            this.mainTableLayout.Controls.Add(this.logPanel, 6, 0);
+            this.mainTableLayout.Controls.Add(this.bgImagePanel, 0, 1);
+            this.mainTableLayout.Controls.Add(this.appNamePanel, 2, 0);
+            this.mainTableLayout.Controls.Add(this.choiceTableLayout, 3, 2);
+            this.mainTableLayout.Controls.Add(this.footerPicBox, 3, 3);
+            this.mainTableLayout.Controls.Add(this.panel1, 1, 0);
+            this.mainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.mainTableLayout.Margin = new System.Windows.Forms.Padding(2);
+            this.mainTableLayout.Name = "mainTableLayout";
+            this.mainTableLayout.RowCount = 4;
+            this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
+            this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.88889F));
+            this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.mainTableLayout.Size = new System.Drawing.Size(663, 537);
+            this.mainTableLayout.TabIndex = 0;
+            // 
+            // appNamePanel
+            // 
+            this.appNamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.appNamePanel.BackgroundImage = global::AdopseAddsTeam5.Properties.Resources.name_white;
+            this.appNamePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mainTableLayout.SetColumnSpan(this.appNamePanel, 3);
+            this.appNamePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.appNamePanel.Location = new System.Drawing.Point(68, 0);
+            this.appNamePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.appNamePanel.Name = "appNamePanel";
+            this.appNamePanel.Size = new System.Drawing.Size(521, 37);
+            this.appNamePanel.TabIndex = 2;
+            // 
+            // footerPicBox
+            // 
+            this.footerPicBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.footerPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.footerBuildingsFull;
+            this.footerPicBox.Location = new System.Drawing.Point(174, 455);
+            this.footerPicBox.Margin = new System.Windows.Forms.Padding(2);
+            this.footerPicBox.Name = "footerPicBox";
+            this.footerPicBox.Size = new System.Drawing.Size(309, 80);
+            this.footerPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.footerPicBox.TabIndex = 7;
+            this.footerPicBox.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(34, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(34, 37);
+            this.panel1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 37);
+            this.label2.TabIndex = 0;
+>>>>>>> Stashed changes
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(798, 553);
             this.Controls.Add(this.sideMenuPanel);
@@ -3211,6 +3843,13 @@ namespace AdopseAddsTeam5
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximumSize = new System.Drawing.Size(1444, 885);
             this.MinimumSize = new System.Drawing.Size(814, 592);
+=======
+            this.ClientSize = new System.Drawing.Size(663, 537);
+            this.Controls.Add(this.sideMenuPanel);
+            this.Controls.Add(this.mainTableLayout);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(679, 576);
+>>>>>>> Stashed changes
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Application Name";
