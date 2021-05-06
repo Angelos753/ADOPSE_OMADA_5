@@ -185,7 +185,6 @@
     </Compile>
     <Compile Include="GUI\Main Form\LuceneSearch.cs" />
     <Compile Include="GUI\Main Form\Message.cs" />
-    <Compile Include="GUI\Main Form\SampleDataRepository.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="GUI\Main Form\MainForm.cs">
       <SubType>Form</SubType>

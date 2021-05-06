@@ -102,8 +102,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                             add[x].perioxi = reader.GetString(1).ToString();
                             add[x].timi = reader.GetInt32(2);
                             add[x].emvadon = reader.GetInt32(4);
-                            add[x].ypnodomatia = reader.GetString(10).ToString();
-                            add[x].mpanio = reader.GetString(9).ToString();
+                            add[x].ypnodomatia = reader.GetInt32(10);
+                            add[x].mpanio = reader.GetInt32(9);
                             add[x].eidos = reader.GetString(5).ToString();
                         }
 
@@ -161,8 +161,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                                 add.perioxi = reader.GetString(1).ToString();
                                 add.timi = reader.GetInt32(2);
                                 add.emvadon = reader.GetInt32(4);
-                                add.ypnodomatia = reader.GetString(10).ToString();
-                                add.mpanio = reader.GetString(9).ToString();
+                                add.ypnodomatia = reader.GetInt32(10);
+                                add.mpanio = reader.GetInt32(9);
                                 add.eidos = reader.GetString(5).ToString();
                             }
                         }
@@ -210,8 +210,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                             newadd.perioxi = reader.GetString(1).ToString();
                             newadd.timi = reader.GetInt32(2);
                             newadd.emvadon = reader.GetInt32(4);
-                            newadd.ypnodomatia = reader.GetString(10).ToString();
-                            newadd.mpanio = reader.GetString(9).ToString();
+                            newadd.ypnodomatia = reader.GetInt32(10);
+                            newadd.mpanio = reader.GetInt32(9);
                             newadd.eidos = reader.GetString(5).ToString();
                         }
                         // add record to Lucene search index
@@ -278,7 +278,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try 
                 { 
                     connection.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM messages(@email)", connection))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_messages(@email)", connection))
                     {
                         cmd.Parameters.AddWithValue("email", email);
                         NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -316,14 +316,14 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         //gia to fortoma olon ton aggelion ston index tou lucene
         //auti h methodos prepei na kalite kata to fortoma tou programmatos
-        public void AllAdds()
+        public static void AllAdds()
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
                 try
                 {
                     connection.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM adds", connection))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM aggelies1", connection))
                     {
                         NpgsqlDataReader reader = cmd.ExecuteReader();
                         List<Adds> everyadd = new List<Adds>();
@@ -331,7 +331,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                         {
                             while (reader.Read())
                             {
-                                everyadd.Add(new Adds { sid = reader.GetInt32(0), title = reader.GetString(3).ToString(), perioxi = reader.GetString(1).ToString(), timi = reader.GetInt32(2), emvadon = reader.GetInt32(4), ypnodomatia = reader.GetString(10).ToString(), mpanio = reader.GetString(9).ToString(), eidos = reader.GetString(5).ToString() });
+                                everyadd.Add(new Adds { sid = reader.GetInt32(0), title = reader.GetString(3).ToString(), perioxi = reader.GetString(1).ToString(), timi = reader.GetInt32(2), emvadon = reader.GetInt32(4), ypnodomatia = reader.GetInt32(10), mpanio = reader.GetInt32(9), eidos = reader.GetString(5).ToString() });
                             }
                         }
                         //edw gemizei o index tou lucene

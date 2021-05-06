@@ -50,8 +50,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             doc.Add(new Field("perioxi", sampleData.perioxi, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("title", sampleData.title, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("eidos", sampleData.eidos, Field.Store.YES, Field.Index.ANALYZED));
-            doc.Add(new Field("mpanio", sampleData.mpanio, Field.Store.YES, Field.Index.ANALYZED));
-            doc.Add(new Field("ypnodomatia", sampleData.ypnodomatia, Field.Store.YES, Field.Index.ANALYZED));
+            doc.Add(new Field("mpanio", sampleData.mpanio.ToString(), Field.Store.YES, Field.Index.ANALYZED));
+            doc.Add(new Field("ypnodomatia", sampleData.ypnodomatia.ToString(), Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("emvadon", sampleData.emvadon.ToString(), Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("timi", sampleData.timi.ToString(), Field.Store.YES, Field.Index.ANALYZED));
 
@@ -140,8 +140,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 title = doc.Get("title"),
                 perioxi = doc.Get("perioxi"),
                 eidos = doc.Get("eidos"),
-                mpanio = doc.Get("mpanio"),
-                ypnodomatia = doc.Get("ypnodomatia"),
+                mpanio = Convert.ToInt32(doc.Get("mpanio")),
+                ypnodomatia = Convert.ToInt32(doc.Get("ypnodomatia")),
                 emvadon = Convert.ToInt32(doc.Get("emvadon")),
                 timi = Convert.ToInt32(doc.Get("timi"))
             };

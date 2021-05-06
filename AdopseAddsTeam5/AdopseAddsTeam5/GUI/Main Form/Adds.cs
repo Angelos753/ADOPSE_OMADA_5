@@ -14,9 +14,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         public string perioxi { get; set; }
 
-        public string  mpanio { get; set; }
+        public int  mpanio { get; set; }
 
-        public string ypnodomatia { get; set; }
+        public int ypnodomatia { get; set; }
 
         public string eidos { get; set; }
 

@@ -16,6 +16,7 @@ namespace AdopseAddsTeam5
 {
     public partial class MainForm : Form
     {
+        public static User user1 = new User();
 
         private static bool logged = false;
         private bool h;
@@ -26,6 +27,7 @@ namespace AdopseAddsTeam5
         {
             InitializeComponent();
             BindControls();
+            DataAccess.AllAdds();
         }
 
         protected void BindControls()
@@ -129,6 +131,9 @@ namespace AdopseAddsTeam5
             favoritesPanel.BringToFront();
             footerLeft.Show();
             footerRight.Show();
+
+            DataAccess db = new DataAccess();
+            Adds[] add = db.FavoriteAdds(user1.EmailAddress);
         }
 
         private void controlFilters_Click(object sender, EventArgs e)
@@ -300,9 +305,10 @@ namespace AdopseAddsTeam5
             new MessageForm().ShowDialog();
         }
 
-        public static void login()
+        public static void login(User user)
         {
             logged = true;
+            user1 = user;
         }
 
         private void MainForm_Activated(object sender, EventArgs e)
@@ -813,6 +819,11 @@ namespace AdopseAddsTeam5
             resultsPanel.Show();
             resultsFilterPanel.Show();
             resultsSearchTableLayout.Show();
+        }
+
+        private void controlProfile_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
