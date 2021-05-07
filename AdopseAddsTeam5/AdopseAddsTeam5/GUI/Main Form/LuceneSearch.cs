@@ -18,8 +18,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
     class LuceneSearch
     {
         public static int total_hits = 0;
-        private static string _luceneDir = Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, "lucene_index");
-
+        static string enviroment = System.Environment.CurrentDirectory;
+        static string projectDirectory = System.IO.Directory.GetParent(enviroment).Parent.FullName;
+        private static string _luceneDir = Path.Combine(projectDirectory, "lucene_index");
         private static FSDirectory _directoryTemp;
 
         //public static IndexWriter writer;

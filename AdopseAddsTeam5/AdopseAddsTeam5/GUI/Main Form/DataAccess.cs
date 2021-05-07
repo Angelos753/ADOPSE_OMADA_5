@@ -79,7 +79,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try
                 {
                     conn.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM favoriteAdds(@email)", conn))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_agapimena(@email)", conn))
                     {
                         cmd.Parameters.AddWithValue("email", email);
                         NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -141,16 +141,16 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //emfanisi tis aggelias
-        public Adds TheAdd(string email)
+        public Adds TheAdd(int id)
         {
             using (var conn = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
                 try
                 {
                     conn.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM TheAdd(@email)", conn))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM TheAdd(@id)", conn))
                     {
-                        cmd.Parameters.AddWithValue("email", email);
+                        cmd.Parameters.AddWithValue("id", id);
                         NpgsqlDataReader reader = cmd.ExecuteReader();
                         Adds add = new Adds();
                         if (reader.HasRows)
@@ -178,22 +178,24 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //dimiourgia neas aggelias
-        public void NewAdd(string email, string perioxi, string timi, string eidos, string emvadon, string title, string thermansi, string phone, string description)
+        public void NewAdd(int ypnodwmatia , int mpania , string email, string perioxi, string timi, string eidos, string emvadon, string title, string thermansi, string phone, string description)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
                 connection.Open();
-                using (var cmd = new NpgsqlCommand("SELECT insert_add(@email , @perioxi , @timi , @eidos , @emvadon , @title , @thermansi , @phone , @description)", connection))
+                using (var cmd = new NpgsqlCommand("SELECT insert_aggelies1(@perioxi , @timi , @typos_aggelias , @emvadon , @typos_akinitou , @systhma_thermanshs , @thlefwno , @perigrafi , @mpania , @ypnodwmatia , @email)", connection))
                 {
                     cmd.Parameters.AddWithValue("email", email);
                     cmd.Parameters.AddWithValue("perioxi", perioxi);
                     cmd.Parameters.AddWithValue("timi", timi);
-                    cmd.Parameters.AddWithValue("eidos", eidos);
+                    cmd.Parameters.AddWithValue("typos_aggelias", eidos);
                     cmd.Parameters.AddWithValue("emvadon", emvadon);
-                    cmd.Parameters.AddWithValue("title", title);
-                    cmd.Parameters.AddWithValue("thermansi", thermansi);
-                    cmd.Parameters.AddWithValue("phone", phone);
-                    cmd.Parameters.AddWithValue("description", description);
+                    cmd.Parameters.AddWithValue("typos_akinitou", title);
+                    cmd.Parameters.AddWithValue("systhma_thermanshs", thermansi);
+                    cmd.Parameters.AddWithValue("thlefwno", phone);
+                    cmd.Parameters.AddWithValue("perigrafi", description);
+                    cmd.Parameters.AddWithValue("mpania", mpania);
+                    cmd.Parameters.AddWithValue("ypnodwmatia", ypnodwmatia);
                     NpgsqlDataReader reader = cmd.ExecuteReader();
 
                     //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -228,10 +230,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             {
 
                 connection.Open();
-                using (var cmd = new NpgsqlCommand("SELECT insert_usersname(@email , @name)", connection))
+                using (var cmd = new NpgsqlCommand("SELECT insert_usersname(@email , @onoma_epwnymo)", connection))
                 {
                     cmd.Parameters.AddWithValue("email", email);
-                    cmd.Parameters.AddWithValue("name", name);
+                    cmd.Parameters.AddWithValue("onoma_epwnymo", name);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -260,10 +262,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             {
 
                 connection.Open();
-                using (var cmd = new NpgsqlCommand("SELECT insert_usersname(@email , @image)", connection))
+                using (var cmd = new NpgsqlCommand("SELECT change_image(@email , @picture)", connection))
                 {
                     cmd.Parameters.AddWithValue("email", email);
-                    cmd.Parameters.AddWithValue("image", image);
+                    cmd.Parameters.AddWithValue("picture", image);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -278,7 +280,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try 
                 { 
                     connection.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_messages(@email)", connection))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_message(@email)", connection))
                     {
                         cmd.Parameters.AddWithValue("email", email);
                         NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -323,7 +325,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try
                 {
                     connection.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM aggelies1", connection))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_aggelies1()", connection))
                     {
                         NpgsqlDataReader reader = cmd.ExecuteReader();
                         List<Adds> everyadd = new List<Adds>();
@@ -353,9 +355,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try
                 {
                     connection.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT delete_add(@sid)", connection))
+                    using (var cmd = new NpgsqlCommand("SELECT delete_aggelies1(@id)", connection))
                     {
-                        cmd.Parameters.AddWithValue("sid", sid);
+                        cmd.Parameters.AddWithValue("id", sid);
                         cmd.ExecuteNonQuery();
                     }
                 }
