@@ -71,7 +71,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
 
         //methodos gia thn emfanisi ton agapimenon aggelion
-        public Adds[] FavoriteAdds(string email)
+        public static Adds[] FavoriteAdds(string email)
         {
             Adds[] add;
             using (var conn = new NpgsqlConnection(Helper.CnnVal("it164760")))

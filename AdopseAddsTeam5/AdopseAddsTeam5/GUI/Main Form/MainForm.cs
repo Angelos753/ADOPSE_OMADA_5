@@ -128,9 +128,6 @@ namespace AdopseAddsTeam5
             favoritesPanel.BringToFront();
             footerLeft.Show();
             footerRight.Show();
-
-            DataAccess db = new DataAccess();
-            Adds[] add = db.FavoriteAdds(user1.EmailAddress);
         }
 
         private void controlFilters_Click(object sender, EventArgs e)
@@ -311,6 +308,7 @@ namespace AdopseAddsTeam5
                 email = user1.EmailAddress;
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
                 loadMessages();
+                loadFavorites();
                 flag = false;
             }
         }
@@ -909,6 +907,27 @@ namespace AdopseAddsTeam5
                 ControlMessage cm = new ControlMessage("Alexandros" , "Giotas" , "6932123123", "alexandros@gmail.com", "Dokimastiko keimeno");
                 notificationsFlowLayout.Controls.Add(cm);
             }
+        }
+
+        private void loadFavorites()
+        {
+            Adds[] a = DataAccess.FavoriteAdds(email);
+            for(int i=0; i<a.Length; i++)
+            {
+                miniAd m = new miniAd();
+                m.setTitle(a[i].eidos + " " + a[i].emvadon);
+                m.setDate("10/5/21");
+                m.setArea(a[i].perioxi);
+                m.setRooms(a[i].ypnodomatia.ToString());
+                m.setBaths(a[i].mpanio.ToString());
+                m.setPrice(a[i].timi + " - " + a[i].title);
+                favoritesFlowLayout.Controls.Add(m);
+            }
+        }
+
+        private void searchFilterRefresh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
