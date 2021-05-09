@@ -157,3 +157,9 @@ C:\Users\Angelos\Documents\GitHub\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5
 C:\Users\Angelos\Documents\GitHub\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.csproj.CopyComplete
 C:\Users\Angelos\Documents\GitHub\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Main_Form.Account.resources
 C:\Users\Angelos\Documents\GitHub\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Templates.Template.resources
+C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\bin\Debug\Lucene.Net.dll
+C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\bin\Debug\Lucene.Net.pdb
+C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\bin\Debug\Lucene.Net.xml
+C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.csprojAssemblyReference.cache
+C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Custom_Controls.ControlMessage.resources
+C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Custom_Controls.ControlFavorite.resources

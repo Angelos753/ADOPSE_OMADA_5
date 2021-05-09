@@ -354,5 +354,14 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         private Custom_Controls.ControlPrint controlPrint1;
         private Custom_Controls.ControlSave controlSave1;
         private System.Windows.Forms.Label label5;
+
+        public void setFields(string fname, string lname, string phone, string email, string desc)
+        {
+            messageFName.Text = fname;
+            messageLName.Text = lname;
+            messagePhone.Text = phone;
+            messageEmail.Text = email;
+            messageTextbox.Text = desc;
+        }
     }
 }

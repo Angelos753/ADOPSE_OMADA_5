@@ -97,6 +97,12 @@
     <Compile Include="GUI\Custom Controls\ControlBuy.Designer.cs">
       <DependentUpon>ControlBuy.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Custom Controls\ControlFavorite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlFavorite.Designer.cs">
+      <DependentUpon>ControlFavorite.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Custom Controls\ControlFavorites.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     </Compile>
     <Compile Include="GUI\Custom Controls\ControlLogout.Designer.cs">
       <DependentUpon>ControlLogout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlMessage.Designer.cs">
+      <DependentUpon>ControlMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Custom Controls\ControlSave.cs">
       <SubType>UserControl</SubType>
@@ -201,6 +213,9 @@
     <EmbeddedResource Include="GUI\Custom Controls\ControlBuy.resx">
       <DependentUpon>ControlBuy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlFavorite.resx">
+      <DependentUpon>ControlFavorite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\ControlFavorites.resx">
       <DependentUpon>ControlFavorites.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\ControlLogout.resx">
       <DependentUpon>ControlLogout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlMessage.resx">
+      <DependentUpon>ControlMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\ControlNotifications.resx">
       <DependentUpon>ControlNotifications.cs</DependentUpon>

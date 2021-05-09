@@ -163,7 +163,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 || loginPassTextbox.Text == "" || loginEmailTextbox.Text == ""
                 || loginEmailTextbox.Text == "Συμπληρώστε email")
             {
-                rPasswordMessage.Text = "*Συμπληρώστε όλα τα πεδία";
+                lErrorText.Text = "*Συμπληρώστε όλα τα πεδία";
             }
             else
             {
@@ -177,9 +177,24 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 }
                 else
                 {
-                    MessageBox.Show("Λάθος email ή κωδικός");
+                    lErrorText.Text = "Λάθος email ή κωδικός";
                 }
             } 
+        }
+
+        private void rEmailTextbox_TextChanged(object sender, EventArgs e)
+        {
+            rPasswordMessage.Text = "";
+        }
+
+        private void loginEmailTextbox_TextChanged(object sender, EventArgs e)
+        {
+            lErrorText.Text = "";
+        }
+
+        private void loginPassTextbox_TextChanged(object sender, EventArgs e)
+        {
+            lErrorText.Text = "";
         }
     }
 }

@@ -178,7 +178,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //dimiourgia neas aggelias
-        public void NewAdd(int ypnodwmatia , int mpania , string email, string perioxi, string timi, string eidos, string emvadon, string title, string thermansi, string phone, string description)
+        //Άλλαξα την μέθοδο σε static - Alex
+        public static void NewAdd(int ypnodwmatia , int mpania , string email, string perioxi, string timi, string eidos, string emvadon, string title, string thermansi, string phone, string description)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
@@ -224,7 +225,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //methodos gia to onoma tou user
-        public void UserName(string email, string name)
+        //Άλλαξα την μέθοδο σε static - Alex
+        public static void UserName(string email, string name)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
@@ -240,7 +242,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //allagi tou email tou user
-        public void UserNewEmail(string email, string newemail)
+        //Άλλαξα την μέθοδο σε static - Alex
+        //Πρέπει να είναι λάθος το όνομα της μεθόδου στην DB. - Alex
+        public static void UserNewEmail(string email, string newemail)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
@@ -272,7 +276,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //emfanisi pinaka minimaton
-        public Message[] UserImage(string email)
+        //Άλλαξα το όνομα της μεθόδου άπό UserImage σε UserMessages - Alex
+        public static Message[] UserMessages(string email)
         {
             Message[] msg;
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))

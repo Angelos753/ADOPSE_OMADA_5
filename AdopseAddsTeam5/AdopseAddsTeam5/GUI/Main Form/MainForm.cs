@@ -16,12 +16,12 @@ namespace AdopseAddsTeam5
 {
     public partial class MainForm : Form
     {
-        public static User user1 = new User();
 
+        public static User user1 = new User();
+        private static bool flag = false;
         private static bool logged = false;
-        private bool h;
-        private bool s = false;
         private string email;
+        private string name;
 
         public MainForm()
         {
@@ -80,8 +80,6 @@ namespace AdopseAddsTeam5
             footerRight.Hide();
             footerMiddle.Hide();
             footerMiddleB.Hide();
-            s = false;
-            h = false;
         }
 
         private void sideMenuPicbox_Click(object sender, EventArgs e)
@@ -101,7 +99,7 @@ namespace AdopseAddsTeam5
         {
             logged = false;
             logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
-            sideMenuPanel.Hide();
+            controlHomepage_Click(this, e);
         }
 
         private void controlHomepage_Click(object sender, EventArgs e)
@@ -112,7 +110,6 @@ namespace AdopseAddsTeam5
             choicePanel.Show();
             footerMiddle.Show();
             watermarkPicbox.Show();
-            h = true;
         }
 
         private void controlProfile_Click(object sender, EventArgs e)
@@ -162,7 +159,6 @@ namespace AdopseAddsTeam5
             footerRight.Show();
             footerMiddleB.Show();
             footerMiddleB.BringToFront();
-            s = true;
         }
 
         private void controlRent1_Click(object sender, EventArgs e)
@@ -172,7 +168,6 @@ namespace AdopseAddsTeam5
             footerLeft.Show();
             footerRight.Show();
             footerMiddleB.BringToFront();
-            s = true;
         }
 
         private void controlAdd1_Click(object sender, EventArgs e)
@@ -191,7 +186,6 @@ namespace AdopseAddsTeam5
             footerLeft.Show();
             footerRight.Show();
             footerMiddleB.BringToFront();
-            s = true;
         }
 
         private void logPicbox_Click(object sender, EventArgs e)
@@ -203,6 +197,7 @@ namespace AdopseAddsTeam5
             else
             {
                 logged = false;
+                controlHomepage_Click(this, e);
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
             }
         }
@@ -210,25 +205,6 @@ namespace AdopseAddsTeam5
         private void profilePicEdit_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void profileEmailEdit_Click(object sender, EventArgs e)
-        {
-            email = profileEmailText.Text;
-            if (profileEmailEdit.Text == "Επεξεργασία")
-            {
-                profileEmailText.Enabled = true;
-                profileEmailText.ReadOnly = false;
-                profileEmailText.Focus();
-                profileEmailEdit.Text = "Αποθήκευση";
-            }
-            else
-            {
-                profileEmailText.Enabled = false;
-                profileEmailText.ReadOnly = true;
-                profileEmailEdit.Text = "Επεξεργασία";
-                email = profileEmailText.Text;
-            }
         }
 
         private void profileAddListing_Click(object sender, EventArgs e)
@@ -242,6 +218,19 @@ namespace AdopseAddsTeam5
 
         private void add1Next_Click(object sender, EventArgs e)
         {
+            int domatia = Int32.Parse(domatiaTextbox.Text);
+            int mpania = Int32.Parse(mpaniaTextbox.Text);
+            string perioxi = perioxiTextbox.Text;
+            string timi = timiTextbox.Text;
+            string eidos;
+            if (buyRBtn.Checked) eidos = "Αγορά";
+            else eidos = "Ενοικίαση";
+            string emvadon = emvadoTextbox.Text;
+            string tipos = typeCombo.Text;
+            string thermansi = heatingCombo1.Text + " " + heatingCombo2.Text;
+            string phone = phoneTextbox.Text;
+            string desc = addPerigrafiText.Text;
+            DataAccess.NewAdd(domatia, mpania, email, perioxi, timi, eidos, emvadon, tipos, thermansi, phone, desc);
             addPanel1.Hide();
             addPanel2.BringToFront();
             addPanel2.Show();
@@ -308,14 +297,21 @@ namespace AdopseAddsTeam5
         public static void login(User user)
         {
             logged = true;
+            flag = true;
             user1 = user;
         }
 
+
         private void MainForm_Activated(object sender, EventArgs e)
         {
-            if(logged)
+            if(logged && flag)
             {
+                name = user1.Name;
+                usernameLabel.Text = name;
+                email = user1.EmailAddress;
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
+                loadMessages();
+                flag = false;
             }
         }
 
@@ -409,6 +405,42 @@ namespace AdopseAddsTeam5
             }
         }
 
+        private void domatiaTextbox_Enter(object sender, EventArgs e)
+        {
+            if (emvadoTextbox.Text == "π.χ. 2")
+            {
+                emvadoTextbox.Text = "";
+                emvadoTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void domatiaTextbox_Leave(object sender, EventArgs e)
+        {
+            if (emvadoTextbox.Text == "")
+            {
+                emvadoTextbox.Text = "π.χ. 2";
+                emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+        private void mpaniaTextbox_Enter(object sender, EventArgs e)
+        {
+            if (emvadoTextbox.Text == "π.χ. 1")
+            {
+                emvadoTextbox.Text = "";
+                emvadoTextbox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void mpaniaTextbox_Leave(object sender, EventArgs e)
+        {
+            if (emvadoTextbox.Text == "")
+            {
+                emvadoTextbox.Text = "π.χ. 1";
+                emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
         private void perioxiTextbox_Enter(object sender, EventArgs e)
         {
             if (perioxiTextbox.Text == "π.χ. Θεσσαλονίκη - Τούμπα")
@@ -461,24 +493,6 @@ namespace AdopseAddsTeam5
             {
                 emvadoTextbox.Text = "π.χ. 89";
                 emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            }
-        }
-
-        private void tiposTextbox_Enter(object sender, EventArgs e)
-        {
-            if (tiposTextbox.Text == "π.χ. Διαμέρισμα ή Μονοκατοικία")
-            {
-                tiposTextbox.Text = "";
-                tiposTextbox.ForeColor = System.Drawing.Color.Black;
-            }
-        }
-
-        private void tiposTextbox_Leave(object sender, EventArgs e)
-        {
-            if (tiposTextbox.Text == "")
-            {
-                tiposTextbox.Text = "π.χ. Διαμέρισμα ή Μονοκατοικία";
-                tiposTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
@@ -752,14 +766,6 @@ namespace AdopseAddsTeam5
             }
         }
 
-        private void profileEmailText_Leave(object sender, EventArgs e)
-        {
-            profileEmailText.Text = email;
-            profileEmailText.Enabled = false;
-            profileEmailText.ReadOnly = true;
-            profileEmailEdit.Text = "Επεξεργασία";            
-        }
-
         private void resultsRentBtn_Click(object sender, EventArgs e)
         {
             resultsRentBtn.BackColor = System.Drawing.Color.White;
@@ -821,9 +827,88 @@ namespace AdopseAddsTeam5
             resultsSearchTableLayout.Show();
         }
 
-        private void controlProfile_Load(object sender, EventArgs e)
+        private void profileEmailEdit_Click(object sender, EventArgs e)
         {
+            email = profileEmailText.Text;
+            if (profileEmailEdit.Text == "Επεξεργασία")
+            {
+                profileEmailText.Enabled = true;
+                profileEmailText.ReadOnly = false;
+                profileEmailText.Focus();
+                profileEmailEdit.Text = "Αποθήκευση";
+            }
+            else
+            {
+                profileEmailText.Enabled = false;
+                profileEmailText.ReadOnly = true;
+                profileEmailEdit.Text = "Επεξεργασία";
+                //DataAccess.UserNewEmail(email, profileEmailText.Text);
+                //email = profileEmailText.Text;
+            }
+        }
 
+        private void profileEmailText_VisibleChanged(object sender, EventArgs e)
+        {
+            profileEmailText.Text = email;
+            profileEmailText.Enabled = false;
+            profileEmailText.ReadOnly = true;
+            profileEmailEdit.Text = "Επεξεργασία";
+        }
+
+        private void profileEmailText_Leave(object sender, EventArgs e)
+        {
+            profileEmailText.Text = email;
+            profileEmailText.Enabled = false;
+            profileEmailText.ReadOnly = true;
+            profileEmailEdit.Text = "Επεξεργασία";
+        }
+
+        private void profileNameEdit_Click(object sender, EventArgs e)
+        {
+            name = profileNameText.Text;
+            if (profileNameEdit.Text == "Επεξεργασία")
+            {
+                profileNameText.Enabled = true;
+                profileNameText.ReadOnly = false;
+                profileNameText.Focus();
+                profileNameEdit.Text = "Αποθήκευση";
+            }
+            else
+            {
+                profileNameText.Enabled = false;
+                profileNameText.ReadOnly = true;
+                profileNameEdit.Text = "Επεξεργασία";
+                DataAccess.UserName(email, profileNameText.Text);
+                name = profileNameText.Text;
+                usernameLabel.Text = name.ToUpper();
+            }
+        }
+
+        private void profileNameText_Leave(object sender, EventArgs e)
+        {
+            profileNameText.Text = name;
+            profileNameText.Enabled = false;
+            profileNameText.ReadOnly = true;
+            profileNameEdit.Text = "Επεξεργασία";
+        }
+
+        private void profileNameText_VisibleChanged(object sender, EventArgs e)
+        {
+            profileNameText.Text = name;
+            profileNameText.Enabled = false;
+            profileNameText.ReadOnly = true;
+            profileNameEdit.Text = "Επεξεργασία";
+        }
+
+        private void loadMessages()
+        {
+            GUI.Main_Form.Message[] m = DataAccess.UserMessages(email);
+            for(int i=0; i<m.Length+2; i++)
+            {
+                //ControlMessage cm = new ControlMessage(m[i].firstname, m[i].lastname, m[i].phone, m[i].email, m[i].desc);
+                ControlMessage cm = new ControlMessage("Alexandros" , "Giotas" , "6932123123", "alexandros@gmail.com", "Dokimastiko keimeno");
+                notificationsFlowLayout.Controls.Add(cm);
+            }
         }
     }
 }
