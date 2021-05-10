@@ -353,7 +353,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //gia diagrafi aggelias
-        public void deleteAdd(int sid)
+        public static void deleteAdd(int sid)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
