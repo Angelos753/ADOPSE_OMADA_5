@@ -230,27 +230,27 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                     cmd.Parameters.AddWithValue("ypnodwmatia", ypnodwmatia);
                     NpgsqlDataReader reader = cmd.ExecuteReader();
 
-                    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    //thelo i insert_add na mou epistrefei ki olas tin add pou molis dimiourgithike
-                    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-                    if (reader.HasRows)
+                    using (var command = new NpgsqlCommand("SELECT MAX(id) FROM aggelies1"))
                     {
-                        var newadd = new Adds { };
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            newadd.sid = reader.GetInt32(0);
-                            newadd.title = reader.GetString(3).ToString();
-                            newadd.perioxi = reader.GetString(1).ToString();
-                            newadd.timi = reader.GetInt32(2);
-                            newadd.emvadon = reader.GetInt32(4);
-                            newadd.ypnodomatia = reader.GetInt32(10);
-                            newadd.mpanio = reader.GetInt32(9);
-                            newadd.eidos = reader.GetString(5).ToString();
+                            var newadd = new Adds { };
+                            while (reader.Read())
+                            {
+                                newadd.sid = reader.GetInt32(0);
+                                newadd.title = reader.GetString(3).ToString();
+                                newadd.perioxi = reader.GetString(1).ToString();
+                                newadd.timi = reader.GetInt32(2);
+                                newadd.emvadon = reader.GetInt32(4);
+                                newadd.ypnodomatia = reader.GetInt32(10);
+                                newadd.mpanio = reader.GetInt32(9);
+                                newadd.eidos = reader.GetString(5).ToString();
+                            }
+                            // add record to Lucene search index
+                            LuceneSearch.AddUpdateLuceneIndex(newadd);
                         }
-                        // add record to Lucene search index
-                        LuceneSearch.AddUpdateLuceneIndex(newadd);
-                    }
+                    } 
                 }
             }
         }
