@@ -30,87 +30,104 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlAd));
-            this.adPicbox = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.priceLabel = new System.Windows.Forms.Label();
             this.infoLabel = new System.Windows.Forms.Label();
             this.deleteLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.adPicbox)).BeginInit();
+            this.adPic = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.adPic)).BeginInit();
             this.SuspendLayout();
             // 
-            // adPicbox
+            // tableLayoutPanel1
             // 
-            this.adPicbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adPicbox.Image = ((System.Drawing.Image)(resources.GetObject("adPicbox.Image")));
-            this.adPicbox.Location = new System.Drawing.Point(0, 0);
-            this.adPicbox.Margin = new System.Windows.Forms.Padding(0);
-            this.adPicbox.Name = "adPicbox";
-            this.adPicbox.Size = new System.Drawing.Size(75, 75);
-            this.adPicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.adPicbox.TabIndex = 0;
-            this.adPicbox.TabStop = false;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 663F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.tableLayoutPanel1.Controls.Add(this.adPic, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.deleteLabel, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.priceLabel, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.infoLabel, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(950, 75);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // priceLabel
             // 
-            this.priceLabel.AutoSize = true;
             this.priceLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.priceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.priceLabel.Location = new System.Drawing.Point(90, 25);
-            this.priceLabel.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.priceLabel.Location = new System.Drawing.Point(80, 5);
+            this.priceLabel.Margin = new System.Windows.Forms.Padding(0);
             this.priceLabel.Name = "priceLabel";
-            this.priceLabel.Size = new System.Drawing.Size(106, 24);
+            this.priceLabel.Size = new System.Drawing.Size(100, 65);
             this.priceLabel.TabIndex = 1;
-            this.priceLabel.Text = "€150.000 -";
+            this.priceLabel.Text = "€ 150000";
+            this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // infoLabel
             // 
             this.infoLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.infoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.infoLabel.Location = new System.Drawing.Point(196, 25);
+            this.infoLabel.Location = new System.Drawing.Point(180, 5);
             this.infoLabel.Margin = new System.Windows.Forms.Padding(0);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(696, 23);
+            this.infoLabel.Size = new System.Drawing.Size(663, 65);
             this.infoLabel.TabIndex = 2;
-            this.infoLabel.Text = "Πώληση, Διαμέρισμα, 82 τ.μ.";
+            this.infoLabel.Text = "Διάφορες πληροφορίες για το ακίνητο";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // deleteLabel
             // 
-            this.deleteLabel.AutoSize = true;
-            this.deleteLabel.BackColor = System.Drawing.Color.White;
-            this.deleteLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.deleteLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.deleteLabel.ForeColor = System.Drawing.Color.Red;
-            this.deleteLabel.Location = new System.Drawing.Point(879, 25);
+            this.deleteLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.deleteLabel.BackColor = System.Drawing.Color.Firebrick;
+            this.deleteLabel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.deleteLabel.ForeColor = System.Drawing.Color.White;
+            this.deleteLabel.Location = new System.Drawing.Point(843, 22);
+            this.deleteLabel.Margin = new System.Windows.Forms.Padding(0);
             this.deleteLabel.Name = "deleteLabel";
-            this.deleteLabel.Size = new System.Drawing.Size(105, 26);
+            this.deleteLabel.Size = new System.Drawing.Size(101, 30);
             this.deleteLabel.TabIndex = 3;
             this.deleteLabel.Text = "Διαγραφή";
-            this.deleteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.deleteLabel.Click += new System.EventHandler(this.deleteLabel_Click);
+            // 
+            // adPic
+            // 
+            this.adPic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adPic.Image = ((System.Drawing.Image)(resources.GetObject("adPic.Image")));
+            this.adPic.Location = new System.Drawing.Point(5, 5);
+            this.adPic.Margin = new System.Windows.Forms.Padding(0);
+            this.adPic.Name = "adPic";
+            this.adPic.Size = new System.Drawing.Size(75, 65);
+            this.adPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.adPic.TabIndex = 0;
+            this.adPic.TabStop = false;
             // 
             // ControlAd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.deleteLabel);
-            this.Controls.Add(this.infoLabel);
-            this.Controls.Add(this.priceLabel);
-            this.Controls.Add(this.adPicbox);
-            this.Margin = new System.Windows.Forms.Padding(15);
+            this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(40, 10, 40, 0);
             this.Name = "ControlAd";
-            this.Size = new System.Drawing.Size(1001, 75);
-            ((System.ComponentModel.ISupportInitialize)(this.adPicbox)).EndInit();
+            this.Size = new System.Drawing.Size(950, 75);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.adPic)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox adPicbox;
-        private System.Windows.Forms.Label priceLabel;
-        private System.Windows.Forms.Label infoLabel;
-        private System.Windows.Forms.Label deleteLabel;
 
         public void setPrice(string price)
         {
@@ -121,5 +138,11 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         {
             infoLabel.Text = info;
         }
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox adPic;
+        private System.Windows.Forms.Label priceLabel;
+        private System.Windows.Forms.Label infoLabel;
+        private System.Windows.Forms.Label deleteLabel;
     }
 }

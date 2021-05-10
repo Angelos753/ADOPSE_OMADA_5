@@ -18,7 +18,6 @@ namespace AdopseAddsTeam5
     {
 
         public static User user1 = new User();
-        public static List<Adds> useradds = new List<Adds>();
         public static GUI.Main_Form.Message[] msg;
         private static bool flag = false;
         private static bool logged = false;
@@ -83,6 +82,7 @@ namespace AdopseAddsTeam5
         {
             logged = false;
             logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
+            profileFlowLayout.Controls.Clear();
             controlHomepage_Click(this, e);
         }
 
@@ -178,8 +178,9 @@ namespace AdopseAddsTeam5
             else
             {
                 logged = false;
-                controlHomepage_Click(this, e);
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
+                profileFlowLayout.Controls.Clear();
+                controlHomepage_Click(this, e);
             }
         }
 
@@ -286,6 +287,7 @@ namespace AdopseAddsTeam5
                 email = user1.EmailAddress;
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
                 loadMessages();
+                loadUserAds();
                 //loadFavorites();
                 flag = false;
             }
@@ -902,6 +904,20 @@ namespace AdopseAddsTeam5
                 favoritesFlowLayout.Controls.Add(m);
             }
         }*/
+
+        private void loadUserAds()
+        {
+            List<Adds> userAds = new List<Adds>();
+            userAds = DataAccess.UserAdds(email);
+            for(int i=0; i<userAds.Count; i++)
+            {
+                ControlAd c = new ControlAd();
+                c.setPrice("€ " + (userAds[i].timi).ToString());
+                c.setInfo(userAds[i].eidos + ", " + userAds[i].perioxi + ", " + userAds[i].title + ", " + (userAds[i].emvadon).ToString() + " τ.μ.");
+                c.Name = "Ad" + userAds[i].sid.ToString();
+                profileFlowLayout.Controls.Add(c);
+            }
+        }
 
         private void searchFilterRefresh_Click(object sender, EventArgs e)
         {

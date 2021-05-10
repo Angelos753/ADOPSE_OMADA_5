@@ -70,7 +70,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //methodos gia tis aggelies tou current user
-        public List<Adds> UserAdds(string email)
+        public static List<Adds> UserAdds(string email)
         {
             List<Adds> useradds = new List<Adds>();
             using (var conn = new NpgsqlConnection(Helper.CnnVal("it164760")))
@@ -78,7 +78,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try
                 {
                     conn.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_aggelies_user(@email)", conn))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM return_aggelies(@email)", conn))
                     {
                         cmd.Parameters.AddWithValue("email", email);
                         NpgsqlDataReader reader = cmd.ExecuteReader();
