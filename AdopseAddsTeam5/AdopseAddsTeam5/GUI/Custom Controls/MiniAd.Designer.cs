@@ -29,6 +29,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(miniAd));
             this.favPicBox = new System.Windows.Forms.PictureBox();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
@@ -54,10 +55,12 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // 
             // picBox
             // 
+            this.picBox.Image = ((System.Drawing.Image)(resources.GetObject("picBox.Image")));
             this.picBox.Location = new System.Drawing.Point(0, 0);
             this.picBox.Margin = new System.Windows.Forms.Padding(0);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(150, 150);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBox.TabIndex = 0;
             this.picBox.TabStop = false;
             // 
