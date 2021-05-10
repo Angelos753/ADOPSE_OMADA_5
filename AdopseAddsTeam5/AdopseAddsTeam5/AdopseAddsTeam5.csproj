@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Custom Controls\ControlAd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlAd.Designer.cs">
+      <DependentUpon>ControlAd.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Custom Controls\ControlAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     <Compile Include="GUI\Main Form\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Custom Controls\ControlAd.resx">
+      <DependentUpon>ControlAd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\ControlAdd.resx">
       <DependentUpon>ControlAdd.cs</DependentUpon>
     </EmbeddedResource>

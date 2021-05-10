@@ -163,3 +163,4 @@ C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAdds
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.csprojAssemblyReference.cache
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Custom_Controls.ControlMessage.resources
 C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Custom_Controls.ControlFavorite.resources
+C:\Users\alexa\source\repos\Angelos753\ADOPSE_OMADA_5\AdopseAddsTeam5\AdopseAddsTeam5\obj\Debug\AdopseAddsTeam5.GUI.Custom_Controls.ControlAd.resources

@@ -102,7 +102,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
 
         //methodos gia thn emfanisi ton agapimenon aggelion
-        public Adds[] FavoriteAdds(string email)
+        public static Adds[] FavoriteAdds(string email)
         {
             Adds[] add;
             using (var conn = new NpgsqlConnection(Helper.CnnVal("it164760")))
@@ -384,7 +384,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //gia diagrafi aggelias
-        public void deleteAdd(int sid)
+        public static void deleteAdd(int sid)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {

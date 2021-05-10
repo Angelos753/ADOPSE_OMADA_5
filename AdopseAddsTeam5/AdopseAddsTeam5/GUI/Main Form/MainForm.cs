@@ -42,24 +42,6 @@ namespace AdopseAddsTeam5
             watermarkPicbox.Parent = bgImagePicbox; 
         }
 
-        private void MainForm_SizeChanged(object sender, EventArgs e)
-        {/*
-            resultsSearchbox.Text = "Text " + resultsFlowLayout.Controls.GetChildIndex(miniAd1);
-            resultsFlowLayout.Controls.SetChildIndex(miniAd2, 0);
-            
-            if (this.Size.Width < 1290)
-            {
-                this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left))));
-                //resultsFilterPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            }
-            else
-            {
-                this.resultsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-                //resultsFilterPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            }*/
-        }
-
         private void hideControls()
         {
             sideMenuPanel.Hide();
@@ -130,9 +112,6 @@ namespace AdopseAddsTeam5
             favoritesPanel.BringToFront();
             footerLeft.Show();
             footerRight.Show();
-
-            DataAccess db = new DataAccess();
-            Adds[] add = db.FavoriteAdds(user1.EmailAddress);
         }
 
         private void controlFilters_Click(object sender, EventArgs e)
@@ -153,7 +132,7 @@ namespace AdopseAddsTeam5
             footerRight.Show();
         }
 
-        private void controlBuy1_Click(object sender, EventArgs e)
+        private void controlBuy_Click(object sender, EventArgs e)
         {
             hideControls();
             this.showResults();
@@ -163,7 +142,7 @@ namespace AdopseAddsTeam5
             footerMiddleB.BringToFront();
         }
 
-        private void controlRent1_Click(object sender, EventArgs e)
+        private void controlRent_Click(object sender, EventArgs e)
         {
             hideControls();
             this.showResults();
@@ -172,7 +151,7 @@ namespace AdopseAddsTeam5
             footerMiddleB.BringToFront();
         }
 
-        private void controlAdd1_Click(object sender, EventArgs e)
+        private void controlAdd_Click(object sender, EventArgs e)
         {
             hideControls();
             addPanel1.Show();
@@ -291,18 +270,12 @@ namespace AdopseAddsTeam5
             controlHomepage_Click(this, e);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            new MessageForm().ShowDialog();
-        }
-
         public static void login(User user)
         {
             logged = true;
             flag = true;
             user1 = user;
         }
-
 
         private void MainForm_Activated(object sender, EventArgs e)
         {
@@ -313,6 +286,7 @@ namespace AdopseAddsTeam5
                 email = user1.EmailAddress;
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
                 loadMessages();
+                //loadFavorites();
                 flag = false;
             }
         }
@@ -912,5 +886,32 @@ namespace AdopseAddsTeam5
                 notificationsFlowLayout.Controls.Add(cm);
             }
         }
+
+        /*private void loadFavorites()
+        {
+            Adds[] a = DataAccess.FavoriteAdds(email);
+            for(int i=0; i<a.Length; i++)
+            {
+                miniAd m = new miniAd();
+                m.setTitle(a[i].eidos + " " + a[i].emvadon);
+                m.setDate("10/5/21");
+                m.setArea(a[i].perioxi);
+                m.setRooms(a[i].ypnodomatia.ToString());
+                m.setBaths(a[i].mpanio.ToString());
+                m.setPrice(a[i].timi + " - " + a[i].title);
+                favoritesFlowLayout.Controls.Add(m);
+            }
+        }*/
+
+        private void searchFilterRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void appNamePicbox_Click(object sender, EventArgs e)
+        {
+            controlHomepage_Click(this, e);
+        }
+
     }
 }
