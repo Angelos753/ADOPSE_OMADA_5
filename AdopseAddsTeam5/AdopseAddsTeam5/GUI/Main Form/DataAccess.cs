@@ -69,6 +69,37 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             }
         }
 
+        //methodos gia tis aggelies tou current user
+        public List<Adds> UserAdds(string email)
+        {
+            List<Adds> useradds = new List<Adds>();
+            using (var conn = new NpgsqlConnection(Helper.CnnVal("it164760")))
+            {
+                try
+                {
+                    conn.Open();
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_aggelies_user(@email)", conn))
+                    {
+                        cmd.Parameters.AddWithValue("email", email);
+                        NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                useradds.Add(new Adds { sid = reader.GetInt32(0), title = reader.GetString(3).ToString(), perioxi = reader.GetString(1).ToString(), timi = reader.GetInt32(2), emvadon = reader.GetInt32(4), ypnodomatia = reader.GetInt32(10), mpanio = reader.GetInt32(9), eidos = reader.GetString(5).ToString() });
+                            }
+                        }
+                        return useradds;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
 
         //methodos gia thn emfanisi ton agapimenon aggelion
         public Adds[] FavoriteAdds(string email)
@@ -367,6 +398,32 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                     }
                 }
                 catch(Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        //methodos gia apostoli message
+        public void SendMessage(string useremail , string fname , string lname , string phone , string email , string desc)
+        {
+            using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
+            {
+                try
+                {
+                    connection.Open();
+                    using (var cmd = new NpgsqlCommand("SELECT insert_message(@useremail , @fname , @lname , @phone , @email , @desc)", connection))
+                    {
+                        cmd.Parameters.AddWithValue("useremail", useremail);
+                        cmd.Parameters.AddWithValue("fname", fname);
+                        cmd.Parameters.AddWithValue("lname", lname);
+                        cmd.Parameters.AddWithValue("phone", phone);
+                        cmd.Parameters.AddWithValue("email", email);
+                        cmd.Parameters.AddWithValue("desc", desc);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
                 {
                     throw ex;
                 }

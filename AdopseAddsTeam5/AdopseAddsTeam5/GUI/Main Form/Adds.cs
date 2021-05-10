@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdopseAddsTeam5.GUI.Main_Form
 {
-    class Adds
+    public class Adds
     {
         public int sid { get; set; }
 
