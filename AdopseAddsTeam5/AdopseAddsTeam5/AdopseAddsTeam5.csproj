@@ -169,6 +169,12 @@
     <Compile Include="GUI\Custom Controls\ControlPrint.Designer.cs">
       <DependentUpon>ControlPrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Custom Controls\ControlUserAd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlUserAd.Designer.cs">
+      <DependentUpon>ControlUserAd.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Custom Controls\MiniAd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\ControlPrint.resx">
       <DependentUpon>ControlPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlUserAd.resx">
+      <DependentUpon>ControlUserAd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\MiniAd.resx">
       <DependentUpon>MiniAd.cs</DependentUpon>

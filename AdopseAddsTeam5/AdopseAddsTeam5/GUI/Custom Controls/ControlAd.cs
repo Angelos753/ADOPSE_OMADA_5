@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdopseAddsTeam5.GUI.Main_Form;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +20,10 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
 
         private void deleteLabel_Click(object sender, EventArgs e)
         {
-            string s = "ad41";
-            string sub = s.Substring(2, 2);
-            this.setInfo(sub);
-            //this.Dispose();
+            string s = (this.Name).Substring(2, (this.Name).Length - 2);
+            int id = Int32.Parse(s);
+            DataAccess.deleteAdd(id);
+            this.Dispose();
         }
     }
 }

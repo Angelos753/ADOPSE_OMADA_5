@@ -230,7 +230,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             var terms = input.Trim().Replace("-", " ").Split(' ')
                 .Where(x => !string.IsNullOrEmpty(x)).Select(x => x.Trim() + "*");
             input = string.Join(" ", terms);
-            string typos_aggelias = "ΑΓΟΡΑ";
+            string typos_aggelias = "Αγορά";
             return _searchbuy(input, typos_aggelias) ;
         }
 
@@ -266,7 +266,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             var terms = input.Trim().Replace("-", " ").Split(' ')
                 .Where(x => !string.IsNullOrEmpty(x)).Select(x => x.Trim() + "*");
             input = string.Join(" ", terms);
-            string typos_aggelias = "ΕΝΟΙΚΙΑΣΗ";
+            string typos_aggelias = "Ενοικίαση";
             return _searchrent(input, typos_aggelias);
         }
 
