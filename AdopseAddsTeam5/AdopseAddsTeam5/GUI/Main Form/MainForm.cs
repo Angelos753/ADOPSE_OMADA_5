@@ -27,13 +27,7 @@ namespace AdopseAddsTeam5
         public MainForm()
         {
             InitializeComponent();
-            BindControls();
             DataAccess.AllAdds();
-        }
-
-        protected void BindControls()
-        {
-            resultsSearchbox.DataBindings.Add("Text", searchTextbox, "Text", false);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -83,6 +77,7 @@ namespace AdopseAddsTeam5
             logged = false;
             logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
             profileFlowLayout.Controls.Clear();
+            resultsFlowLayout.Controls.Clear();
             controlHomepage_Click(this, e);
         }
 
@@ -162,6 +157,28 @@ namespace AdopseAddsTeam5
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
+            resultsFlowLayout.Controls.Clear();
+            List<Adds> a = LuceneSearch.Search(searchTextbox.Text).ToList();
+            for(int i=0; i<a.Count; i++)
+            {
+                miniAd m = new miniAd();
+                m.setTitle(a[i].title);
+                m.setEmvado(a[i].emvadon.ToString());
+                m.setArea(a[i].perioxi);
+                m.setBaths(a[i].mpanio.ToString() + " Μπάνια");
+                m.setRooms(a[i].ypnodomatia.ToString() + " Υπνοδωμάτια");
+                m.setPrice("€ " + a[i].timi.ToString());
+                m.setThermansi(a[i].thermansi);
+                m.setEidos(a[i].eidos);
+                double d = (double)a[i].timi / (double)a[i].emvadon;
+                m.Click += (sender1, e1) =>
+                {
+                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
+                    viewListing();
+                };
+                resultsFlowLayout.Controls.Add(m);
+            }
+
             hideControls();
             showResults();
             footerLeft.Show();
@@ -776,20 +793,6 @@ namespace AdopseAddsTeam5
             }
         }
 
-        private void miniAd1_Click(object sender, EventArgs e)
-        {
-            int n = 4;
-            miniAd m = new miniAd();
-            UserFilter u = new UserFilter();
-            string t = "listing" + n;
-            m.setPrice(t);
-            m.Click += (sender1, e1) =>
-            {
-                viewListing();
-            };
-            resultsFlowLayout.Controls.Add(m);
-        }
-
         public void viewListing()
         {
             hideControls();
@@ -929,5 +932,29 @@ namespace AdopseAddsTeam5
             controlHomepage_Click(this, e);
         }
 
+        private void resultsSearchBtn_Click(object sender, EventArgs e)
+        {
+            resultsFlowLayout.Controls.Clear();
+            List<Adds> a = LuceneSearch.Search(resultsSearchbox.Text).ToList();
+            for (int i = 0; i < a.Count; i++)
+            {
+                miniAd m = new miniAd();
+                m.setTitle(a[i].title);
+                m.setEmvado(a[i].emvadon.ToString());
+                m.setArea(a[i].perioxi);
+                m.setBaths(a[i].mpanio.ToString() + " Μπάνια");
+                m.setRooms(a[i].ypnodomatia.ToString() + " Υπνοδωμάτια");
+                m.setPrice("€ " + a[i].timi.ToString());
+                m.setThermansi(a[i].thermansi);
+                m.setEidos(a[i].eidos);
+                double d = (double)a[i].timi / (double)a[i].emvadon;
+                m.Click += (sender1, e1) =>
+                {
+                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
+                    viewListing();
+                };
+                resultsFlowLayout.Controls.Add(m);
+            }
+        }
     }
 }

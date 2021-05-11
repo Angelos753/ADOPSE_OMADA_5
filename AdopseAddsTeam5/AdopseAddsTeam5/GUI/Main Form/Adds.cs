@@ -24,6 +24,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         public int emvadon { get; set; }
 
-        
+        public string email { get; set; }
+
+        public string thermansi { get; set; }
+
     }
 }
