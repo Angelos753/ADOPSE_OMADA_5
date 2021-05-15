@@ -79,6 +79,9 @@ namespace AdopseAddsTeam5
             logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
             profileFlowLayout.Controls.Clear();
             resultsFlowLayout.Controls.Clear();
+            filtersFlowLayout.Controls.Clear();
+            favoritesFlowLayout.Controls.Clear();
+            notificationsFlowLayout.Controls.Clear();
             controlHomepage_Click(this, e);
         }
 
@@ -204,7 +207,13 @@ namespace AdopseAddsTeam5
 
         private void profilePicEdit_Click(object sender, EventArgs e)
         {
-
+            add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            add3Dialog.Multiselect = false;
+            if (add3Dialog.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 189);
+                profilePicbox.Image = b;
+            }
         }
 
         private void profileAddListing_Click(object sender, EventArgs e)
@@ -403,37 +412,37 @@ namespace AdopseAddsTeam5
 
         private void domatiaTextbox_Enter(object sender, EventArgs e)
         {
-            if (emvadoTextbox.Text == "π.χ. 2")
+            if (domatiaTextbox.Text == "π.χ. 2")
             {
-                emvadoTextbox.Text = "";
-                emvadoTextbox.ForeColor = System.Drawing.Color.Black;
+                domatiaTextbox.Text = "";
+                domatiaTextbox.ForeColor = System.Drawing.Color.Black;
             }
         }
 
         private void domatiaTextbox_Leave(object sender, EventArgs e)
         {
-            if (emvadoTextbox.Text == "")
+            if (domatiaTextbox.Text == "")
             {
-                emvadoTextbox.Text = "π.χ. 2";
-                emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+                domatiaTextbox.Text = "π.χ. 2";
+                domatiaTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
         private void mpaniaTextbox_Enter(object sender, EventArgs e)
         {
-            if (emvadoTextbox.Text == "π.χ. 1")
+            if (mpaniaTextbox.Text == "π.χ. 1")
             {
-                emvadoTextbox.Text = "";
-                emvadoTextbox.ForeColor = System.Drawing.Color.Black;
+                mpaniaTextbox.Text = "";
+                mpaniaTextbox.ForeColor = System.Drawing.Color.Black;
             }
         }
 
         private void mpaniaTextbox_Leave(object sender, EventArgs e)
         {
-            if (emvadoTextbox.Text == "")
+            if (mpaniaTextbox.Text == "")
             {
-                emvadoTextbox.Text = "π.χ. 1";
-                emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+                mpaniaTextbox.Text = "π.χ. 1";
+                mpaniaTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
@@ -957,5 +966,6 @@ namespace AdopseAddsTeam5
                 resultsFlowLayout.Controls.Add(m);
             }
         }
+
     }
 }
