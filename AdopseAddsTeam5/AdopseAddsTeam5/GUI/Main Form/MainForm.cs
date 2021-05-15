@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace AdopseAddsTeam5
 {
@@ -24,7 +25,6 @@ namespace AdopseAddsTeam5
         private static bool logged = false;
         private string email;
         private string name;
-        private int addId;
         private PictureBox[] pics = new PictureBox[5];
         private int x = 0;
 
@@ -181,6 +181,7 @@ namespace AdopseAddsTeam5
                 m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
+
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -261,9 +262,11 @@ namespace AdopseAddsTeam5
                 add3Dialog.Multiselect = false;
                 if (add3Dialog.ShowDialog() == DialogResult.OK)
                 {
-                    Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 90, 90);
-                    ((PictureBox)(add3FlowLayout.Controls[x+1])).Image = b;
-                    ((PictureBox)(add3FlowLayout.Controls[x+1])).ImageLocation = add3Dialog.FileName;
+                    Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 140);
+                    ((PictureBox)(add3FlowLayout.Controls[x])).Image = b;
+                    ((PictureBox)(add3FlowLayout.Controls[x])).ImageLocation = add3Dialog.FileName;
+                    ((PictureBox)(add3FlowLayout.Controls[x])).BorderStyle = BorderStyle.FixedSingle;
+
                 }
                 x = x + 1;
             }
@@ -296,14 +299,29 @@ namespace AdopseAddsTeam5
 
         private void add3Post_Click(object sender, EventArgs e)
         {
-            ForImages.createPhotoDir(2);
-            for(int i=1; i<add3FlowLayout.Controls.Count; i++)
+            bw.RunWorkerAsync();
+            controlHomepage_Click(this, e);
+        }
+        private void bw_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ForImages.createPhotoDir(7);
+            for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
             {
-                ForImages.sftpSendImage(2, ((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation, i);
+                if (((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation != null)
+                {
+                    ForImages.sftpSendImage(7, ((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation, i);
+                }
             }
             x = 0;
-            addPanel3.Hide();
-            controlHomepage_Click(this, e);
+        }
+
+        private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
+            {
+                ((PictureBox)(add3FlowLayout.Controls[i])).BorderStyle = BorderStyle.None;
+                ((PictureBox)(add3FlowLayout.Controls[i])).Image = null;
+            }
         }
 
         public static void login(User user)
@@ -320,6 +338,9 @@ namespace AdopseAddsTeam5
                 name = user1.Name;
                 usernameLabel.Text = name;
                 email = user1.EmailAddress;
+                //Image im = ForImages.stringToImage(user1.Image);
+                //sideMenuPicbox.Image = im;
+                //profilePicbox.Image = im;
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
                 loadMessages();
                 loadUserAds();
@@ -937,7 +958,8 @@ namespace AdopseAddsTeam5
 
         private void appNamePicbox_Click(object sender, EventArgs e)
         {
-            controlHomepage_Click(this, e);
+            addPanel3.Show();
+            //controlHomepage_Click(this, e);
         }
 
         private void resultsSearchBtn_Click(object sender, EventArgs e)
@@ -959,6 +981,7 @@ namespace AdopseAddsTeam5
                 m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
+                    vlMainPic.Navigate(ForImages.showAddImages(4, 1));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);

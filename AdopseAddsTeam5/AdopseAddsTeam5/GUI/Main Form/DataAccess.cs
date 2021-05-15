@@ -49,7 +49,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                             reader.Read();
                             //error null pedio pou epistrefei apo tin vasi
                             //user.Name = Convert.ToString(reader.GetString(0));
-                            //user.Image = Convert.ToString(reader.GetString(1));
+                            user.Image = Convert.ToString(reader.GetString(1));
                             user.EmailAddress = Convert.ToString(reader.GetString(2).ToString());
                             user.Password = Convert.ToString(reader.GetString(3).ToString());
 

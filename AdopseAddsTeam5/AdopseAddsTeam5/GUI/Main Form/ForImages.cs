@@ -20,17 +20,18 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             // save bytes to ms
             image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             // to get the bytes we type
-            var bytes = ms.ToString();
+            //var bytes = ms.ToString();
+
             // we can now save the byte array to a db, file, or transport (stream) it
-            DataAccess.UserImage(MainForm.user1.EmailAddress , bytes);
+            DataAccess.UserImage(MainForm.user1.EmailAddress , Convert.ToBase64String(ms.ToArray()));
         }
 
         //anaktisi foto tou user
-        public static void stringToImage(string image)
+        public static Image stringToImage(string image)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(image);
             Image imageMemoryStream = Image.FromStream(new MemoryStream(bytes));
-            MainForm.user1.Image = image;
+            return imageMemoryStream;
         }
 
 
