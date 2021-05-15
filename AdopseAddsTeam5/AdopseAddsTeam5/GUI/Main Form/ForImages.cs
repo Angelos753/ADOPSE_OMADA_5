@@ -20,17 +20,18 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             // save bytes to ms
             image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             // to get the bytes we type
-            var bytes = ms.ToString();
+            //var bytes = ms.ToString();
+
             // we can now save the byte array to a db, file, or transport (stream) it
-            DataAccess.UserImage(MainForm.user1.EmailAddress , bytes);
+            DataAccess.UserImage(MainForm.user1.EmailAddress , Convert.ToBase64String(ms.ToArray()));
         }
 
         //anaktisi foto tou user
-        public static void stringToImage(string image)
+        public static Image stringToImage(string image)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(image);
             Image imageMemoryStream = Image.FromStream(new MemoryStream(bytes));
-            MainForm.user1.Image = image;
+            return imageMemoryStream;
         }
 
 
@@ -87,9 +88,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
 
         //anevasma foto me sftp
-        public static void sftpSendImage(int addsid ,Bitmap image, int counter)
+        public static void sftpSendImage(int addsid, string imagePath, int counter)
         {
-            Bitmap filename = image;
+            string filename = imagePath;
             string host = @"users.iee.ihu.gr";
             string username = "it144377";
             string password = "Vainoe3zit144377#$";
@@ -99,17 +100,18 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
                 int port = 22;
                 //edw apo katw na pros8esw to sid
-                string destinationpath = "/home/student/it/2014/it144377/public_html/Images/"+ addsid.ToString() + "/";
+                string destinationpath = "/home/student/it/2014/it144377/public_html/Images/"+ "add" + addsid.ToString() + "/";
                 
                 using (SftpClient client = new SftpClient(host, port, username, password))
                 {
                     client.Connect();
                     client.ChangeDirectory(destinationpath);
-                    using (FileStream fs = new FileStream(filename.ToString(), FileMode.Open))
+                    using (FileStream fs = new FileStream(filename, FileMode.Open))
                     {
                         client.BufferSize = 4 * 1024;
-                        client.UploadFile(fs, Path.GetFileName(filename.ToString()));
-                        client.RenameFile("/home/student/it/2014/it144377/public_html/Images/" + "add"+addsid.ToString() + "/" +filename.ToString()+"/", "/home/student/it/2014/it144377/public_html/Images/" +"add"+ addsid.ToString()+"/"+"photo_"+counter.ToString()+".png"+"/");
+                        string s = Path.GetFileName(filename);
+                        client.UploadFile(fs, Path.GetFileName(filename));
+                        client.RenameFile("/home/student/it/2014/it144377/public_html/Images/" + "add"+addsid.ToString() + "/" + Path.GetFileName(filename), "/home/student/it/2014/it144377/public_html/Images/" +"add"+ addsid.ToString()+"/"+"photo_"+counter.ToString()+".png");
                     }
                 }
             }

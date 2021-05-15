@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace AdopseAddsTeam5
 {
@@ -24,6 +25,8 @@ namespace AdopseAddsTeam5
         private static bool logged = false;
         private string email;
         private string name;
+        private PictureBox[] pics = new PictureBox[5];
+        private int x = 0;
 
         public MainForm()
         {
@@ -79,6 +82,9 @@ namespace AdopseAddsTeam5
             logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
             profileFlowLayout.Controls.Clear();
             resultsFlowLayout.Controls.Clear();
+            filtersFlowLayout.Controls.Clear();
+            favoritesFlowLayout.Controls.Clear();
+            notificationsFlowLayout.Controls.Clear();
             controlHomepage_Click(this, e);
         }
 
@@ -175,6 +181,7 @@ namespace AdopseAddsTeam5
                 m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
+
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -195,16 +202,21 @@ namespace AdopseAddsTeam5
             }
             else
             {
-                logged = false;
-                logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
-                profileFlowLayout.Controls.Clear();
-                controlHomepage_Click(this, e);
+                controlLogout_Click(this, e);
             }
         }
 
         private void profilePicEdit_Click(object sender, EventArgs e)
         {
-
+            add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            add3Dialog.Multiselect = false;
+            if (add3Dialog.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 189);
+                profilePicbox.Image = b;
+                sideMenuPicbox.Image = b;
+                ForImages.imageToString(b);
+            }
         }
 
         private void profileAddListing_Click(object sender, EventArgs e)
@@ -242,19 +254,21 @@ namespace AdopseAddsTeam5
             addPanel3.BringToFront();
             addPanel3.Show();
         }
-
-        private PictureBox[] pics = new PictureBox[10];
-        private int x = 0;
-
+        
         private void add3PicAdd_Click(object sender, EventArgs e)
         {
-            pics[0] = add3Picbox1;
-            add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            add3Dialog.Multiselect = false;
-            if (add3Dialog.ShowDialog() == DialogResult.OK)
-            {
-                Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 90, 90);
-                pics[x].Image = b;
+            if(x<5) { 
+                add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+                add3Dialog.Multiselect = false;
+                if (add3Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 140);
+                    ((PictureBox)(add3FlowLayout.Controls[x])).Image = b;
+                    ((PictureBox)(add3FlowLayout.Controls[x])).ImageLocation = add3Dialog.FileName;
+                    ((PictureBox)(add3FlowLayout.Controls[x])).BorderStyle = BorderStyle.FixedSingle;
+
+                }
+                x = x + 1;
             }
         }
 
@@ -285,8 +299,29 @@ namespace AdopseAddsTeam5
 
         private void add3Post_Click(object sender, EventArgs e)
         {
-            addPanel3.Hide();
+            bw.RunWorkerAsync();
             controlHomepage_Click(this, e);
+        }
+        private void bw_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ForImages.createPhotoDir(7);
+            for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
+            {
+                if (((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation != null)
+                {
+                    ForImages.sftpSendImage(7, ((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation, i);
+                }
+            }
+            x = 0;
+        }
+
+        private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
+            {
+                ((PictureBox)(add3FlowLayout.Controls[i])).BorderStyle = BorderStyle.None;
+                ((PictureBox)(add3FlowLayout.Controls[i])).Image = null;
+            }
         }
 
         public static void login(User user)
@@ -303,6 +338,9 @@ namespace AdopseAddsTeam5
                 name = user1.Name;
                 usernameLabel.Text = name;
                 email = user1.EmailAddress;
+                //Image im = ForImages.stringToImage(user1.Image);
+                //sideMenuPicbox.Image = im;
+                //profilePicbox.Image = im;
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
                 loadMessages();
                 loadUserAds();
@@ -342,31 +380,6 @@ namespace AdopseAddsTeam5
             }
         }
 
-        private void viewListingPic1_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingPic2_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingPic3_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingPic4_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingPic5_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
         private void showResults()
         {
             resultsPanel.Show();
@@ -375,65 +388,80 @@ namespace AdopseAddsTeam5
             resultsCombo.BringToFront();
             resultsSearchTableLayout.Show();
             resultsSearchTableLayout.BringToFront();
-            if (this.Size.Width >= 1290)
-            {
-                resultsFilterPanel.Show();
-                resultsFilterPanel.BringToFront();
-            }
-                
+            resultsFilterPanel.Show();
+            resultsFilterPanel.BringToFront();
         }
 
-        private void add2AddressTextbox_Enter(object sender, EventArgs e)
+        private void add2Address_Enter(object sender, EventArgs e)
         {
-            if(add2AddressTextbox.Text == "Διεύθυνση")
+            if(add2Address.Text == "Διεύθυνση")
             {
-                add2AddressTextbox.Text = "";
-                add2AddressTextbox.ForeColor = System.Drawing.Color.Black;
+                add2Address.Text = "";
+                add2Address.ForeColor = System.Drawing.Color.Black;
             }
         }
 
-        private void add2AddressTextbox_Leave(object sender, EventArgs e)
+        private void add2Address_Leave(object sender, EventArgs e)
         {
-            if (add2AddressTextbox.Text == "")
+            if (add2Address.Text == "")
             {
-                add2AddressTextbox.Text = "Διεύθυνση";
-                add2AddressTextbox.ForeColor = System.Drawing.Color.DarkGray;
+                add2Address.Text = "Διεύθυνση";
+                add2Address.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+
+        private void add2City_Enter(object sender, EventArgs e)
+        {
+            if (add2City.Text == "Πόλη")
+            {
+                add2City.Text = "";
+                add2City.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void add2City_Leave(object sender, EventArgs e)
+        {
+            if (add2City.Text == "")
+            {
+                add2City.Text = "Πόλη";
+                add2City.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
         private void domatiaTextbox_Enter(object sender, EventArgs e)
         {
-            if (emvadoTextbox.Text == "π.χ. 2")
+            if (domatiaTextbox.Text == "π.χ. 2")
             {
-                emvadoTextbox.Text = "";
-                emvadoTextbox.ForeColor = System.Drawing.Color.Black;
+                domatiaTextbox.Text = "";
+                domatiaTextbox.ForeColor = System.Drawing.Color.Black;
             }
         }
 
         private void domatiaTextbox_Leave(object sender, EventArgs e)
         {
-            if (emvadoTextbox.Text == "")
+            if (domatiaTextbox.Text == "")
             {
-                emvadoTextbox.Text = "π.χ. 2";
-                emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+                domatiaTextbox.Text = "π.χ. 2";
+                domatiaTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
         private void mpaniaTextbox_Enter(object sender, EventArgs e)
         {
-            if (emvadoTextbox.Text == "π.χ. 1")
+            if (mpaniaTextbox.Text == "π.χ. 1")
             {
-                emvadoTextbox.Text = "";
-                emvadoTextbox.ForeColor = System.Drawing.Color.Black;
+                mpaniaTextbox.Text = "";
+                mpaniaTextbox.ForeColor = System.Drawing.Color.Black;
             }
         }
 
         private void mpaniaTextbox_Leave(object sender, EventArgs e)
         {
-            if (emvadoTextbox.Text == "")
+            if (mpaniaTextbox.Text == "")
             {
-                emvadoTextbox.Text = "π.χ. 1";
-                emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+                mpaniaTextbox.Text = "π.χ. 1";
+                mpaniaTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
@@ -930,7 +958,8 @@ namespace AdopseAddsTeam5
 
         private void appNamePicbox_Click(object sender, EventArgs e)
         {
-            controlHomepage_Click(this, e);
+            addPanel3.Show();
+            //controlHomepage_Click(this, e);
         }
 
         private void resultsSearchBtn_Click(object sender, EventArgs e)
@@ -952,10 +981,22 @@ namespace AdopseAddsTeam5
                 m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
+                    vlMainPic.Navigate(ForImages.showAddImages(4, 1));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
             }
+        }
+
+        private void searchTextbox_TextChanged(object sender, EventArgs e)
+        {
+            resultsSearchbox.Text = searchTextbox.Text;
+        }
+
+        private void add2Search_Click(object sender, EventArgs e)
+        {
+            string s = ForImages.googleMaps(add2City.Text, add2Address.Text);
+            add2Browser.Navigate(s);
         }
     }
 }
