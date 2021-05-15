@@ -24,6 +24,9 @@ namespace AdopseAddsTeam5
         private static bool logged = false;
         private string email;
         private string name;
+        private int addId;
+        private PictureBox[] pics = new PictureBox[5];
+        private int x = 0;
 
         public MainForm()
         {
@@ -198,10 +201,7 @@ namespace AdopseAddsTeam5
             }
             else
             {
-                logged = false;
-                logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_login_white_24dp;
-                profileFlowLayout.Controls.Clear();
-                controlHomepage_Click(this, e);
+                controlLogout_Click(this, e);
             }
         }
 
@@ -213,6 +213,7 @@ namespace AdopseAddsTeam5
             {
                 Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 189);
                 profilePicbox.Image = b;
+                sideMenuPicbox.Image = b;
                 ForImages.imageToString(b);
             }
         }
@@ -252,21 +253,19 @@ namespace AdopseAddsTeam5
             addPanel3.BringToFront();
             addPanel3.Show();
         }
-
-        private PictureBox[] pics = new PictureBox[10];
-        private int x = 0;
-
+        
         private void add3PicAdd_Click(object sender, EventArgs e)
         {
-            pics[0] = add3Picbox1;
-            add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
-            add3Dialog.Multiselect = false;
-            if (add3Dialog.ShowDialog() == DialogResult.OK)
-            {
-                Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 90, 90);
-                pics[x].Image = b;
-                pics[x].ImageLocation = add3Dialog.FileName;
-                //ForImages.sftpSendImage(1, add3Dialog.FileName, 1);
+            if(x<5) { 
+                add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
+                add3Dialog.Multiselect = false;
+                if (add3Dialog.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 90, 90);
+                    ((PictureBox)(add3FlowLayout.Controls[x+1])).Image = b;
+                    ((PictureBox)(add3FlowLayout.Controls[x+1])).ImageLocation = add3Dialog.FileName;
+                }
+                x = x + 1;
             }
         }
 
@@ -297,7 +296,12 @@ namespace AdopseAddsTeam5
 
         private void add3Post_Click(object sender, EventArgs e)
         {
-            ForImages.sftpSendImage(1, add3Picbox1.ImageLocation, 1);
+            ForImages.createPhotoDir(2);
+            for(int i=1; i<add3FlowLayout.Controls.Count; i++)
+            {
+                ForImages.sftpSendImage(2, ((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation, i);
+            }
+            x = 0;
             addPanel3.Hide();
             controlHomepage_Click(this, e);
         }
@@ -367,21 +371,40 @@ namespace AdopseAddsTeam5
             resultsFilterPanel.BringToFront();
         }
 
-        private void add2AddressTextbox_Enter(object sender, EventArgs e)
+        private void add2Address_Enter(object sender, EventArgs e)
         {
-            if(add2AddressTextbox.Text == "Διεύθυνση")
+            if(add2Address.Text == "Διεύθυνση")
             {
-                add2AddressTextbox.Text = "";
-                add2AddressTextbox.ForeColor = System.Drawing.Color.Black;
+                add2Address.Text = "";
+                add2Address.ForeColor = System.Drawing.Color.Black;
             }
         }
 
-        private void add2AddressTextbox_Leave(object sender, EventArgs e)
+        private void add2Address_Leave(object sender, EventArgs e)
         {
-            if (add2AddressTextbox.Text == "")
+            if (add2Address.Text == "")
             {
-                add2AddressTextbox.Text = "Διεύθυνση";
-                add2AddressTextbox.ForeColor = System.Drawing.Color.DarkGray;
+                add2Address.Text = "Διεύθυνση";
+                add2Address.ForeColor = System.Drawing.Color.DarkGray;
+            }
+        }
+
+
+        private void add2City_Enter(object sender, EventArgs e)
+        {
+            if (add2City.Text == "Πόλη")
+            {
+                add2City.Text = "";
+                add2City.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void add2City_Leave(object sender, EventArgs e)
+        {
+            if (add2City.Text == "")
+            {
+                add2City.Text = "Πόλη";
+                add2City.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
@@ -945,6 +968,12 @@ namespace AdopseAddsTeam5
         private void searchTextbox_TextChanged(object sender, EventArgs e)
         {
             resultsSearchbox.Text = searchTextbox.Text;
+        }
+
+        private void add2Search_Click(object sender, EventArgs e)
+        {
+            string s = ForImages.googleMaps(add2City.Text, add2Address.Text);
+            add2Browser.Navigate(s);
         }
     }
 }

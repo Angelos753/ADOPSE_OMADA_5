@@ -105,7 +105,6 @@ namespace AdopseAddsTeam5
             this.irrelevant16 = new System.Windows.Forms.Label();
             this.lineSeparator2 = new System.Windows.Forms.Label();
             this.add2Next = new System.Windows.Forms.Label();
-            this.add2AddressTextbox = new System.Windows.Forms.TextBox();
             this.add2MapPanel = new System.Windows.Forms.Panel();
             this.add2ProgressPic = new System.Windows.Forms.PictureBox();
             this.add2ProgressLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -117,9 +116,13 @@ namespace AdopseAddsTeam5
             this.add3Post = new System.Windows.Forms.Label();
             this.lineSeparator3 = new System.Windows.Forms.Label();
             this.irrelevant17 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.add3FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.add3PicAdd = new System.Windows.Forms.Label();
             this.add3Picbox1 = new System.Windows.Forms.PictureBox();
+            this.add3Picbox2 = new System.Windows.Forms.PictureBox();
+            this.add3Picbox3 = new System.Windows.Forms.PictureBox();
+            this.add3Picbox4 = new System.Windows.Forms.PictureBox();
+            this.add3Picbox5 = new System.Windows.Forms.PictureBox();
             this.add3ProgressPic = new System.Windows.Forms.PictureBox();
             this.add3ProgressLayout = new System.Windows.Forms.TableLayoutPanel();
             this.irrelevant46 = new System.Windows.Forms.Label();
@@ -219,6 +222,7 @@ namespace AdopseAddsTeam5
             this.vlExit = new System.Windows.Forms.Label();
             this.viewListingTableLayout3 = new System.Windows.Forms.TableLayoutPanel();
             this.viewListingMapPanel = new System.Windows.Forms.Panel();
+            this.vlMainPic = new System.Windows.Forms.WebBrowser();
             this.footerMiddleB = new System.Windows.Forms.Panel();
             this.controlSave1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlSave();
             this.vlPrint = new AdopseAddsTeam5.GUI.Custom_Controls.ControlPrint();
@@ -231,7 +235,11 @@ namespace AdopseAddsTeam5
             this.controlRent1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlRent();
             this.controlBuy1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlBuy();
             this.controlAdd1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlAdd();
-            this.vlMainPic = new System.Windows.Forms.WebBrowser();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.add2City = new System.Windows.Forms.TextBox();
+            this.add2Address = new System.Windows.Forms.TextBox();
+            this.add2Search = new System.Windows.Forms.Label();
+            this.add2Browser = new System.Windows.Forms.WebBrowser();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
             this.searchTableLayout.SuspendLayout();
@@ -261,12 +269,17 @@ namespace AdopseAddsTeam5
             ((System.ComponentModel.ISupportInitialize)(this.add1ProgressPic)).BeginInit();
             this.addPanel2.SuspendLayout();
             this.add2TableLayout.SuspendLayout();
+            this.add2MapPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add2ProgressPic)).BeginInit();
             this.add2ProgressLayout.SuspendLayout();
             this.addPanel3.SuspendLayout();
             this.add3TableLayout.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.add3FlowLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add3Picbox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add3Picbox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add3Picbox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add3Picbox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add3Picbox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add3ProgressPic)).BeginInit();
             this.add3ProgressLayout.SuspendLayout();
             this.notificationsPanel.SuspendLayout();
@@ -291,6 +304,7 @@ namespace AdopseAddsTeam5
             this.viewListingMessageTableLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.viewListingTableLayout3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -1378,11 +1392,12 @@ namespace AdopseAddsTeam5
             this.add2TableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.add2TableLayout.Controls.Add(this.irrelevant16, 0, 0);
             this.add2TableLayout.Controls.Add(this.lineSeparator2, 0, 3);
-            this.add2TableLayout.Controls.Add(this.add2Next, 0, 6);
-            this.add2TableLayout.Controls.Add(this.add2AddressTextbox, 0, 4);
             this.add2TableLayout.Controls.Add(this.add2MapPanel, 1, 5);
             this.add2TableLayout.Controls.Add(this.add2ProgressPic, 0, 1);
             this.add2TableLayout.Controls.Add(this.add2ProgressLayout, 0, 2);
+            this.add2TableLayout.Controls.Add(this.tableLayoutPanel4, 1, 4);
+            this.add2TableLayout.Controls.Add(this.add2Next, 2, 6);
+            this.add2TableLayout.Controls.Add(this.add2Search, 1, 6);
             this.add2TableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.add2TableLayout.Location = new System.Drawing.Point(0, 0);
             this.add2TableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -1430,37 +1445,22 @@ namespace AdopseAddsTeam5
             // 
             this.add2Next.AutoSize = true;
             this.add2Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
-            this.add2TableLayout.SetColumnSpan(this.add2Next, 3);
-            this.add2Next.Dock = System.Windows.Forms.DockStyle.Right;
+            this.add2Next.Dock = System.Windows.Forms.DockStyle.Fill;
             this.add2Next.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.add2Next.ForeColor = System.Drawing.Color.White;
-            this.add2Next.Location = new System.Drawing.Point(969, 501);
+            this.add2Next.Location = new System.Drawing.Point(949, 501);
             this.add2Next.Margin = new System.Windows.Forms.Padding(0);
             this.add2Next.Name = "add2Next";
-            this.add2Next.Size = new System.Drawing.Size(80, 39);
+            this.add2Next.Size = new System.Drawing.Size(100, 39);
             this.add2Next.TabIndex = 4;
             this.add2Next.Text = "Επόμενο";
             this.add2Next.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.add2Next.Click += new System.EventHandler(this.add2Next_Click);
             // 
-            // add2AddressTextbox
-            // 
-            this.add2AddressTextbox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.add2TableLayout.SetColumnSpan(this.add2AddressTextbox, 3);
-            this.add2AddressTextbox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.add2AddressTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            this.add2AddressTextbox.Location = new System.Drawing.Point(215, 160);
-            this.add2AddressTextbox.Margin = new System.Windows.Forms.Padding(0);
-            this.add2AddressTextbox.Name = "add2AddressTextbox";
-            this.add2AddressTextbox.Size = new System.Drawing.Size(633, 27);
-            this.add2AddressTextbox.TabIndex = 5;
-            this.add2AddressTextbox.Text = "Διεύθυνση";
-            this.add2AddressTextbox.Enter += new System.EventHandler(this.add2AddressTextbox_Enter);
-            this.add2AddressTextbox.Leave += new System.EventHandler(this.add2AddressTextbox_Leave);
-            // 
             // add2MapPanel
             // 
             this.add2MapPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.add2MapPanel.Controls.Add(this.add2Browser);
             this.add2MapPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.add2MapPanel.Location = new System.Drawing.Point(140, 203);
             this.add2MapPanel.Margin = new System.Windows.Forms.Padding(25, 10, 25, 10);
@@ -1552,7 +1552,7 @@ namespace AdopseAddsTeam5
             this.add3TableLayout.Controls.Add(this.add3Post, 0, 5);
             this.add3TableLayout.Controls.Add(this.lineSeparator3, 0, 3);
             this.add3TableLayout.Controls.Add(this.irrelevant17, 0, 0);
-            this.add3TableLayout.Controls.Add(this.flowLayoutPanel2, 0, 4);
+            this.add3TableLayout.Controls.Add(this.add3FlowLayout, 0, 4);
             this.add3TableLayout.Controls.Add(this.add3ProgressPic, 0, 1);
             this.add3TableLayout.Controls.Add(this.add3ProgressLayout, 0, 2);
             this.add3TableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1613,17 +1613,21 @@ namespace AdopseAddsTeam5
             this.irrelevant17.Text = "Δημιουργία Αγγελίας";
             this.irrelevant17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanel2
+            // add3FlowLayout
             // 
-            this.add3TableLayout.SetColumnSpan(this.flowLayoutPanel2, 2);
-            this.flowLayoutPanel2.Controls.Add(this.add3PicAdd);
-            this.flowLayoutPanel2.Controls.Add(this.add3Picbox1);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(30, 169);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(15);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1004, 317);
-            this.flowLayoutPanel2.TabIndex = 6;
+            this.add3TableLayout.SetColumnSpan(this.add3FlowLayout, 2);
+            this.add3FlowLayout.Controls.Add(this.add3PicAdd);
+            this.add3FlowLayout.Controls.Add(this.add3Picbox1);
+            this.add3FlowLayout.Controls.Add(this.add3Picbox2);
+            this.add3FlowLayout.Controls.Add(this.add3Picbox3);
+            this.add3FlowLayout.Controls.Add(this.add3Picbox4);
+            this.add3FlowLayout.Controls.Add(this.add3Picbox5);
+            this.add3FlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.add3FlowLayout.Location = new System.Drawing.Point(30, 169);
+            this.add3FlowLayout.Margin = new System.Windows.Forms.Padding(15);
+            this.add3FlowLayout.Name = "add3FlowLayout";
+            this.add3FlowLayout.Size = new System.Drawing.Size(1004, 317);
+            this.add3FlowLayout.TabIndex = 6;
             // 
             // add3PicAdd
             // 
@@ -1648,6 +1652,46 @@ namespace AdopseAddsTeam5
             this.add3Picbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.add3Picbox1.TabIndex = 1;
             this.add3Picbox1.TabStop = false;
+            // 
+            // add3Picbox2
+            // 
+            this.add3Picbox2.Location = new System.Drawing.Point(205, 10);
+            this.add3Picbox2.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.add3Picbox2.Name = "add3Picbox2";
+            this.add3Picbox2.Size = new System.Drawing.Size(75, 75);
+            this.add3Picbox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add3Picbox2.TabIndex = 2;
+            this.add3Picbox2.TabStop = false;
+            // 
+            // add3Picbox3
+            // 
+            this.add3Picbox3.Location = new System.Drawing.Point(302, 10);
+            this.add3Picbox3.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.add3Picbox3.Name = "add3Picbox3";
+            this.add3Picbox3.Size = new System.Drawing.Size(75, 75);
+            this.add3Picbox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add3Picbox3.TabIndex = 3;
+            this.add3Picbox3.TabStop = false;
+            // 
+            // add3Picbox4
+            // 
+            this.add3Picbox4.Location = new System.Drawing.Point(399, 10);
+            this.add3Picbox4.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.add3Picbox4.Name = "add3Picbox4";
+            this.add3Picbox4.Size = new System.Drawing.Size(75, 75);
+            this.add3Picbox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add3Picbox4.TabIndex = 4;
+            this.add3Picbox4.TabStop = false;
+            // 
+            // add3Picbox5
+            // 
+            this.add3Picbox5.Location = new System.Drawing.Point(496, 10);
+            this.add3Picbox5.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.add3Picbox5.Name = "add3Picbox5";
+            this.add3Picbox5.Size = new System.Drawing.Size(75, 75);
+            this.add3Picbox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add3Picbox5.TabIndex = 5;
+            this.add3Picbox5.TabStop = false;
             // 
             // add3ProgressPic
             // 
@@ -3110,6 +3154,17 @@ namespace AdopseAddsTeam5
             this.viewListingMapPanel.Size = new System.Drawing.Size(414, 232);
             this.viewListingMapPanel.TabIndex = 6;
             // 
+            // vlMainPic
+            // 
+            this.viewListingTableLayout3.SetColumnSpan(this.vlMainPic, 5);
+            this.vlMainPic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlMainPic.Location = new System.Drawing.Point(0, 0);
+            this.vlMainPic.Margin = new System.Windows.Forms.Padding(0);
+            this.vlMainPic.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vlMainPic.Name = "vlMainPic";
+            this.vlMainPic.Size = new System.Drawing.Size(420, 235);
+            this.vlMainPic.TabIndex = 7;
+            // 
             // footerMiddleB
             // 
             this.footerMiddleB.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -3225,16 +3280,73 @@ namespace AdopseAddsTeam5
             this.controlAdd1.TabIndex = 0;
             this.controlAdd1.Click += new System.EventHandler(this.controlAdd_Click);
             // 
-            // vlMainPic
+            // tableLayoutPanel4
             // 
-            this.viewListingTableLayout3.SetColumnSpan(this.vlMainPic, 5);
-            this.vlMainPic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vlMainPic.Location = new System.Drawing.Point(0, 0);
-            this.vlMainPic.Margin = new System.Windows.Forms.Padding(0);
-            this.vlMainPic.MinimumSize = new System.Drawing.Size(20, 20);
-            this.vlMainPic.Name = "vlMainPic";
-            this.vlMainPic.Size = new System.Drawing.Size(420, 235);
-            this.vlMainPic.TabIndex = 7;
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.add2Address, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.add2City, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(115, 154);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(834, 39);
+            this.tableLayoutPanel4.TabIndex = 9;
+            // 
+            // add2City
+            // 
+            this.add2City.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.add2City.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.add2City.ForeColor = System.Drawing.Color.DarkGray;
+            this.add2City.Location = new System.Drawing.Point(6, 6);
+            this.add2City.Margin = new System.Windows.Forms.Padding(0);
+            this.add2City.Name = "add2City";
+            this.add2City.Size = new System.Drawing.Size(405, 27);
+            this.add2City.TabIndex = 6;
+            this.add2City.Text = "Πόλη";
+            this.add2City.Enter += new System.EventHandler(this.add2City_Enter);
+            this.add2City.Leave += new System.EventHandler(this.add2City_Leave);
+            // 
+            // add2Address
+            // 
+            this.add2Address.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.add2Address.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.add2Address.ForeColor = System.Drawing.Color.DarkGray;
+            this.add2Address.Location = new System.Drawing.Point(426, 6);
+            this.add2Address.Margin = new System.Windows.Forms.Padding(0);
+            this.add2Address.Name = "add2Address";
+            this.add2Address.Size = new System.Drawing.Size(398, 27);
+            this.add2Address.TabIndex = 7;
+            this.add2Address.Text = "Διεύθυνση";
+            this.add2Address.Enter += new System.EventHandler(this.add2Address_Enter);
+            this.add2Address.Leave += new System.EventHandler(this.add2Address_Leave);
+            // 
+            // add2Search
+            // 
+            this.add2Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.add2Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
+            this.add2Search.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.add2Search.ForeColor = System.Drawing.Color.White;
+            this.add2Search.Location = new System.Drawing.Point(446, 501);
+            this.add2Search.Margin = new System.Windows.Forms.Padding(0);
+            this.add2Search.Name = "add2Search";
+            this.add2Search.Size = new System.Drawing.Size(171, 39);
+            this.add2Search.TabIndex = 10;
+            this.add2Search.Text = "Αναζήτηση";
+            this.add2Search.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.add2Search.Click += new System.EventHandler(this.add2Search_Click);
+            // 
+            // add2Browser
+            // 
+            this.add2Browser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.add2Browser.Location = new System.Drawing.Point(0, 0);
+            this.add2Browser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.add2Browser.Name = "add2Browser";
+            this.add2Browser.Size = new System.Drawing.Size(784, 288);
+            this.add2Browser.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -3242,13 +3354,13 @@ namespace AdopseAddsTeam5
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1063, 679);
+            this.Controls.Add(this.addPanel2);
             this.Controls.Add(this.addPanel3);
             this.Controls.Add(this.viewListingPanel);
             this.Controls.Add(this.sideMenuPanel);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.filtersPanel);
             this.Controls.Add(this.favoritesPanel);
-            this.Controls.Add(this.addPanel2);
             this.Controls.Add(this.footerMiddleB);
             this.Controls.Add(this.resultsSearchTableLayout);
             this.Controls.Add(this.resultsFilterPanel);
@@ -3302,14 +3414,19 @@ namespace AdopseAddsTeam5
             this.addPanel2.ResumeLayout(false);
             this.add2TableLayout.ResumeLayout(false);
             this.add2TableLayout.PerformLayout();
+            this.add2MapPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.add2ProgressPic)).EndInit();
             this.add2ProgressLayout.ResumeLayout(false);
             this.add2ProgressLayout.PerformLayout();
             this.addPanel3.ResumeLayout(false);
             this.add3TableLayout.ResumeLayout(false);
             this.add3TableLayout.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.add3FlowLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.add3Picbox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add3Picbox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add3Picbox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add3Picbox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add3Picbox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add3ProgressPic)).EndInit();
             this.add3ProgressLayout.ResumeLayout(false);
             this.add3ProgressLayout.PerformLayout();
@@ -3346,6 +3463,8 @@ namespace AdopseAddsTeam5
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.viewListingTableLayout3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3415,14 +3534,13 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label irrelevant16;
         private System.Windows.Forms.Label lineSeparator2;
         private System.Windows.Forms.Label add2Next;
-        private System.Windows.Forms.TextBox add2AddressTextbox;
         private System.Windows.Forms.Panel add2MapPanel;
         private System.Windows.Forms.Panel addPanel3;
         private System.Windows.Forms.TableLayoutPanel add3TableLayout;
         private System.Windows.Forms.Label add3Post;
         private System.Windows.Forms.Label lineSeparator3;
         private System.Windows.Forms.Label irrelevant17;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel add3FlowLayout;
         private System.Windows.Forms.Label add3PicAdd;
         private System.Windows.Forms.OpenFileDialog add3Dialog;
         private System.Windows.Forms.PictureBox add3Picbox1;
@@ -3566,6 +3684,15 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox profilePicbox;
         private System.Windows.Forms.WebBrowser vlMainPic;
+        private System.Windows.Forms.PictureBox add3Picbox2;
+        private System.Windows.Forms.PictureBox add3Picbox3;
+        private System.Windows.Forms.PictureBox add3Picbox4;
+        private System.Windows.Forms.PictureBox add3Picbox5;
+        private System.Windows.Forms.WebBrowser add2Browser;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TextBox add2Address;
+        private System.Windows.Forms.TextBox add2City;
+        private System.Windows.Forms.Label add2Search;
     }
 }
 

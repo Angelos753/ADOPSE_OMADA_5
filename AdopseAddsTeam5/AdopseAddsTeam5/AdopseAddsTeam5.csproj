@@ -253,6 +253,9 @@
     <EmbeddedResource Include="GUI\Custom Controls\ControlHomepage.resx">
       <DependentUpon>ControlHomepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Custom Controls\ControlImage.resx">
+      <DependentUpon>ControlImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Custom Controls\ControlLogout.resx">
       <DependentUpon>ControlLogout.cs</DependentUpon>
     </EmbeddedResource>
