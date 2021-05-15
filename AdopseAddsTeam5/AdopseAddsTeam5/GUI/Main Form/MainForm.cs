@@ -213,6 +213,7 @@ namespace AdopseAddsTeam5
             {
                 Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 189);
                 profilePicbox.Image = b;
+                ForImages.imageToString(b);
             }
         }
 
@@ -384,12 +385,8 @@ namespace AdopseAddsTeam5
             resultsCombo.BringToFront();
             resultsSearchTableLayout.Show();
             resultsSearchTableLayout.BringToFront();
-            if (this.Size.Width >= 1290)
-            {
-                resultsFilterPanel.Show();
-                resultsFilterPanel.BringToFront();
-            }
-                
+            resultsFilterPanel.Show();
+            resultsFilterPanel.BringToFront();
         }
 
         private void add2AddressTextbox_Enter(object sender, EventArgs e)
@@ -967,5 +964,9 @@ namespace AdopseAddsTeam5
             }
         }
 
+        private void searchTextbox_TextChanged(object sender, EventArgs e)
+        {
+            resultsSearchbox.Text = searchTextbox.Text;
+        }
     }
 }

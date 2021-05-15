@@ -45,17 +45,8 @@ namespace AdopseAddsTeam5
             this.appNamePicbox = new System.Windows.Forms.PictureBox();
             this.sideMenuPicbox = new System.Windows.Forms.PictureBox();
             this.choicePanel = new System.Windows.Forms.Panel();
-            this.controlRent1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlRent();
-            this.controlBuy1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlBuy();
-            this.controlAdd1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlAdd();
             this.resultsCombo = new System.Windows.Forms.ComboBox();
             this.sideMenuPanel = new System.Windows.Forms.Panel();
-            this.controlLogout = new AdopseAddsTeam5.GUI.Custom_Controls.ControlLogout();
-            this.controlNotifications = new AdopseAddsTeam5.GUI.Custom_Controls.ControlNotifications();
-            this.controlFilters = new AdopseAddsTeam5.GUI.Custom_Controls.ControlFilters();
-            this.controlFavorites = new AdopseAddsTeam5.GUI.Custom_Controls.ControlFavorites();
-            this.controlProfile = new AdopseAddsTeam5.GUI.Custom_Controls.ControlProfile();
-            this.controlHomepage = new AdopseAddsTeam5.GUI.Custom_Controls.ControlHomepage();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.userPicbox = new System.Windows.Forms.PictureBox();
             this.profilePanel = new System.Windows.Forms.Panel();
@@ -225,8 +216,6 @@ namespace AdopseAddsTeam5
             this.vlMsgText = new System.Windows.Forms.TextBox();
             this.vlMsgSend = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.controlSave1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlSave();
-            this.vlPrint = new AdopseAddsTeam5.GUI.Custom_Controls.ControlPrint();
             this.vlExit = new System.Windows.Forms.Label();
             this.viewListingTableLayout3 = new System.Windows.Forms.TableLayoutPanel();
             this.viewListingMainPic = new System.Windows.Forms.PictureBox();
@@ -237,6 +226,17 @@ namespace AdopseAddsTeam5
             this.viewListingPic5 = new System.Windows.Forms.PictureBox();
             this.viewListingMapPanel = new System.Windows.Forms.Panel();
             this.footerMiddleB = new System.Windows.Forms.Panel();
+            this.controlSave1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlSave();
+            this.vlPrint = new AdopseAddsTeam5.GUI.Custom_Controls.ControlPrint();
+            this.controlLogout = new AdopseAddsTeam5.GUI.Custom_Controls.ControlLogout();
+            this.controlNotifications = new AdopseAddsTeam5.GUI.Custom_Controls.ControlNotifications();
+            this.controlFilters = new AdopseAddsTeam5.GUI.Custom_Controls.ControlFilters();
+            this.controlFavorites = new AdopseAddsTeam5.GUI.Custom_Controls.ControlFavorites();
+            this.controlProfile = new AdopseAddsTeam5.GUI.Custom_Controls.ControlProfile();
+            this.controlHomepage = new AdopseAddsTeam5.GUI.Custom_Controls.ControlHomepage();
+            this.controlRent1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlRent();
+            this.controlBuy1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlBuy();
+            this.controlAdd1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlAdd();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
             this.searchTableLayout.SuspendLayout();
@@ -399,6 +399,7 @@ namespace AdopseAddsTeam5
             this.searchTextbox.Size = new System.Drawing.Size(355, 21);
             this.searchTextbox.TabIndex = 2;
             this.searchTextbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.";
+            this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             this.searchTextbox.Enter += new System.EventHandler(this.searchTextbox_Enter);
             this.searchTextbox.Leave += new System.EventHandler(this.searchTextbox_Leave);
             // 
@@ -521,36 +522,6 @@ namespace AdopseAddsTeam5
             this.choicePanel.Size = new System.Drawing.Size(749, 270);
             this.choicePanel.TabIndex = 7;
             // 
-            // controlRent1
-            // 
-            this.controlRent1.BackColor = System.Drawing.Color.White;
-            this.controlRent1.Location = new System.Drawing.Point(275, 10);
-            this.controlRent1.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.controlRent1.Name = "controlRent1";
-            this.controlRent1.Size = new System.Drawing.Size(200, 250);
-            this.controlRent1.TabIndex = 2;
-            this.controlRent1.Click += new System.EventHandler(this.controlRent_Click);
-            // 
-            // controlBuy1
-            // 
-            this.controlBuy1.BackColor = System.Drawing.Color.White;
-            this.controlBuy1.Location = new System.Drawing.Point(11, 10);
-            this.controlBuy1.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.controlBuy1.Name = "controlBuy1";
-            this.controlBuy1.Size = new System.Drawing.Size(200, 250);
-            this.controlBuy1.TabIndex = 1;
-            this.controlBuy1.Click += new System.EventHandler(this.controlBuy_Click);
-            // 
-            // controlAdd1
-            // 
-            this.controlAdd1.BackColor = System.Drawing.Color.White;
-            this.controlAdd1.Location = new System.Drawing.Point(540, 10);
-            this.controlAdd1.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.controlAdd1.Name = "controlAdd1";
-            this.controlAdd1.Size = new System.Drawing.Size(200, 250);
-            this.controlAdd1.TabIndex = 0;
-            this.controlAdd1.Click += new System.EventHandler(this.controlAdd_Click);
-            // 
             // resultsCombo
             // 
             this.resultsCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -588,61 +559,6 @@ namespace AdopseAddsTeam5
             this.sideMenuPanel.Size = new System.Drawing.Size(269, 640);
             this.sideMenuPanel.TabIndex = 1;
             this.sideMenuPanel.Visible = false;
-            // 
-            // controlLogout
-            // 
-            this.controlLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.controlLogout.Location = new System.Drawing.Point(0, 581);
-            this.controlLogout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.controlLogout.Name = "controlLogout";
-            this.controlLogout.Size = new System.Drawing.Size(269, 48);
-            this.controlLogout.TabIndex = 7;
-            this.controlLogout.Click += new System.EventHandler(this.controlLogout_Click);
-            // 
-            // controlNotifications
-            // 
-            this.controlNotifications.Location = new System.Drawing.Point(0, 532);
-            this.controlNotifications.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.controlNotifications.Name = "controlNotifications";
-            this.controlNotifications.Size = new System.Drawing.Size(269, 39);
-            this.controlNotifications.TabIndex = 6;
-            this.controlNotifications.Click += new System.EventHandler(this.controlNotifications_Click);
-            // 
-            // controlFilters
-            // 
-            this.controlFilters.Location = new System.Drawing.Point(0, 482);
-            this.controlFilters.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.controlFilters.Name = "controlFilters";
-            this.controlFilters.Size = new System.Drawing.Size(269, 39);
-            this.controlFilters.TabIndex = 5;
-            this.controlFilters.Click += new System.EventHandler(this.controlFilters_Click);
-            // 
-            // controlFavorites
-            // 
-            this.controlFavorites.Location = new System.Drawing.Point(0, 432);
-            this.controlFavorites.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.controlFavorites.Name = "controlFavorites";
-            this.controlFavorites.Size = new System.Drawing.Size(269, 39);
-            this.controlFavorites.TabIndex = 4;
-            this.controlFavorites.Click += new System.EventHandler(this.controlFavorites_Click);
-            // 
-            // controlProfile
-            // 
-            this.controlProfile.Location = new System.Drawing.Point(0, 382);
-            this.controlProfile.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.controlProfile.Name = "controlProfile";
-            this.controlProfile.Size = new System.Drawing.Size(269, 39);
-            this.controlProfile.TabIndex = 3;
-            this.controlProfile.Click += new System.EventHandler(this.controlProfile_Click);
-            // 
-            // controlHomepage
-            // 
-            this.controlHomepage.Location = new System.Drawing.Point(0, 332);
-            this.controlHomepage.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.controlHomepage.Name = "controlHomepage";
-            this.controlHomepage.Size = new System.Drawing.Size(269, 39);
-            this.controlHomepage.TabIndex = 2;
-            this.controlHomepage.Click += new System.EventHandler(this.controlHomepage_Click);
             // 
             // usernameLabel
             // 
@@ -2793,7 +2709,6 @@ namespace AdopseAddsTeam5
             this.vlThermansi.Name = "vlThermansi";
             this.vlThermansi.Size = new System.Drawing.Size(165, 54);
             this.vlThermansi.TabIndex = 23;
-            this.vlThermansi.Text = "what";
             this.vlThermansi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // vlTypos
@@ -3160,26 +3075,6 @@ namespace AdopseAddsTeam5
             this.tableLayoutPanel1.Size = new System.Drawing.Size(644, 34);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // controlSave1
-            // 
-            this.controlSave1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.controlSave1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.controlSave1.Location = new System.Drawing.Point(273, 4);
-            this.controlSave1.Margin = new System.Windows.Forms.Padding(0);
-            this.controlSave1.Name = "controlSave1";
-            this.controlSave1.Size = new System.Drawing.Size(152, 25);
-            this.controlSave1.TabIndex = 0;
-            // 
-            // vlPrint
-            // 
-            this.vlPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vlPrint.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.vlPrint.Location = new System.Drawing.Point(455, 4);
-            this.vlPrint.Margin = new System.Windows.Forms.Padding(0);
-            this.vlPrint.Name = "vlPrint";
-            this.vlPrint.Size = new System.Drawing.Size(129, 25);
-            this.vlPrint.TabIndex = 1;
-            // 
             // vlExit
             // 
             this.vlExit.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -3321,6 +3216,111 @@ namespace AdopseAddsTeam5
             this.footerMiddleB.Size = new System.Drawing.Size(1064, 62);
             this.footerMiddleB.TabIndex = 14;
             this.footerMiddleB.Visible = false;
+            // 
+            // controlSave1
+            // 
+            this.controlSave1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.controlSave1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.controlSave1.Location = new System.Drawing.Point(273, 4);
+            this.controlSave1.Margin = new System.Windows.Forms.Padding(0);
+            this.controlSave1.Name = "controlSave1";
+            this.controlSave1.Size = new System.Drawing.Size(152, 25);
+            this.controlSave1.TabIndex = 0;
+            // 
+            // vlPrint
+            // 
+            this.vlPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.vlPrint.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.vlPrint.Location = new System.Drawing.Point(455, 4);
+            this.vlPrint.Margin = new System.Windows.Forms.Padding(0);
+            this.vlPrint.Name = "vlPrint";
+            this.vlPrint.Size = new System.Drawing.Size(129, 25);
+            this.vlPrint.TabIndex = 1;
+            // 
+            // controlLogout
+            // 
+            this.controlLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.controlLogout.Location = new System.Drawing.Point(0, 581);
+            this.controlLogout.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.controlLogout.Name = "controlLogout";
+            this.controlLogout.Size = new System.Drawing.Size(269, 48);
+            this.controlLogout.TabIndex = 7;
+            this.controlLogout.Click += new System.EventHandler(this.controlLogout_Click);
+            // 
+            // controlNotifications
+            // 
+            this.controlNotifications.Location = new System.Drawing.Point(0, 532);
+            this.controlNotifications.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.controlNotifications.Name = "controlNotifications";
+            this.controlNotifications.Size = new System.Drawing.Size(269, 39);
+            this.controlNotifications.TabIndex = 6;
+            this.controlNotifications.Click += new System.EventHandler(this.controlNotifications_Click);
+            // 
+            // controlFilters
+            // 
+            this.controlFilters.Location = new System.Drawing.Point(0, 482);
+            this.controlFilters.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.controlFilters.Name = "controlFilters";
+            this.controlFilters.Size = new System.Drawing.Size(269, 39);
+            this.controlFilters.TabIndex = 5;
+            this.controlFilters.Click += new System.EventHandler(this.controlFilters_Click);
+            // 
+            // controlFavorites
+            // 
+            this.controlFavorites.Location = new System.Drawing.Point(0, 432);
+            this.controlFavorites.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.controlFavorites.Name = "controlFavorites";
+            this.controlFavorites.Size = new System.Drawing.Size(269, 39);
+            this.controlFavorites.TabIndex = 4;
+            this.controlFavorites.Click += new System.EventHandler(this.controlFavorites_Click);
+            // 
+            // controlProfile
+            // 
+            this.controlProfile.Location = new System.Drawing.Point(0, 382);
+            this.controlProfile.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.controlProfile.Name = "controlProfile";
+            this.controlProfile.Size = new System.Drawing.Size(269, 39);
+            this.controlProfile.TabIndex = 3;
+            this.controlProfile.Click += new System.EventHandler(this.controlProfile_Click);
+            // 
+            // controlHomepage
+            // 
+            this.controlHomepage.Location = new System.Drawing.Point(0, 332);
+            this.controlHomepage.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.controlHomepage.Name = "controlHomepage";
+            this.controlHomepage.Size = new System.Drawing.Size(269, 39);
+            this.controlHomepage.TabIndex = 2;
+            this.controlHomepage.Click += new System.EventHandler(this.controlHomepage_Click);
+            // 
+            // controlRent1
+            // 
+            this.controlRent1.BackColor = System.Drawing.Color.White;
+            this.controlRent1.Location = new System.Drawing.Point(275, 10);
+            this.controlRent1.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.controlRent1.Name = "controlRent1";
+            this.controlRent1.Size = new System.Drawing.Size(200, 250);
+            this.controlRent1.TabIndex = 2;
+            this.controlRent1.Click += new System.EventHandler(this.controlRent_Click);
+            // 
+            // controlBuy1
+            // 
+            this.controlBuy1.BackColor = System.Drawing.Color.White;
+            this.controlBuy1.Location = new System.Drawing.Point(11, 10);
+            this.controlBuy1.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.controlBuy1.Name = "controlBuy1";
+            this.controlBuy1.Size = new System.Drawing.Size(200, 250);
+            this.controlBuy1.TabIndex = 1;
+            this.controlBuy1.Click += new System.EventHandler(this.controlBuy_Click);
+            // 
+            // controlAdd1
+            // 
+            this.controlAdd1.BackColor = System.Drawing.Color.White;
+            this.controlAdd1.Location = new System.Drawing.Point(540, 10);
+            this.controlAdd1.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.controlAdd1.Name = "controlAdd1";
+            this.controlAdd1.Size = new System.Drawing.Size(200, 250);
+            this.controlAdd1.TabIndex = 0;
+            this.controlAdd1.Click += new System.EventHandler(this.controlAdd_Click);
             // 
             // MainForm
             // 
