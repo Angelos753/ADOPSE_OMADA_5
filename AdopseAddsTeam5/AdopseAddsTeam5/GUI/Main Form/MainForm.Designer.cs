@@ -218,12 +218,6 @@ namespace AdopseAddsTeam5
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.vlExit = new System.Windows.Forms.Label();
             this.viewListingTableLayout3 = new System.Windows.Forms.TableLayoutPanel();
-            this.viewListingMainPic = new System.Windows.Forms.PictureBox();
-            this.viewListingPic1 = new System.Windows.Forms.PictureBox();
-            this.viewListingPic2 = new System.Windows.Forms.PictureBox();
-            this.viewListingPic3 = new System.Windows.Forms.PictureBox();
-            this.viewListingPic4 = new System.Windows.Forms.PictureBox();
-            this.viewListingPic5 = new System.Windows.Forms.PictureBox();
             this.viewListingMapPanel = new System.Windows.Forms.Panel();
             this.footerMiddleB = new System.Windows.Forms.Panel();
             this.controlSave1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlSave();
@@ -237,6 +231,7 @@ namespace AdopseAddsTeam5
             this.controlRent1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlRent();
             this.controlBuy1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlBuy();
             this.controlAdd1 = new AdopseAddsTeam5.GUI.Custom_Controls.ControlAdd();
+            this.vlMainPic = new System.Windows.Forms.WebBrowser();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
             this.searchTableLayout.SuspendLayout();
@@ -296,12 +291,6 @@ namespace AdopseAddsTeam5
             this.viewListingMessageTableLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.viewListingTableLayout3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingMainPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic5)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -3097,13 +3086,8 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.viewListingTableLayout3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.viewListingTableLayout3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.viewListingTableLayout3.Controls.Add(this.viewListingMainPic, 0, 0);
-            this.viewListingTableLayout3.Controls.Add(this.viewListingPic1, 0, 1);
-            this.viewListingTableLayout3.Controls.Add(this.viewListingPic2, 1, 1);
-            this.viewListingTableLayout3.Controls.Add(this.viewListingPic3, 2, 1);
-            this.viewListingTableLayout3.Controls.Add(this.viewListingPic4, 3, 1);
-            this.viewListingTableLayout3.Controls.Add(this.viewListingPic5, 4, 1);
             this.viewListingTableLayout3.Controls.Add(this.viewListingMapPanel, 0, 2);
+            this.viewListingTableLayout3.Controls.Add(this.vlMainPic, 0, 0);
             this.viewListingTableLayout3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingTableLayout3.Location = new System.Drawing.Point(0, 0);
             this.viewListingTableLayout3.Margin = new System.Windows.Forms.Padding(0);
@@ -3114,87 +3098,6 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.viewListingTableLayout3.Size = new System.Drawing.Size(420, 555);
             this.viewListingTableLayout3.TabIndex = 1;
-            // 
-            // viewListingMainPic
-            // 
-            this.viewListingMainPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.viewListingTableLayout3.SetColumnSpan(this.viewListingMainPic, 5);
-            this.viewListingMainPic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingMainPic.Image = ((System.Drawing.Image)(resources.GetObject("viewListingMainPic.Image")));
-            this.viewListingMainPic.Location = new System.Drawing.Point(3, 2);
-            this.viewListingMainPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.viewListingMainPic.Name = "viewListingMainPic";
-            this.viewListingMainPic.Size = new System.Drawing.Size(414, 231);
-            this.viewListingMainPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.viewListingMainPic.TabIndex = 0;
-            this.viewListingMainPic.TabStop = false;
-            // 
-            // viewListingPic1
-            // 
-            this.viewListingPic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.viewListingPic1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPic1.Image = ((System.Drawing.Image)(resources.GetObject("viewListingPic1.Image")));
-            this.viewListingPic1.Location = new System.Drawing.Point(3, 237);
-            this.viewListingPic1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.viewListingPic1.Name = "viewListingPic1";
-            this.viewListingPic1.Size = new System.Drawing.Size(78, 80);
-            this.viewListingPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.viewListingPic1.TabIndex = 1;
-            this.viewListingPic1.TabStop = false;
-            this.viewListingPic1.Click += new System.EventHandler(this.viewListingPic1_Click);
-            // 
-            // viewListingPic2
-            // 
-            this.viewListingPic2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.viewListingPic2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPic2.Image = ((System.Drawing.Image)(resources.GetObject("viewListingPic2.Image")));
-            this.viewListingPic2.Location = new System.Drawing.Point(87, 237);
-            this.viewListingPic2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.viewListingPic2.Name = "viewListingPic2";
-            this.viewListingPic2.Size = new System.Drawing.Size(78, 80);
-            this.viewListingPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.viewListingPic2.TabIndex = 2;
-            this.viewListingPic2.TabStop = false;
-            this.viewListingPic2.Click += new System.EventHandler(this.viewListingPic2_Click);
-            // 
-            // viewListingPic3
-            // 
-            this.viewListingPic3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.viewListingPic3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPic3.Location = new System.Drawing.Point(171, 237);
-            this.viewListingPic3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.viewListingPic3.Name = "viewListingPic3";
-            this.viewListingPic3.Size = new System.Drawing.Size(78, 80);
-            this.viewListingPic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.viewListingPic3.TabIndex = 3;
-            this.viewListingPic3.TabStop = false;
-            this.viewListingPic3.Click += new System.EventHandler(this.viewListingPic3_Click);
-            // 
-            // viewListingPic4
-            // 
-            this.viewListingPic4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.viewListingPic4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPic4.Location = new System.Drawing.Point(255, 237);
-            this.viewListingPic4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.viewListingPic4.Name = "viewListingPic4";
-            this.viewListingPic4.Size = new System.Drawing.Size(78, 80);
-            this.viewListingPic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.viewListingPic4.TabIndex = 4;
-            this.viewListingPic4.TabStop = false;
-            this.viewListingPic4.Click += new System.EventHandler(this.viewListingPic4_Click);
-            // 
-            // viewListingPic5
-            // 
-            this.viewListingPic5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.viewListingPic5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPic5.Location = new System.Drawing.Point(339, 237);
-            this.viewListingPic5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.viewListingPic5.Name = "viewListingPic5";
-            this.viewListingPic5.Size = new System.Drawing.Size(78, 80);
-            this.viewListingPic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.viewListingPic5.TabIndex = 5;
-            this.viewListingPic5.TabStop = false;
-            this.viewListingPic5.Click += new System.EventHandler(this.viewListingPic5_Click);
             // 
             // viewListingMapPanel
             // 
@@ -3322,19 +3225,30 @@ namespace AdopseAddsTeam5
             this.controlAdd1.TabIndex = 0;
             this.controlAdd1.Click += new System.EventHandler(this.controlAdd_Click);
             // 
+            // vlMainPic
+            // 
+            this.viewListingTableLayout3.SetColumnSpan(this.vlMainPic, 5);
+            this.vlMainPic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlMainPic.Location = new System.Drawing.Point(0, 0);
+            this.vlMainPic.Margin = new System.Windows.Forms.Padding(0);
+            this.vlMainPic.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vlMainPic.Name = "vlMainPic";
+            this.vlMainPic.Size = new System.Drawing.Size(420, 235);
+            this.vlMainPic.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1063, 679);
+            this.Controls.Add(this.addPanel3);
             this.Controls.Add(this.viewListingPanel);
             this.Controls.Add(this.sideMenuPanel);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.filtersPanel);
             this.Controls.Add(this.favoritesPanel);
             this.Controls.Add(this.addPanel2);
-            this.Controls.Add(this.addPanel3);
             this.Controls.Add(this.footerMiddleB);
             this.Controls.Add(this.resultsSearchTableLayout);
             this.Controls.Add(this.resultsFilterPanel);
@@ -3432,12 +3346,6 @@ namespace AdopseAddsTeam5
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.viewListingTableLayout3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingMainPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.viewListingPic5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3575,12 +3483,6 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label lineSeparator13;
         private System.Windows.Forms.TableLayoutPanel viewListingTableLayout3;
-        private System.Windows.Forms.PictureBox viewListingMainPic;
-        private System.Windows.Forms.PictureBox viewListingPic1;
-        private System.Windows.Forms.PictureBox viewListingPic2;
-        private System.Windows.Forms.PictureBox viewListingPic3;
-        private System.Windows.Forms.PictureBox viewListingPic4;
-        private System.Windows.Forms.PictureBox viewListingPic5;
         private System.Windows.Forms.TableLayoutPanel viewListingTableLayout4;
         private System.Windows.Forms.TextBox viewListingTitle;
         private System.Windows.Forms.TableLayoutPanel viewListingTableLayout6;
@@ -3663,6 +3565,7 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label profileAddListing;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox profilePicbox;
+        private System.Windows.Forms.WebBrowser vlMainPic;
     }
 }
 

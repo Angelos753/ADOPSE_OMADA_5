@@ -259,12 +259,14 @@ namespace AdopseAddsTeam5
         private void add3PicAdd_Click(object sender, EventArgs e)
         {
             pics[0] = add3Picbox1;
-            add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            add3Dialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
             add3Dialog.Multiselect = false;
             if (add3Dialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 90, 90);
                 pics[x].Image = b;
+                pics[x].ImageLocation = add3Dialog.FileName;
+                //ForImages.sftpSendImage(1, add3Dialog.FileName, 1);
             }
         }
 
@@ -295,6 +297,7 @@ namespace AdopseAddsTeam5
 
         private void add3Post_Click(object sender, EventArgs e)
         {
+            ForImages.sftpSendImage(1, add3Picbox1.ImageLocation, 1);
             addPanel3.Hide();
             controlHomepage_Click(this, e);
         }
@@ -350,31 +353,6 @@ namespace AdopseAddsTeam5
                 vlShowPhone.ForeColor = System.Drawing.Color.Black;
                 vlShowPhone.Text = "6937123456";
             }
-        }
-
-        private void viewListingPic1_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingPic2_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingPic3_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingPic4_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
-        }
-
-        private void viewListingPic5_Click(object sender, EventArgs e)
-        {
-            viewListingMainPic.Image = ((PictureBox)sender).Image;
         }
 
         private void showResults()

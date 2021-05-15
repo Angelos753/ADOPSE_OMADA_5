@@ -133,6 +133,12 @@
     <Compile Include="GUI\Custom Controls\ControlHomepage.Designer.cs">
       <DependentUpon>ControlHomepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Custom Controls\ControlImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Custom Controls\ControlImage.Designer.cs">
+      <DependentUpon>ControlImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Custom Controls\ControlLogout.cs">
       <SubType>UserControl</SubType>
     </Compile>
