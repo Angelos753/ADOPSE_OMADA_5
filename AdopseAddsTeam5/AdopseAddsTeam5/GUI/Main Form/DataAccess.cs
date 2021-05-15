@@ -91,7 +91,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                                     perioxi = reader.GetString(1).ToString(), timi = reader.GetInt32(2), emvadon = reader.GetInt32(4), 
                                     ypnodomatia = reader.GetInt32(10), mpanio = reader.GetInt32(9), eidos = reader.GetString(5).ToString() , 
                                     thermansi = reader.GetString(6).ToString() , desc = reader.GetString(8).ToString() , 
-                                    phone = reader.GetString(7).ToString() , email = reader.GetString(11).ToString()});
+                                    phone = reader.GetString(7).ToString() , email = reader.GetString(11).ToString() , 
+                                    dieuthinsi = reader.GetString(12).ToString() , photonumber = reader.GetInt32(13)});
                             }
                         }
                         return useradds;
@@ -144,7 +145,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                             add[x].desc = reader.GetString(8).ToString();
                             add[x].phone = reader.GetString(7).ToString();
                             add[x].email = reader.GetString(11).ToString();
-
+                            add[x].dieuthinsi = reader.GetString(12).ToString();
+                            add[x].photonumber = reader.GetInt32(13);
                         }
 
                         return add;
@@ -208,6 +210,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                                 add.desc = reader.GetString(8).ToString();
                                 add.phone = reader.GetString(7).ToString();
                                 add.email = reader.GetString(11).ToString();
+                                add.dieuthinsi = reader.GetString(12).ToString();
+                                add.photonumber = reader.GetInt32(13);
                             }
                         }
 
@@ -223,12 +227,12 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         //dimiourgia neas aggelias
         //Άλλαξα την μέθοδο σε static - Alex
-        public static void NewAdd(int ypnodwmatia , int mpania , string email, string perioxi, string timi, string eidos, string emvadon, string title, string thermansi, string phone, string description)
+        public static void NewAdd(int ypnodwmatia , int mpania , string email, string perioxi, string timi, string eidos, string emvadon, string title, string thermansi, string phone, string description, string dieuthinsi)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
                 connection.Open();
-                using (var cmd = new NpgsqlCommand("SELECT insert_aggelies1(@perioxi , @timi , @typos_aggelias , @emvadon , @typos_akinitou , @systhma_thermanshs , @thlefwno , @perigrafi , @mpania , @ypnodwmatia , @email)", connection))
+                using (var cmd = new NpgsqlCommand("SELECT insert_aggelies1(@perioxi , @timi , @typos_aggelias , @emvadon , @typos_akinitou , @systhma_thermanshs , @thlefwno , @perigrafi , @mpania , @ypnodwmatia , @email , @dieuthinsi)", connection))
                 {
                     cmd.Parameters.AddWithValue("email", email);
                     cmd.Parameters.AddWithValue("perioxi", perioxi);
@@ -241,6 +245,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                     cmd.Parameters.AddWithValue("perigrafi", description);
                     cmd.Parameters.AddWithValue("mpania", mpania);
                     cmd.Parameters.AddWithValue("ypnodwmatia", ypnodwmatia);
+                    cmd.Parameters.AddWithValue("dieuthinsi", dieuthinsi);
                     NpgsqlDataReader reader = cmd.ExecuteReader();
 
 
@@ -263,6 +268,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                                 newadd.desc = reader.GetString(8).ToString();
                                 newadd.phone = reader.GetString(7).ToString();
                                 newadd.email = reader.GetString(11).ToString();
+                                newadd.dieuthinsi = reader.GetString(12).ToString();
                             }
                             //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                             //gia na parw to sid kai na ftiaksw folder gia tis foto me auto to sid
