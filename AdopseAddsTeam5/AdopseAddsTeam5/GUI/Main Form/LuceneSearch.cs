@@ -55,6 +55,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             doc.Add(new Field("ypnodomatia", sampleData.ypnodomatia.ToString(), Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("emvadon", sampleData.emvadon.ToString(), Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("timi", sampleData.timi.ToString(), Field.Store.YES, Field.Index.ANALYZED));
+            doc.Add(new Field("perigrafi", sampleData.desc, Field.Store.YES, Field.Index.ANALYZED));
+            doc.Add(new Field("email", sampleData.email, Field.Store.YES, Field.Index.NOT_ANALYZED));
+            doc.Add(new Field("thlefwno", sampleData.phone, Field.Store.YES, Field.Index.NOT_ANALYZED));
+            doc.Add(new Field("systhma_thermanshs", sampleData.thermansi, Field.Store.YES, Field.Index.ANALYZED));
 
             // add entry to index
             writer.AddDocument(doc);
@@ -144,7 +148,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 mpanio = Convert.ToInt32(doc.Get("mpanio")),
                 ypnodomatia = Convert.ToInt32(doc.Get("ypnodomatia")),
                 emvadon = Convert.ToInt32(doc.Get("emvadon")),
-                timi = Convert.ToInt32(doc.Get("timi"))
+                timi = Convert.ToInt32(doc.Get("timi")),
+                email = doc.Get("email"),
+                desc = doc.Get("perigrafi"),
+                phone = doc.Get("thlefwno"),
+                thermansi = doc.Get("systhma_thermanshs")
             };
         }
 
@@ -206,7 +214,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             }
         }
 
-        // auti ti methodo tha kaloume ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // auti ti methodo tha kaloume gia to koumpi ANAZITISI ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public static IEnumerable<Adds> Search(string input)
         {
             if (string.IsNullOrEmpty(input)) return new List<Adds>();
@@ -217,11 +225,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
             return _search(input);
         }
-        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
-        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // auti gia to koumpi AGORA  
         public static IEnumerable<Adds> SearchBuy(string input)
         {
@@ -230,33 +236,12 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             var terms = input.Trim().Replace("-", " ").Split(' ')
                 .Where(x => !string.IsNullOrEmpty(x)).Select(x => x.Trim() + "*");
             input = string.Join(" ", terms);
-            string typos_aggelias = "Αγορά";
-            return _searchbuy(input, typos_aggelias) ;
+            List<Adds> buyadds = _search(input).ToList();
+            buyadds.RemoveAll(p => p.eidos == "Ενοικίαση");
+            return  buyadds;
         }
 
-        private static IEnumerable<Adds> _searchbuy
-    (string searchQuery, string searchField)
-        {
-            // validation
-            if (string.IsNullOrEmpty(searchQuery.Replace("*", "").Replace("?", ""))) return new List<Adds>();
-
-            // set up lucene searcher
-            using (var searcher = new IndexSearcher(_directory, false))
-            {
-                var hits_limit = 1000;
-                var analyzer = new StandardAnalyzer(Version.LUCENE_30);
-
-                var parser = new QueryParser(Version.LUCENE_30, searchField, analyzer);
-                var query = parseQuery(searchQuery, parser);
-                var hits = searcher.Search(query, hits_limit).ScoreDocs;
-                var results = _mapLuceneToDataList(hits, searcher);
-                analyzer.Close();
-                searcher.Dispose();
-                return results;
-                
-                
-            }
-        }
+        
 
         //auti gia to koumpi ENOIKIASI
         public static IEnumerable<Adds> SearchRent(string input)
@@ -266,32 +251,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             var terms = input.Trim().Replace("-", " ").Split(' ')
                 .Where(x => !string.IsNullOrEmpty(x)).Select(x => x.Trim() + "*");
             input = string.Join(" ", terms);
-            string typos_aggelias = "Ενοικίαση";
-            return _searchrent(input, typos_aggelias);
+            List<Adds> rentadds = _search(input).ToList();
+            rentadds.RemoveAll(p => p.eidos == "Αγορά");
+            return rentadds;
         }
 
-        private static IEnumerable<Adds> _searchrent
-    (string searchQuery, string searchField)
-        {
-            // validation
-            if (string.IsNullOrEmpty(searchQuery.Replace("*", "").Replace("?", ""))) return new List<Adds>();
-
-            // set up lucene searcher
-            using (var searcher = new IndexSearcher(_directory, false))
-            {
-                var hits_limit = 1000;
-                var analyzer = new StandardAnalyzer(Version.LUCENE_30);
-
-                var parser = new QueryParser(Version.LUCENE_30, searchField, analyzer);
-                var query = parseQuery(searchQuery, parser);
-                var hits = searcher.Search(query, hits_limit).ScoreDocs;
-                var results = _mapLuceneToDataList(hits, searcher);
-                analyzer.Close();
-                searcher.Dispose();
-                return results;
-
-
-            }
-        }
+        
     }
 }

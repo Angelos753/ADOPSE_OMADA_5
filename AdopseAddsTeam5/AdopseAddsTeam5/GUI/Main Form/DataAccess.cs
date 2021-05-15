@@ -87,7 +87,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                         {
                             while (reader.Read())
                             {
-                                useradds.Add(new Adds { sid = reader.GetInt32(0), title = reader.GetString(3).ToString(), perioxi = reader.GetString(1).ToString(), timi = reader.GetInt32(2), emvadon = reader.GetInt32(4), ypnodomatia = reader.GetInt32(10), mpanio = reader.GetInt32(9), eidos = reader.GetString(5).ToString() });
+                                useradds.Add(new Adds { sid = reader.GetInt32(0), title = reader.GetString(3).ToString(),
+                                    perioxi = reader.GetString(1).ToString(), timi = reader.GetInt32(2), emvadon = reader.GetInt32(4), 
+                                    ypnodomatia = reader.GetInt32(10), mpanio = reader.GetInt32(9), eidos = reader.GetString(5).ToString() , 
+                                    thermansi = reader.GetString(6).ToString() , desc = reader.GetString(8).ToString() , 
+                                    phone = reader.GetString(7).ToString() , email = reader.GetString(11).ToString()});
                             }
                         }
                         return useradds;
@@ -136,6 +140,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                             add[x].ypnodomatia = reader.GetInt32(10);
                             add[x].mpanio = reader.GetInt32(9);
                             add[x].eidos = reader.GetString(5).ToString();
+                            add[x].thermansi = reader.GetString(6).ToString();
+                            add[x].desc = reader.GetString(8).ToString();
+                            add[x].phone = reader.GetString(7).ToString();
+                            add[x].email = reader.GetString(11).ToString();
+
                         }
 
                         return add;
@@ -195,6 +204,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                                 add.ypnodomatia = reader.GetInt32(10);
                                 add.mpanio = reader.GetInt32(9);
                                 add.eidos = reader.GetString(5).ToString();
+                                add.thermansi = reader.GetString(6).ToString();
+                                add.desc = reader.GetString(8).ToString();
+                                add.phone = reader.GetString(7).ToString();
+                                add.email = reader.GetString(11).ToString();
                             }
                         }
 
@@ -246,7 +259,15 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                                 newadd.ypnodomatia = reader.GetInt32(10);
                                 newadd.mpanio = reader.GetInt32(9);
                                 newadd.eidos = reader.GetString(5).ToString();
+                                newadd.thermansi = reader.GetString(6).ToString();
+                                newadd.desc = reader.GetString(8).ToString();
+                                newadd.phone = reader.GetString(7).ToString();
+                                newadd.email = reader.GetString(11).ToString();
                             }
+                            //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                            //gia na parw to sid kai na ftiaksw folder gia tis foto me auto to sid
+                            MainForm.newuseradd = newadd;
+
                             // add record to Lucene search index
                             LuceneSearch.AddUpdateLuceneIndex(newadd);
                         }
@@ -291,7 +312,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //allagi fotografias tou user
-        public void UserImage(string email, string image)
+        public static void UserImage(string email, string image)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
@@ -316,7 +337,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try 
                 { 
                     connection.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_message(@email)", connection))
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_message1(@email)", connection))
                     {
                         cmd.Parameters.AddWithValue("email", email);
                         NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -334,10 +355,12 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                         {
                             reader.Read();
                             //gemisma oxi tou List<> alla tou pinaka []
+                            msg[x].mid = reader.GetInt32(5);
+                            msg[x].useremail = reader.GetString(3).ToString();
                             msg[x].firstname = reader.GetString(0).ToString();
                             msg[x].lastname = reader.GetString(1).ToString();
                             msg[x].phone = reader.GetString(2).ToString();
-                            msg[x].email = reader.GetString(3).ToString();
+                            msg[x].email = reader.GetString(6).ToString();
                             msg[x].desc = reader.GetString(4).ToString();
                         }
 
@@ -369,7 +392,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                         {
                             while (reader.Read())
                             {
-                                everyadd.Add(new Adds { sid = reader.GetInt32(0), title = reader.GetString(3).ToString(), perioxi = reader.GetString(1).ToString(), timi = reader.GetInt32(2), emvadon = reader.GetInt32(4), ypnodomatia = reader.GetInt32(10), mpanio = reader.GetInt32(9), eidos = reader.GetString(5).ToString() });
+                                everyadd.Add(new Adds { sid = reader.GetInt32(0), title = reader.GetString(3).ToString(), 
+                                    perioxi = reader.GetString(1).ToString(), timi = reader.GetInt32(2), emvadon = reader.GetInt32(4), 
+                                    ypnodomatia = reader.GetInt32(10), mpanio = reader.GetInt32(9), eidos = reader.GetString(5).ToString(), 
+                                    thermansi = reader.GetString(6).ToString() , desc = reader.GetString(8).ToString() , 
+                                    phone = reader.GetString(7).ToString() , email = reader.GetString(11).ToString() });
                             }
                         }
                         //edw gemizei o index tou lucene
@@ -412,14 +439,97 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try
                 {
                     connection.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT insert_message(@useremail , @fname , @lname , @phone , @email , @desc)", connection))
+                    using (var cmd = new NpgsqlCommand("SELECT insert_message1(@name , @surname , @phone_number , @email , @text , @email2)", connection))
                     {
-                        cmd.Parameters.AddWithValue("useremail", useremail);
-                        cmd.Parameters.AddWithValue("fname", fname);
-                        cmd.Parameters.AddWithValue("lname", lname);
-                        cmd.Parameters.AddWithValue("phone", phone);
-                        cmd.Parameters.AddWithValue("email", email);
-                        cmd.Parameters.AddWithValue("desc", desc);
+                        cmd.Parameters.AddWithValue("email", useremail);
+                        cmd.Parameters.AddWithValue("name", fname);
+                        cmd.Parameters.AddWithValue("surname", lname);
+                        cmd.Parameters.AddWithValue("phone_number)", phone);
+                        cmd.Parameters.AddWithValue("email2", email);
+                        cmd.Parameters.AddWithValue("text", desc);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        //diagrafi minimatos
+        public static void deleteMsg(int mid)
+        {
+            using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
+            {
+                try
+                {
+                    connection.Open();
+                    using (var cmd = new NpgsqlCommand("SELECT delete_message1(@id)", connection))
+                    {
+                        cmd.Parameters.AddWithValue("id", mid);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        //test methodos gia ta filtra
+        public static List<Adds> Filtra(List<Adds> fltr , int timiE , int timiM , int emvE , int emvM , int ypnE , int ypnM , int mpE , int mpM)
+        {
+            List<Adds> addswithfiltra = new List<Adds>();
+
+            
+
+            foreach (var f in fltr)
+            {
+                if(f.timi >= timiE && f.timi <= timiM)
+                {
+                    addswithfiltra.Add(new Adds { sid = f.sid, title = f.title, perioxi = f.perioxi, timi = f.timi, 
+                        emvadon = f.emvadon, ypnodomatia = f.ypnodomatia, mpanio = f.mpanio, eidos = f.eidos });
+                }
+            }
+
+            foreach(var f in addswithfiltra)
+            {
+                if (f.emvadon >= emvE && f.timi <= emvM)
+                {
+                    addswithfiltra.Remove(f);
+                }
+            }
+
+            foreach (var f in addswithfiltra)
+            {
+                if (f.ypnodomatia >= ypnE && f.timi <= ypnM)
+                {
+                    addswithfiltra.Remove(f);
+                }
+            }
+
+            foreach (var f in addswithfiltra)
+            {
+                if (f.mpanio >= mpE && f.timi <= mpM)
+                {
+                    addswithfiltra.Remove(f);
+                }
+            }
+            return addswithfiltra;
+        }
+
+        public static void setPhotoNum(int y)
+        {
+            using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
+            {
+                try
+                {
+                    connection.Open();
+                    using (var cmd = new NpgsqlCommand("SELECT photo_number(@photos)", connection))
+                    {
+                        cmd.Parameters.AddWithValue("photos", y);
                         cmd.ExecuteNonQuery();
                     }
                 }

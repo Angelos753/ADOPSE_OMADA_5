@@ -18,6 +18,7 @@ namespace AdopseAddsTeam5
     {
 
         public static User user1 = new User();
+        public static Adds newuseradd = new Adds();
         public static GUI.Main_Form.Message[] msg;
         private static bool flag = false;
         private static bool logged = false;

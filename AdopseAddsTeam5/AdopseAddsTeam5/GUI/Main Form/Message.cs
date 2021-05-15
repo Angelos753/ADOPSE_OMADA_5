@@ -8,6 +8,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 {
     public class Message
     {
+        public int mid { get; set; }
+
+        public string useremail { get; set; }
+
         public string firstname { get; set; }
 
         public string lastname { get; set; }
