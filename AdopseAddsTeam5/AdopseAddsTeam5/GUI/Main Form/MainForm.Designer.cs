@@ -198,7 +198,7 @@ namespace AdopseAddsTeam5
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.viewListingPerigrafi = new System.Windows.Forms.TextBox();
+            this.vlPerigrafi = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.lineSeparator13 = new System.Windows.Forms.Label();
@@ -238,6 +238,7 @@ namespace AdopseAddsTeam5
             this.vlExit = new System.Windows.Forms.Label();
             this.viewListingTableLayout3 = new System.Windows.Forms.TableLayoutPanel();
             this.viewListingMapPanel = new System.Windows.Forms.Panel();
+            this.vlMap = new System.Windows.Forms.WebBrowser();
             this.vlMainPic = new System.Windows.Forms.WebBrowser();
             this.footerMiddleB = new System.Windows.Forms.Panel();
             this.bw = new System.ComponentModel.BackgroundWorker();
@@ -306,6 +307,7 @@ namespace AdopseAddsTeam5
             this.viewListingMessageTableLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.viewListingTableLayout3.SuspendLayout();
+            this.viewListingMapPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -1017,7 +1019,7 @@ namespace AdopseAddsTeam5
             this.addPerigrafiText.Location = new System.Drawing.Point(15, 473);
             this.addPerigrafiText.Margin = new System.Windows.Forms.Padding(0);
             this.addPerigrafiText.Name = "addPerigrafiText";
-            this.addPerigrafiText.Size = new System.Drawing.Size(1293, 35);
+            this.addPerigrafiText.Size = new System.Drawing.Size(1034, 28);
             this.addPerigrafiText.TabIndex = 5;
             this.addPerigrafiText.Text = "";
             // 
@@ -2743,7 +2745,7 @@ namespace AdopseAddsTeam5
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.viewListingPerigrafi);
+            this.tabPage2.Controls.Add(this.vlPerigrafi);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage2.Name = "tabPage2";
@@ -2752,19 +2754,19 @@ namespace AdopseAddsTeam5
             this.tabPage2.Text = "Περιγραφή";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // viewListingPerigrafi
+            // vlPerigrafi
             // 
-            this.viewListingPerigrafi.BackColor = System.Drawing.Color.White;
-            this.viewListingPerigrafi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewListingPerigrafi.Enabled = false;
-            this.viewListingPerigrafi.Location = new System.Drawing.Point(0, 0);
-            this.viewListingPerigrafi.Margin = new System.Windows.Forms.Padding(0);
-            this.viewListingPerigrafi.Multiline = true;
-            this.viewListingPerigrafi.Name = "viewListingPerigrafi";
-            this.viewListingPerigrafi.ReadOnly = true;
-            this.viewListingPerigrafi.Size = new System.Drawing.Size(636, 190);
-            this.viewListingPerigrafi.TabIndex = 0;
-            this.viewListingPerigrafi.Text = "Lorem ipsum dolor sit amet. Ex nobis dicta nam sapiente possimus eos quia sunt. E" +
+            this.vlPerigrafi.BackColor = System.Drawing.Color.White;
+            this.vlPerigrafi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlPerigrafi.Enabled = false;
+            this.vlPerigrafi.Location = new System.Drawing.Point(0, 0);
+            this.vlPerigrafi.Margin = new System.Windows.Forms.Padding(0);
+            this.vlPerigrafi.Multiline = true;
+            this.vlPerigrafi.Name = "vlPerigrafi";
+            this.vlPerigrafi.ReadOnly = true;
+            this.vlPerigrafi.Size = new System.Drawing.Size(636, 190);
+            this.vlPerigrafi.TabIndex = 0;
+            this.vlPerigrafi.Text = "Lorem ipsum dolor sit amet. Ex nobis dicta nam sapiente possimus eos quia sunt. E" +
     "st eius commodi eos omnis molestiae vel explicabo illum et quis laboriosam ea ne" +
     "que rerum.";
             // 
@@ -3328,12 +3330,23 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingMapPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingTableLayout3.SetColumnSpan(this.viewListingMapPanel, 5);
+            this.viewListingMapPanel.Controls.Add(this.vlMap);
             this.viewListingMapPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingMapPanel.Location = new System.Drawing.Point(3, 321);
             this.viewListingMapPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.viewListingMapPanel.Name = "viewListingMapPanel";
             this.viewListingMapPanel.Size = new System.Drawing.Size(414, 232);
             this.viewListingMapPanel.TabIndex = 6;
+            // 
+            // vlMap
+            // 
+            this.vlMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlMap.Location = new System.Drawing.Point(0, 0);
+            this.vlMap.Margin = new System.Windows.Forms.Padding(0);
+            this.vlMap.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vlMap.Name = "vlMap";
+            this.vlMap.Size = new System.Drawing.Size(412, 230);
+            this.vlMap.TabIndex = 0;
             // 
             // vlMainPic
             // 
@@ -3390,6 +3403,7 @@ namespace AdopseAddsTeam5
             this.Text = "Application Name";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.MainForm_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.mainPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).EndInit();
@@ -3478,6 +3492,7 @@ namespace AdopseAddsTeam5
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.viewListingTableLayout3.ResumeLayout(false);
+            this.viewListingMapPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3638,7 +3653,7 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.TextBox vlMsgText;
         private System.Windows.Forms.Label vlMsgSend;
         private System.Windows.Forms.Panel viewListingMapPanel;
-        private System.Windows.Forms.TextBox viewListingPerigrafi;
+        private System.Windows.Forms.TextBox vlPerigrafi;
         private System.Windows.Forms.Panel footerMiddleB;
         private System.Windows.Forms.TextBox profileEmailText;
         private System.Windows.Forms.PictureBox add2ProgressPic;
@@ -3680,7 +3695,7 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label vlTimi;
         private System.Windows.Forms.Label vlPerioxi;
 
-        private void setListingFields(string p, string t, string tt, string e, string ty, string th, string ei)
+        private void setListingFields(string p, string t, string tt, string e, string ty, string th, string ei, string desc)
         {
             vlPerioxi.Text = p;
             vlTimi.Text = t;
@@ -3688,6 +3703,7 @@ namespace AdopseAddsTeam5
             vlEmvado.Text = e;
             vlTypos.Text = ty;
             vlThermansi.Text = th;
+            vlPerigrafi.Text = desc;
             viewListingTitle.Text = t + " - " + ty + ", " + ei + ", " + e + "τ.μ., " + p + ".";
         }
 
@@ -3707,6 +3723,7 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label add2Search;
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker bw;
+        private System.Windows.Forms.WebBrowser vlMap;
     }
 }
 

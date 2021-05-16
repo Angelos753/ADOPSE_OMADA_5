@@ -177,11 +177,13 @@ namespace AdopseAddsTeam5
                 m.setPrice("€ " + a[i].timi.ToString());
                 m.setThermansi(a[i].thermansi);
                 m.setEidos(a[i].eidos);
+                m.setPerigrafi(a[i].desc);
                 double d = (double)a[i].timi / (double)a[i].emvadon;
                 m.Click += (sender1, e1) =>
                 {
-                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
-
+                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
+                    vlMainPic.Navigate(ForImages.showAddImages(4, 1));
+                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi()));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -348,12 +350,12 @@ namespace AdopseAddsTeam5
                 name = user1.Name;
                 usernameLabel.Text = name;
                 email = user1.EmailAddress;
-                /*if(user1.Image!=null)
+                if(user1.Image!=null)
                 {
                     Image im = ForImages.stringToImage(user1.Image);
                     userPicbox.Image = im;
                     profilePicbox.Image = im;
-                }*/
+                }
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
                 loadMessages();
                 loadUserAds();
@@ -561,11 +563,13 @@ namespace AdopseAddsTeam5
                 m.setPrice("€ " + a[i].timi.ToString());
                 m.setThermansi(a[i].thermansi);
                 m.setEidos(a[i].eidos);
+                m.setPerigrafi(a[i].desc);
                 double d = (double)a[i].timi / (double)a[i].emvadon;
                 m.Click += (sender1, e1) =>
                 {
-                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
+                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi()); ;
                     vlMainPic.Navigate(ForImages.showAddImages(4, 1));
+                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi()));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -1019,6 +1023,11 @@ namespace AdopseAddsTeam5
         private void perioxiTextbox_TextChanged(object sender, EventArgs e)
         {
             add2City.Text = perioxiTextbox.Text;
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LuceneSearch.ClearLuceneIndex();
         }
     }
 }
