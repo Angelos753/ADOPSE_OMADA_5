@@ -353,23 +353,7 @@ namespace AdopseAddsTeam5
 
         private void add3Post_Click(object sender, EventArgs e)
         {
-            add2Address.Text = "Διεύθυνση";
-            add2Address.ForeColor = System.Drawing.Color.DarkGray;
-            add2City.Text = "Πόλη";
-            add2City.ForeColor = System.Drawing.Color.DarkGray;
-            domatiaTextbox.Text = "π.χ. 2";
-            domatiaTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            mpaniaTextbox.Text = "π.χ. 1";
-            mpaniaTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            perioxiTextbox.Text = "π.χ. Θεσσαλονίκη - Τούμπα";
-            perioxiTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            timiTextbox.Text = "π.χ. €150000 ή 150.000";
-            timiTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            emvadoTextbox.Text = "π.χ. 89";
-            emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
-            phoneTextbox.Text = "π.χ. 2101234567 ή 6912345678";
-            phoneTextbox.ForeColor = System.Drawing.Color.DarkGray;
-
+            clearFields();
             controlHomepage_Click(this, e);
             //bw.RunWorkerAsync();
         }
@@ -466,7 +450,7 @@ namespace AdopseAddsTeam5
             DataAccess.SendMessage(activeAdEmail, vlMsgFName.Text, vlMsgLName.Text, vlMsgPhone.Text, vlMsgEmail.Text, vlMsgText.Text);
             vlMsgFName.Text = "Όνομα";
             vlMsgFName.ForeColor = System.Drawing.Color.DarkGray;
-            vlMsgLName.Text = "Επίθετο";
+            vlMsgLName.Text = "Επώνυμο";
             vlMsgLName.ForeColor = System.Drawing.Color.DarkGray;
             vlMsgPhone.Text = "Τηλέφωνο";
             vlMsgPhone.ForeColor = System.Drawing.Color.DarkGray;
@@ -599,6 +583,7 @@ namespace AdopseAddsTeam5
                 ControlMessage cm = new ControlMessage(m[i].firstname, m[i].lastname, m[i].phone, m[i].email, m[i].desc, m[i].mid);
                 notificationsFlowLayout.Controls.Add(cm);
             }
+            notificationCounter.Text = m.Count.ToString() + " νέες ειδοποιήσεις";
         }
 
         /*private void loadFavorites()
@@ -1109,6 +1094,10 @@ namespace AdopseAddsTeam5
             emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
             phoneTextbox.Text = "π.χ. 2101234567 ή 6912345678";
             phoneTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            heatingCombo1.Text = "";
+            heatingCombo2.Text = "";
+            typeCombo.Text = "";
+            addPerigrafiText.Text = "";
             for(int i=0; i<add3FlowLayout.Controls.Count; i++)
             {
                 ((PictureBox)(add3FlowLayout.Controls[i])).Image = null;
