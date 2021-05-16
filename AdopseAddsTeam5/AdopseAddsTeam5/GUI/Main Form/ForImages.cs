@@ -13,20 +13,26 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 {
     public class ForImages
     {
+
+        //metatropi foto se string gia ton User
         public static void imageToString(Bitmap bitmap)
         {
             Image image = bitmap;
-            var ms = new MemoryStream();  // this is where we are going to deposit the bytes
-            // save bytes to ms
+            var ms = new MemoryStream(); 
             image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            // to get the bytes we type
-            //var bytes = ms.ToString();
-
-            // we can now save the byte array to a db, file, or transport (stream) it
             DataAccess.UserImage(MainForm.user1.EmailAddress , Convert.ToBase64String(ms.ToArray()));
         }
 
-        //anaktisi foto tou user
+        //metatropi foto se string gia tin Add
+        public static void imageToStringAdd(Bitmap bitmap)
+        {
+            Image image = bitmap;
+            var ms = new MemoryStream();
+            image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            DataAccess.addImage(MainForm.newuseradd.sid, Convert.ToBase64String(ms.ToArray()));
+        }
+
+        //anaktisi foto apo string
         public static Image stringToImage(string image)
         {
             byte[] bytes = Convert.FromBase64String(image);
@@ -126,7 +132,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //metritis fwtografiwn tis kathe aggelias
-        public static int imageCounter(int addsid)
+        public static void imageCounter(int addsid)
         {
             string host = @"users.iee.ihu.gr";
             string username = "it144377";
@@ -148,8 +154,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                         filepath = "/home/student/it/2014/it144377/public_html/Images/" + "add" + addsid.ToString() + "/" + "photo_" + x.ToString() + ".png";
                     }
                 }
-                DataAccess.setPhotoNum(x);
-                return x;
+                DataAccess.setPhotoNum(addsid,x);
             }
             catch (Exception ex)
             {

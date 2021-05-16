@@ -411,11 +411,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                             }
                         }
                         //edw gemizei o index tou lucene
-                        foreach (Adds add in everyadd)
-                        {
-                            LuceneSearch.AddUpdateLuceneIndex(add);
-                        }
-                            
+                        LuceneSearch.AddUpdateLuceneIndex(everyadd);
                     }
                 }
                 catch(Exception ex)
@@ -535,15 +531,17 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             return addswithfiltra;
         }
 
-        public static void setPhotoNum(int y)
+        //metritis fwtografiwn gia na steiloume sti vasi
+        public static void setPhotoNum(int id , int y)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
                 try
                 {
                     connection.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT photo_number(@photos)", connection))
+                    using (var cmd = new NpgsqlCommand("SELECT photo_number(@id , @photos)", connection))
                     {
+                        cmd.Parameters.AddWithValue("id", id);
                         cmd.Parameters.AddWithValue("photos", y);
                         cmd.ExecuteNonQuery();
                     }
@@ -555,5 +553,52 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             }
         }
 
+        //gia anevasma fwtografiwn sti vasi
+        public static void addImage(int id, string image)
+        {
+            using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
+            {
+
+                connection.Open();
+                using (var cmd = new NpgsqlCommand("SELECT insert_picture_aggelies(@id , @picture)", connection))
+                {
+                    cmd.Parameters.AddWithValue("id", id);
+                    cmd.Parameters.AddWithValue("picture", image);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        //travigma foto apo ti vasi
+        public static List<string> showAddImages(int id)
+        {
+            List<string> images = new List<string>();
+            string s;
+            using (var conn = new NpgsqlConnection(Helper.CnnVal("it164760")))
+            {
+                try
+                {
+                    conn.Open();
+                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_picture_aggelies(@id)", conn))
+                    {
+                        cmd.Parameters.AddWithValue("id", id);
+                        NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                images.Add(s = reader.GetString(0).ToString()); ;
+                            }
+                        }
+                        return images;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
     }
 }
