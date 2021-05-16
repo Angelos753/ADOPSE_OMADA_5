@@ -579,7 +579,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 try
                 {
                     conn.Open();
-                    using (var cmd = new NpgsqlCommand("SELECT * FROM show_picture_aggelies(@id)", conn))
+                    using (var cmd = new NpgsqlCommand("SELECT picture FROM show_pictures_aggelies_test1(@id)", conn))
                     {
                         cmd.Parameters.AddWithValue("id", id);
                         NpgsqlDataReader reader = cmd.ExecuteReader();

@@ -153,6 +153,11 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             picBox.Image = images[0];
         }
 
+        public List<Image> getImages()
+        {
+            return images;
+        }
+
         public int getId()
         {
             return id;

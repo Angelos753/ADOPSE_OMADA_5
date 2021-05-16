@@ -239,12 +239,12 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout3 = new System.Windows.Forms.TableLayoutPanel();
             this.viewListingMapPanel = new System.Windows.Forms.Panel();
             this.vlMap = new System.Windows.Forms.WebBrowser();
-            this.vlMainPic = new System.Windows.Forms.WebBrowser();
-            this.vl0 = new System.Windows.Forms.WebBrowser();
-            this.vl1 = new System.Windows.Forms.WebBrowser();
-            this.vl2 = new System.Windows.Forms.WebBrowser();
-            this.vl3 = new System.Windows.Forms.WebBrowser();
-            this.vl4 = new System.Windows.Forms.WebBrowser();
+            this.vlMainPic = new System.Windows.Forms.PictureBox();
+            this.vlPic0 = new System.Windows.Forms.PictureBox();
+            this.vlPic2 = new System.Windows.Forms.PictureBox();
+            this.vlPic3 = new System.Windows.Forms.PictureBox();
+            this.vlPic4 = new System.Windows.Forms.PictureBox();
+            this.vlPic1 = new System.Windows.Forms.PictureBox();
             this.footerMiddleB = new System.Windows.Forms.Panel();
             this.bw = new System.ComponentModel.BackgroundWorker();
             this.mainPanel.SuspendLayout();
@@ -313,6 +313,12 @@ namespace AdopseAddsTeam5
             this.tableLayoutPanel1.SuspendLayout();
             this.viewListingTableLayout3.SuspendLayout();
             this.viewListingMapPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vlMainPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -3320,11 +3326,11 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.viewListingTableLayout3.Controls.Add(this.viewListingMapPanel, 0, 2);
             this.viewListingTableLayout3.Controls.Add(this.vlMainPic, 0, 0);
-            this.viewListingTableLayout3.Controls.Add(this.vl0, 0, 1);
-            this.viewListingTableLayout3.Controls.Add(this.vl1, 1, 1);
-            this.viewListingTableLayout3.Controls.Add(this.vl2, 2, 1);
-            this.viewListingTableLayout3.Controls.Add(this.vl3, 3, 1);
-            this.viewListingTableLayout3.Controls.Add(this.vl4, 4, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vlPic0, 0, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vlPic2, 2, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vlPic3, 3, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vlPic4, 4, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vlPic1, 1, 1);
             this.viewListingTableLayout3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingTableLayout3.Location = new System.Drawing.Point(0, 0);
             this.viewListingTableLayout3.Margin = new System.Windows.Forms.Padding(0);
@@ -3362,62 +3368,68 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingTableLayout3.SetColumnSpan(this.vlMainPic, 5);
             this.vlMainPic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vlMainPic.Location = new System.Drawing.Point(0, 0);
-            this.vlMainPic.Margin = new System.Windows.Forms.Padding(0);
-            this.vlMainPic.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vlMainPic.Location = new System.Drawing.Point(1, 1);
+            this.vlMainPic.Margin = new System.Windows.Forms.Padding(1);
             this.vlMainPic.Name = "vlMainPic";
-            this.vlMainPic.Size = new System.Drawing.Size(420, 235);
+            this.vlMainPic.Size = new System.Drawing.Size(418, 233);
+            this.vlMainPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vlMainPic.TabIndex = 7;
+            this.vlMainPic.TabStop = false;
             // 
-            // vl0
+            // vlPic0
             // 
-            this.vl0.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vl0.Location = new System.Drawing.Point(0, 235);
-            this.vl0.Margin = new System.Windows.Forms.Padding(0);
-            this.vl0.MinimumSize = new System.Drawing.Size(20, 20);
-            this.vl0.Name = "vl0";
-            this.vl0.Size = new System.Drawing.Size(84, 84);
-            this.vl0.TabIndex = 8;
+            this.vlPic0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlPic0.Location = new System.Drawing.Point(1, 236);
+            this.vlPic0.Margin = new System.Windows.Forms.Padding(1);
+            this.vlPic0.Name = "vlPic0";
+            this.vlPic0.Size = new System.Drawing.Size(82, 82);
+            this.vlPic0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.vlPic0.TabIndex = 8;
+            this.vlPic0.TabStop = false;
             // 
-            // vl1
+            // vlPic2
             // 
-            this.vl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vl1.Location = new System.Drawing.Point(84, 235);
-            this.vl1.Margin = new System.Windows.Forms.Padding(0);
-            this.vl1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.vl1.Name = "vl1";
-            this.vl1.Size = new System.Drawing.Size(84, 84);
-            this.vl1.TabIndex = 9;
+            this.vlPic2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlPic2.Location = new System.Drawing.Point(169, 236);
+            this.vlPic2.Margin = new System.Windows.Forms.Padding(1);
+            this.vlPic2.Name = "vlPic2";
+            this.vlPic2.Size = new System.Drawing.Size(82, 82);
+            this.vlPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.vlPic2.TabIndex = 9;
+            this.vlPic2.TabStop = false;
             // 
-            // vl2
+            // vlPic3
             // 
-            this.vl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vl2.Location = new System.Drawing.Point(168, 235);
-            this.vl2.Margin = new System.Windows.Forms.Padding(0);
-            this.vl2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.vl2.Name = "vl2";
-            this.vl2.Size = new System.Drawing.Size(84, 84);
-            this.vl2.TabIndex = 10;
+            this.vlPic3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlPic3.Location = new System.Drawing.Point(253, 236);
+            this.vlPic3.Margin = new System.Windows.Forms.Padding(1);
+            this.vlPic3.Name = "vlPic3";
+            this.vlPic3.Size = new System.Drawing.Size(82, 82);
+            this.vlPic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.vlPic3.TabIndex = 10;
+            this.vlPic3.TabStop = false;
             // 
-            // vl3
+            // vlPic4
             // 
-            this.vl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vl3.Location = new System.Drawing.Point(252, 235);
-            this.vl3.Margin = new System.Windows.Forms.Padding(0);
-            this.vl3.MinimumSize = new System.Drawing.Size(20, 20);
-            this.vl3.Name = "vl3";
-            this.vl3.Size = new System.Drawing.Size(84, 84);
-            this.vl3.TabIndex = 11;
+            this.vlPic4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlPic4.Location = new System.Drawing.Point(337, 236);
+            this.vlPic4.Margin = new System.Windows.Forms.Padding(1);
+            this.vlPic4.Name = "vlPic4";
+            this.vlPic4.Size = new System.Drawing.Size(82, 82);
+            this.vlPic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.vlPic4.TabIndex = 11;
+            this.vlPic4.TabStop = false;
             // 
-            // vl4
+            // vlPic1
             // 
-            this.vl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vl4.Location = new System.Drawing.Point(336, 235);
-            this.vl4.Margin = new System.Windows.Forms.Padding(0);
-            this.vl4.MinimumSize = new System.Drawing.Size(20, 20);
-            this.vl4.Name = "vl4";
-            this.vl4.Size = new System.Drawing.Size(84, 84);
-            this.vl4.TabIndex = 12;
+            this.vlPic1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlPic1.Location = new System.Drawing.Point(85, 236);
+            this.vlPic1.Margin = new System.Windows.Forms.Padding(1);
+            this.vlPic1.Name = "vlPic1";
+            this.vlPic1.Size = new System.Drawing.Size(82, 82);
+            this.vlPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.vlPic1.TabIndex = 12;
+            this.vlPic1.TabStop = false;
             // 
             // footerMiddleB
             // 
@@ -3553,6 +3565,12 @@ namespace AdopseAddsTeam5
             this.tableLayoutPanel1.PerformLayout();
             this.viewListingTableLayout3.ResumeLayout(false);
             this.viewListingMapPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.vlMainPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlPic1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3771,7 +3789,6 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label profileAddListing;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox profilePicbox;
-        private System.Windows.Forms.WebBrowser vlMainPic;
         private System.Windows.Forms.PictureBox add3Picbox2;
         private System.Windows.Forms.PictureBox add3Picbox3;
         private System.Windows.Forms.PictureBox add3Picbox4;
@@ -3784,11 +3801,12 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker bw;
         private System.Windows.Forms.WebBrowser vlMap;
-        private System.Windows.Forms.WebBrowser vl0;
-        private System.Windows.Forms.WebBrowser vl1;
-        private System.Windows.Forms.WebBrowser vl2;
-        private System.Windows.Forms.WebBrowser vl3;
-        private System.Windows.Forms.WebBrowser vl4;
+        private System.Windows.Forms.PictureBox vlMainPic;
+        private System.Windows.Forms.PictureBox vlPic0;
+        private System.Windows.Forms.PictureBox vlPic2;
+        private System.Windows.Forms.PictureBox vlPic3;
+        private System.Windows.Forms.PictureBox vlPic4;
+        private System.Windows.Forms.PictureBox vlPic1;
     }
 }
 

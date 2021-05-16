@@ -27,13 +27,13 @@ namespace AdopseAddsTeam5
         private string name;
         private PictureBox[] pics = new PictureBox[5];
         private int x = 0;
-        private List<WebBrowser> wb = new List<WebBrowser>();
+        private List<PictureBox> pb = new List<PictureBox>();
 
         public MainForm()
         {
             InitializeComponent();
             DataAccess.AllAdds();
-            addBrowsers();
+            createPbList();
     }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -41,13 +41,13 @@ namespace AdopseAddsTeam5
             watermarkPicbox.Parent = bgImagePicbox; 
         }
 
-        private void addBrowsers()
+        private void createPbList()
         {
-            wb.Add(vl0);
-            wb.Add(vl1);
-            wb.Add(vl2);
-            wb.Add(vl3);
-            wb.Add(vl4);
+            pb.Add(vlPic0);
+            pb.Add(vlPic1);
+            pb.Add(vlPic2);
+            pb.Add(vlPic3);
+            pb.Add(vlPic4);
         }
 
         private void hideControls()
@@ -166,11 +166,18 @@ namespace AdopseAddsTeam5
 
         private void controlAdd_Click(object sender, EventArgs e)
         {
-            hideControls();
-            addPanel1.Show();
-            addPanel1.BringToFront();
-            footerLeft.Show();
-            footerRight.Show();
+            if(!logged)
+            {
+                new AccountForm().ShowDialog();
+            }
+            else
+            {
+                hideControls();
+                addPanel1.Show();
+                addPanel1.BringToFront();
+                footerLeft.Show();
+                footerRight.Show();
+            }
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -191,10 +198,18 @@ namespace AdopseAddsTeam5
                 m.setPerigrafi(a[i].desc);
                 m.setDieythinsi(a[i].dieythinsi);
                 m.setId(a[i].sid);
+                m.imageList(a[i].sid);
                 double d = (double)a[i].timi / (double)a[i].emvadon;
                 m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
+                    List<Image> im = m.getImages();
+                    for(int j=0; j<im.Count; j++)
+                    {
+                        vlMainPic.Image = im[0];
+                        pb[j].Image = im[j];
+                    }
+                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 400, 320));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -227,9 +242,15 @@ namespace AdopseAddsTeam5
                 m.setId(a[i].sid);
                 m.imageList(a[i].sid);
                 double d = (double)a[i].timi / (double)a[i].emvadon;
-                m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
+                    List<Image> im = m.getImages();
+                    for (int j = 0; j < im.Count; j++)
+                    {
+                        vlMainPic.Image = im[0];
+                        pb[j].Image = im[j];
+                    }
+                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 400, 320));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
