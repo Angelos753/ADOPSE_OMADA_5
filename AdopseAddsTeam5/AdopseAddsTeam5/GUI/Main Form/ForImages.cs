@@ -29,8 +29,10 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         //anaktisi foto tou user
         public static Image stringToImage(string image)
         {
-            byte[] bytes = Encoding.UTF8.GetBytes(image);
-            Image imageMemoryStream = Image.FromStream(new MemoryStream(bytes));
+            byte[] bytes = Convert.FromBase64String(image);
+            MemoryStream ms = new MemoryStream(bytes, 0, bytes.Length);
+            ms.Write(bytes, 0, bytes.Length);
+            System.Drawing.Image imageMemoryStream = System.Drawing.Image.FromStream(ms, true);
             return imageMemoryStream;
         }
 
