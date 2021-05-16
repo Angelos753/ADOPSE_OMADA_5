@@ -341,7 +341,7 @@ namespace AdopseAddsTeam5
                 add3Dialog.Multiselect = false;
                 if (add3Dialog.ShowDialog() == DialogResult.OK)
                 {
-                    Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 140);
+                    Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 200);
                     ((PictureBox)(add3FlowLayout.Controls[x])).Image = b;
                     ((PictureBox)(add3FlowLayout.Controls[x])).ImageLocation = add3Dialog.FileName;
                     ((PictureBox)(add3FlowLayout.Controls[x])).BorderStyle = BorderStyle.FixedSingle;
@@ -435,7 +435,7 @@ namespace AdopseAddsTeam5
                 name = user1.Name;
                 usernameLabel.Text = name;
                 email = user1.EmailAddress;
-                if(user1.Image!=null)
+                if(user1.Image!="")
                 {
                     Image im = ForImages.stringToImage(user1.Image);
                     userPicbox.Image = im;
@@ -464,6 +464,17 @@ namespace AdopseAddsTeam5
         private void vlMsgSend_Click(object sender, EventArgs e)
         {
             DataAccess.SendMessage(activeAdEmail, vlMsgFName.Text, vlMsgLName.Text, vlMsgPhone.Text, vlMsgEmail.Text, vlMsgText.Text);
+            vlMsgFName.Text = "Όνομα";
+            vlMsgFName.ForeColor = System.Drawing.Color.DarkGray;
+            vlMsgLName.Text = "Επίθετο";
+            vlMsgLName.ForeColor = System.Drawing.Color.DarkGray;
+            vlMsgPhone.Text = "Τηλέφωνο";
+            vlMsgPhone.ForeColor = System.Drawing.Color.DarkGray;
+            vlMsgEmail.Text = "Email";
+            vlMsgEmail.ForeColor = System.Drawing.Color.DarkGray;
+            vlMsgText.Text = "Το μήνυμα σας...";
+            vlMsgText.ForeColor = System.Drawing.Color.DarkGray;
+            MessageBox.Show("Το μήνυμα σας στάλθηκε επιτυχώς.", "Μήνυμα", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void vlShowPhone_Click(object sender, EventArgs e)

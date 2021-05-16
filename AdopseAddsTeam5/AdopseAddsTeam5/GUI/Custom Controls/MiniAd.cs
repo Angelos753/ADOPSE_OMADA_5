@@ -163,9 +163,12 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             imagestrings = DataAccess.showAddImages(sid);
             for(int i=0; i<imagestrings.Count; i++)
             {
-                images.Add(ForImages.stringToImage(imagestrings[i]));
+                images.Add(ForImages.stringToImage(imagestrings[i])); 
+                if (i == 0)
+                {
+                    picBox.Image = images[0];
+                }
             }
-            picBox.Image = images[0];
         }
 
         public List<Image> getImages()

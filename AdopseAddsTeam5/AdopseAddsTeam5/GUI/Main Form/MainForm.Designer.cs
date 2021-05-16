@@ -676,7 +676,7 @@ namespace AdopseAddsTeam5
             // 
             // userPicbox
             // 
-            this.userPicbox.BackColor = System.Drawing.Color.RosyBrown;
+            this.userPicbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
             this.userPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.enoikiasiBuilding;
             this.userPicbox.Location = new System.Drawing.Point(0, 0);
             this.userPicbox.Margin = new System.Windows.Forms.Padding(0);
@@ -3366,6 +3366,7 @@ namespace AdopseAddsTeam5
             // 
             // vlMainPic
             // 
+            this.vlMainPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingTableLayout3.SetColumnSpan(this.vlMainPic, 5);
             this.vlMainPic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlMainPic.Location = new System.Drawing.Point(1, 1);
@@ -3378,6 +3379,7 @@ namespace AdopseAddsTeam5
             // 
             // vlPic0
             // 
+            this.vlPic0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlPic0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlPic0.Location = new System.Drawing.Point(1, 236);
             this.vlPic0.Margin = new System.Windows.Forms.Padding(1);
@@ -3390,6 +3392,7 @@ namespace AdopseAddsTeam5
             // 
             // vlPic2
             // 
+            this.vlPic2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlPic2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlPic2.Location = new System.Drawing.Point(169, 236);
             this.vlPic2.Margin = new System.Windows.Forms.Padding(1);
@@ -3402,6 +3405,7 @@ namespace AdopseAddsTeam5
             // 
             // vlPic3
             // 
+            this.vlPic3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlPic3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlPic3.Location = new System.Drawing.Point(253, 236);
             this.vlPic3.Margin = new System.Windows.Forms.Padding(1);
@@ -3414,6 +3418,7 @@ namespace AdopseAddsTeam5
             // 
             // vlPic4
             // 
+            this.vlPic4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlPic4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlPic4.Location = new System.Drawing.Point(337, 236);
             this.vlPic4.Margin = new System.Windows.Forms.Padding(1);
@@ -3426,6 +3431,7 @@ namespace AdopseAddsTeam5
             // 
             // vlPic1
             // 
+            this.vlPic1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlPic1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlPic1.Location = new System.Drawing.Point(85, 236);
             this.vlPic1.Margin = new System.Windows.Forms.Padding(1);
