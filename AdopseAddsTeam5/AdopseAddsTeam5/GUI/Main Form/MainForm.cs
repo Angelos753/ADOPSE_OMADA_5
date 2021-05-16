@@ -103,6 +103,7 @@ namespace AdopseAddsTeam5
         private void controlHomepage_Click(object sender, EventArgs e)
         {
             hideControls();
+            clearFields();
             searchTableLayout.Show();
             searchTableLayout.BringToFront();
             choicePanel.Show();
@@ -1093,7 +1094,17 @@ namespace AdopseAddsTeam5
             emvadoTextbox.Text = "π.χ. 89";
             emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
             phoneTextbox.Text = "π.χ. 2101234567 ή 6912345678";
-            phoneTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            phoneTextbox.ForeColor = System.Drawing.Color.DarkGray; 
+            vlMsgFName.Text = "Όνομα";
+            vlMsgFName.ForeColor = System.Drawing.Color.DarkGray;
+            vlMsgLName.Text = "Επώνυμο";
+            vlMsgLName.ForeColor = System.Drawing.Color.DarkGray;
+            vlMsgPhone.Text = "Τηλέφωνο";
+            vlMsgPhone.ForeColor = System.Drawing.Color.DarkGray;
+            vlMsgEmail.Text = "Email";
+            vlMsgEmail.ForeColor = System.Drawing.Color.DarkGray;
+            vlMsgText.Text = "Το μήνυμα σας...";
+            vlMsgText.ForeColor = System.Drawing.Color.DarkGray;
             heatingCombo1.Text = "";
             heatingCombo2.Text = "";
             typeCombo.Text = "";
