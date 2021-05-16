@@ -3457,9 +3457,6 @@ namespace AdopseAddsTeam5
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1063, 679);
-            this.Controls.Add(this.viewListingPanel);
-            this.Controls.Add(this.addPanel2);
-            this.Controls.Add(this.addPanel3);
             this.Controls.Add(this.sideMenuPanel);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.filtersPanel);
@@ -3471,6 +3468,9 @@ namespace AdopseAddsTeam5
             this.Controls.Add(this.resultsPanel);
             this.Controls.Add(this.addPanel1);
             this.Controls.Add(this.profilePanel);
+            this.Controls.Add(this.viewListingPanel);
+            this.Controls.Add(this.addPanel2);
+            this.Controls.Add(this.addPanel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1918, 1076);
