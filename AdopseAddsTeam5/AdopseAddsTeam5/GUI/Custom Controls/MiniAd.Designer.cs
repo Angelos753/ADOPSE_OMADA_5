@@ -1,4 +1,6 @@
 ﻿
+using System.Drawing;
+
 namespace AdopseAddsTeam5.GUI.Custom_Controls
 {
     partial class miniAd
@@ -29,12 +31,11 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(miniAd));
             this.favPicBox = new System.Windows.Forms.PictureBox();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
             this.area = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.Label();
+            this.address = new System.Windows.Forms.Label();
             this.bedrooms = new System.Windows.Forms.Label();
             this.baths = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.Label();
@@ -55,7 +56,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // 
             // picBox
             // 
-            this.picBox.Image = ((System.Drawing.Image)(resources.GetObject("picBox.Image")));
+            this.picBox.Image = global::AdopseAddsTeam5.Properties.Resources.logoandname_Color;
             this.picBox.Location = new System.Drawing.Point(0, 0);
             this.picBox.Margin = new System.Windows.Forms.Padding(0);
             this.picBox.Name = "picBox";
@@ -90,18 +91,18 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.area.Text = "Κάτω Τούμπα";
             this.area.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // date
+            // address
             // 
-            this.date.AutoSize = true;
-            this.date.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.date.ForeColor = System.Drawing.Color.DimGray;
-            this.date.Location = new System.Drawing.Point(150, 54);
-            this.date.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(64, 19);
-            this.date.TabIndex = 4;
-            this.date.Text = "23/3/21";
-            this.date.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.address.AutoSize = true;
+            this.address.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.address.ForeColor = System.Drawing.Color.DimGray;
+            this.address.Location = new System.Drawing.Point(150, 54);
+            this.address.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(110, 24);
+            this.address.TabIndex = 4;
+            this.address.Text = "Tsimiski 14";
+            this.address.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // bedrooms
             // 
@@ -149,7 +150,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.Controls.Add(this.price);
             this.Controls.Add(this.baths);
             this.Controls.Add(this.bedrooms);
-            this.Controls.Add(this.date);
+            this.Controls.Add(this.address);
             this.Controls.Add(this.area);
             this.Controls.Add(this.title);
             this.Controls.Add(this.favPicBox);
@@ -170,7 +171,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         private System.Windows.Forms.PictureBox favPicBox;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label area;
-        private System.Windows.Forms.Label date;
+        private System.Windows.Forms.Label address;
         private System.Windows.Forms.Label bedrooms;
         private System.Windows.Forms.Label baths;
         private System.Windows.Forms.Label price;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdopseAddsTeam5.GUI.Main_Form;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,8 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         private string perigrafi;
         private string eidos;
         private string dieythinsi;
+        private List<string> imagestrings = new List<string>();
+        private List<Image> images = new List<Image>();
 
         public void setTitle(string s)
         {
@@ -60,11 +63,6 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         public string getPerioxi()
         {
             return perioxi;
-        }
-
-        public void setDate(string s)
-        {
-            date.Text = s;
         }
 
         public void setRooms(string s)
@@ -122,6 +120,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         public void setDieythinsi(string s)
         {
             dieythinsi = s;
+            address.Text = s;
         }
 
         public string getDieythinsi()
@@ -142,6 +141,16 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         public void setId(int s)
         {
             id = s;
+        }
+
+        public void imageList(int sid)
+        {
+            imagestrings = DataAccess.showAddImages(sid);
+            for(int i=0; i<imagestrings.Count; i++)
+            {
+                images.Add(ForImages.stringToImage(imagestrings[i]));
+            }
+            picBox.Image = images[0];
         }
 
         public int getId()

@@ -42,6 +42,8 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             return imageMemoryStream;
         }
 
+        //SELECT photo FROM adPhotos WHERE id=
+
 
 
         //methodos gia to static google maps 

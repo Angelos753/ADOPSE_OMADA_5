@@ -189,12 +189,12 @@ namespace AdopseAddsTeam5
                 m.setThermansi(a[i].thermansi);
                 m.setEidos(a[i].eidos);
                 m.setPerigrafi(a[i].desc);
+                m.setDieythinsi(a[i].dieythinsi);
+                m.setId(a[i].sid);
                 double d = (double)a[i].timi / (double)a[i].emvadon;
                 m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
-                    vlMainPic.Navigate(ForImages.showAddImages(4, 1));
-                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 412, 382));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -205,6 +205,35 @@ namespace AdopseAddsTeam5
             footerLeft.Show();
             footerRight.Show();
             footerMiddleB.BringToFront();
+        }
+
+        private void resultsSearchBtn_Click(object sender, EventArgs e)
+        {
+            resultsFlowLayout.Controls.Clear();
+            List<Adds> a = LuceneSearch.Search(resultsSearchbox.Text).ToList();
+            for (int i = 0; i < a.Count; i++)
+            {
+                miniAd m = new miniAd();
+                m.setTitle(a[i].title);
+                m.setEmvado(a[i].emvadon.ToString());
+                m.setArea(a[i].perioxi);
+                m.setBaths(a[i].mpanio.ToString() + " Μπάνια");
+                m.setRooms(a[i].ypnodomatia.ToString() + " Υπνοδωμάτια");
+                m.setPrice("€ " + a[i].timi.ToString());
+                m.setThermansi(a[i].thermansi);
+                m.setEidos(a[i].eidos);
+                m.setPerigrafi(a[i].desc);
+                m.setDieythinsi(a[i].dieythinsi);
+                m.setId(a[i].sid);
+                m.imageList(a[i].sid);
+                double d = (double)a[i].timi / (double)a[i].emvadon;
+                m.Click += (sender1, e1) =>
+                {
+                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
+                    viewListing();
+                };
+                resultsFlowLayout.Controls.Add(m);
+            }
         }
 
         private void logPicbox_Click(object sender, EventArgs e)
@@ -289,9 +318,37 @@ namespace AdopseAddsTeam5
                     ((PictureBox)(add3FlowLayout.Controls[x])).Image = b;
                     ((PictureBox)(add3FlowLayout.Controls[x])).ImageLocation = add3Dialog.FileName;
                     ((PictureBox)(add3FlowLayout.Controls[x])).BorderStyle = BorderStyle.FixedSingle;
-
+                    ForImages.imageToStringAdd(b);
                 }
                 x = x + 1;
+            }
+        }
+
+        private void add3Post_Click(object sender, EventArgs e)
+        {
+            controlHomepage_Click(this, e);
+            //bw.RunWorkerAsync();
+        }
+
+        private void bw_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ForImages.createPhotoDir(newuseradd.sid);
+            for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
+            {
+                if (((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation != null)
+                {
+                    ForImages.sftpSendImage(newuseradd.sid, ((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation, i);
+                }
+            }
+            x = 0;
+        }
+
+        private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
+            {
+                ((PictureBox)(add3FlowLayout.Controls[i])).BorderStyle = BorderStyle.None;
+                ((PictureBox)(add3FlowLayout.Controls[i])).Image = null;
             }
         }
 
@@ -318,33 +375,6 @@ namespace AdopseAddsTeam5
             }
 
             return destImage;
-        }
-
-        private void add3Post_Click(object sender, EventArgs e)
-        {
-            bw.RunWorkerAsync();
-            controlHomepage_Click(this, e);
-        }
-        private void bw_DoWork(object sender, DoWorkEventArgs e)
-        {
-            ForImages.createPhotoDir(newuseradd.sid);
-            for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
-            {
-                if (((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation != null)
-                {
-                    ForImages.sftpSendImage(newuseradd.sid, ((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation, i);
-                }
-            }
-            x = 0;
-        }
-
-        private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
-            {
-                ((PictureBox)(add3FlowLayout.Controls[i])).BorderStyle = BorderStyle.None;
-                ((PictureBox)(add3FlowLayout.Controls[i])).Image = null;
-            }
         }
 
         public static void login(User user)
@@ -558,35 +588,6 @@ namespace AdopseAddsTeam5
             controlHomepage_Click(this, e);
         }
 
-        private void resultsSearchBtn_Click(object sender, EventArgs e)
-        {
-            resultsFlowLayout.Controls.Clear();
-            List<Adds> a = LuceneSearch.Search(resultsSearchbox.Text).ToList();
-            for (int i = 0; i < a.Count; i++)
-            {
-                miniAd m = new miniAd();
-                m.setTitle(a[i].title);
-                m.setEmvado(a[i].emvadon.ToString());
-                m.setArea(a[i].perioxi);
-                m.setBaths(a[i].mpanio.ToString() + " Μπάνια");
-                m.setRooms(a[i].ypnodomatia.ToString() + " Υπνοδωμάτια");
-                m.setPrice("€ " + a[i].timi.ToString());
-                m.setThermansi(a[i].thermansi);
-                m.setEidos(a[i].eidos);
-                m.setPerigrafi(a[i].desc);
-                m.setDieythinsi(a[i].dieythinsi);
-                double d = (double)a[i].timi / (double)a[i].emvadon;
-                m.Click += (sender1, e1) =>
-                {
-                    
-                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
-                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 420, 235));
-                    
-                    viewListing();
-                };
-                resultsFlowLayout.Controls.Add(m);
-            }
-        }
 
         private void searchTextbox_TextChanged(object sender, EventArgs e)
         {
