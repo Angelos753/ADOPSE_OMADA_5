@@ -142,7 +142,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                     client.Connect();
                     client.ChangeDirectory(destinationpath);
                     string filepath = "/home/student/it/2014/it144377/public_html/Images/" + "add" + addsid.ToString() + "/" + "photo_" + x.ToString() + ".png";
-                    while (File.Exists(filepath))
+                    while (client.Exists(filepath))
                     {
                         x = x + 1;
                         filepath = "/home/student/it/2014/it144377/public_html/Images/" + "add" + addsid.ToString() + "/" + "photo_" + x.ToString() + ".png";
