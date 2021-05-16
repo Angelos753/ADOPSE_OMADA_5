@@ -443,7 +443,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //methodos gia apostoli message
-        public void SendMessage(string useremail , string fname , string lname , string phone , string email , string desc)
+        public static void SendMessage(string useremail , string fname , string lname , string phone , string email , string desc)
         {
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {

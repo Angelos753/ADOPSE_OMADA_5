@@ -29,6 +29,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         private string perigrafi;
         private string eidos;
         private string dieythinsi;
+        private string email;
         private List<string> imagestrings = new List<string>();
         private List<Image> images = new List<Image>();
 
@@ -143,6 +144,20 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             id = s;
         }
 
+        public int getId()
+        {
+            return id;
+        }
+        public void setEmail(string s)
+        {
+            email = s;
+        }
+
+        public string getEmail()
+        {
+            return email;
+        }
+
         public void imageList(int sid)
         {
             imagestrings = DataAccess.showAddImages(sid);
@@ -156,11 +171,6 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         public List<Image> getImages()
         {
             return images;
-        }
-
-        public int getId()
-        {
-            return id;
         }
 
         public new event EventHandler Click

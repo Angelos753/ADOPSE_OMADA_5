@@ -21,13 +21,14 @@ namespace AdopseAddsTeam5
         public static User user1 = new User();
         public static Adds newuseradd = new Adds();
         public static GUI.Main_Form.Message[] msg;
+        private List<PictureBox> pb = new List<PictureBox>();
+        private PictureBox[] pics = new PictureBox[5];
         private static bool flag = false;
         private static bool logged = false;
         private string email;
         private string name;
-        private PictureBox[] pics = new PictureBox[5];
+        private string activeAdEmail;
         private int x = 0;
-        private List<PictureBox> pb = new List<PictureBox>();
 
         public MainForm()
         {
@@ -198,6 +199,7 @@ namespace AdopseAddsTeam5
                 m.setPerigrafi(a[i].desc);
                 m.setDieythinsi(a[i].dieythinsi);
                 m.setId(a[i].sid);
+                m.setEmail(a[i].email);
                 m.imageList(a[i].sid);
                 double d = (double)a[i].timi / (double)a[i].emvadon;
                 m.Click += (sender1, e1) =>
@@ -240,8 +242,10 @@ namespace AdopseAddsTeam5
                 m.setPerigrafi(a[i].desc);
                 m.setDieythinsi(a[i].dieythinsi);
                 m.setId(a[i].sid);
+                m.setEmail(a[i].email);
                 m.imageList(a[i].sid);
                 double d = (double)a[i].timi / (double)a[i].emvadon;
+                m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
                     List<Image> im = m.getImages();
@@ -251,6 +255,7 @@ namespace AdopseAddsTeam5
                         pb[j].Image = im[j];
                     }
                     vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 400, 320));
+                    activeAdEmail = m.getEmail();
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -440,7 +445,7 @@ namespace AdopseAddsTeam5
 
         private void vlMsgSend_Click(object sender, EventArgs e)
         {
-
+            DataAccess.SendMessage(activeAdEmail, vlMsgFName.Text, vlMsgLName.Text, vlMsgPhone.Text, vlMsgEmail.Text, vlMsgText.Text);
         }
 
         private void vlShowPhone_Click(object sender, EventArgs e)
