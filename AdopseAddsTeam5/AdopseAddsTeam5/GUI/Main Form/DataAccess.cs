@@ -227,12 +227,13 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         //dimiourgia neas aggelias
         //Άλλαξα την μέθοδο σε static - Alex
-        public static void NewAdd(int ypnodwmatia , int mpania , string email, string perioxi, string timi, string eidos, string emvadon, string title, string thermansi, string phone, string description, string dieythinsi)
+        public static void NewAdd(int ypnodwmatia , int mpania , string email, string perioxi, int timi, string eidos, int emvadon, string title, string thermansi, string phone, string description, string dieythinsi)
         {
+            var newadd = new Adds { };
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
                 connection.Open();
-                using (var cmd = new NpgsqlCommand("SELECT insert_aggelies1(@perioxi , @timi , @typos_aggelias , @emvadon , @typos_akinitou , @systhma_thermanshs , @thlefwno , @perigrafi , @mpania , @ypnodwmatia , @email , @dieythinsi)", connection))
+                using (var cmd = new NpgsqlCommand("SELECT insert_aggelies_final(@perioxi , @timi , @typos_aggelias , @emvadon , @typos_akinitou , @systhma_thermanshs , @thlefwno , @perigrafi , @mpania , @ypnodwmatia , @email , @dieythinsi)", connection))
                 {
                     cmd.Parameters.AddWithValue("email", email);
                     cmd.Parameters.AddWithValue("perioxi", perioxi);
@@ -246,40 +247,42 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                     cmd.Parameters.AddWithValue("mpania", mpania);
                     cmd.Parameters.AddWithValue("ypnodwmatia", ypnodwmatia);
                     cmd.Parameters.AddWithValue("dieythinsi", dieythinsi);
-                    NpgsqlDataReader reader = cmd.ExecuteReader();
+                    cmd.ExecuteNonQuery();
 
-
-                    using (var command = new NpgsqlCommand("SELECT MAX(id) FROM aggelies1"))
-                    {
-                        if (reader.HasRows)
-                        {
-                            var newadd = new Adds { };
-                            while (reader.Read())
-                            {
-                                newadd.sid = reader.GetInt32(0);
-                                newadd.title = reader.GetString(3).ToString();
-                                newadd.perioxi = reader.GetString(1).ToString();
-                                newadd.timi = reader.GetInt32(2);
-                                newadd.emvadon = reader.GetInt32(4);
-                                newadd.ypnodomatia = reader.GetInt32(10);
-                                newadd.mpanio = reader.GetInt32(9);
-                                newadd.eidos = reader.GetString(5).ToString();
-                                newadd.thermansi = reader.GetString(6).ToString();
-                                newadd.desc = reader.GetString(8).ToString();
-                                newadd.phone = reader.GetString(7).ToString();
-                                newadd.email = reader.GetString(11).ToString();
-                                newadd.dieythinsi = reader.GetString(13).ToString();
-                            }
-                            //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                            //gia na parw to sid kai na ftiaksw folder gia tis foto me auto to sid
-                            MainForm.newuseradd = newadd;
-
-                            // add record to Lucene search index
-                            LuceneSearch.AddUpdateLuceneIndex(newadd);
-                        }
-                    } 
                 }
+                    using (var command = new NpgsqlCommand("select * from aggelies1 WHERE id=(SELECT MAX(id) from aggelies1)", connection))
+                    {
+                        NpgsqlDataReader dr = command.ExecuteReader();
+                        if (dr.HasRows)
+                        {
+                           
+                            while (dr.Read())
+                            {
+                                newadd.sid = dr.GetInt32(0);
+                                newadd.title = dr.GetString(3).ToString();
+                                newadd.perioxi = dr.GetString(1).ToString();
+                                newadd.timi = dr.GetInt32(2);
+                                newadd.emvadon = dr.GetInt32(4);
+                                newadd.ypnodomatia = dr.GetInt32(10);
+                                newadd.mpanio = dr.GetInt32(9);
+                                newadd.eidos = dr.GetString(5).ToString();
+                                newadd.thermansi = dr.GetString(6).ToString();
+                                newadd.desc = dr.GetString(8).ToString();
+                                newadd.phone = dr.GetString(7).ToString();
+                                newadd.email = dr.GetString(11).ToString();
+                                newadd.dieythinsi = dr.GetString(13).ToString();
+                            }
+                        }
+                    }
+                connection.Close();
             }
+
+            //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            //gia na parw to sid kai na ftiaksw folder gia tis foto me auto to sid
+            MainForm.newuseradd = newadd;
+
+            // add record to Lucene search index
+            LuceneSearch.AddUpdateLuceneIndex(newadd);
         }
 
         //methodos gia to onoma tou user

@@ -1013,10 +1013,11 @@ namespace AdopseAddsTeam5
             this.addPerigrafiText.BackColor = System.Drawing.Color.Gainsboro;
             this.add1TableLayout.SetColumnSpan(this.addPerigrafiText, 3);
             this.addPerigrafiText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addPerigrafiText.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.addPerigrafiText.Location = new System.Drawing.Point(15, 473);
             this.addPerigrafiText.Margin = new System.Windows.Forms.Padding(0);
             this.addPerigrafiText.Name = "addPerigrafiText";
-            this.addPerigrafiText.Size = new System.Drawing.Size(1034, 28);
+            this.addPerigrafiText.Size = new System.Drawing.Size(1293, 35);
             this.addPerigrafiText.TabIndex = 5;
             this.addPerigrafiText.Text = "";
             // 
@@ -1135,6 +1136,7 @@ namespace AdopseAddsTeam5
             this.perioxiTextbox.Size = new System.Drawing.Size(706, 28);
             this.perioxiTextbox.TabIndex = 0;
             this.perioxiTextbox.Text = "π.χ. Θεσσαλονίκη - Τούμπα";
+            this.perioxiTextbox.TextChanged += new System.EventHandler(this.perioxiTextbox_TextChanged);
             this.perioxiTextbox.Enter += new System.EventHandler(this.perioxiTextbox_Enter);
             this.perioxiTextbox.Leave += new System.EventHandler(this.perioxiTextbox_Leave);
             // 

@@ -230,11 +230,11 @@ namespace AdopseAddsTeam5
 
         private void add1Next_Click(object sender, EventArgs e)
         {
-            int domatia = Int32.Parse(domatiaTextbox.Text);
-            int mpania = Int32.Parse(mpaniaTextbox.Text);
-            string perioxi = perioxiTextbox.Text;
+            /*newuseradd.ypnodomatia = Int32.Parse(domatiaTextbox.Text);
+            newuseradd.mpanio = Int32.Parse(mpaniaTextbox.Text);
+            newuseradd.perioxi = perioxiTextbox.Text;
             add2City.Text = perioxiTextbox.Text;
-            string timi = timiTextbox.Text;
+            newuseradd.timi = Int32.Parse(timiTextbox.Text);
             string eidos;
             if (buyRBtn.Checked) eidos = "Αγορά";
             else eidos = "Ενοικίαση";
@@ -244,7 +244,7 @@ namespace AdopseAddsTeam5
             string phone = phoneTextbox.Text;
             string desc = addPerigrafiText.Text;
             string dieythinsi = add2Address.Text;
-            DataAccess.NewAdd(domatia, mpania, email, perioxi, timi, eidos, emvadon, tipos, thermansi, phone, desc, dieythinsi);
+            */
             addPanel1.Hide();
             addPanel2.BringToFront();
             addPanel2.Show();
@@ -252,6 +252,14 @@ namespace AdopseAddsTeam5
 
         private void add2Next_Click(object sender, EventArgs e)
         {
+            string eidos;
+            if (buyRBtn.Checked) eidos = "Αγορά";
+            else eidos = "Ενοικίαση";
+            DataAccess.NewAdd(Int32.Parse(domatiaTextbox.Text), Int32.Parse(mpaniaTextbox.Text), 
+                                          email, perioxiTextbox.Text, Int32.Parse(timiTextbox.Text),
+                                          eidos, Int32.Parse(emvadoTextbox.Text), typeCombo.Text,
+                                          (heatingCombo1.Text + " " + heatingCombo2.Text), phoneTextbox.Text,
+                                          addPerigrafiText.Text, add2Address.Text);
             addPanel2.Hide();
             addPanel3.BringToFront();
             addPanel3.Show();
@@ -1006,6 +1014,11 @@ namespace AdopseAddsTeam5
             profileNameText.Enabled = false;
             profileNameText.ReadOnly = true;
             profileNameEdit.Text = "Επεξεργασία";
+        }
+
+        private void perioxiTextbox_TextChanged(object sender, EventArgs e)
+        {
+            add2City.Text = perioxiTextbox.Text;
         }
     }
 }
