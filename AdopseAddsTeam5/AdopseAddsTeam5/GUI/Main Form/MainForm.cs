@@ -212,6 +212,7 @@ namespace AdopseAddsTeam5
                         pb[j].Image = im[j];
                     }
                     vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 400, 320));
+                    activeAdEmail = m.getEmail();
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -352,6 +353,23 @@ namespace AdopseAddsTeam5
 
         private void add3Post_Click(object sender, EventArgs e)
         {
+            add2Address.Text = "Διεύθυνση";
+            add2Address.ForeColor = System.Drawing.Color.DarkGray;
+            add2City.Text = "Πόλη";
+            add2City.ForeColor = System.Drawing.Color.DarkGray;
+            domatiaTextbox.Text = "π.χ. 2";
+            domatiaTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            mpaniaTextbox.Text = "π.χ. 1";
+            mpaniaTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            perioxiTextbox.Text = "π.χ. Θεσσαλονίκη - Τούμπα";
+            perioxiTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            timiTextbox.Text = "π.χ. €150000 ή 150.000";
+            timiTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            emvadoTextbox.Text = "π.χ. 89";
+            emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            phoneTextbox.Text = "π.χ. 2101234567 ή 6912345678";
+            phoneTextbox.ForeColor = System.Drawing.Color.DarkGray;
+
             controlHomepage_Click(this, e);
             //bw.RunWorkerAsync();
         }
@@ -474,7 +492,6 @@ namespace AdopseAddsTeam5
             resultsFilterPanel.BringToFront();
         }
 
-
         private void resultsRentBtn_Click(object sender, EventArgs e)
         {
             resultsRentBtn.BackColor = System.Drawing.Color.White;
@@ -566,10 +583,9 @@ namespace AdopseAddsTeam5
         private void loadMessages()
         {
             GUI.Main_Form.Message[] m = DataAccess.UserMessages(email);
-            for(int i=0; i<m.Length+2; i++)
+            for(int i=0; i<m.Length; i++)
             {
-                //ControlMessage cm = new ControlMessage(m[i].firstname, m[i].lastname, m[i].phone, m[i].email, m[i].desc);
-                ControlMessage cm = new ControlMessage("Alexandros" , "Giotas" , "6932123123", "alexandros@gmail.com", "Dokimastiko keimeno");
+                ControlMessage cm = new ControlMessage(m[i].firstname, m[i].lastname, m[i].phone, m[i].email, m[i].desc);
                 notificationsFlowLayout.Controls.Add(cm);
             }
         }
@@ -1062,6 +1078,32 @@ namespace AdopseAddsTeam5
         private void perioxiTextbox_TextChanged(object sender, EventArgs e)
         {
             add2City.Text = perioxiTextbox.Text;
+        }
+
+        private void clearFields()
+        {
+            add2Address.Text = "Διεύθυνση";
+            add2Address.ForeColor = System.Drawing.Color.DarkGray;
+            add2City.Text = "Πόλη";
+            add2City.ForeColor = System.Drawing.Color.DarkGray;
+            domatiaTextbox.Text = "π.χ. 2";
+            domatiaTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            mpaniaTextbox.Text = "π.χ. 1";
+            mpaniaTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            perioxiTextbox.Text = "π.χ. Θεσσαλονίκη - Τούμπα";
+            perioxiTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            timiTextbox.Text = "π.χ. €150000 ή 150.000";
+            timiTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            emvadoTextbox.Text = "π.χ. 89";
+            emvadoTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            phoneTextbox.Text = "π.χ. 2101234567 ή 6912345678";
+            phoneTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            for(int i=0; i<add3FlowLayout.Controls.Count; i++)
+            {
+                ((PictureBox)(add3FlowLayout.Controls[i])).Image = null;
+                ((PictureBox)(add3FlowLayout.Controls[i])).BorderStyle = BorderStyle.None;
+            }
+
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

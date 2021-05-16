@@ -455,7 +455,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                         cmd.Parameters.AddWithValue("email", useremail);
                         cmd.Parameters.AddWithValue("name", fname);
                         cmd.Parameters.AddWithValue("surname", lname);
-                        cmd.Parameters.AddWithValue("phone_number)", phone);
+                        cmd.Parameters.AddWithValue("phone_number", phone);
                         cmd.Parameters.AddWithValue("email2", email);
                         cmd.Parameters.AddWithValue("text", desc);
                         cmd.ExecuteNonQuery();
