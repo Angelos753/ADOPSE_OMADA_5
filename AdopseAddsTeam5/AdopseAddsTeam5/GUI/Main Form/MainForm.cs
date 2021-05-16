@@ -420,7 +420,7 @@ namespace AdopseAddsTeam5
                 name = user1.Name;
                 usernameLabel.Text = name;
                 email = user1.EmailAddress;
-                if(user1.Image!="")
+                if(user1.Image!="" && user1.Image!=null)
                 {
                     Image im = ForImages.stringToImage(user1.Image);
                     userPicbox.Image = im;
