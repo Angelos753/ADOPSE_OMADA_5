@@ -241,6 +241,7 @@ namespace AdopseAddsTeam5
             this.vlMainPic = new System.Windows.Forms.WebBrowser();
             this.footerMiddleB = new System.Windows.Forms.Panel();
             this.bw = new System.ComponentModel.BackgroundWorker();
+            this.vlMap = new System.Windows.Forms.WebBrowser();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.watermarkPicbox)).BeginInit();
             this.searchTableLayout.SuspendLayout();
@@ -306,6 +307,7 @@ namespace AdopseAddsTeam5
             this.viewListingMessageTableLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.viewListingTableLayout3.SuspendLayout();
+            this.viewListingMapPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -1017,7 +1019,7 @@ namespace AdopseAddsTeam5
             this.addPerigrafiText.Location = new System.Drawing.Point(15, 473);
             this.addPerigrafiText.Margin = new System.Windows.Forms.Padding(0);
             this.addPerigrafiText.Name = "addPerigrafiText";
-            this.addPerigrafiText.Size = new System.Drawing.Size(1293, 35);
+            this.addPerigrafiText.Size = new System.Drawing.Size(1034, 28);
             this.addPerigrafiText.TabIndex = 5;
             this.addPerigrafiText.Text = "";
             // 
@@ -3328,6 +3330,7 @@ namespace AdopseAddsTeam5
             // 
             this.viewListingMapPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.viewListingTableLayout3.SetColumnSpan(this.viewListingMapPanel, 5);
+            this.viewListingMapPanel.Controls.Add(this.vlMap);
             this.viewListingMapPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingMapPanel.Location = new System.Drawing.Point(3, 321);
             this.viewListingMapPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -3360,6 +3363,16 @@ namespace AdopseAddsTeam5
             // 
             this.bw.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bw_DoWork);
             this.bw.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bw_RunWorkerCompleted);
+            // 
+            // vlMap
+            // 
+            this.vlMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlMap.Location = new System.Drawing.Point(0, 0);
+            this.vlMap.Margin = new System.Windows.Forms.Padding(0);
+            this.vlMap.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vlMap.Name = "vlMap";
+            this.vlMap.Size = new System.Drawing.Size(412, 230);
+            this.vlMap.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -3478,6 +3491,7 @@ namespace AdopseAddsTeam5
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.viewListingTableLayout3.ResumeLayout(false);
+            this.viewListingMapPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3707,6 +3721,7 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label add2Search;
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker bw;
+        private System.Windows.Forms.WebBrowser vlMap;
     }
 }
 

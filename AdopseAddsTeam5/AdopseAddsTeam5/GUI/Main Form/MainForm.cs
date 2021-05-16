@@ -177,11 +177,12 @@ namespace AdopseAddsTeam5
                 m.setPrice("€ " + a[i].timi.ToString());
                 m.setThermansi(a[i].thermansi);
                 m.setEidos(a[i].eidos);
-                double d = (double)a[i].timi / (double)a[i].emvadon;
+                double d = (double)a[i].timi / (double)a[i].emvadon; vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi()));
                 m.Click += (sender1, e1) =>
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
-
+                    vlMainPic.Navigate(ForImages.showAddImages(4, 1));
+                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi()));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -566,6 +567,7 @@ namespace AdopseAddsTeam5
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
                     vlMainPic.Navigate(ForImages.showAddImages(4, 1));
+                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi()));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);

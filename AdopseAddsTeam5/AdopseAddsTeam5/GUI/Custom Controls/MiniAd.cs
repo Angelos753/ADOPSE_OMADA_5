@@ -26,6 +26,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         private string thermansi;
         private string perigrafi;
         private string eidos;
+        private string dieythinsi;
 
         public void setTitle(string s)
         {
@@ -116,6 +117,16 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         public string getEidos()
         {
             return eidos;
+        }
+
+        public void setDieythinsi(string s)
+        {
+            dieythinsi = s;
+        }
+
+        public string getDieythinsi()
+        {
+            return dieythinsi;
         }
 
         public new event EventHandler Click
