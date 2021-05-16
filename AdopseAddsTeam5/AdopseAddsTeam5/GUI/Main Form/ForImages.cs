@@ -39,10 +39,12 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
 
         //methodos gia to static google maps 
-        public static string googleMaps(string perioxi , string dieuthinsi)
+        public static string googleMaps(string perioxi, string dieuthinsi, int x, int y)
         {
             string city = perioxi;
             string street = dieuthinsi;
+            string w = x.ToString();
+            string h = y.ToString();
 
             StringBuilder queryaddress = new StringBuilder();
             queryaddress.Append("https://maps.googleapis.com/maps/api/staticmap?center=");
@@ -54,7 +56,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 {
                     queryaddress.Append(city + "," + "+");
                 }
-            queryaddress.Append("&zoom=17&size=600x400&markers=color:red|");
+            queryaddress.Append("&zoom=17&size="+w+"x"+h+"&markers=color:red|");
             queryaddress.Append(city + "+");
             queryaddress.Append(street);
             queryaddress.Append("&key=AIzaSyAcIRhdafdixebdvXHyF6PS4dAFtvy431w");
@@ -124,34 +126,34 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         }
 
         //metritis fwtografiwn tis kathe aggelias
-        public static void imageCounter(int addsid)
+        public static int imageCounter(int addsid)
         {
             string host = @"users.iee.ihu.gr";
             string username = "it144377";
             string password = "Vainoe3zit144377#$";
             try
             {
-
                 int port = 22;
                 //edw apo katw na pros8esw to sid
-                string destinationpath = "/home/student/it/2014/it144377/public_html/Images/" + addsid.ToString() + "/";
+                string destinationpath = "/home/student/it/2014/it144377/public_html/Images/" + "add" + addsid.ToString() + "/";
                 int x = 0;
                 using (SftpClient client = new SftpClient(host, port, username, password))
                 {
                     client.Connect();
                     client.ChangeDirectory(destinationpath);
-                    string filepath = "/home/student/it/2014/it144377/public_html/Images/" + "add" + addsid.ToString() + "/" + "photo_" + x.ToString() + "/";
+                    string filepath = "/home/student/it/2014/it144377/public_html/Images/" + "add" + addsid.ToString() + "/" + "photo_" + x.ToString() + ".png";
                     while (File.Exists(filepath))
                     {
                         x = x + 1;
-                        filepath = "/home/student/it/2014/it144377/public_html/Images/" + "add" + addsid.ToString() + "/" + "photo_" + x.ToString() + "/";
+                        filepath = "/home/student/it/2014/it144377/public_html/Images/" + "add" + addsid.ToString() + "/" + "photo_" + x.ToString() + ".png";
                     }
                 }
                 DataAccess.setPhotoNum(x);
+                return x;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

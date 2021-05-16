@@ -240,6 +240,11 @@ namespace AdopseAddsTeam5
             this.viewListingMapPanel = new System.Windows.Forms.Panel();
             this.vlMap = new System.Windows.Forms.WebBrowser();
             this.vlMainPic = new System.Windows.Forms.WebBrowser();
+            this.vl0 = new System.Windows.Forms.WebBrowser();
+            this.vl1 = new System.Windows.Forms.WebBrowser();
+            this.vl2 = new System.Windows.Forms.WebBrowser();
+            this.vl3 = new System.Windows.Forms.WebBrowser();
+            this.vl4 = new System.Windows.Forms.WebBrowser();
             this.footerMiddleB = new System.Windows.Forms.Panel();
             this.bw = new System.ComponentModel.BackgroundWorker();
             this.mainPanel.SuspendLayout();
@@ -3315,6 +3320,11 @@ namespace AdopseAddsTeam5
             this.viewListingTableLayout3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.viewListingTableLayout3.Controls.Add(this.viewListingMapPanel, 0, 2);
             this.viewListingTableLayout3.Controls.Add(this.vlMainPic, 0, 0);
+            this.viewListingTableLayout3.Controls.Add(this.vl0, 0, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vl1, 1, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vl2, 2, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vl3, 3, 1);
+            this.viewListingTableLayout3.Controls.Add(this.vl4, 4, 1);
             this.viewListingTableLayout3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewListingTableLayout3.Location = new System.Drawing.Point(0, 0);
             this.viewListingTableLayout3.Margin = new System.Windows.Forms.Padding(0);
@@ -3358,6 +3368,56 @@ namespace AdopseAddsTeam5
             this.vlMainPic.Name = "vlMainPic";
             this.vlMainPic.Size = new System.Drawing.Size(420, 235);
             this.vlMainPic.TabIndex = 7;
+            // 
+            // vl0
+            // 
+            this.vl0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vl0.Location = new System.Drawing.Point(0, 235);
+            this.vl0.Margin = new System.Windows.Forms.Padding(0);
+            this.vl0.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vl0.Name = "vl0";
+            this.vl0.Size = new System.Drawing.Size(84, 84);
+            this.vl0.TabIndex = 8;
+            // 
+            // vl1
+            // 
+            this.vl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vl1.Location = new System.Drawing.Point(84, 235);
+            this.vl1.Margin = new System.Windows.Forms.Padding(0);
+            this.vl1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vl1.Name = "vl1";
+            this.vl1.Size = new System.Drawing.Size(84, 84);
+            this.vl1.TabIndex = 9;
+            // 
+            // vl2
+            // 
+            this.vl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vl2.Location = new System.Drawing.Point(168, 235);
+            this.vl2.Margin = new System.Windows.Forms.Padding(0);
+            this.vl2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vl2.Name = "vl2";
+            this.vl2.Size = new System.Drawing.Size(84, 84);
+            this.vl2.TabIndex = 10;
+            // 
+            // vl3
+            // 
+            this.vl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vl3.Location = new System.Drawing.Point(252, 235);
+            this.vl3.Margin = new System.Windows.Forms.Padding(0);
+            this.vl3.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vl3.Name = "vl3";
+            this.vl3.Size = new System.Drawing.Size(84, 84);
+            this.vl3.TabIndex = 11;
+            // 
+            // vl4
+            // 
+            this.vl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vl4.Location = new System.Drawing.Point(336, 235);
+            this.vl4.Margin = new System.Windows.Forms.Padding(0);
+            this.vl4.MinimumSize = new System.Drawing.Size(20, 20);
+            this.vl4.Name = "vl4";
+            this.vl4.Size = new System.Drawing.Size(84, 84);
+            this.vl4.TabIndex = 12;
             // 
             // footerMiddleB
             // 
@@ -3724,6 +3784,11 @@ namespace AdopseAddsTeam5
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker bw;
         private System.Windows.Forms.WebBrowser vlMap;
+        private System.Windows.Forms.WebBrowser vl0;
+        private System.Windows.Forms.WebBrowser vl1;
+        private System.Windows.Forms.WebBrowser vl2;
+        private System.Windows.Forms.WebBrowser vl3;
+        private System.Windows.Forms.WebBrowser vl4;
     }
 }
 

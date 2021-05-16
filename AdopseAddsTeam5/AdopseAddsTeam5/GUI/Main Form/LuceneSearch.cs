@@ -40,14 +40,14 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         private static void _addToLuceneIndex(Adds sampleData, IndexWriter writer)
         {
             // remove older index entry
-            var searchQuery = new TermQuery(new Term("sid", sampleData.sid.ToString()));
+            var searchQuery = new TermQuery(new Term("id", sampleData.sid.ToString()));
             writer.DeleteDocuments(searchQuery);
 
             // add new index entry
             var doc = new Document();
 
             // add lucene fields mapped to db fields
-            doc.Add(new Field("sid", sampleData.sid.ToString(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+            doc.Add(new Field("id", sampleData.sid.ToString(), Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("perioxi", sampleData.perioxi, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("typos_akinitou", sampleData.title, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("typos_aggelias", sampleData.eidos, Field.Store.YES, Field.Index.ANALYZED));
@@ -56,11 +56,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             doc.Add(new Field("emvadon", sampleData.emvadon.ToString(), Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("timi", sampleData.timi.ToString(), Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("perigrafi", sampleData.desc, Field.Store.YES, Field.Index.ANALYZED));
-            doc.Add(new Field("email", sampleData.email, Field.Store.YES, Field.Index.NOT_ANALYZED));
-            doc.Add(new Field("thlefwno", sampleData.phone, Field.Store.YES, Field.Index.NOT_ANALYZED));
+            doc.Add(new Field("email", sampleData.email, Field.Store.YES, Field.Index.ANALYZED));
+            doc.Add(new Field("thlefwno", sampleData.phone, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("systhma_thermanshs", sampleData.thermansi, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("dieythinsi", sampleData.dieythinsi, Field.Store.YES, Field.Index.ANALYZED));
-            doc.Add(new Field("photos", sampleData.photonumber.ToString(), Field.Store.YES, Field.Index.NOT_ANALYZED));
+            doc.Add(new Field("photos", sampleData.photonumber.ToString(), Field.Store.YES, Field.Index.ANALYZED));
 
             // add entry to index
             writer.AddDocument(doc);
@@ -94,7 +94,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             using (var writer = new IndexWriter(_directory, analyzer, IndexWriter.MaxFieldLength.UNLIMITED))
             {
                 // remove older index entry
-                var searchQuery = new TermQuery(new Term("sid", record_sid.ToString()));
+                var searchQuery = new TermQuery(new Term("id", record_sid.ToString()));
                 writer.DeleteDocuments(searchQuery);
 
                 // close handles

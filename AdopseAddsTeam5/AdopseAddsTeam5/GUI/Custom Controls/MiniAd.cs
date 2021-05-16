@@ -17,6 +17,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             InitializeComponent();
         }
 
+        private int id;
         private string typos_akinitou;
         private string emvado;
         private string perioxi;
@@ -136,6 +137,16 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         public string getPerigrafi()
         {
             return perigrafi;
+        }
+
+        public void setId(int s)
+        {
+            id = s;
+        }
+
+        public int getId()
+        {
+            return id;
         }
 
         public new event EventHandler Click

@@ -27,16 +27,27 @@ namespace AdopseAddsTeam5
         private string name;
         private PictureBox[] pics = new PictureBox[5];
         private int x = 0;
+        private List<WebBrowser> wb = new List<WebBrowser>();
 
         public MainForm()
         {
             InitializeComponent();
             DataAccess.AllAdds();
-        }
+            addBrowsers();
+    }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             watermarkPicbox.Parent = bgImagePicbox; 
+        }
+
+        private void addBrowsers()
+        {
+            wb.Add(vl0);
+            wb.Add(vl1);
+            wb.Add(vl2);
+            wb.Add(vl3);
+            wb.Add(vl4);
         }
 
         private void hideControls()
@@ -183,7 +194,7 @@ namespace AdopseAddsTeam5
                 {
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
                     vlMainPic.Navigate(ForImages.showAddImages(4, 1));
-                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi()));
+                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 412, 382));
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -316,12 +327,12 @@ namespace AdopseAddsTeam5
         }
         private void bw_DoWork(object sender, DoWorkEventArgs e)
         {
-            ForImages.createPhotoDir(7);
+            ForImages.createPhotoDir(newuseradd.sid);
             for (int i = 0; i < add3FlowLayout.Controls.Count; i++)
             {
                 if (((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation != null)
                 {
-                    ForImages.sftpSendImage(7, ((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation, i);
+                    ForImages.sftpSendImage(newuseradd.sid, ((PictureBox)(add3FlowLayout.Controls[i])).ImageLocation, i);
                 }
             }
             x = 0;
@@ -544,8 +555,7 @@ namespace AdopseAddsTeam5
 
         private void appNamePicbox_Click(object sender, EventArgs e)
         {
-            addPanel3.Show();
-            //controlHomepage_Click(this, e);
+            controlHomepage_Click(this, e);
         }
 
         private void resultsSearchBtn_Click(object sender, EventArgs e)
@@ -567,9 +577,17 @@ namespace AdopseAddsTeam5
                 double d = (double)a[i].timi / (double)a[i].emvadon;
                 m.Click += (sender1, e1) =>
                 {
-                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi()); ;
-                    vlMainPic.Navigate(ForImages.showAddImages(4, 1));
-                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi()));
+                    int z = ForImages.imageCounter(m.getId());
+                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
+                    vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 420, 235));
+                    for(int j=0; j<z; j++)
+                    {
+                    if (j == 0)
+                        {
+                            vlMainPic.Navigate(ForImages.showAddImages(0, 0));
+                        }
+                        wb[j].Navigate(ForImages.showAddImages(0, 1));
+                    }
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
@@ -583,7 +601,7 @@ namespace AdopseAddsTeam5
 
         private void add2Search_Click(object sender, EventArgs e)
         {
-            string s = ForImages.googleMaps(add2City.Text, add2Address.Text);
+            string s = ForImages.googleMaps(add2City.Text, add2Address.Text, 600, 400);
             add2Browser.Navigate(s);
         }
 
