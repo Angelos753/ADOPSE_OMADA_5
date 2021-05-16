@@ -14,7 +14,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
     public partial class ControlMessage : UserControl
     {
 
-        public ControlMessage(string fname, string lname, string phone, string email, string desc)
+        public ControlMessage(string fname, string lname, string phone, string email, string desc, int mid)
         {
             InitializeComponent();
             this.fname = fname;
@@ -22,6 +22,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.phone = phone;
             this.email = email;
             this.desc = desc;
+            this.mid = mid;
         }
 
         private void provoliLabel_Click(object sender, EventArgs e)
@@ -33,6 +34,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
 
         private void diagrafiLabel_Click(object sender, EventArgs e)
         {
+            DataAccess.deleteMsg(mid);
             this.Dispose();
         }
 
@@ -46,5 +48,6 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         private string phone;
         private string email;
         private string desc;
+        private int mid;
     }
 }

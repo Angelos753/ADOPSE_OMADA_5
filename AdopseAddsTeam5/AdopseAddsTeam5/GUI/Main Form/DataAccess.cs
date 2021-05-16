@@ -338,9 +338,9 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         //emfanisi pinaka minimaton
         //Άλλαξα το όνομα της μεθόδου άπό UserImage σε UserMessages - Alex
-        public static Message[] UserMessages(string email)
+        public static List<Message> UserMessages(string email)
         {
-            Message[] msg;
+            List<Message> msg = new List<Message>();
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
                 try 
@@ -351,26 +351,22 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                         cmd.Parameters.AddWithValue("email", email);
                         NpgsqlDataReader reader = cmd.ExecuteReader();
 
-                        int c = 0;
                         if (reader.HasRows)
                         {
                             while (reader.Read())
                             {
-                                c = c + 1;
+
+                                msg.Add(new Message
+                                {
+                                     mid = reader.GetInt32(5),
+                                     useremail = reader.GetString(3).ToString(),
+                                     firstname = reader.GetString(0).ToString(),
+                                     lastname = reader.GetString(1).ToString(),
+                                     phone = reader.GetString(2).ToString(),
+                                     email = reader.GetString(6).ToString(),
+                                     desc = reader.GetString(4).ToString()
+                                });
                             }
-                        }
-                        msg = new Message[c];
-                        for (int x = 0; x < c; x++)
-                        {
-                            reader.Read();
-                            //gemisma oxi tou List<> alla tou pinaka []
-                            msg[x].mid = reader.GetInt32(5);
-                            msg[x].useremail = reader.GetString(3).ToString();
-                            msg[x].firstname = reader.GetString(0).ToString();
-                            msg[x].lastname = reader.GetString(1).ToString();
-                            msg[x].phone = reader.GetString(2).ToString();
-                            msg[x].email = reader.GetString(6).ToString();
-                            msg[x].desc = reader.GetString(4).ToString();
                         }
 
                         return msg;

@@ -41,7 +41,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -60,7 +60,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 69);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(979, 64);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -72,7 +72,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 34);
+            this.label1.Size = new System.Drawing.Size(300, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Μήνυμα";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -83,7 +83,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.provoliLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
             this.provoliLabel.Font = new System.Drawing.Font("Arial", 10.2F);
             this.provoliLabel.ForeColor = System.Drawing.Color.White;
-            this.provoliLabel.Location = new System.Drawing.Point(346, 4);
+            this.provoliLabel.Location = new System.Drawing.Point(344, 3);
             this.provoliLabel.Margin = new System.Windows.Forms.Padding(0);
             this.provoliLabel.Name = "provoliLabel";
             this.provoliLabel.Size = new System.Drawing.Size(100, 25);
@@ -98,7 +98,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.diagrafiLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(16)))), ((int)(((byte)(80)))));
             this.diagrafiLabel.Font = new System.Drawing.Font("Arial", 10.2F);
             this.diagrafiLabel.ForeColor = System.Drawing.Color.White;
-            this.diagrafiLabel.Location = new System.Drawing.Point(538, 4);
+            this.diagrafiLabel.Location = new System.Drawing.Point(533, 3);
             this.diagrafiLabel.Margin = new System.Windows.Forms.Padding(0);
             this.diagrafiLabel.Name = "diagrafiLabel";
             this.diagrafiLabel.Size = new System.Drawing.Size(100, 25);
@@ -112,10 +112,10 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.label4.Location = new System.Drawing.Point(0, 34);
+            this.label4.Location = new System.Drawing.Point(0, 32);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(300, 35);
+            this.label4.Size = new System.Drawing.Size(300, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "Διάφορες πληροφορίες";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,7 +124,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // 
             this.favoritePicbox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.favoritePicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_grade_black_24dp;
-            this.favoritePicbox.Location = new System.Drawing.Point(952, 15);
+            this.favoritePicbox.Location = new System.Drawing.Point(947, 13);
             this.favoritePicbox.Margin = new System.Windows.Forms.Padding(0);
             this.favoritePicbox.Name = "favoritePicbox";
             this.tableLayoutPanel1.SetRowSpan(this.favoritePicbox, 2);
@@ -138,12 +138,12 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(0);
+            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
             this.Name = "ControlMessage";
             this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(1004, 89);
+            this.Size = new System.Drawing.Size(803, 71);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.favoritePicbox)).EndInit();

@@ -284,8 +284,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             this.messageTitle.ReadOnly = true;
             this.messageTitle.Size = new System.Drawing.Size(622, 60);
             this.messageTitle.TabIndex = 17;
-            this.messageTitle.Text = "Μήνυμα για την αγγελία \"€150.000 - Πώληση, Διαμέρισμα 89τ.μ., Άνω Τούμπα, Τούμπα\"" +
-    "";
+            this.messageTitle.Text = "Μήνυμα ενδιαφέροντος για μία από τις αγγελίες σας.";
             this.messageTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // controlPrint1

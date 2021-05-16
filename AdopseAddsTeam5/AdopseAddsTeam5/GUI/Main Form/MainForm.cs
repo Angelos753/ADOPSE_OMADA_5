@@ -20,7 +20,7 @@ namespace AdopseAddsTeam5
 
         public static User user1 = new User();
         public static Adds newuseradd = new Adds();
-        public static GUI.Main_Form.Message[] msg;
+        public static List<GUI.Main_Form.Message> msg;
         private List<PictureBox> pb = new List<PictureBox>();
         private PictureBox[] pics = new PictureBox[5];
         private static bool flag = false;
@@ -582,10 +582,10 @@ namespace AdopseAddsTeam5
 
         private void loadMessages()
         {
-            GUI.Main_Form.Message[] m = DataAccess.UserMessages(email);
-            for(int i=0; i<m.Length; i++)
+            List<GUI.Main_Form.Message> m = DataAccess.UserMessages(email);
+            for(int i=0; i<m.Count; i++)
             {
-                ControlMessage cm = new ControlMessage(m[i].firstname, m[i].lastname, m[i].phone, m[i].email, m[i].desc);
+                ControlMessage cm = new ControlMessage(m[i].firstname, m[i].lastname, m[i].phone, m[i].email, m[i].desc, m[i].mid);
                 notificationsFlowLayout.Controls.Add(cm);
             }
         }
