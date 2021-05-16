@@ -415,7 +415,7 @@ namespace AdopseAddsTeam5
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(355, 21);
             this.searchTextbox.TabIndex = 2;
-            this.searchTextbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.";
+            this.searchTextbox.Text = "Πληκτρολογήστε διεύθυνση ή πόλη";
             this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             this.searchTextbox.Enter += new System.EventHandler(this.searchTextbox_Enter);
             this.searchTextbox.Leave += new System.EventHandler(this.searchTextbox_Leave);
@@ -2084,7 +2084,7 @@ namespace AdopseAddsTeam5
             this.filtersCounter.Name = "filtersCounter";
             this.filtersCounter.Size = new System.Drawing.Size(299, 23);
             this.filtersCounter.TabIndex = 1;
-            this.filtersCounter.Text = "X αποθηκευμένα φίλτρα";
+            this.filtersCounter.Text = "0 αποθηκευμένα φίλτρα";
             this.filtersCounter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // filtersCombo
@@ -2172,7 +2172,7 @@ namespace AdopseAddsTeam5
             this.favoritesCounter.Name = "favoritesCounter";
             this.favoritesCounter.Size = new System.Drawing.Size(299, 23);
             this.favoritesCounter.TabIndex = 1;
-            this.favoritesCounter.Text = "X στην λίστα";
+            this.favoritesCounter.Text = "0 στην λίστα";
             this.favoritesCounter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // favoritesCombo
@@ -2236,6 +2236,7 @@ namespace AdopseAddsTeam5
             this.resultsSearchbox.Name = "resultsSearchbox";
             this.resultsSearchbox.Size = new System.Drawing.Size(361, 30);
             this.resultsSearchbox.TabIndex = 11;
+            this.resultsSearchbox.TextChanged += new System.EventHandler(this.resultsSearchbox_TextChanged);
             this.resultsSearchbox.Enter += new System.EventHandler(this.resultsSearchbox_Enter);
             this.resultsSearchbox.Leave += new System.EventHandler(this.resultsSearchbox_Leave);
             // 

@@ -31,7 +31,6 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         /// </summary>
         private void InitializeComponent()
         {
-            this.favPicBox = new System.Windows.Forms.PictureBox();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
             this.area = new System.Windows.Forms.Label();
@@ -39,20 +38,8 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.bedrooms = new System.Windows.Forms.Label();
             this.baths = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.favPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // favPicBox
-            // 
-            this.favPicBox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_favorite_white_24dp;
-            this.favPicBox.Location = new System.Drawing.Point(0, 0);
-            this.favPicBox.Margin = new System.Windows.Forms.Padding(0);
-            this.favPicBox.Name = "favPicBox";
-            this.favPicBox.Size = new System.Drawing.Size(25, 25);
-            this.favPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.favPicBox.TabIndex = 1;
-            this.favPicBox.TabStop = false;
             // 
             // picBox
             // 
@@ -99,7 +86,7 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.address.Location = new System.Drawing.Point(150, 54);
             this.address.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.address.Name = "address";
-            this.address.Size = new System.Drawing.Size(110, 24);
+            this.address.Size = new System.Drawing.Size(88, 19);
             this.address.TabIndex = 4;
             this.address.Text = "Tsimiski 14";
             this.address.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,12 +140,10 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
             this.Controls.Add(this.address);
             this.Controls.Add(this.area);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.favPicBox);
             this.Controls.Add(this.picBox);
             this.Margin = new System.Windows.Forms.Padding(15);
             this.Name = "miniAd";
             this.Size = new System.Drawing.Size(400, 150);
-            ((System.ComponentModel.ISupportInitialize)(this.favPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,7 +153,6 @@ namespace AdopseAddsTeam5.GUI.Custom_Controls
         #endregion
 
         private System.Windows.Forms.PictureBox picBox;
-        private System.Windows.Forms.PictureBox favPicBox;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label area;
         private System.Windows.Forms.Label address;

@@ -633,6 +633,11 @@ namespace AdopseAddsTeam5
             resultsSearchbox.Text = searchTextbox.Text;
         }
 
+        private void resultsSearchbox_TextChanged(object sender, EventArgs e)
+        {
+            searchTextbox.Text = resultsSearchbox.Text;
+        }
+
         private void add2Search_Click(object sender, EventArgs e)
         {
             string s = ForImages.googleMaps(add2City.Text, add2Address.Text, 600, 400);
@@ -1022,7 +1027,7 @@ namespace AdopseAddsTeam5
 
         private void searchTextbox_Enter(object sender, EventArgs e)
         {
-            if (searchTextbox.Text == "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.")
+            if (searchTextbox.Text == "Πληκτρολογήστε διεύθυνση ή πόλη")
             {
                 searchTextbox.Text = "";
                 searchTextbox.ForeColor = System.Drawing.Color.Black;
@@ -1033,14 +1038,14 @@ namespace AdopseAddsTeam5
         {
             if (searchTextbox.Text == "")
             {
-                searchTextbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.";
+                searchTextbox.Text = "Πληκτρολογήστε διεύθυνση ή πόλη";
                 searchTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
 
         private void resultsSearchbox_Enter(object sender, EventArgs e)
         {
-            if (resultsSearchbox.Text == "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.")
+            if (resultsSearchbox.Text == "Πληκτρολογήστε διεύθυνση ή πόλη")
             {
                 resultsSearchbox.Text = "";
                 resultsSearchbox.ForeColor = System.Drawing.Color.Black;
@@ -1051,7 +1056,7 @@ namespace AdopseAddsTeam5
         {
             if (resultsSearchbox.Text == "")
             {
-                resultsSearchbox.Text = "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.";
+                resultsSearchbox.Text = "Πληκτρολογήστε διεύθυνση ή πόλη";
                 resultsSearchbox.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
@@ -1105,10 +1110,15 @@ namespace AdopseAddsTeam5
             vlMsgEmail.ForeColor = System.Drawing.Color.DarkGray;
             vlMsgText.Text = "Το μήνυμα σας...";
             vlMsgText.ForeColor = System.Drawing.Color.DarkGray;
+            searchTextbox.Text = "Πληκτρολογήστε διεύθυνση ή πόλη";
+            searchTextbox.ForeColor = System.Drawing.Color.DarkGray;
+            resultsSearchbox.Text = "Πληκτρολογήστε διεύθυνση ή πόλη";
+            resultsSearchbox.ForeColor = System.Drawing.Color.DarkGray;
             heatingCombo1.Text = "";
             heatingCombo2.Text = "";
             typeCombo.Text = "";
             addPerigrafiText.Text = "";
+            searchTextbox.Text = "";
             for(int i=0; i<add3FlowLayout.Controls.Count; i++)
             {
                 ((PictureBox)(add3FlowLayout.Controls[i])).Image = null;
@@ -1146,5 +1156,6 @@ namespace AdopseAddsTeam5
         {
             vlMainPic.Image = vlPic4.Image;
         }
+
     }
 }
