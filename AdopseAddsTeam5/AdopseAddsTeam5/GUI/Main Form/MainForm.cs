@@ -214,7 +214,7 @@ namespace AdopseAddsTeam5
             {
                 Bitmap b = ResizeImage(new Bitmap(add3Dialog.FileName), 250, 189);
                 profilePicbox.Image = b;
-                sideMenuPicbox.Image = b;
+                userPicbox.Image = b;
                 ForImages.imageToString(b);
             }
         }
@@ -233,6 +233,7 @@ namespace AdopseAddsTeam5
             int domatia = Int32.Parse(domatiaTextbox.Text);
             int mpania = Int32.Parse(mpaniaTextbox.Text);
             string perioxi = perioxiTextbox.Text;
+            add2City.Text = perioxiTextbox.Text;
             string timi = timiTextbox.Text;
             string eidos;
             if (buyRBtn.Checked) eidos = "Αγορά";
@@ -242,7 +243,8 @@ namespace AdopseAddsTeam5
             string thermansi = heatingCombo1.Text + " " + heatingCombo2.Text;
             string phone = phoneTextbox.Text;
             string desc = addPerigrafiText.Text;
-            DataAccess.NewAdd(domatia, mpania, email, perioxi, timi, eidos, emvadon, tipos, thermansi, phone, desc);
+            string dieythinsi = add2Address.Text;
+            DataAccess.NewAdd(domatia, mpania, email, perioxi, timi, eidos, emvadon, tipos, thermansi, phone, desc, dieythinsi);
             addPanel1.Hide();
             addPanel2.BringToFront();
             addPanel2.Show();
@@ -338,9 +340,12 @@ namespace AdopseAddsTeam5
                 name = user1.Name;
                 usernameLabel.Text = name;
                 email = user1.EmailAddress;
-                //Image im = ForImages.stringToImage(user1.Image);
-                //sideMenuPicbox.Image = im;
-                //profilePicbox.Image = im;
+                /*if(user1.Image!=null)
+                {
+                    Image im = ForImages.stringToImage(user1.Image);
+                    userPicbox.Image = im;
+                    profilePicbox.Image = im;
+                }*/
                 logPicbox.Image = global::AdopseAddsTeam5.Properties.Resources.outline_logout_white_24dp;
                 loadMessages();
                 loadUserAds();
@@ -392,9 +397,189 @@ namespace AdopseAddsTeam5
             resultsFilterPanel.BringToFront();
         }
 
+
+        private void resultsRentBtn_Click(object sender, EventArgs e)
+        {
+            resultsRentBtn.BackColor = System.Drawing.Color.White;
+            resultsRentBtn.ForeColor = System.Drawing.Color.Black;
+            resultsBuyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
+        }
+
+        private void resultsBuyBtn_Click(object sender, EventArgs e)
+        {
+            resultsBuyBtn.BackColor = System.Drawing.Color.White;
+            resultsBuyBtn.ForeColor = System.Drawing.Color.Black;
+            resultsRentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
+        }
+
+        public void viewListing()
+        {
+            hideControls();
+            viewListingPanel.Show();
+            viewListingPanel.BringToFront();
+        }
+
+        private void vlExit_Click(object sender, EventArgs e)
+        {
+            viewListingPanel.Hide();
+            resultsPanel.Show();
+            resultsFilterPanel.Show();
+            resultsSearchTableLayout.Show();
+        }
+
+        private void profileEmailEdit_Click(object sender, EventArgs e)
+        {
+            email = profileEmailText.Text;
+            if (profileEmailEdit.Text == "Επεξεργασία")
+            {
+                profileEmailText.Enabled = true;
+                profileEmailText.ReadOnly = false;
+                profileEmailText.Focus();
+                profileEmailEdit.Text = "Αποθήκευση";
+            }
+            else
+            {
+                profileEmailText.Enabled = false;
+                profileEmailText.ReadOnly = true;
+                profileEmailEdit.Text = "Επεξεργασία";
+                //DataAccess.UserNewEmail(email, profileEmailText.Text);
+                //email = profileEmailText.Text;
+            }
+        }
+
+        private void profileEmailText_VisibleChanged(object sender, EventArgs e)
+        {
+            profileEmailText.Text = email;
+            profileEmailText.Enabled = false;
+            profileEmailText.ReadOnly = true;
+            profileEmailEdit.Text = "Επεξεργασία";
+        }
+
+
+        private void profileNameEdit_Click(object sender, EventArgs e)
+        {
+            name = profileNameText.Text;
+            if (profileNameEdit.Text == "Επεξεργασία")
+            {
+                profileNameText.Enabled = true;
+                profileNameText.ReadOnly = false;
+                profileNameText.Focus();
+                profileNameEdit.Text = "Αποθήκευση";
+            }
+            else
+            {
+                profileNameText.Enabled = false;
+                profileNameText.ReadOnly = true;
+                profileNameEdit.Text = "Επεξεργασία";
+                DataAccess.UserName(email, profileNameText.Text);
+                name = profileNameText.Text;
+                usernameLabel.Text = name.ToUpper();
+            }
+        }
+
+
+        private void profileNameText_VisibleChanged(object sender, EventArgs e)
+        {
+            profileNameText.Text = name;
+            profileNameText.Enabled = false;
+            profileNameText.ReadOnly = true;
+            profileNameEdit.Text = "Επεξεργασία";
+        }
+
+        private void loadMessages()
+        {
+            GUI.Main_Form.Message[] m = DataAccess.UserMessages(email);
+            for(int i=0; i<m.Length+2; i++)
+            {
+                //ControlMessage cm = new ControlMessage(m[i].firstname, m[i].lastname, m[i].phone, m[i].email, m[i].desc);
+                ControlMessage cm = new ControlMessage("Alexandros" , "Giotas" , "6932123123", "alexandros@gmail.com", "Dokimastiko keimeno");
+                notificationsFlowLayout.Controls.Add(cm);
+            }
+        }
+
+        /*private void loadFavorites()
+        {
+            Adds[] a = DataAccess.FavoriteAdds(email);
+            for(int i=0; i<a.Length; i++)
+            {
+                miniAd m = new miniAd();
+                m.setTitle(a[i].eidos + " " + a[i].emvadon);
+                m.setDate("10/5/21");
+                m.setArea(a[i].perioxi);
+                m.setRooms(a[i].ypnodomatia.ToString());
+                m.setBaths(a[i].mpanio.ToString());
+                m.setPrice(a[i].timi + " - " + a[i].title);
+                favoritesFlowLayout.Controls.Add(m);
+            }
+        }*/
+
+        private void loadUserAds()
+        {
+            List<Adds> userAds = new List<Adds>();
+            userAds = DataAccess.UserAdds(email);
+            for(int i=0; i<userAds.Count; i++)
+            {
+                ControlAd c = new ControlAd();
+                c.setPrice("€ " + (userAds[i].timi).ToString());
+                c.setInfo(userAds[i].eidos + ", " + userAds[i].perioxi + ", " + userAds[i].title + ", " + (userAds[i].emvadon).ToString() + " τ.μ.");
+                c.Name = "Ad" + userAds[i].sid.ToString();
+                profileFlowLayout.Controls.Add(c);
+            }
+        }
+
+        private void searchFilterRefresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void appNamePicbox_Click(object sender, EventArgs e)
+        {
+            addPanel3.Show();
+            //controlHomepage_Click(this, e);
+        }
+
+        private void resultsSearchBtn_Click(object sender, EventArgs e)
+        {
+            resultsFlowLayout.Controls.Clear();
+            List<Adds> a = LuceneSearch.Search(resultsSearchbox.Text).ToList();
+            for (int i = 0; i < a.Count; i++)
+            {
+                miniAd m = new miniAd();
+                m.setTitle(a[i].title);
+                m.setEmvado(a[i].emvadon.ToString());
+                m.setArea(a[i].perioxi);
+                m.setBaths(a[i].mpanio.ToString() + " Μπάνια");
+                m.setRooms(a[i].ypnodomatia.ToString() + " Υπνοδωμάτια");
+                m.setPrice("€ " + a[i].timi.ToString());
+                m.setThermansi(a[i].thermansi);
+                m.setEidos(a[i].eidos);
+                double d = (double)a[i].timi / (double)a[i].emvadon;
+                m.Click += (sender1, e1) =>
+                {
+                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
+                    vlMainPic.Navigate(ForImages.showAddImages(4, 1));
+                    viewListing();
+                };
+                resultsFlowLayout.Controls.Add(m);
+            }
+        }
+
+        private void searchTextbox_TextChanged(object sender, EventArgs e)
+        {
+            resultsSearchbox.Text = searchTextbox.Text;
+        }
+
+        private void add2Search_Click(object sender, EventArgs e)
+        {
+            string s = ForImages.googleMaps(add2City.Text, add2Address.Text);
+            add2Browser.Navigate(s);
+        }
+
+        //Enter|Leave commands for text fields.
+
         private void add2Address_Enter(object sender, EventArgs e)
         {
-            if(add2Address.Text == "Διεύθυνση")
+            if (add2Address.Text == "Διεύθυνση")
             {
                 add2Address.Text = "";
                 add2Address.ForeColor = System.Drawing.Color.Black;
@@ -409,7 +594,6 @@ namespace AdopseAddsTeam5
                 add2Address.ForeColor = System.Drawing.Color.DarkGray;
             }
         }
-
 
         private void add2City_Enter(object sender, EventArgs e)
         {
@@ -481,7 +665,7 @@ namespace AdopseAddsTeam5
                 perioxiTextbox.Text = "π.χ. Θεσσαλονίκη - Τούμπα";
                 perioxiTextbox.ForeColor = System.Drawing.Color.DarkGray;
             }
-           
+
         }
 
         private void timiTextbox_Enter(object sender, EventArgs e)
@@ -790,20 +974,6 @@ namespace AdopseAddsTeam5
             }
         }
 
-        private void resultsRentBtn_Click(object sender, EventArgs e)
-        {
-            resultsRentBtn.BackColor = System.Drawing.Color.White;
-            resultsRentBtn.ForeColor = System.Drawing.Color.Black;
-            resultsBuyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
-        }
-
-        private void resultsBuyBtn_Click(object sender, EventArgs e)
-        {
-            resultsBuyBtn.BackColor = System.Drawing.Color.White;
-            resultsBuyBtn.ForeColor = System.Drawing.Color.Black;
-            resultsRentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(205)))));
-        }
-
         private void resultsSearchbox_Enter(object sender, EventArgs e)
         {
             if (resultsSearchbox.Text == "Πληκτρολογήστε διεύθυνση, πόλη ή Τ.Κ.")
@@ -822,49 +992,6 @@ namespace AdopseAddsTeam5
             }
         }
 
-        public void viewListing()
-        {
-            hideControls();
-            viewListingPanel.Show();
-            viewListingPanel.BringToFront();
-        }
-
-        private void vlExit_Click(object sender, EventArgs e)
-        {
-            viewListingPanel.Hide();
-            resultsPanel.Show();
-            resultsFilterPanel.Show();
-            resultsSearchTableLayout.Show();
-        }
-
-        private void profileEmailEdit_Click(object sender, EventArgs e)
-        {
-            email = profileEmailText.Text;
-            if (profileEmailEdit.Text == "Επεξεργασία")
-            {
-                profileEmailText.Enabled = true;
-                profileEmailText.ReadOnly = false;
-                profileEmailText.Focus();
-                profileEmailEdit.Text = "Αποθήκευση";
-            }
-            else
-            {
-                profileEmailText.Enabled = false;
-                profileEmailText.ReadOnly = true;
-                profileEmailEdit.Text = "Επεξεργασία";
-                //DataAccess.UserNewEmail(email, profileEmailText.Text);
-                //email = profileEmailText.Text;
-            }
-        }
-
-        private void profileEmailText_VisibleChanged(object sender, EventArgs e)
-        {
-            profileEmailText.Text = email;
-            profileEmailText.Enabled = false;
-            profileEmailText.ReadOnly = true;
-            profileEmailEdit.Text = "Επεξεργασία";
-        }
-
         private void profileEmailText_Leave(object sender, EventArgs e)
         {
             profileEmailText.Text = email;
@@ -873,130 +1000,12 @@ namespace AdopseAddsTeam5
             profileEmailEdit.Text = "Επεξεργασία";
         }
 
-        private void profileNameEdit_Click(object sender, EventArgs e)
-        {
-            name = profileNameText.Text;
-            if (profileNameEdit.Text == "Επεξεργασία")
-            {
-                profileNameText.Enabled = true;
-                profileNameText.ReadOnly = false;
-                profileNameText.Focus();
-                profileNameEdit.Text = "Αποθήκευση";
-            }
-            else
-            {
-                profileNameText.Enabled = false;
-                profileNameText.ReadOnly = true;
-                profileNameEdit.Text = "Επεξεργασία";
-                DataAccess.UserName(email, profileNameText.Text);
-                name = profileNameText.Text;
-                usernameLabel.Text = name.ToUpper();
-            }
-        }
-
         private void profileNameText_Leave(object sender, EventArgs e)
         {
             profileNameText.Text = name;
             profileNameText.Enabled = false;
             profileNameText.ReadOnly = true;
             profileNameEdit.Text = "Επεξεργασία";
-        }
-
-        private void profileNameText_VisibleChanged(object sender, EventArgs e)
-        {
-            profileNameText.Text = name;
-            profileNameText.Enabled = false;
-            profileNameText.ReadOnly = true;
-            profileNameEdit.Text = "Επεξεργασία";
-        }
-
-        private void loadMessages()
-        {
-            GUI.Main_Form.Message[] m = DataAccess.UserMessages(email);
-            for(int i=0; i<m.Length+2; i++)
-            {
-                //ControlMessage cm = new ControlMessage(m[i].firstname, m[i].lastname, m[i].phone, m[i].email, m[i].desc);
-                ControlMessage cm = new ControlMessage("Alexandros" , "Giotas" , "6932123123", "alexandros@gmail.com", "Dokimastiko keimeno");
-                notificationsFlowLayout.Controls.Add(cm);
-            }
-        }
-
-        /*private void loadFavorites()
-        {
-            Adds[] a = DataAccess.FavoriteAdds(email);
-            for(int i=0; i<a.Length; i++)
-            {
-                miniAd m = new miniAd();
-                m.setTitle(a[i].eidos + " " + a[i].emvadon);
-                m.setDate("10/5/21");
-                m.setArea(a[i].perioxi);
-                m.setRooms(a[i].ypnodomatia.ToString());
-                m.setBaths(a[i].mpanio.ToString());
-                m.setPrice(a[i].timi + " - " + a[i].title);
-                favoritesFlowLayout.Controls.Add(m);
-            }
-        }*/
-
-        private void loadUserAds()
-        {
-            List<Adds> userAds = new List<Adds>();
-            userAds = DataAccess.UserAdds(email);
-            for(int i=0; i<userAds.Count; i++)
-            {
-                ControlAd c = new ControlAd();
-                c.setPrice("€ " + (userAds[i].timi).ToString());
-                c.setInfo(userAds[i].eidos + ", " + userAds[i].perioxi + ", " + userAds[i].title + ", " + (userAds[i].emvadon).ToString() + " τ.μ.");
-                c.Name = "Ad" + userAds[i].sid.ToString();
-                profileFlowLayout.Controls.Add(c);
-            }
-        }
-
-        private void searchFilterRefresh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void appNamePicbox_Click(object sender, EventArgs e)
-        {
-            addPanel3.Show();
-            //controlHomepage_Click(this, e);
-        }
-
-        private void resultsSearchBtn_Click(object sender, EventArgs e)
-        {
-            resultsFlowLayout.Controls.Clear();
-            List<Adds> a = LuceneSearch.Search(resultsSearchbox.Text).ToList();
-            for (int i = 0; i < a.Count; i++)
-            {
-                miniAd m = new miniAd();
-                m.setTitle(a[i].title);
-                m.setEmvado(a[i].emvadon.ToString());
-                m.setArea(a[i].perioxi);
-                m.setBaths(a[i].mpanio.ToString() + " Μπάνια");
-                m.setRooms(a[i].ypnodomatia.ToString() + " Υπνοδωμάτια");
-                m.setPrice("€ " + a[i].timi.ToString());
-                m.setThermansi(a[i].thermansi);
-                m.setEidos(a[i].eidos);
-                double d = (double)a[i].timi / (double)a[i].emvadon;
-                m.Click += (sender1, e1) =>
-                {
-                    setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos());
-                    vlMainPic.Navigate(ForImages.showAddImages(4, 1));
-                    viewListing();
-                };
-                resultsFlowLayout.Controls.Add(m);
-            }
-        }
-
-        private void searchTextbox_TextChanged(object sender, EventArgs e)
-        {
-            resultsSearchbox.Text = searchTextbox.Text;
-        }
-
-        private void add2Search_Click(object sender, EventArgs e)
-        {
-            string s = ForImages.googleMaps(add2City.Text, add2Address.Text);
-            add2Browser.Navigate(s);
         }
     }
 }

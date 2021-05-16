@@ -34,7 +34,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
         public int photonumber { get; set; }//13 na ksanakanoume to table aggelies
 
-        public string dieuthinsi { get; set; }//14 na ksanakanoume to table aggelies
+        public string dieythinsi { get; set; }//14 na ksanakanoume to table aggelies
 
     }
 }

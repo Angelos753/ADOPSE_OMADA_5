@@ -1650,6 +1650,7 @@ namespace AdopseAddsTeam5
             this.add2City.Location = new System.Drawing.Point(6, 6);
             this.add2City.Margin = new System.Windows.Forms.Padding(0);
             this.add2City.Name = "add2City";
+            this.add2City.ReadOnly = true;
             this.add2City.Size = new System.Drawing.Size(405, 27);
             this.add2City.TabIndex = 6;
             this.add2City.Text = "Πόλη";

@@ -59,7 +59,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
             doc.Add(new Field("email", sampleData.email, Field.Store.YES, Field.Index.NOT_ANALYZED));
             doc.Add(new Field("thlefwno", sampleData.phone, Field.Store.YES, Field.Index.NOT_ANALYZED));
             doc.Add(new Field("systhma_thermanshs", sampleData.thermansi, Field.Store.YES, Field.Index.ANALYZED));
-            doc.Add(new Field("dieuthinsi", sampleData.dieuthinsi, Field.Store.YES, Field.Index.ANALYZED));
+            doc.Add(new Field("dieythinsi", sampleData.dieythinsi, Field.Store.YES, Field.Index.ANALYZED));
             doc.Add(new Field("photos", sampleData.photonumber.ToString(), Field.Store.YES, Field.Index.NOT_ANALYZED));
 
             // add entry to index
@@ -156,7 +156,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                 phone = doc.Get("thlefwno"),
                 thermansi = doc.Get("systhma_thermanshs"),
                 photonumber = Convert.ToInt32(doc.Get("photos")),
-                dieuthinsi = doc.Get("dieuthinsi")
+                dieythinsi = doc.Get("dieythinsi")
             };
         }
 
@@ -205,7 +205,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
                 
                     var parser = new MultiFieldQueryParser
-                        (Version.LUCENE_30, new[] { "perioxi", "typos_akinitou", "typos_aggelias", "mpanio", "ypnodomatia", "emvadon", "timi", "dieuthinsi" }, analyzer);
+                        (Version.LUCENE_30, new[] { "perioxi", "typos_akinitou", "typos_aggelias", "mpanio", "ypnodomatia", "emvadon", "timi", "dieythinsi" }, analyzer);
                     var query = parseQuery(searchQuery, parser);
                     var hits = searcher.Search
                     (query, null, hits_limit, Sort.RELEVANCE).ScoreDocs;
