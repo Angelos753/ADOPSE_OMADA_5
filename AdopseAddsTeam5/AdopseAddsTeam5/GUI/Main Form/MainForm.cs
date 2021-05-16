@@ -574,20 +574,14 @@ namespace AdopseAddsTeam5
                 m.setThermansi(a[i].thermansi);
                 m.setEidos(a[i].eidos);
                 m.setPerigrafi(a[i].desc);
+                m.setDieythinsi(a[i].dieythinsi);
                 double d = (double)a[i].timi / (double)a[i].emvadon;
                 m.Click += (sender1, e1) =>
                 {
-                    int z = ForImages.imageCounter(m.getId());
+                    
                     setListingFields(m.getPerioxi(), m.getTimi(), d.ToString(), m.getEmvado(), m.getTypoAk(), m.getThermansi(), m.getEidos(), m.getPerigrafi());
                     vlMap.Navigate(ForImages.googleMaps(m.getPerioxi(), m.getDieythinsi(), 420, 235));
-                    for(int j=0; j<z; j++)
-                    {
-                    if (j == 0)
-                        {
-                            vlMainPic.Navigate(ForImages.showAddImages(0, 0));
-                        }
-                        wb[j].Navigate(ForImages.showAddImages(0, 1));
-                    }
+                    
                     viewListing();
                 };
                 resultsFlowLayout.Controls.Add(m);
