@@ -205,7 +205,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
 
                 
                     var parser = new MultiFieldQueryParser
-                        (Version.LUCENE_30, new[] { "perioxi", "typos_akinitou", "typos_aggelias", "mpanio", "ypnodomatia", "emvadon", "timi", "dieythinsi" }, analyzer);
+                        (Version.LUCENE_30, new[] { "perioxi", "typos_akinitou", "typos_aggelias", "emvadon", "dieythinsi" }, analyzer);
                     var query = parseQuery(searchQuery, parser);
                     var hits = searcher.Search
                     (query, null, hits_limit, Sort.RELEVANCE).ScoreDocs;

@@ -388,6 +388,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
         //auti h methodos prepei na kalite kata to fortoma tou programmatos
         public static void AllAdds()
         {
+            List<Adds> everyadd = new List<Adds>();
             using (var connection = new NpgsqlConnection(Helper.CnnVal("it164760")))
             {
                 try
@@ -396,7 +397,7 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                     using (var cmd = new NpgsqlCommand("SELECT * FROM show_aggelies1()", connection))
                     {
                         NpgsqlDataReader reader = cmd.ExecuteReader();
-                        List<Adds> everyadd = new List<Adds>();
+                        
                         if (reader.HasRows)
                         {
                             while (reader.Read())
@@ -410,7 +411,11 @@ namespace AdopseAddsTeam5.GUI.Main_Form
                             }
                         }
                         //edw gemizei o index tou lucene
-                        LuceneSearch.AddUpdateLuceneIndex(everyadd);
+                        foreach (Adds add in everyadd)
+                        {
+                            LuceneSearch.AddUpdateLuceneIndex(add);
+                        }
+                            
                     }
                 }
                 catch(Exception ex)
