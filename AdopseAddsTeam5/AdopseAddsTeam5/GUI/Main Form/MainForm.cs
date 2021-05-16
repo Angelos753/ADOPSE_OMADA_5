@@ -1063,5 +1063,30 @@ namespace AdopseAddsTeam5
         {
             LuceneSearch.ClearLuceneIndex();
         }
+
+        private void vlPic0_Click(object sender, EventArgs e)
+        {
+            vlMainPic.Image = vlPic0.Image;
+        }
+
+        private void vlPic1_Click(object sender, EventArgs e)
+        {
+            vlMainPic.Image = vlPic1.Image;
+        }
+
+        private void vlPic2_Click(object sender, EventArgs e)
+        {
+            vlMainPic.Image = vlPic2.Image;
+        }
+
+        private void vlPic3_Click(object sender, EventArgs e)
+        {
+            vlMainPic.Image = vlPic3.Image;
+        }
+
+        private void vlPic4_Click(object sender, EventArgs e)
+        {
+            vlMainPic.Image = vlPic4.Image;
+        }
     }
 }

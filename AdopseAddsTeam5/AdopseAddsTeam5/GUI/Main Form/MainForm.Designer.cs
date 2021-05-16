@@ -3386,6 +3386,7 @@ namespace AdopseAddsTeam5
             this.vlPic0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vlPic0.TabIndex = 8;
             this.vlPic0.TabStop = false;
+            this.vlPic0.Click += new System.EventHandler(this.vlPic0_Click);
             // 
             // vlPic2
             // 
@@ -3397,6 +3398,7 @@ namespace AdopseAddsTeam5
             this.vlPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vlPic2.TabIndex = 9;
             this.vlPic2.TabStop = false;
+            this.vlPic2.Click += new System.EventHandler(this.vlPic2_Click);
             // 
             // vlPic3
             // 
@@ -3408,6 +3410,7 @@ namespace AdopseAddsTeam5
             this.vlPic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vlPic3.TabIndex = 10;
             this.vlPic3.TabStop = false;
+            this.vlPic3.Click += new System.EventHandler(this.vlPic3_Click);
             // 
             // vlPic4
             // 
@@ -3419,6 +3422,7 @@ namespace AdopseAddsTeam5
             this.vlPic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vlPic4.TabIndex = 11;
             this.vlPic4.TabStop = false;
+            this.vlPic4.Click += new System.EventHandler(this.vlPic4_Click);
             // 
             // vlPic1
             // 
@@ -3430,6 +3434,7 @@ namespace AdopseAddsTeam5
             this.vlPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.vlPic1.TabIndex = 12;
             this.vlPic1.TabStop = false;
+            this.vlPic1.Click += new System.EventHandler(this.vlPic1_Click);
             // 
             // footerMiddleB
             // 
